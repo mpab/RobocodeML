@@ -4,7 +4,7 @@ import robocode.*;
 
 public class Trainer extends AdvancedRobot {
 
-    private BotProxy proxy = new BotProxy(this);
+    private BotProxy proxy = new BotProxy(this, new Connection());
 
     public void run() {
         while (true) {
@@ -46,6 +46,14 @@ public class Trainer extends AdvancedRobot {
 
     public void onWin(WinEvent event) {
         proxy.onWin();
+    }
+
+    public void onBattleEnded(BattleEndedEvent event) {
+        proxy.onBattleEnded();
+    }
+
+    public void onRoundEnded(RoundEndedEvent event) {
+        proxy.onRoundEnded();
     }
 
 }

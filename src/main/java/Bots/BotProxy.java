@@ -1,6 +1,8 @@
 package Bots;
 
-import robocode.*;
+import robocode.AdvancedRobot;
+import robocode.Rules;
+import robocode.ScannedRobotEvent;
 
 import java.util.Random;
 
@@ -24,30 +26,80 @@ public class BotProxy {
 	
 	public static final int NUM_ACTIONS = 5;
 
-	Connection connection = new Connection();
+    Connection connection;
+    int msgFrame = 0;
 
     public BotProxy(AdvancedRobot bot) {
         this.bot = bot;
     }
 
-	public void learn() {
+    public BotProxy(AdvancedRobot bot, Connection connection ) {
+        this.bot = bot;
+        this.connection = connection;
+    }
 
+    public int execRandomAction() {
         action = randomAction();
         execAction(action);
+        return action;
+    }
+
+    private void cSend(String k, String v) {
+
+        if (connection == null)
+            return;
 
         if (!connection.isOpen()) {
             return;
         }
 
-        connection.send("action", actionToString());
-        connection.send("x", String.format("%f", bot.getX()));
-        connection.send("y", String.format("%f", bot.getY()));
-        connection.send("distance", String.format("%f", enemyDistance));
-        connection.send("bearing", String.format("%f", enemyBearing));
+        connection.send(msgFrame, k, v);
+    }
 
-        //connection.close();
-        //connection.send("CLOSE_CONNECTION");
-        //connection.close();
+    private void cOpen(int round, int numRounds) {
+
+        if (connection == null)
+            return;
+
+        if (connection.isOpen()) {
+            return;
+        }
+
+        System.out.println("opening connection");
+        connection.open(round, numRounds);
+    }
+
+    private void cClose() {
+
+        if (connection == null)
+            return;
+
+        if (!connection.isOpen()) {
+            return;
+        }
+
+        System.out.println("closing connection");
+        connection.close();
+        connection = null;
+    }
+
+	public void learn() {
+
+        System.out.println("learn()");
+
+        action = execRandomAction();
+
+        if (!connection.isOpen()) {
+            return;
+        }
+
+        ++msgFrame; // update frame counter for message
+
+        cSend("action", actionToString());
+        cSend("x", String.format("%f", bot.getX()));
+        cSend("y", String.format("%f", bot.getY()));
+        cSend("distance", String.format("%f", enemyDistance));
+        cSend("bearing", String.format("%f", enemyBearing));
     }
 
     public int randomAction() {
@@ -100,7 +152,7 @@ public class BotProxy {
         qEnemyDistance = Util.qDist(enemyDistance);
 
         // now we have a full set of features, start transmission
-        connection.open(bot.getRoundNum(), bot.getNumRounds());
+        cOpen(bot.getRoundNum(), bot.getNumRounds());
 
 		fireAtEnemy();
 	}
@@ -165,38 +217,49 @@ public class BotProxy {
 
     // robot collision
     public void onHitRobot() {
-        //connection.send("HitRobotEvent");
+        cSend("event", "HitRobotEvent");
     }
 
     // we have shot an enemy
     public void onBulletHit() {
 
-        //connection.send("BulletHitEvent");
+        cSend("event","BulletHitEvent");
     }
 
     // an enemy has shot us
     public void onHitByBullet() {
 
-        //connection.send("HitByBulletEvent");
+        cSend("event","HitByBulletEvent");
     }
 
     public void onHitWall() {
 
-        //connection.send("HitWallEvent");
+        cSend("event","HitWallEvent");
     }
 
     public void onBulletMissed() {
 
-        //connection.send("BulletMissedEvent");
+        cSend("event","BulletMissedEvent");
     }
 
     public void onBulletHitBullet() {
 
-        //connection.send("BulletHitBulletEvent");
+        cSend("event","BulletHitBulletEvent");
     }
 
     public void onWin() {
-        connection.send("WinEvent");
-        connection.close();
+        cSend("event","WinEvent");
+        cClose();
     }
+
+    public void onBattleEnded() {
+        cSend("event","BattleEndedEvent");
+        cClose();
+    }
+
+    public void onRoundEnded() {
+        cSend("event","RoundEndedEvent");
+        cClose();
+    }
+
 }

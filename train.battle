@@ -5,4 +5,4 @@ robocode.battle.numRounds=100
 robocode.battle.gunCoolingRate=0.1
 robocode.battle.rules.inactivityTime=450
 robocode.battle.hideEnemyNames=true
-robocode.battle.selectedRobots=Bots.Trainer*,Bots.NNBot*
+robocode.battle.selectedRobots=Bots.Trainer*,Bots.Random*

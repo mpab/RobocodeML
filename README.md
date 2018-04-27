@@ -26,12 +26,12 @@ $PROJECT is the project folder
     - https://maven.apache.org/install.html
 
 3.a Build from command line
-
-    mvn clean install
+    
+    `mvn clean install`
 
 3.b Build from IDE
 
-    - IntelliJ:
+    - IntelliJ
 
         - Go to `Run` > `Edit Configurations...` > Click `+` (`Add New Configuration`) > Select `Application`
         - Configure with the below parameters:
@@ -41,15 +41,29 @@ $PROJECT is the project folder
             - `VM options`: `-Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true`
             - `Working directory`: `/path/to/robocode` (from previous step)
             - `Use classpath of module`: `robocode`
+                  
+        - Alternatively, if you don't need the built-in robots (skip `Preferences` / `Development Options`)
+            - `VM options`: `Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true -DNOSECURITY=true -DROBOTPATH=../target/classes`
 
     - Eclipse: [use these instructions](http://robowiki.net/wiki/Robocode/Running_from_Eclipse)
 
 3. After setting up the IDE, robocode needs to know where the project robots are.
 
    - Run robocode
-    `> cd $PROJECT/robocode-1.9.3.2` then `> ./robocode.sh`.
+    `cd $PROJECT/robocode-1.9.3.2` then `./robocode.sh`.
 
    - Go to `Preferences` / `Development Options`, add path `$PROJECT/robocode/target/classes`
+
+4. Train
+    - Start the listener: `./python/listener.py`
+
+    - Run the training: `./train.sh` or `slow-train.sh`
+    
+## Notes
+
+`java.io.FileNotFoundException: ... /org/json/JSONObject.class (No such file or directory)`
+
+Ignore this: I suspect robocode's class loader logs this erroneously, but the json module works fine 
 
 ## Resources
 

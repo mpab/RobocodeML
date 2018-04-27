@@ -14,14 +14,14 @@ start_robocode () {
   -DROBOTPATH=./target/classes \
   -cp "$ROBOCODE/libs/*:./lib/*:./target:/*" robocode.Robocode \
   -battle ./train.battle \
-  -nosound \
-  -tps 100 &
+  -tps 10 &
 }
 
 #mvn clean install
 #start_listener
 #rm -rf $ROBOCODE/robots/Bots
 #cp -R target/classes/Bots $ROBOCODE/robots/Bots
+
 start_robocode
 
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT

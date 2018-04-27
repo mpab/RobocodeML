@@ -2,6 +2,7 @@ package Bots;
 
 import java.io.*;
 import java.net.*;
+import org.json.*;
 
 public class Connection {
 
@@ -38,10 +39,15 @@ public class Connection {
         }
     }
 
-    public void send(String k, String v) {
+    public void send(int msgFrame, String k, String v) {
         if (isOpen()) {
-            String msg = String.format("'%d/%d':'%s':'%s'", battle, maxBattles, k, v);
-            send(msg);
+            JSONObject msg = new JSONObject();
+            msg.put("battle", Integer.toString(battle));
+            msg.put("max_battles", Integer.toString(maxBattles));
+            msg.put("frame", Integer.toString(msgFrame));
+            msg.put(k, v);
+            //String msg = String.format("'%d/%d':'%s':'%s'", battle, maxBattles, k, v);
+            send(msg.toString());
         }
     }
 
