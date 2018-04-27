@@ -55,8 +55,8 @@ public class Connection {
         if (isOpen()) {
             try {
                 DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-                out.writeUTF(msg);
-                //out.writeUTF("");
+                out.writeBytes(msg);
+                //out.writeUTF(msg);
                 out.flush();
             } catch (Exception e) {
                 System.out.println(e);
