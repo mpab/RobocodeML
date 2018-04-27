@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 import socket
+import json
 
 import parser
+#import features
 
 def connect():
     soc = socket.socket()
@@ -46,7 +48,8 @@ def process_messages(conn):
         js = p.scan(text)
 
         if js is not None:
-            print(js)
+            jsn = json.loads(js)
+            print(json.dumps(jsn))
 
     conn.close()
 

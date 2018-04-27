@@ -16,6 +16,14 @@ public class Trainer extends AdvancedRobot {
     double bearing;
     // plus x, y
 
+    // events
+    int enemy_collisions;
+    int enemy_hits;
+    int wounds;
+    int wall_collisions;
+    int bullet_misses;
+    int bullet_intercepts;
+
     public void run() {
 
         connection.open();
@@ -23,14 +31,17 @@ public class Trainer extends AdvancedRobot {
         while (true) {
             action = proxy.randomAction();
             proxy.execAction(action);
-
-            netSendAction();
+            netUpdate();
         }
     }
 
-    public void xonScannedRobot(ScannedRobotEvent e) {
-        distance = e.getDistance();
-        proxy.fireAtEnemy(distance);
+    private void resetEvents() {
+        enemy_collisions = 0;
+        enemy_hits = 0;
+        wounds = 0;
+        wall_collisions = 0;
+        bullet_misses = 0;
+        bullet_intercepts = 0;
     }
 
     public void onScannedRobot(ScannedRobotEvent e) {
@@ -56,71 +67,73 @@ public class Trainer extends AdvancedRobot {
 
     private JSONObject createTrainMsg() {
         JSONObject msg = new JSONObject();
-        msg.put("frame", Integer.toString(frame));
-        msg.put("battle", Integer.toString(getRoundNum()));
-        msg.put("max_battles", Integer.toString(getNumRounds()));
+        msg.put("frame", frame);
+        msg.put("round", getRoundNum());
+        msg.put("num_rounds", getNumRounds());
         return msg;
     }
 
-    private void netSendEvent(String event) {
-        JSONObject msg = createTrainMsg();
-        msg.put("type", "event");
-        msg.put("event", event);
-        connection.send(msg.toString());
-    }
-
-    private void netSendAction() {
+    private void netUpdate() {
         ++frame; // update frame counter for message
         JSONObject msg = createTrainMsg();
+
+        // actions
         msg.put("type", "action");
-        msg.put("action", proxy.actionToString(action));
-        msg.put("x", String.format("%f", getX()));
-        msg.put("y", String.format("%f", getY()));
-        msg.put("distance", String.format("%f", distance));
-        msg.put("bearing", String.format("%f", bearing));
+        msg.put("action", action);
+        msg.put("x", getX());
+        msg.put("y", getY());
+        msg.put("distance", distance);
+        msg.put("bearing", bearing);
+
+        // events
+        msg.put("enemy_collisions", enemy_collisions);
+        msg.put("enemy_hits", enemy_hits);
+        msg.put("wounds", wounds);
+        msg.put("wall_collisions", wall_collisions);
+        msg.put("bullet_misses", bullet_misses);
+        msg.put("bullet_intercepts", bullet_misses);
+
         connection.send(msg.toString());
+        resetEvents();
     }
 
     // robot collision
     public void onHitRobot(HitRobotEvent event) {
-        netSendEvent( "HitRobotEvent");
+        ++enemy_collisions;
     }
 
     // we have shot an enemy
     public void onBulletHit(BulletHitEvent event) {
 
-        netSendEvent("BulletHitEvent");
+        ++enemy_hits;
     }
 
     // an enemy has shot us
     public void onHitByBullet(HitByBulletEvent event) {
-        netSendEvent("HitByBulletEvent");
+        ++wounds;
     }
 
     public void onHitWall(HitWallEvent event) {
-        netSendEvent("HitWallEvent");
+        ++wall_collisions;
     }
 
     public void onBulletMissed(BulletMissedEvent event) {
-        netSendEvent("BulletMissedEvent");
+        ++bullet_misses;
     }
 
     public void onBulletHitBullet(BulletHitBulletEvent event) {
-        netSendEvent("BulletHitBulletEvent");
+        ++bullet_intercepts;
     }
 
     public void onWin(WinEvent event) {
-        netSendEvent("WinEvent");
         connection.close();
     }
 
     public void onBattleEnded(BattleEndedEvent event) {
-        netSendEvent("BattleEndedEvent");
         connection.close();
     }
 
     public void onRoundEnded(RoundEndedEvent event) {
-        netSendEvent("RoundEndedEvent");
         connection.close();
     }
 
