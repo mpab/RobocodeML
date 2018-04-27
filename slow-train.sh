@@ -14,7 +14,7 @@ start_robocode () {
   -DROBOTPATH=./target/classes \
   -cp "$ROBOCODE/libs/*:./lib/*:./target:/*" robocode.Robocode \
   -battle ./train.battle \
-  -tps 10 &
+  -tps 100 &
 }
 
 #mvn clean install

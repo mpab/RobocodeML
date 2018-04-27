@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import socket
+import json
 
 def connect():
     soc = socket.socket()
@@ -50,6 +51,30 @@ class MsgExtractor:
 
         return None
 
+class FeatureExtractor:
+    def __init__(self):
+        self.battle = 0;
+        self.max_battles = 0;
+        self.frame = 0;
+
+def analyse_json_msg(msg):
+
+    j = json.loads(msg)
+    
+    p = '{}/{}/{}'.format(j['battle'], j['max_battles'], j['frame'])
+
+    t = j['type']
+
+    if t == 'action':
+        a = j['action']
+        p = p + '/' + a
+
+    elif t == 'event':
+        e = j['event']
+        p = p + '/' + e
+
+    print(p)
+
 def process_messages(conn):
 
     extractor = MsgExtractor();
@@ -83,6 +108,7 @@ def process_messages(conn):
 
         if json is not None:
             print(json)
+            #analyse_json_msg(json)
 
     conn.close()
 

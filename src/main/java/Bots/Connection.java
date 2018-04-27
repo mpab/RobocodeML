@@ -6,17 +6,16 @@ import org.json.*;
 
 public class Connection {
 
-    int battle;
-    int maxBattles;
-
     Socket socket = null;
 
-    public void open(int battle, int maxBattles) {
+    public void open() {
+
+        if (isOpen())
+            return;
+
         try {
             if (socket == null) {
                 socket = new Socket("localhost", 8888);
-                this.battle = battle + 1;
-                this.maxBattles = maxBattles;
             }
         } catch(Exception e) {
             System.out.println(e);
@@ -39,24 +38,11 @@ public class Connection {
         }
     }
 
-    public void send(int msgFrame, String k, String v) {
-        if (isOpen()) {
-            JSONObject msg = new JSONObject();
-            msg.put("battle", Integer.toString(battle));
-            msg.put("max_battles", Integer.toString(maxBattles));
-            msg.put("frame", Integer.toString(msgFrame));
-            msg.put(k, v);
-            //String msg = String.format("'%d/%d':'%s':'%s'", battle, maxBattles, k, v);
-            send(msg.toString());
-        }
-    }
-
     public void send(String msg) {
         if (isOpen()) {
             try {
                 DataOutputStream out = new DataOutputStream(socket.getOutputStream());
                 out.writeBytes(msg);
-                //out.writeUTF(msg);
                 out.flush();
             } catch (Exception e) {
                 System.out.println(e);

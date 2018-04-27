@@ -8,12 +8,12 @@ public class Random extends AdvancedRobot {
 
     public void run() {
         while (true) {
-            proxy.execRandomAction();
+            int action = proxy.randomAction();
+            proxy.execAction(action);
         }
     }
 
     public void onScannedRobot(ScannedRobotEvent e) {
-        proxy.onScannedRobot(e);
+        proxy.fireAtEnemy(e.getDistance());
     }
-
 }
