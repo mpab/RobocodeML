@@ -15,7 +15,8 @@ start_robocode () {
   -cp "$ROBOCODE/libs/*:./lib/*:./target:/*" robocode.Robocode \
   -battle ./train.battle \
   -nosound \
-  -tps 100 &
+  -nodisplay \
+  -tps 1000 &
 }
 
 #mvn clean install
