@@ -43,7 +43,7 @@ $PROJECT is the project folder
 
             - `Main class`: `robocode.Robocode`
 
-            - IF you want to confiugre robocode to automatically find the project robots
+            - IF you want to configure robocode to automatically find the project robots
 
                 - `VM options`: `--Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true -DROBOTPATH=../java/target/classes`
 
