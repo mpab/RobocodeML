@@ -6,10 +6,11 @@ Machine learning for robocode
 
 ./*.sh -> scripts
 
+./*.battle -> battle configurations
+
 ./java -> java code (for robots)
 
 ./python -> python code (capture/training/ML stuff)
-
 
 ## Setup
 
@@ -20,23 +21,15 @@ $PROJECT is the project folder
 
 1. Install robocode `1.9.3.2`:
 
-    - Open a terminal at $PROJECT/setup
+    - Open a terminal at $PROJECT
 
-    - Install robocode: run `./setup.sh`
-      OR type `java -jar installers/robocode-1.9.3.2-setup.jar ./robocode-1.9.3.2`.
-      This installs robocode within the project folder.
-      If you install this way, you won't need to fix up any maven paths in pom.xml
-
-    - OR `java -jar ./setup/robocode-1.8.3.0-setup.jar` then choose an installation folder,
-      but keep a note of where robocode was installed, and you will need to adjust pom.xml
+    - Install robocode: run `./setup.sh` (This installs robocode within the project folder, if you install like this, you won't need to fix up any maven paths in pom.xml)
 
 2. Install maven
 
     - https://maven.apache.org/install.html
 
-3.a Build from command line
-
-    `./build.sh`
+3.a Build from command line: `./build.sh`
 
 3.b Build from IDE
 
@@ -75,8 +68,14 @@ $PROJECT is the project folder
    - Go to `Preferences` / `Development Options`, add path `$PROJECT/robocode/target/classes`
 
 5. Run from command line
-    - Start the capture: `./capture.sh` -> data is saved to ./data/
-    - Run the training: `./train.sh` or `slow-train.sh`
+
+    - Start the capture: (data is saved to ./data/)
+
+        `./capture.sh`
+
+    - Run the Training bot vs the Random bot in Robocode:
+
+        `./train.sh` or `slow-train.sh`
 
 ## Notes
 
