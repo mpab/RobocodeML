@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+pushd python
+
+if [ ! -d "./venv" ]; then
+    echo "python virtual environment not found, creating"
+    python3 -m venv venv
+fi
+
+if [ ! -d "./venv" ]; then
+    echo "failed to create python virtual environment, this script may fail if python 3 is not installed"
+fi
+
+if [ -d "./venv" ]; then
+    . venv/bin/activate
+fi
+
+popd
