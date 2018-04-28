@@ -11,8 +11,8 @@ start_robocode () {
   -Dsun.io.useCanonCaches=false \
   -Ddebug=true \
   -DNOSECURITY=true \
-  -DROBOTPATH=./target/classes \
-  -cp "$ROBOCODE/libs/*:./lib/*:./target:/*" robocode.Robocode \
+  -DROBOTPATH=./java/target/classes \
+  -cp "$ROBOCODE/libs/*:./java/lib/*:./java/target:/*" robocode.Robocode \
   -battle ./train.battle \
   -tps 100 &
 }
