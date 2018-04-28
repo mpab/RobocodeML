@@ -1,5 +1,6 @@
 package Bots;
 
+import org.json.JSONObject;
 import robocode.AdvancedRobot;
 import robocode.Rules;
 

@@ -20,7 +20,7 @@ class Tracker:
 
         round_diff = obs.round - self.round
         if round_diff > 1:
-            raise RuntimeError("missed a round")
+            raise RuntimeError("missed rounds: from {} to {}".format(self.round, obs.round))
 
         if round_diff > 0:
             self.round = obs.round
@@ -29,7 +29,7 @@ class Tracker:
 
         frame_diff = obs.frame - self.frame
         if frame_diff > 1:
-            raise RuntimeError("missed a frame")
+            raise RuntimeError("missed frames: from {} to {}".format(self.frame, obs.frame))
 
         if frame_diff == 0:
             raise RuntimeError("frame was not updated")
@@ -39,8 +39,6 @@ class Tracker:
 
 def connect(host, port):
     soc = socket.socket()
-    host = "localhost"
-    port = 8888
     soc.bind((host, port))
     soc.listen(5)
     conn, addr = soc.accept()
@@ -73,11 +71,11 @@ def capture(conn, filepath, tracker):
             connected = False
             continue
 
-        text = msg.decode('utf-8')
-        jstr = p.scan(text)
+        fragment = msg.decode('utf-8')
+        text = p.scan(fragment)
 
-        if jstr is not None:
-            jsn = json.loads(jstr)
+        if text is not None:
+            jsn = json.loads(text)
             obs = features.extract(jsn)
 
             if tracker is None:
@@ -115,11 +113,10 @@ def main():
             print("no tracker, aborting")
             return
 
-        if tracker.round == tracker.num_rounds:
-            print("complete")
-            return
+        print("captured round: {}/{}".format(tracker.round, tracker.num_rounds))
 
-        print("capturing round: {}/{}".format(tracker.round, tracker.num_rounds))
+        if tracker.round == tracker.num_rounds:
+            return
 
 
 if __name__ == "__main__":

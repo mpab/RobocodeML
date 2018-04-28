@@ -1,45 +1,44 @@
 package Bots;
 
-import java.io.*;
-import java.net.*;
-import org.json.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
 
 public class Connection {
 
-    Socket socket = null;
+    protected Socket socket;
+    protected int status; // 0 = closed, 1 = open, -1 = error
 
-    public void open() {
+    public void open(String host, int port) {
 
-        if (isOpen())
+        if (status == 1)
             return;
 
         try {
-            if (socket == null) {
-                socket = new Socket("localhost", 8888);
-            }
+            socket = new Socket(host, port);
+            status = 1;
         } catch(Exception e) {
             System.out.println(e);
-            socket = null;
+            status = -1;
         }
     }
 
-    public boolean isOpen() {
-        return socket != null;
-    }
-
     public void close() {
-        if (socket != null) {
-            try {
-                socket.close();
-            } catch(Exception e) {
-                System.out.println(e);
-            }
-            socket = null;
+
+        if (status == 0)
+            return;
+
+        try {
+            socket.close();
+            status = 0;
+        } catch(Exception e) {
+            System.out.println(e);
+            status = -1;
         }
     }
 
     public void send(String msg) {
-        if (isOpen()) {
+        if (status == 1) {
             try {
                 DataOutputStream out = new DataOutputStream(socket.getOutputStream());
                 out.writeBytes(msg);
@@ -50,4 +49,20 @@ public class Connection {
             }
         }
     }
+
+    public String receive() {
+
+        if (status == 1) {
+            try {
+                DataInputStream dis = new DataInputStream(socket.getInputStream());
+                return dis.readUTF();
+            } catch (Exception e) {
+                System.out.println(e);
+                close();
+            }
+        }
+
+        return null;
+    }
+
 }

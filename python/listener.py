@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
 
 import errno
+import json
 import socket
+import pathlib
 
 import parser
 
-def connect():
+
+def connect(host, port):
     soc = socket.socket()
-    host = "localhost"
-    port = 8888
     soc.bind((host, port))
     soc.listen(5)
-    print("listening on port: {}".format(port))
     conn, addr = soc.accept()
-    print("accepted connection from: ", addr)
     return conn
 
 
-def process_messages(conn):
+def listen(conn):
 
     p = parser.MsgParser();
 
@@ -40,19 +39,30 @@ def process_messages(conn):
             continue
 
         if len(msg) == 0:
-            print("empty message")
             connected = False
             continue
 
-        text = msg.decode('utf-8')
-        js = p.scan(text)
+        fragment = msg.decode('utf-8')
+        text = p.scan(fragment)
 
-        if js is not None:
-            print(js)
+        if text is not None:
+            print(text)
 
     conn.close()
 
 
-while True:
-    conn = connect()
-    process_messages(conn)
+def main():
+
+    host = "localhost"
+    port = 8888
+
+    print("listening to: {}:{}".format(host, port))
+
+    while True:
+        listen(connect(host, port))
+        print("connection closed")
+
+
+if __name__ == "__main__":
+    main()
+
