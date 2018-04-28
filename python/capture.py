@@ -3,6 +3,7 @@
 import errno
 import json
 import socket
+import pathlib
 
 import parser
 import features
@@ -102,6 +103,8 @@ def main():
     print("capturing from: {}:{}".format(host, port))
     print("saving to: {}".format(filepath))
 
+    path = pathlib.Path('./data')
+    path.mkdir(parents=True, exist_ok=True)
     features.csv_create(filepath)
 
     while True:
