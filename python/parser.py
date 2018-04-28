@@ -1,11 +1,11 @@
-class JsonParser:
+class MsgParser:
     def __init__(self):
         self.buff = ""
         self.msg = ""
 
-    def scan(self, inBuff):
+    def scan(self, in_buff):
 
-        self.buff = self.buff + inBuff
+        self.buff = self.buff + in_buff
 
         out = ""
 

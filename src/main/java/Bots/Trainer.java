@@ -12,17 +12,17 @@ public class Trainer extends AdvancedRobot {
 
     // features
     int action;
-    double distance;
-    double bearing;
+    double enemy_distance;
+    double enemy_bearing;
     // plus x, y
 
     // events
     int enemy_collisions;
-    int enemy_hits;
-    int wounds;
     int wall_collisions;
-    int bullet_misses;
-    int bullet_intercepts;
+    int shell_hits;
+    int shell_wounds;
+    int shell_misses;
+    int shell_intercepts;
 
     public void run() {
 
@@ -30,68 +30,68 @@ public class Trainer extends AdvancedRobot {
 
         while (true) {
             action = proxy.randomAction();
-            proxy.execAction(action);
             netUpdate();
+            proxy.execAction(action);
         }
     }
 
     private void resetEvents() {
         enemy_collisions = 0;
-        enemy_hits = 0;
-        wounds = 0;
         wall_collisions = 0;
-        bullet_misses = 0;
-        bullet_intercepts = 0;
+        shell_hits = 0;
+        shell_wounds = 0;
+        shell_misses = 0;
+        shell_intercepts = 0;
     }
 
     public void onScannedRobot(ScannedRobotEvent e) {
 
-        distance = e.getDistance();
+        enemy_distance = e.getDistance();
 
         double lastEnemyBearing = e.getBearing() % 360;
 
         // Calculate the angle to the scanned robot
         double angle = Math.toRadians((getHeading() + lastEnemyBearing));
-        double enemyX = getX() + Math.sin(angle) * distance;
-        double enemyY = getY() + Math.cos(angle) * distance;
+        double enemyX = getX() + Math.sin(angle) * enemy_distance;
+        double enemyY = getY() + Math.cos(angle) * enemy_distance;
 
         //absolute angle to enemy
-        bearing = Util.absBearing(
+        enemy_bearing = Util.absBearing(
                 (float)getX(),
                 (float)getY(),
                 (float)enemyX,
                 (float)enemyY);
 
-        proxy.fireAtEnemy(distance);
+        proxy.fireAtEnemy(enemy_distance);
     }
 
     private JSONObject createTrainMsg() {
+        ++frame; // update frame counter for message
         JSONObject msg = new JSONObject();
-        msg.put("frame", frame);
-        msg.put("round", getRoundNum());
+        msg.put("round", getRoundNum() + 1);
         msg.put("num_rounds", getNumRounds());
+        msg.put("frame", frame);
         return msg;
     }
 
     private void netUpdate() {
-        ++frame; // update frame counter for message
         JSONObject msg = createTrainMsg();
 
-        // actions
-        msg.put("type", "action");
+        // features
         msg.put("action", action);
         msg.put("x", getX());
         msg.put("y", getY());
-        msg.put("distance", distance);
-        msg.put("bearing", bearing);
+        msg.put("heading", getHeading());
+        msg.put("enemy_distance", enemy_distance);
+        msg.put("enemy_bearing", enemy_bearing);
 
         // events
         msg.put("enemy_collisions", enemy_collisions);
-        msg.put("enemy_hits", enemy_hits);
-        msg.put("wounds", wounds);
         msg.put("wall_collisions", wall_collisions);
-        msg.put("bullet_misses", bullet_misses);
-        msg.put("bullet_intercepts", bullet_misses);
+        msg.put("shell_hits", shell_hits);
+        msg.put("shell_wounds", shell_wounds);
+        msg.put("shell_misses", shell_misses);
+        msg.put("shell_intercepts", shell_misses);
 
         connection.send(msg.toString());
         resetEvents();
@@ -105,12 +105,12 @@ public class Trainer extends AdvancedRobot {
     // we have shot an enemy
     public void onBulletHit(BulletHitEvent event) {
 
-        ++enemy_hits;
+        ++shell_hits;
     }
 
     // an enemy has shot us
     public void onHitByBullet(HitByBulletEvent event) {
-        ++wounds;
+        ++shell_wounds;
     }
 
     public void onHitWall(HitWallEvent event) {
@@ -118,11 +118,11 @@ public class Trainer extends AdvancedRobot {
     }
 
     public void onBulletMissed(BulletMissedEvent event) {
-        ++bullet_misses;
+        ++shell_misses;
     }
 
     public void onBulletHitBullet(BulletHitBulletEvent event) {
-        ++bullet_intercepts;
+        ++shell_intercepts;
     }
 
     public void onWin(WinEvent event) {

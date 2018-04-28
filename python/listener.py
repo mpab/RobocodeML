@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import errno
 import socket
 
 import parser
@@ -15,9 +16,10 @@ def connect():
     print("accepted connection from: ", addr)
     return conn
 
+
 def process_messages(conn):
 
-    p = parser.JsonParser();
+    p = parser.MsgParser();
 
     connected = True
 

@@ -1,79 +1,76 @@
-import json
-
 class Observation:
-    def __init__(self, frame):
-        self.frame = frame;
+    def __init__(self,):
 
         # actions
         self.action = -1
         self.x = 0
         self.y = 0
-        self.distance = 0
-        self.bearing = 0
+        self.heading = 0
+        self.enemy_distance = 0
+        self.enemy_bearing = 0
 
         # events
         self.enemy_collisions = 0
-        self.enemy_hits = 0
-        self.wounds = 0
         self.wall_collisions = 0
-        self.bullet_misses = 0
-        self.bullet_intercepts = 0
+        self.shell_hits = 0
+        self.shell_wounds = 0
+        self.shell_misses = 0
+        self.shell_intercepts = 0
 
 
-class Extractor:
+def csv_append(filepath, obs):
+    record = "{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
+        obs.round,
+        obs.frame,
+        obs.action,
+        obs.x,
+        obs.y,
+        obs.heading,
+        obs.enemy_distance,
+        obs.enemy_bearing,
+        obs.enemy_collisions,
+        obs.wall_collisions,
+        obs.shell_hits,
+        obs.shell_wounds,
+        obs.shell_misses,
+        obs.shell_intercepts)
 
-    featuresList = []
-
-    def __init__(self):
-        self.observation = None
-        self.battle = -1;
-        self.max_battles = -1;
-        self.frame = -1;
-        self.collisions = 0
-        self.enemy_hits = 0
-        self.bullet_misses = 0
-        self.bullet_intercepts = 0
-        self.wounds = 0
-
-    def extract_action(cls, json, obs):
-        t = json['type']
-
-        if t != 'action':
-            return
-
-        obs.action = json['action']
-        obs.x = json['x'] 
-        obs.y = json['y']
-        obs.distance = json['distance']
-        obs.bearing = json['bearing']
-
-        return obs
+    with open(str(filepath), 'a') as handle:
+        handle.write("{}\n".format(record))
 
 
-    def extract_event(cls, json, obs):
-        t = json['type']
+def csv_create(filepath):
+    header = "ROUND,FRAME,ACTION," \
+             "X,Y,HEADING," \
+             "ENEMY_DISTANCE,ENEMY_BEARING," \
+             "ENEMY_COLLISIONS,WALL_COLLISIONS," \
+             "SHELL_HITS,SHELL_WOUNDS,SHELL_MISSES,SHELL_INTERCEPTS"
+    with open(str(filepath), 'w') as handle:
+        handle.write("{}\n".format(header))
 
-        if t != 'event':
-            return
 
-        collision = json['collision']
-        obs.enemy_collisions = 
+def extract(jsn):
 
-    def extract(cls, msg):
-        j = json.loads(msg)
-        battle = j['battle']
+    obs = Observation()
 
-        if battle > self.battle: # new battle
-            self.battle = battle
-            self.max_battles = j['max_battles']
+    # meta info
+    obs.round = jsn['round']
+    obs.num_rounds = jsn['num_rounds']
+    obs.frame = jsn['frame']
 
-            observation = Observation(j['frame'])
+    # actions
+    obs.action = jsn['action']
+    obs.x = jsn['x']
+    obs.y = jsn['y']
+    obs.enemy_distance = jsn['enemy_distance']
+    obs.enemy_bearing = jsn['enemy_bearing']
 
-            if self.observation is None:
-                self.observation = observation
-            else:
-                featuresList.append(observation)
-                self.observation = observation
+    # events
+    obs.enemy_collisions = jsn['enemy_collisions']
+    obs.wall_collisions = jsn['wall_collisions']
+    obs.shell_hits = jsn['shell_hits']
+    obs.shell_wounds = jsn['shell_wounds']
+    obs.shell_misses = jsn['shell_misses']
+    obs.shell_intercepts = jsn['shell_intercepts']
 
-            Extractor.extract_action(j)
-            Extractor.extract_event(j)
+    return obs
