@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. ./create-venv
+pushd ../python
+python ./capture.py

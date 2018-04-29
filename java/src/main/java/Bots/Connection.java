@@ -1,7 +1,9 @@
 package Bots;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.InputStreamReader;
 import java.net.Socket;
 
 public class Connection {
@@ -45,7 +47,15 @@ public class Connection {
                 out.flush();
             } catch (Exception e) {
                 System.out.println(e);
-                close();
+                status = -1;
+            }
+
+            if (status == -1) {
+                try {
+                    socket.close();
+                } catch(Exception e) {
+                    System.out.println(e);
+                }
             }
         }
     }
@@ -54,11 +64,20 @@ public class Connection {
 
         if (status == 1) {
             try {
-                DataInputStream dis = new DataInputStream(socket.getInputStream());
-                return dis.readUTF();
+                BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                String msg = br.readLine();
+                return msg;
             } catch (Exception e) {
                 System.out.println(e);
-                close();
+                status = -1;
+            }
+        }
+
+        if (status == -1) {
+            try {
+                socket.close();
+            } catch(Exception e) {
+                System.out.println(e);
             }
         }
 

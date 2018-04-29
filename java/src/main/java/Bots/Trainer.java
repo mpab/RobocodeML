@@ -49,24 +49,39 @@ public class Trainer extends AdvancedRobot {
 
     // robot collision
     public void onHitRobot(HitRobotEvent event) {
+        if (obs == null)
+            return;
         ++obs.enemy_collisions;
     }
 
     // we have shot an enemy
-    public void onBulletHit(BulletHitEvent event) { ++obs.shell_hits; }
+    public void onBulletHit(BulletHitEvent event) {
+        if (obs == null)
+            return;
+        ++obs.shell_hits; }
 
     // an enemy has shot us
     public void onHitByBullet(HitByBulletEvent event) {
+        if (obs == null)
+            return;
         ++obs.shell_wounds;
     }
 
-    public void onHitWall(HitWallEvent event) { ++obs.wall_collisions; }
+    public void onHitWall(HitWallEvent event) {
+        if (obs == null)
+            return;
+        ++obs.wall_collisions;
+    }
 
     public void onBulletMissed(BulletMissedEvent event) {
+        if (obs == null)
+            return;
         ++obs.shell_misses;
     }
 
     public void onBulletHitBullet(BulletHitBulletEvent event) {
+        if (obs == null)
+            return;
         ++obs.shell_intercepts;
     }
 

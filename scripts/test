@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. ./create-venv.sh
+pushd ../python
+python ./test.py

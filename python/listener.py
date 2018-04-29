@@ -1,24 +1,13 @@
 #!/usr/bin/env python3
 
-import errno
-import json
 import socket
-import pathlib
-
-import parser
-
-
-def connect(host, port):
-    soc = socket.socket()
-    soc.bind((host, port))
-    soc.listen(5)
-    conn, addr = soc.accept()
-    return conn
+import errno
+import util
 
 
 def listen(conn):
 
-    p = parser.MsgParser();
+    p = util.MsgParser();
 
     connected = True
 
@@ -59,7 +48,7 @@ def main():
     print("listening to: {}:{}".format(host, port))
 
     while True:
-        listen(connect(host, port))
+        listen(util.connect(host, port))
         print("connection closed")
 
 

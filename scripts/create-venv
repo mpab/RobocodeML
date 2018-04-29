@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pushd python
+pushd ../python
 
 if [ ! -d "./venv" ]; then
     echo "python virtual environment not found, creating"
