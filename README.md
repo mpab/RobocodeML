@@ -4,13 +4,18 @@ Machine learning for robocode
 
 ## Project Structure
 
-./*.sh -> scripts
-
-./*.battle -> battle configurations
-
-./java -> java code (for robots)
-
-./python -> python code (capture/training/ML stuff)
+```
+$root
+README.md
+/analysis/      # analytics data
+/battles/       # battle configurations
+/data/          # generated/reprocessed data from robocode
+/doc/           # project documentation
+/installers/    # 3rd-party installers
+/java/          # java source files
+/python/        # python source files (capture/training/analytics/ML)
+/scripts/       # shell scripts
+```
 
 ## Setup
 

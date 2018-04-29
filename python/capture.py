@@ -6,10 +6,11 @@ import socket
 import pathlib
 
 import observation
+import features
 import util
 
 
-def capture(conn, filepath, tracker):
+def capture(conn, obs_fp, feat_fp, num_rewards, tracker):
 
     p = util.MsgParser()
 
@@ -47,7 +48,17 @@ def capture(conn, filepath, tracker):
             else:
                 tracker.update(obs)
 
-                observation.csv_append(filepath, obs)
+                observation.csv_append(obs_fp, obs)
+
+                feat = features.observation_to_features(obs)
+
+                if feat is not None:
+                    norm = features.normalise_features(feat)
+
+                    for n in range(num_rewards):
+                        actual_fp = feat_fp.format(n)
+                        features.set_reward(norm, n)
+                        features.csv_append(actual_fp, norm)
 
     conn.close()
 
@@ -56,22 +67,30 @@ def capture(conn, filepath, tracker):
 
 def main():
 
-    filepath = "../data/observations.csv"
+    num_rewards = 5
+
+    obs_fp = "../data/observations.csv"
+    feat_fp = "../data/features_rwd_{}.csv"
     tracker = None
 
     host = "localhost"
     port = 8888
 
-    print("capturing from: {}:{}".format(host, port))
-    print("saving to: {}".format(filepath))
-
     path = pathlib.Path('../data')
     path.mkdir(parents=True, exist_ok=True)
-    observation.csv_create(filepath)
+    observation.csv_create(obs_fp)
+
+    print("capturing from: {}:{}".format(host, port))
+    print("creating: {}".format(obs_fp))
+
+    for n in range(num_rewards):
+        actual_fp = feat_fp.format(n)
+        print("creating: {}".format(actual_fp))
+        features.csv_create(actual_fp)
 
     while True:
 
-        tracker = capture(util.connect(host, port), filepath, tracker)
+        tracker = capture(util.connect(host, port), obs_fp, feat_fp, num_rewards, tracker)
 
         if tracker is None:
             print("invalid battle tracker, aborting")
@@ -80,7 +99,11 @@ def main():
         print("captured round: {}/{}".format(tracker.round, tracker.num_rounds))
 
         if tracker.round == tracker.num_rounds:
-            print("saved observations to: {}".format(filepath))
+            print("saved observations to: {}".format(obs_fp))
+            for n in range(num_rewards):
+                actual_fp = feat_fp.format(n)
+                print("saved features to: {}".format(actual_fp))
+                features.csv_create(actual_fp)
             return
 
 

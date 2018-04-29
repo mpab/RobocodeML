@@ -12,7 +12,7 @@ start_robocode_headless () {
   -battle $1 \
   -nosound \
   -nodisplay \
-  -tps 1000 &
+  -tps 800 &
 }
 
 start_robocode_gui () {

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-. ./create-venv
+. ./env-py
 pushd ../python
 python ./capture.py
