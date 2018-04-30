@@ -9,7 +9,7 @@ public class Observation {
     int num_rounds;
     int frame;
     // features
-    int action;
+    String action;
     double x;
     double y;
     double heading;
@@ -28,7 +28,7 @@ public class Observation {
     int shell_misses;
     int shell_intercepts;
 
-    public Observation(int round, int num_rounds, int frame, int action, double x, double y, double heading) {
+    public Observation(int round, int num_rounds, int frame, String action, double x, double y, double heading) {
         this.round = round;
         this.num_rounds = num_rounds;
         this.frame = frame;

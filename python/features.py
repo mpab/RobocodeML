@@ -1,4 +1,5 @@
 import copy
+import dataset_features
 
 
 class Features(object):
@@ -6,30 +7,33 @@ class Features(object):
 
 
 def set_reward(features, reward):
+    val = 0
     if reward == 0:
-        features.reward = features.enemy_collisions * .2 + \
+        val = features.enemy_collisions * .2 + \
                           features.wall_collisions * .2 + \
                           features.shell_wounds * .6
 
     if reward == 1:
-        features.reward = features.enemy_collisions * .3 + \
+        val = features.enemy_collisions * .3 + \
                           features.wall_collisions * .3 + \
                           features.shell_wounds * .4
 
     if reward == 2:
-        features.reward = features.enemy_collisions * .1 + \
+        val = features.enemy_collisions * .1 + \
                           features.wall_collisions * .2 + \
                           features.shell_wounds * .7
 
     if reward == 3:
-        features.reward = features.enemy_collisions * .2 + \
+        val = features.enemy_collisions * .2 + \
                           features.wall_collisions * .1 + \
                           features.shell_wounds * .7
 
     if reward == 4:
-        features.reward = features.enemy_collisions * .1 + \
+        val = features.enemy_collisions * .1 + \
                           features.wall_collisions * .1 + \
                           features.shell_wounds * .8
+
+    features.reward = "R{0:.2f}".format(val)
 
 
 def normalise_features(features):
@@ -79,7 +83,11 @@ def csv_append(filepath, feat):
 
 
 def csv_create(filepath):
-    header = "action,x,y,heading,enemy_distance,enemy_bearing," \
-             "reward"
+    header = ""
+    for col in dataset_features.csv_column_names:
+        header = header + col + ","
+
+    header = header.rstrip(",")
+
     with open(str(filepath), 'w') as handle:
         handle.write("{}\n".format(header))

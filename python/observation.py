@@ -1,11 +1,4 @@
-"""
-from pprint import pprint
-
-
-class Observation(object):
-    def __str__(self):
-        pprint(vars(self))
-"""
+import dataset_observation
 
 
 class Observation(object):
@@ -63,9 +56,11 @@ def csv_append(filepath, obs):
 
 
 def csv_create(filepath):
-    header = "round,num_rounds,frame,action," \
-             "x,y,heading,scanned,scanned_enemy_distance,scanned_enemy_bearing," \
-             "enemy_collisions,wall_collisions," \
-             "shell_hits,shell_wounds,shell_misses,shell_intercepts"
+    header = ""
+    for col in dataset_observation.csv_column_names:
+        header = header + col + ","
+
+    header = header.rstrip(",")
+
     with open(str(filepath), 'w') as handle:
         handle.write("{}\n".format(header))
