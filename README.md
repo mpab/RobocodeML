@@ -5,16 +5,16 @@ Machine learning for robocode
 ## Project Structure
 
 ```
-$root
-README.md
-/analysis/      # analytics data
-/battles/       # battle configurations
-/data/          # generated/reprocessed data from robocode
-/doc/           # project documentation
-/installers/    # 3rd-party installers
-/java/          # java source files
-/python/        # python source files (capture/training/analytics/ML)
-/scripts/       # shell scripts
+$PROJECT
+|-analysis/     # analytics data
+|-battles/       # battle configurations
+|-data/          # generated/reprocessed data from robocode
+|-doc/           # project documentation
+|-installers/    # 3rd-party installers
+|-java/          # java source files
+|-python/        # python source files (capture/training/analytics/ML)
+|-scripts/       # shell scripts
+|-README.md
 ```
 
 ## Setup
@@ -22,19 +22,22 @@ README.md
 Note:
 A copy of robocode is supplied with this repository
 
-$PROJECT is the project folder
+$PROJECT is the root of the project folder
 
 1. Install robocode `1.9.3.2`:
 
-    - Open a terminal at $PROJECT
+    - Open a terminal at $PROJECT/scripts
 
-    - Install robocode: run `./setup.sh` (This installs robocode within the project folder, if you install like this, you won't need to fix up any maven paths in pom.xml)
+    - Install robocode: run `./setup` (This installs robocode within the project folder, if you install like this, you won't need to fix up any maven paths in pom.xml)
 
-2. Install maven
+2. Install java dependencies
 
     - https://maven.apache.org/install.html
 
-3.a Build from command line: `./build.sh`
+    - JDK 8
+
+
+3.a Build from command line: `./build`
 
 3.b Build from IDE
 
@@ -76,11 +79,11 @@ $PROJECT is the project folder
 
     - Start the capture: (data is saved to ./data/)
 
-        `./capture.sh`
+        `./capture`
 
     - Run the Training bot vs the Random bot in Robocode:
 
-        `./train.sh` or `slow-train.sh`
+        `./battle-test-random` (headless) or `./battle-test-random-gui`
 
 ## Notes
 
