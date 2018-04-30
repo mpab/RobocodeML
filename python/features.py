@@ -1,5 +1,5 @@
 import copy
-import dataset_features
+import dataset
 
 
 class Features(object):
@@ -84,7 +84,7 @@ def csv_append(filepath, feat):
 
 def csv_create(filepath):
     header = ""
-    for col in dataset_features.csv_column_names:
+    for col in dataset.csv_column_names:
         header = header + col + ","
 
     header = header.rstrip(",")

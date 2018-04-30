@@ -15,7 +15,7 @@ import distutils.dir_util
 import pandas as pd
 
 # data
-import dataset_features
+import dataset
 
 # local utilities
 import stats
@@ -135,7 +135,7 @@ def main():
 
     distutils.dir_util.mkpath(log_path)
 
-    ds, _ = dataset_features.load(data_fp)
+    ds, _ = dataset.load(data_fp)
 
     classifier = MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)
     pca5 = PCA(n_components=5)
