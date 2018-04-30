@@ -13,7 +13,7 @@ class Tracker:
 
         round_diff = obs.round - self.round
         if round_diff > 1:
-            raise RuntimeError("missed rounds: from {} to {}".format(self.round, obs.round))
+            print("missed rounds: from {} to {}".format(self.round, obs.round))
 
         if round_diff > 0:
             self.round = obs.round
@@ -22,7 +22,7 @@ class Tracker:
 
         frame_diff = obs.frame - self.frame
         if frame_diff > 1:
-            raise RuntimeError("missed frames: from {} to {}".format(self.frame, obs.frame))
+            print("missed frames: from {} to {}".format(self.frame, obs.frame))
 
         if frame_diff == 0:
             raise RuntimeError("frame was not updated")

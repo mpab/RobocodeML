@@ -19,6 +19,8 @@ public class Observation {
     boolean scanned;
     double scanned_enemy_distance;
     double scanned_enemy_bearing;
+    double scanned_enemy_x;
+    double scanned_enemy_y;
 
     // events
     int enemy_collisions;
@@ -28,14 +30,11 @@ public class Observation {
     int shell_misses;
     int shell_intercepts;
 
-    public Observation(int round, int num_rounds, int frame, String action, double x, double y, double heading) {
+    public Observation(int round, int num_rounds, int frame, String action) {
         this.round = round;
         this.num_rounds = num_rounds;
         this.frame = frame;
         this.action = action;
-        this.x = x;
-        this.y = y;
-        this.heading = heading;
     }
 
     public JSONObject toJson() {
@@ -53,6 +52,8 @@ public class Observation {
         jsn.put("scanned", scanned);
         jsn.put("scanned_enemy_distance", scanned_enemy_distance);
         jsn.put("scanned_enemy_bearing", scanned_enemy_bearing);
+        jsn.put("scanned_enemy_x", scanned_enemy_x);
+        jsn.put("scanned_enemy_y", scanned_enemy_y);
         // events
         jsn.put("enemy_collisions", enemy_collisions);
         jsn.put("wall_collisions", wall_collisions);

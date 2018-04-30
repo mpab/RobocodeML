@@ -47,7 +47,6 @@ fi
 if [ "x$2" == "xgui" ]; then
   echo "gui option specified, running with gui"
   export option=gui
-  #start_robocode_gui $1
   start_robocode_gui $1
 fi
 

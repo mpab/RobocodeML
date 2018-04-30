@@ -18,6 +18,8 @@ def json_to_observation(jsn):
     obs.scanned = jsn['scanned']
     obs.scanned_enemy_distance = jsn['scanned_enemy_distance']
     obs.scanned_enemy_bearing = jsn['scanned_enemy_bearing']
+    obs.scanned_enemy_x = jsn['scanned_enemy_x']
+    obs.scanned_enemy_y = jsn['scanned_enemy_y']
     # events
     obs.enemy_collisions = jsn['enemy_collisions']
     obs.wall_collisions = jsn['wall_collisions']
@@ -30,7 +32,7 @@ def json_to_observation(jsn):
 
 
 def csv_append(filepath, obs):
-    record = "{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
+    record = "{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
         obs.round,
         obs.num_rounds,
         obs.frame,
@@ -41,6 +43,8 @@ def csv_append(filepath, obs):
         obs.scanned,
         obs.scanned_enemy_distance,
         obs.scanned_enemy_bearing,
+        obs.scanned_enemy_x,
+        obs.scanned_enemy_y,
         obs.enemy_collisions,
         obs.wall_collisions,
         obs.shell_hits,
@@ -53,10 +57,10 @@ def csv_append(filepath, obs):
 
 
 def csv_create(filepath):
-    header = "round,num_rounds,frame,action,x,y,"\
-            "heading,scanned,scanned_enemy_distance,scanned_enemy_bearing," \
-            "enemy_collisions,wall_collisions," \
-            "shell_hits,shell_wounds,shell_misses,shell_intercepts"
+    header = "round,num_rounds,frame,action,x,y,heading," \
+             "scanned,scanned_enemy_distance,scanned_enemy_bearing,scanned_enemy_x,scanned_enemy_y," \
+             "enemy_collisions,wall_collisions," \
+             "shell_hits,shell_wounds,shell_misses,shell_intercepts"
 
     with open(str(filepath), 'w') as handle:
         handle.write("{}\n".format(header))
