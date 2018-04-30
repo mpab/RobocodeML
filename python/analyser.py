@@ -15,7 +15,8 @@ import distutils.dir_util
 import pandas as pd
 
 # data
-import dataset
+import classification_ds
+import feature_cfg
 
 # local utilities
 import stats
@@ -24,10 +25,10 @@ import graphs
 # -----------------------------------------------------------
 
 
-class Analyser():
+class Analyser:
 
-    def __init__(self, log_path, dataset):
-        self.dataset = dataset
+    def __init__(self, log_path, ds):
+        self.ds = ds
 
         self.X_train = None
         self.X_test = None
@@ -62,8 +63,7 @@ class Analyser():
             test_size,
             splitter.__name__)
 
-        self.X_train, self.X_test, self.y_train, self.y_test = splitter(self.dataset.data, self.dataset.target)
-
+        self.X_train, self.X_test, self.y_train, self.y_test = splitter(self.ds.data, self.ds.target)
 
     def train(self, model):
         start = timer()
@@ -89,22 +89,22 @@ class Analyser():
 
     def assess(self):
         self.classification_report = \
-            metrics.classification_report(self.y_test, self.y_predict, target_names=self.dataset.target_names)
+            metrics.classification_report(self.y_test, self.y_predict, target_names=self.ds.target_names)
         self.accuracy_score = metrics.accuracy_score(self.y_test, self.y_predict)
 
     def report(self):
         self.log.info("------------------------- START REPORT ----------------------------------")
 
         df = self.classification_report_dataframe()
-        df.to_csv(self.log_file_path + '_classification_report.csv', index = False)
+        df.to_csv(self.log_file_path + '_classification_report.csv', index=False)
 
         self.log.info('classification report:\n%s', self.classification_report)
         self.log.info('accuracy score: %f', self.accuracy_score)
 
-        test = list(self.dataset.encoders[self.dataset.target_name].inverse_transform(self.y_test))
-        predict = list(self.dataset.encoders[self.dataset.target_name].inverse_transform(self.y_predict))
+        test = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_test))
+        predict = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_predict))
 
-        stats.report(test, predict, self.dataset.target_names, self.log)
+        stats.report(test, predict, self.ds.target_names, self.log)
 
         self.log.info("-------------------------- END REPORT -----------------------------------")
 
@@ -124,18 +124,20 @@ class Analyser():
 
     def graph(self):
         cm = confusion_matrix(self.y_test, self.y_predict)
-        graphs.plot_cm(cm, self.dataset.target_names, self.log_file_path)
+        graphs.plot_cm(cm, self.ds.target_names, self.log_file_path)
 
 # -----------------------------------------------------------
 
 
 def main():
     log_path = "../analysis/MLP_005/"
-    data_fp = "./qfeatures.csv"
 
     distutils.dir_util.mkpath(log_path)
 
-    ds, _ = dataset.load(data_fp)
+    data_fp = "../data/features/raw_class.csv"
+    discard = feature_cfg.onehot_targets
+    target_name = feature_cfg.onehot_targets[1]
+    ds = classification_ds.load_encoded(data_fp, discard, target_name)
 
     classifier = MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)
     pca5 = PCA(n_components=5)
