@@ -98,21 +98,26 @@ def create_dataset(df, meta, target_name, readme):
 
 
 def check_filter(discard, target):
-    if target in discard:
-        discard.remove(target)
 
-    for d in discard:
+    filtered = list(discard)
+
+    if target in discard:
+        filtered.remove(target)
+
+    for d in filtered:
         print("discard: {}".format(d))
 
     print("target: {}".format(target))
 
+    return filtered
+
 
 def load(data_fp, discard, target_name, readme_fp=None):
 
-    check_filter(discard, target_name)
+    filtered = check_filter(discard, target_name)
 
     meta_fp = data_fp + ".meta"
-    meta, df, feature_names = create_metadata(data_fp, meta_fp, discard, target_name)
+    meta, df, feature_names = create_metadata(data_fp, meta_fp, filtered, target_name)
 
     # Load the readme information
     if readme_fp is not None:

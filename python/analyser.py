@@ -79,7 +79,7 @@ class Analyser:
 
     def eval(self, classifier, splitter):
         start = timer()
-        scores = cross_val_score(classifier, self.dataset.data, self.dataset.target, cv=splitter)
+        scores = cross_val_score(classifier, self.ds.data, self.ds.target, cv=splitter)
         elapsed = timer() - start
         self.log.info("eval: took %.2fs", elapsed)
 
@@ -129,14 +129,10 @@ class Analyser:
 # -----------------------------------------------------------
 
 
-def main():
-    log_path = "../analysis/MLP_005/"
+def analyse(log_path, data_fp, discard, target_name, notes):
 
     distutils.dir_util.mkpath(log_path)
 
-    data_fp = "../data/features/raw_class.csv"
-    discard = feature_cfg.onehot_targets
-    target_name = feature_cfg.onehot_targets[1]
     ds = classification_ds.load_encoded(data_fp, discard, target_name)
 
     classifier = MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)
@@ -146,6 +142,8 @@ def main():
     analyser = Analyser(log_path, ds)
 
     log = analyser.get_logger()
+    log.info(notes)
+    log.info("target is: {}".format(target_name))
     log.info("MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)")
     log.info("no scaling, pca5")
 
@@ -155,6 +153,21 @@ def main():
     analyser.assess()
     analyser.report()
     analyser.graph()
+
+
+def main():
+
+    for target_name in feature_cfg.onehot_targets:
+
+        discard = feature_cfg.onehot_targets
+        log_path = "../analysis/raw_classifier/" + target_name
+        data_fp = "../data/features/raw_class.csv"
+        analyse(log_path, data_fp, discard, target_name, "using raw features")
+
+        discard = feature_cfg.onehot_targets
+        log_path = "../analysis/scaled_classifier/" + target_name
+        data_fp = "../data/features/scaled_class.csv"
+        analyse(log_path, data_fp, discard, target_name, "using pre-scaled features")
 
 
 if __name__ == "__main__":
