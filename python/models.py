@@ -11,6 +11,12 @@ class MetaModel:
         self.name = name
         self.description = description
 
+    def save(self, folder):
+        with open(meta_fp(folder), 'w') as handle:
+            handle.write("{}\n".format(self.name))
+            handle.write("{}\n".format(self.description))
+        joblib.dump(self.model, model_fp(folder))
+
 
 def meta_fp(folder):
     return folder / "model.txt"
@@ -18,13 +24,6 @@ def meta_fp(folder):
 
 def model_fp(folder):
     return folder / "model.pickle"
-
-
-def save(mm, folder):
-    with open(meta_fp(folder), 'w') as handle:
-        handle.write("{}\n".format(mm.name))
-        handle.write("{}\n".format(mm.description))
-    joblib.dump(mm.model, model_fp(folder))
 
 
 def load(folder):
