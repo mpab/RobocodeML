@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
+import random
+
 import util
 import observations
 import cfg
 import models
 import extractor
 import features
-import random
+import classification_ds
 
 enemy_collisions = cfg.ensure_path("../data/models/pure_boolean_classified/mlp_classifier_7_7_7_pca_5/enemy_collisions")
 shell_wounds = cfg.ensure_path("../data/models/pure_boolean_classified/mlp_classifier_7_7_7_pca_5/shell_wounds")
@@ -18,14 +20,27 @@ wcm = models.load(wall_collisions)
 
 
 def xrecommend(obs):
+    obs.scanned = True  # enable the conversion...
     features_class = "pure_boolean_classified"
+
     pure_pure = features.observation_to_features(obs)
+    if pure_pure is None:
+        raise RuntimeError("failed to convert observation to features")
+
     pure_boolean_classified = extractor.extract(features_class, pure_pure)
 
     if pure_boolean_classified is None:
         raise RuntimeError("no feature converter for features_class: {}".format(features_class))
 
-    ecr = ecm.model
+    # TODO: convert observation to dataframe and process using dataset
+    data_fp = "../data/features/pure_classified/features.csv"
+    discard = cfg.onehot_targets
+    target_name = cfg.onehot_targets[0]
+    ds = classification_ds.load_encoded(data_fp, discard, target_name)
+
+    prediction = ecm.model.predict(pure_boolean_classified)
+
+    print(prediction)
 
 
 def recommend(obs):
