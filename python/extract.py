@@ -2,9 +2,7 @@
 
 import os
 
-import json
-import pandas as pd
-
+import util
 import cfg
 import features
 import observations
@@ -67,9 +65,6 @@ def extract(obs_list):
                 features.csv_append(fp, out)
 
     for fp in features_fp:
-        if not fp.exists():
-            raise RuntimeError("features file: {} not found".format(features_fp))
-
         size = os.path.getsize(fp)
         if size < 1024:
             print("WARNING: length of file {} is {} bytes".format(features_fp, size))
@@ -78,9 +73,7 @@ def extract(obs_list):
 def main():
     obs_fp = cfg.ensure_fp(cfg.observations_root, cfg.observations)
     print("extracting from: {}".format(obs_fp))
-    frame = pd.read_csv(obs_fp)
-    raw = frame.to_json(orient='records')
-    obs_list = json.loads(raw)
+    obs_list = util.csv_to_json(obs_fp)
 
     extract(obs_list)
 

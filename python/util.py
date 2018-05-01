@@ -1,4 +1,7 @@
 import socket
+import json
+
+import pandas as pd
 
 
 class Tracker:
@@ -74,3 +77,10 @@ def connect(host, port):
     soc.listen(5)
     conn, addr = soc.accept()
     return conn
+
+
+def csv_to_json(fp):
+    frame = pd.read_csv(fp)
+    raw = frame.to_json(orient='records')
+    jslist = json.loads(raw)
+    return jslist
