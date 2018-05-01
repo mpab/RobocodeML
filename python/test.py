@@ -4,10 +4,9 @@ import errno
 import json
 import socket
 
-import parser
-import observation
-import features
-import nnet
+import recommender
+import observations
+import util
 
 
 def connect(host, port):
@@ -18,9 +17,9 @@ def connect(host, port):
     return conn
 
 
-def test(conn, tracker):
+def test(conn):
 
-    p = parser.MsgParser();
+    p = util.MsgParser()
 
     connected = True
 
@@ -51,18 +50,14 @@ def test(conn, tracker):
             continue
 
         jsn = json.loads(text)
-        obs = observation.json_to_observation(jsn)
-        feat = features.observation_to_features(obs)
+        obs = observations.json_to_observation(jsn)
 
-        action = nnet.recommend(feat)
-        obs.action = action
+        recommendation = recommender.recommend(obs)
 
-        #print(text)
-        recommendation = json.dumps(obs.__dict__)
+        reply = json.dumps(recommendation.__dict__) + '\n'  # add EOL for java client
 
         try:
-            conn.send(recommendation + "\n")  # add EOL for java client
-            print("recommending action: {}".format(action))
+            conn.send(reply.encode('utf-8'))
         except socket.error as e:
             if e.errno == errno.ECONNRESET:
                 print("connection reset")
@@ -72,12 +67,8 @@ def test(conn, tracker):
 
     conn.close()
 
-    return tracker
-
 
 def main():
-
-    tracker = None
 
     host = "localhost"
     port = 8889
@@ -85,11 +76,7 @@ def main():
     print("monitoring {}:{}".format(host, port))
 
     while True:
-
-        tracker = test(connect(host, port), tracker)
-
-        if tracker is not None:
-            print("round: {}/{}".format(tracker.round, tracker.num_rounds))
+        test(util.connect(host, port))
 
 
 if __name__ == "__main__":
