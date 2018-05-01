@@ -3,9 +3,9 @@
 import errno
 import json
 import socket
-import pathlib
+import cfg
 
-import observation
+import observations
 import util
 
 
@@ -40,13 +40,13 @@ def capture(conn, obs_fp, tracker):
 
         if text is not None:
             jsn = json.loads(text)
-            obs = observation.json_to_observation(jsn)
+            obs = observations.json_to_observation(jsn)
 
             if tracker is None:
                 tracker = util.Tracker(obs)
             else:
                 tracker.update(obs)
-                observation.csv_append(obs_fp, obs)
+                observations.csv_append(obs_fp, obs)
 
     conn.close()
 
@@ -59,13 +59,11 @@ def main():
     host = "localhost"
     port = 8888
 
+    obs_fp = cfg.ensure_fp(cfg.observations_root, cfg.observations)
+    observations.csv_create(obs_fp)
+
     print("capturing from: {}:{}".format(host, port))
     print("waiting for data...")
-
-    path = pathlib.Path('../data')
-    path.mkdir(parents=True, exist_ok=True)
-    obs_fp = "../data/observations.csv"
-    observation.csv_create(obs_fp)
 
     while True:
 
