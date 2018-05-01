@@ -1,67 +1,82 @@
 #!/usr/bin/env python3
 
+import os
+
 import json
-import pathlib
 import pandas as pd
 
-import observation
+import cfg
 import features
+import observations
 
 
 def extract(obs_list):
-    # num_rewards = 5
 
-    raw_class_fp = "../data/features/raw_class.csv"
-    raw_reg_fp = "../data/features/raw_reg.csv"
-    scaled_class_fp = "../data/features/scaled_class.csv"
-    scaled_reg_fp = "../data/features/scaled_reg.csv"
+    features_fp = []
 
-    path = pathlib.Path('../data/features')
-    path.mkdir(parents=True, exist_ok=True)
-
-    features.csv_create(raw_class_fp)
-    features.csv_create(raw_reg_fp)
-    features.csv_create(scaled_class_fp)
-    features.csv_create(scaled_reg_fp)
-
-    # for n in range(num_rewards):
-    #    fp = feat_fp.format(n)
-    #    print("creating: {}".format(fp))
-    #    features.csv_create(fp)
-    #    fp = qfeat_fp.format(n)
-    #    print("creating: {}".format(fp))
-    #    features.csv_create(fp)
+    # create feature files
+    for features_class in cfg.features_classes:
+        fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
+        print("creating features file: {}".format(fp))
+        features.csv_create(fp)
+        features_fp.append(fp)
 
     for jsn in obs_list:
+        obs = observations.json_to_observation(jsn)
+        pure_pure = features.observation_to_features(obs)
 
-        obs = observation.json_to_observation(jsn)
+        if pure_pure is None:
+            continue
 
-        feat = features.observation_to_features(obs)
+        for features_class in cfg.features_classes:
 
-        if feat is not None:
-            features.csv_append_classification(raw_class_fp, feat)
-            features.csv_append_regression(raw_reg_fp, feat)
+            fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
 
-            scaled = features.scale(feat)
-            features.csv_append_classification(scaled_class_fp, scaled)
-            features.csv_append_regression(scaled_reg_fp, feat)
+            if features_class == "pure_pure":
+                features.csv_append(fp, pure_pure)
 
-            # for n in range(num_rewards):
-            #    fp = feat_fp.format(n)
-            #    features.set_reward(feat, n)
-            #    features.csv_append(fp, feat)
+            if features_class == "pure_classified":
+                out = features.classify(pure_pure)
+                features.csv_append(fp, out)
 
-            #    fp = qfeat_fp.format(n)
-            #    features.set_reward(norm, n)
-            #    features.csv_append(fp, norm)
+            if features_class == "pure_boolean":
+                out = features.binarise(pure_pure)
+                features.csv_append(fp, out)
 
-    # for n in range(num_rewards):
-    #    actual_fp = feat_fp.format(n)
-    #    print("saved features to: {}".format(actual_fp))
+            if features_class == "pure_boolean_classified":
+                out = features.binarise(pure_pure)
+                out = features.classify(out)
+                features.csv_append(fp, out)
+
+            scaled_pure = features.scale(pure_pure)
+
+            if features_class == "scaled_pure":
+                features.csv_append(fp, scaled_pure)
+
+            if features_class == "scaled_classified":
+                out = features.classify(scaled_pure)
+                features.csv_append(fp, out)
+
+            if features_class == "scaled_boolean":
+                out = features.binarise(scaled_pure)
+                features.csv_append(fp, out)
+
+            if features_class == "scaled_boolean_classified":
+                out = features.binarise(scaled_pure)
+                out = features.classify(out)
+                features.csv_append(fp, out)
+
+    for fp in features_fp:
+        if not fp.exists():
+            raise RuntimeError("features file: {} not found".format(features_fp))
+
+        size = os.path.getsize(fp)
+        if size < 1024:
+            print("WARNING: length of file {} is {} bytes".format(features_fp, size))
 
 
 def main():
-    obs_fp = "../data/observations.csv"
+    obs_fp = cfg.ensure_fp(cfg.observations_root, cfg.observations)
     print("extracting from: {}".format(obs_fp))
     frame = pd.read_csv(obs_fp)
     raw = frame.to_json(orient='records')

@@ -3,7 +3,10 @@ import pathlib
 
 data_root = "../data/"
 analysis_root = data_root + "trained_models_analysis/"
+
 features_root = data_root + "features/"
+features = "features.csv"
+
 model_root = data_root + "trained_models/"
 
 observations_root = data_root + "observations/"
@@ -33,7 +36,18 @@ onehot_targets = [
     "shell_intercepts"
 ]
 
-feature_classes = ["raw", "scaled", "rounded"]
+# convention: feature_target
+features_classes = [
+    "pure_pure",
+    "pure_classified",
+    "pure_boolean",
+    "pure_boolean_classified",
+    "scaled_pure",
+    "scaled_classified",
+    "scaled_boolean",
+    "scaled_classified",
+    "scaled_boolean_classified",
+]
 
 
 def ensure_path(path):
