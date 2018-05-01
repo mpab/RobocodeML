@@ -6,12 +6,16 @@ RobocodeML dataset helper for scikit-learn
 used for classifiers
 """
 
-import pandas as pd
+import os
+import datetime
 import json
+import logging
+
+import pandas as pd
 from sklearn.datasets.base import Bunch
 from sklearn.preprocessing import LabelEncoder
 
-import feature_cfg
+import cfg
 
 # see here for tips on preparing data
 # https://districtdatalabs.silvrback.com/building-a-classifier-from-census-data
@@ -19,6 +23,30 @@ import feature_cfg
 
 # see here for data wrangling
 # http://fastml.com/converting-categorical-data-into-numbers-with-pandas-and-scikit-learn/
+
+# -----------------------------------------------------------
+
+__logger__ = [None]
+
+
+def log():
+
+    if __logger__[0] is not None:
+        return __logger__[0]
+
+    log_name = '{:%Y-%m-%d_%H.%M.%S}'.format(datetime.datetime.now()) + '_' + os.path.basename(__file__) + '.log'
+
+    log_fp = cfg.ensure_fp(cfg.data_root + "logs", log_name)
+
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(log_name)
+    fh = logging.FileHandler(log_fp)
+    fh.setLevel(logging.INFO)
+    logger.addHandler(fh)
+    __logger__[0] = logger
+    return __logger__[0]
+
+# -----------------------------------------------------------
 
 
 def create_metadata(data_fp, meta_fp, discard, target_name):
@@ -29,7 +57,7 @@ def create_metadata(data_fp, meta_fp, discard, target_name):
     for d in discard:
         for f in feature_names:
             if d in f:
-                print("removing feature: {}".format(d))
+                log().info("removing feature: {}".format(d))
                 feature_names.remove(d)
                 df = df.drop(d, axis=1)
 
@@ -60,7 +88,7 @@ def label_encoder(ds, target_name):
     raw_data = dict()
 
     for x in ds.categorical_data:
-        print("encoding column: {}".format(x))
+        log().info("encoding column: {}".format(x))
         if x == target_name:
             encoder = LabelEncoder()
             encoder.fit(ds.target)
@@ -105,9 +133,9 @@ def check_filter(discard, target):
         filtered.remove(target)
 
     for d in filtered:
-        print("discard: {}".format(d))
+        log().info("discard: {}".format(d))
 
-    print("target: {}".format(target))
+    log().info("target: {}".format(target))
 
     return filtered
 
@@ -138,9 +166,9 @@ def load_encoded(data_fp, discard, target_name, readme_fp=None):
 def main():
     # load raw dataset
 
-    data_fp = "../data/features/raw_class.csv"
-    discard = feature_cfg.onehot_targets
-    target_name = feature_cfg.onehot_targets[0]
+    data_fp = "../data/features/pure_classified/features.csv"
+    discard = cfg.onehot_targets
+    target_name = cfg.onehot_targets[0]
     ds = load_encoded(data_fp, discard, target_name)
 
     # store the feature matrix (X) and response vector (y)
@@ -165,7 +193,7 @@ def main():
 
     # load scaled dataset
 
-    data_fp = "../data/features/scaled_class.csv"
+    data_fp = "../data/features/scaled_classified/features.csv"
 
     ds = load_encoded(data_fp, discard, target_name)
 

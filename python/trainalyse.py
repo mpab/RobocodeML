@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 
 import logging
-
-from sklearn.neural_network import MLPClassifier
-from sklearn.model_selection import cross_val_score
-from sklearn.pipeline import make_pipeline
+import os
 import datetime
 from timeit import default_timer as timer
-from sklearn.decomposition import PCA
+
+from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
-import distutils.dir_util
 import pandas as pd
+
+# models
+import models
 
 # data
 import classification_ds
-import feature_cfg
+import cfg
 
 # local utilities
 import stats
@@ -24,10 +24,33 @@ import graphs
 
 # -----------------------------------------------------------
 
+__logger__ = [None]
 
-class Analyser:
 
-    def __init__(self, log_path, ds):
+def log():
+
+    if __logger__[0] is not None:
+        return __logger__[0]
+
+    log_name = '{:%Y-%m-%d_%H.%M.%S}'.format(datetime.datetime.now()) + '_' + os.path.basename(__file__) + '.log'
+
+    log_fp = cfg.ensure_fp(cfg.data_root + "logs", log_name)
+
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(log_name)
+    fh = logging.FileHandler(log_fp)
+    fh.setLevel(logging.INFO)
+    logger.addHandler(fh)
+    __logger__[0] = logger
+    return __logger__[0]
+
+# -----------------------------------------------------------
+
+
+class Trainalyser:  # because it trains and analyses...
+
+    def __init__(self, working_folder, ds):
+        self.working_folder = working_folder
         self.ds = ds
 
         self.X_train = None
@@ -38,26 +61,10 @@ class Analyser:
         self.classification_report = None
         self.accuracy_score = None
 
-        self.creation_timestamp = '{:%Y-%m-%d_%H.%M.%S}'.format(datetime.datetime.now())
-        self.instance_name = self.creation_timestamp + '_' + type(self).__name__
-
-        self.log = None
-        self.log_file_path = log_path + '/' + self.instance_name
-        self.get_logger()
-        self.log.info("------------------------ NEW CLASSIFIER -----------------------------------")
-
-    def get_logger(self):
-        if self.log is None:
-            logging.basicConfig(level=logging.INFO)
-            logger = logging.getLogger(self.instance_name)
-            fh = logging.FileHandler(self.log_file_path + '.log')
-            fh.setLevel(logging.INFO)
-            logger.addHandler(fh)
-            self.log = logger
-        return self.log
+        log().info("------------------------ NEW CLASSIFIER ---------------------------------")
 
     def split(self, splitter=train_test_split, test_size=0.33):
-        self.log.info(
+        log().info(
             "splitting data into train/test %0.2f/%0.2f using splitter: '%s'",
             1.0 - test_size,
             test_size,
@@ -69,23 +76,23 @@ class Analyser:
         start = timer()
         model.fit(self.X_train, self.y_train)
         elapsed = timer() - start
-        self.log.info("train: took %.2fs", elapsed)
+        log().info("train: took %.2fs", elapsed)
 
     def test(self, model):
         start = timer()
         self.y_predict = model.predict(self.X_test)
         elapsed = timer() - start
-        self.log.info("test: took %.2fs", elapsed)
+        log().info("test: took %.2fs", elapsed)
 
     def eval(self, classifier, splitter):
         start = timer()
         scores = cross_val_score(classifier, self.ds.data, self.ds.target, cv=splitter)
         elapsed = timer() - start
-        self.log.info("eval: took %.2fs", elapsed)
+        log().info("eval: took %.2fs", elapsed)
 
-        self.log.info(scores)
-        self.log.info("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
-        self.log.info("")
+        log().info(scores)
+        log().info("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+        log().info("")
 
     def assess(self):
         self.classification_report = \
@@ -93,20 +100,20 @@ class Analyser:
         self.accuracy_score = metrics.accuracy_score(self.y_test, self.y_predict)
 
     def report(self):
-        self.log.info("------------------------- START REPORT ----------------------------------")
+        log().info("------------------------- START REPORT ----------------------------------")
 
         df = self.classification_report_dataframe()
-        df.to_csv(self.log_file_path + '_classification_report.csv', index=False)
+        df.to_csv(self.working_folder / 'classification_report.csv', index=False)
 
-        self.log.info('classification report:\n%s', self.classification_report)
-        self.log.info('accuracy score: %f', self.accuracy_score)
+        log().info('classification report:\n%s', self.classification_report)
+        log().info('accuracy score: %f', self.accuracy_score)
 
         test = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_test))
         predict = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_predict))
 
-        stats.report(test, predict, self.ds.target_names, self.log)
+        stats.report(test, predict, self.ds.target_names, log())
 
-        self.log.info("-------------------------- END REPORT -----------------------------------")
+        log().info("-------------------------- END REPORT -----------------------------------")
 
     def classification_report_dataframe(self):
         report_data = []
@@ -124,51 +131,51 @@ class Analyser:
 
     def graph(self):
         cm = confusion_matrix(self.y_test, self.y_predict)
-        graphs.plot_cm(cm, self.ds.target_names, self.log_file_path)
+        graphs.plot_cm(cm, self.ds.target_names, self.working_folder)
 
 # -----------------------------------------------------------
 
 
-def analyse(log_path, data_fp, discard, target_name, notes):
+def train_and_evaluate(features_class, target_name):
 
-    distutils.dir_util.mkpath(log_path)
+    mm = models.create(features_class)
+    if mm is None:
+        log().info("no model for target: {} - unhandled features class: {}".format(target_name, features_class))
+        return
 
-    ds = classification_ds.load_encoded(data_fp, discard, target_name)
+    feat_fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
+    model_path = cfg.ensure_path(cfg.models_root + "/" + features_class)
 
-    classifier = MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)
-    pca5 = PCA(n_components=5)
-    pipeline = make_pipeline(pca5, classifier)
+    working_folder = cfg.ensure_path(model_path / mm.name / target_name)
+    ds = classification_ds.load_encoded(feat_fp, cfg.onehot_targets, target_name)
 
-    analyser = Analyser(log_path, ds)
+    analyser = Trainalyser(working_folder, ds)
 
-    log = analyser.get_logger()
-    log.info(notes)
-    log.info("target is: {}".format(target_name))
-    log.info("MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)")
-    log.info("no scaling, pca5")
+    log().info("target: {}".format(target_name))
+    log().info("feature class: {}".format(features_class))
+    log().info("model name: {}".format(mm.name))
+    log().info("model description: {}".format(mm.description))
 
     analyser.split()
-    analyser.train(pipeline)
-    analyser.test(pipeline)
+    analyser.train(mm.model)
+    analyser.test(mm.model)
     analyser.assess()
     analyser.report()
     analyser.graph()
 
+    mm.save(working_folder)
+
+
+def train_and_evaluate_all():
+    for target_name in cfg.onehot_targets:
+        for features_class in cfg.features_classes:
+            train_and_evaluate(features_class, target_name)
+
 
 def main():
-
-    for target_name in feature_cfg.onehot_targets:
-
-        discard = feature_cfg.onehot_targets
-        log_path = "../analysis/raw_classifier/" + target_name
-        data_fp = "../data/features/raw_class.csv"
-        analyse(log_path, data_fp, discard, target_name, "using raw features")
-
-        discard = feature_cfg.onehot_targets
-        log_path = "../analysis/scaled_classifier/" + target_name
-        data_fp = "../data/features/scaled_class.csv"
-        analyse(log_path, data_fp, discard, target_name, "using pre-scaled features")
+    train_and_evaluate_all()
 
 
 if __name__ == "__main__":
     main()
+

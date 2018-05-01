@@ -1,16 +1,14 @@
 import pathlib
 
-
 data_root = "../data/"
-analysis_root = data_root + "trained_models_analysis/"
+
+observations_root = data_root + "observations/"
+observations = "observations.csv"
 
 features_root = data_root + "features/"
 features = "features.csv"
 
-model_root = data_root + "trained_models/"
-
-observations_root = data_root + "observations/"
-observations = "observations.csv"
+models_root = data_root + "models/"
 
 csv_column_names = [
     "action",
@@ -37,6 +35,7 @@ onehot_targets = [
 ]
 
 # convention: feature_target
+# convention: feature_target_target
 features_classes = [
     "pure_pure",
     "pure_classified",
@@ -45,8 +44,14 @@ features_classes = [
     "scaled_pure",
     "scaled_classified",
     "scaled_boolean",
+    "scaled_boolean_classified"
+]
+
+classification_compatible = [
+    "pure_classified",
+    "pure_boolean_classified",
     "scaled_classified",
-    "scaled_boolean_classified",
+    "scaled_boolean_classified"
 ]
 
 
@@ -59,4 +64,4 @@ def ensure_path(path):
 def ensure_fp(path, filename):
     pathlib_path = ensure_path(path)
     fp = pathlib_path / filename
-    return fp
+    return str(fp)

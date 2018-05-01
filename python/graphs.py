@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from pylab import rcParams
 rcParams['figure.figsize'] = 12, 12
 
+
 def plot_cm(cm,
             target_names,
             path,
@@ -39,7 +40,7 @@ def plot_cm(cm,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
-    #plt.show()
+    # plt.show()
 
-    plt.savefig(path + "_confusion_matrix.png", bbox_inches='tight')
+    plt.savefig(path / 'confusion_matrix.png', bbox_inches='tight')
 

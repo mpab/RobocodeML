@@ -1,58 +1,41 @@
 import copy
-import feature_cfg
+import cfg
 
 
 class Features(object):
     pass
 
 
-def xxset_reward(features, reward):
-    val = 0
-    if reward == 0:
-        val = features.enemy_collisions * .2 + \
-                          features.wall_collisions * .2 + \
-                          features.shell_wounds * .6
-
-    if reward == 1:
-        val = features.enemy_collisions * .3 + \
-                          features.wall_collisions * .3 + \
-                          features.shell_wounds * .4
-
-    if reward == 2:
-        val = features.enemy_collisions * .1 + \
-                          features.wall_collisions * .2 + \
-                          features.shell_wounds * .7
-
-    if reward == 3:
-        val = features.enemy_collisions * .2 + \
-                          features.wall_collisions * .1 + \
-                          features.shell_wounds * .7
-
-    if reward == 4:
-        val = features.enemy_collisions * .1 + \
-                          features.wall_collisions * .1 + \
-                          features.shell_wounds * .8
-
-    features.reward = "R{0:.2f}".format(val)
-
-
 def scale(features):
-    scaled = copy.copy(features)
-    scaled.x = (scaled.x // 10) / 80
-    scaled.y = (scaled.y // 10) / 60
-    scaled.enemy_x = (scaled.enemy_x // 10) / 80
-    scaled.enemy_y = (scaled.enemy_y // 10) / 60
-    scaled.heading = (scaled.heading // 45) / 8
-    scaled.enemy_bearing = (scaled.enemy_bearing // 45) / 8
-    scaled.enemy_distance = (scaled.enemy_distance // 100) / 10
+    mod = copy.copy(features)
+    mod.x = (mod.x // 10) / 80
+    mod.y = (mod.y // 10) / 60
+    mod.enemy_x = (mod.enemy_x // 10) / 80
+    mod.enemy_y = (mod.enemy_y // 10) / 60
+    mod.heading = (mod.heading // 45) / 8
+    mod.enemy_bearing = (mod.enemy_bearing // 45) / 8
+    mod.enemy_distance = (mod.enemy_distance // 100) / 10
+    return mod
 
-    scaled.enemy_collisions = scaled.enemy_collisions and 1
-    scaled.wall_collisions = scaled.wall_collisions and 1
-    scaled.shell_hits = scaled.shell_hits and 1
-    scaled.shell_wounds = scaled.shell_wounds and 1
-    scaled.shell_intercepts = scaled.shell_intercepts and 1
 
-    return scaled
+def binarise(features):
+    mod = copy.copy(features)
+    mod.enemy_collisions = mod.enemy_collisions and 1
+    mod.wall_collisions = mod.wall_collisions and 1
+    mod.shell_hits = mod.shell_hits and 1
+    mod.shell_wounds = mod.shell_wounds and 1
+    mod.shell_intercepts = mod.shell_intercepts and 1
+    return mod
+
+
+def classify(features):
+    mod = copy.copy(features)
+    mod.enemy_collisions = "C" + str(mod.enemy_collisions)
+    mod.wall_collisions = "C" + str(mod.wall_collisions)
+    mod.shell_hits = "C" + str(mod.shell_hits)
+    mod.shell_wounds = "C" + str(mod.shell_wounds)
+    mod.shell_intercepts = "C" + str(mod.shell_intercepts)
+    return mod
 
 
 def observation_to_features(obs):
@@ -78,7 +61,7 @@ def observation_to_features(obs):
     return feat
 
 
-def csv_append_regression(filepath, feat):
+def csv_append(filepath, feat):
     record = "{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
         feat.action,
         feat.x,
@@ -98,29 +81,9 @@ def csv_append_regression(filepath, feat):
         handle.write("{}\n".format(record))
 
 
-def csv_append_classification(filepath, feat):
-    record = "{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
-        feat.action,
-        feat.x,
-        feat.y,
-        feat.heading,
-        feat.enemy_distance,
-        feat.enemy_bearing,
-        feat.enemy_x,
-        feat.enemy_y,
-        "C" + str(feat.enemy_collisions),
-        "C" + str(feat.wall_collisions),
-        "C" + str(feat.shell_hits),
-        "C" + str(feat.shell_wounds),
-        "C" + str(feat.shell_intercepts))
-
-    with open(str(filepath), 'a') as handle:
-        handle.write("{}\n".format(record))
-
-
 def csv_create(filepath):
     header = ""
-    for col in feature_cfg.csv_column_names:
+    for col in cfg.csv_column_names:
         header = header + col + ","
 
     header = header.rstrip(",")
