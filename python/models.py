@@ -19,11 +19,11 @@ class MetaModel:
 
 
 def meta_fp(folder):
-    return folder / "model.txt"
+    return str(folder) + "/model.txt"
 
 
 def model_fp(folder):
-    return folder / "model.pickle"
+    return str(folder) + "/model.pickle"
 
 
 def load(folder):

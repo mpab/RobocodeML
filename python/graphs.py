@@ -1,5 +1,3 @@
-print(__doc__)
-
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,5 +40,4 @@ def plot_cm(cm,
 
     # plt.show()
 
-    plt.savefig(path / 'confusion_matrix.png', bbox_inches='tight')
-
+    plt.savefig(str(path) + '/confusion_matrix.png', bbox_inches='tight')
