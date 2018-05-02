@@ -39,24 +39,20 @@ def classify(features):
 
 
 def observation_to_features(obs):
-
-    feat = None
-
-    if obs.scanned:  # filter out invalid features
-        feat = Features()
-        feat.action = obs.action
-        feat.x = obs.x
-        feat.y = obs.y
-        feat.heading = obs.heading
-        feat.enemy_distance = obs.scanned_enemy_distance
-        feat.enemy_bearing = obs.scanned_enemy_bearing
-        feat.enemy_x = obs.scanned_enemy_x
-        feat.enemy_y = obs.scanned_enemy_y
-        feat.enemy_collisions = obs.enemy_collisions
-        feat.wall_collisions = obs.wall_collisions
-        feat.shell_hits = obs.shell_hits
-        feat.shell_wounds = obs.shell_wounds
-        feat.shell_intercepts = obs.shell_intercepts
+    feat = Features()
+    feat.action = obs.action
+    feat.x = obs.x
+    feat.y = obs.y
+    feat.heading = obs.heading
+    feat.enemy_distance = obs.scanned_enemy_distance
+    feat.enemy_bearing = obs.scanned_enemy_bearing
+    feat.enemy_x = obs.scanned_enemy_x
+    feat.enemy_y = obs.scanned_enemy_y
+    feat.enemy_collisions = obs.enemy_collisions
+    feat.wall_collisions = obs.wall_collisions
+    feat.shell_hits = obs.shell_hits
+    feat.shell_wounds = obs.shell_wounds
+    feat.shell_intercepts = obs.shell_intercepts
 
     return feat
 

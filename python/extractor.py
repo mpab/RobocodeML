@@ -25,7 +25,7 @@ def extract(features_class, pure_pure):
     scaled_pure = features.scale(pure_pure)
 
     if features_class == "scaled_pure":
-        return scaled_pure;
+        return scaled_pure
 
     if features_class == "scaled_classified":
         return features.classify(scaled_pure)
@@ -50,13 +50,15 @@ def extract_to_csv(obs_list):
         print("creating features file: {}".format(fp))
         features.csv_create(fp)
         features_fp.append(fp)
+        fp = cfg.ensure_fp(cfg.features_scanned_root + features_class, cfg.features)
+        print("creating features file: {}".format(fp))
+        features.csv_create(fp)
+        features_fp.append(fp)
 
     for jsn in obs_list:
         obs = observations.json_to_observation(jsn)
+        
         pure_pure = features.observation_to_features(obs)
-
-        if pure_pure is None:
-            continue
 
         for features_class in cfg.features_classes:
 
@@ -67,6 +69,10 @@ def extract_to_csv(obs_list):
 
             fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
             features.csv_append(fp, out)
+
+            if obs.scanned:
+                fp = cfg.ensure_fp(cfg.features_scanned_root + features_class, cfg.features)
+                features.csv_append(fp, out)
 
     for fp in features_fp:
         size = os.path.getsize(fp)
