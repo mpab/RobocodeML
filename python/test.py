@@ -40,6 +40,7 @@ def test(conn):
             continue
 
         if len(msg) == 0:
+            print("empty message")
             connected = False
             continue
 
@@ -66,6 +67,7 @@ def test(conn):
             connected = False
 
     conn.close()
+    print("disconnected")
 
 
 def main():
