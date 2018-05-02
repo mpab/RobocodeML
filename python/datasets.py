@@ -35,12 +35,22 @@ def log():
 
 # -----------------------------------------------------------
 
+def check_discard_list(discard, target):
+
+    filtered = list(discard)
+
+    if target in discard:
+        filtered.remove(target)
+
+    return filtered
 
 def load_csv_and_discard(data_fp, discard_list, target_name):
     df = pd.read_csv(data_fp)
 
+    checked_discard_list = check_discard_list(discard_list, target_name)
+
     feature_names = list(df.columns)
-    for d in discard_list:
+    for d in checked_discard_list:
         for f in feature_names:
             if d in f:
                 log().debug('discard feature: {}'.format(d))
@@ -57,16 +67,16 @@ def load_csv_and_discard(data_fp, discard_list, target_name):
         feature_names=feature_names,
         target_name=target_name)
 
-    return ds, feature_names, target_names
+    return ds, df, feature_names, target_names
 
 
-def uncategorised_from_csv(data_fp, discard_list, target_name):
-    ds, feature_names, target_names = load_csv_and_discard(data_fp, discard_list, target_name)
+def from_csv(data_fp, discard_list, target_name):
+    ds, _, _, _ = load_csv_and_discard(data_fp, discard_list, target_name)
     return ds
 
 
-def categorised_from_csv(data_fp, discard_list, target_name):
-    ds, feature_names, target_names = load_csv_and_discard(data_fp, discard_list, target_name)
+def from_csv_with_target_names(data_fp, discard_list, target_name):
+    ds, _, _, target_names = load_csv_and_discard(data_fp, discard_list, target_name)
     ds.target_names = target_names
     return ds
 
@@ -79,7 +89,7 @@ def load_features_u():
         'shell_hits',
         'shell_wounds']
 
-    ds = uncategorised_from_csv(data_fp, discard_list, 'shell_intercepts')
+    ds = from_csv(data_fp, discard_list, 'shell_intercepts')
 
     return ds
 
@@ -92,7 +102,7 @@ def load_features_c():
         'shell_hits',
         'shell_wounds']
 
-    ds = categorised_from_csv(data_fp, discard_list, 'shell_intercepts')
+    ds = from_csv_with_target_names(data_fp, discard_list, 'shell_intercepts')
 
     return ds
 
@@ -114,6 +124,7 @@ def print_info(ds):
         print("no target name")
 
     try:
+        print("target names type:", type(ds.target_names))
         print("target names:", ds.target_names)
     except:
         print("no target names")
