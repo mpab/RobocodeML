@@ -8,7 +8,7 @@ start_robocode_headless () {
   -Ddebug=true \
   -DNOSECURITY=true \
   -DROBOTPATH=../java/target/classes \
-  -cp "../$ROBOCODE/libs/*:../java/lib/*:../java/target:/*" robocode.Robocode \
+  -cp "../$ROBOCODE/libs/*:../java/lib/*:../java/target/*" robocode.Robocode \
   -battle $1 \
   -nosound \
   -nodisplay \

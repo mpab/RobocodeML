@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+./run-battle ../battles/nntest-vs-nntest.battle

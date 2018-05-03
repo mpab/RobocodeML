@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-./run-battle ../battles/test-vs-random.battle
+./run-battle ../battles/nntest-vs-random.battle
