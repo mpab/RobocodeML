@@ -3,6 +3,7 @@
 import logging
 import os
 import datetime
+import traceback
 from timeit import default_timer as timer
 
 from sklearn.model_selection import cross_val_score
@@ -26,8 +27,8 @@ import graphs
 # -----------------------------------------------------------
 
 def tostrlist(v):
-        a = np.array([str(e) for e in v])
-        return list(a)
+    a = np.array([str(e) for e in v])
+    return list(a)
 
 # -----------------------------------------------------------
 
@@ -68,7 +69,18 @@ class Trainalyser:  # because it trains and analyses...
         self.classification_report = None
         self.accuracy_score = None
 
+        self.errors = []
+        self.num_errors = 0
+
         log().info("------------------------ NEW CLASSIFIER ---------------------------------")
+
+    def on_err(self, err, note=None):
+        if note is not None:
+            self.errors.append(note)
+            log().error(note)
+        self.errors.append(err)
+        log().error(err)
+        self.num_errors = self.num_errors + 1
 
     def split(self, splitter=train_test_split, test_size=0.33):
         log().info(
@@ -183,21 +195,65 @@ def train_and_evaluate(mm, features_class, target_name):
         log().info("model name: {}".format(mm.name))
         log().info("model description: {}".format(mm.description))
 
-        analyser.split()
-        analyser.train(mm.model)
-        analyser.test(mm.model)
-        analyser.assess()
-        analyser.report()
-        analyser.graph()
+        try:
+            analyser.split()
+        except:
+            log().error('analyser.split()')
+            log().error(traceback.format_exc())
+            return analyser
+
+        try:
+            analyser.train(mm.model)
+        except:
+            log().error('analyser.train(mm.model)')
+            log().error(traceback.format_exc())
+            return analyser
+        
+        try:
+            analyser.test(mm.model)
+        except:
+            log().error('analyser.test(mm.model)')
+            log().error(traceback.format_exc())
+            return analyser
+
+        try:
+            analyser.assess()
+        except:
+            log().error('analyser.assess()')
+            log().error(traceback.format_exc())
+            return analyser
+
+        try:
+            analyser.report()
+        except:
+            log().error('analyser.report()')
+            log().error(traceback.format_exc())
+            return analyser
+
+        try:
+            analyser.graph()
+        except:
+            log().error('analyser.graph()')
+            log().error(traceback.format_exc())
+            return analyser
 
         mm.save(working_folder)
+
+        return analyser
 
 
 def train_and_evaluate_all():
     for mm in models.generate(): 
         for features_class in cfg.features_classes:
             for target_name in cfg.onehot_targets:           
-                train_and_evaluate(mm, features_class, target_name)
+                tr = train_and_evaluate(mm, features_class, target_name)
+                if tr.num_errors > 0:
+                    log().info('=========================================================================')
+                    log().info('========================= ERROR SUMMARY =================================')
+                    for err in tr.errors:
+                        log().Info(err)
+                    log().info('=========================================================================')
+                    log().info('')
 
 
 def main():
