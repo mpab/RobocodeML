@@ -1,0 +1,3819 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50740
+          1       0.45      0.28      0.35       577
+          2       0.48      0.60      0.53       290
+          3       0.00      0.00      0.00        11
+
+avg / total       0.98      0.99      0.99     51618
+
+accuracy score: 0.986303
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50573>  133    34     . |
+1 |   267  <164>  146     . |
+2 |    48    68  <174>    . |
+3 |     2     2     7    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50573>  133    34     . |
+1 |   267  <164>  146     . |
+2 |    48    68  <174>    . |
+3 |     2     2     7    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50911): 0=50573, 2=174, 1=164, 3=0, 
+
+False Negatives (707): 1=413, 0=167, 2=116, 3=11, 
+
+False Positives (707): 0=317, 1=203, 2=187, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.48s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.99      0.95     35720
+          1       0.97      0.80      0.88     15898
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.931884
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35366>  354 |
+1 |  3162<12736>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35366>  354 |
+1 |  3162<12736>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48102): 0=35366, 1=12736, 
+
+False Negatives (3516): 1=3162, 0=354, 
+
+False Positives (3516): 0=3162, 1=354, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.48s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41618
+          1       0.62      0.09      0.16      9636
+          2       0.00      0.00      0.00       364
+
+avg / total       0.78      0.81      0.75     51618
+
+accuracy score: 0.814910
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41208>  410     . |
+1 |  8780  <856>    . |
+2 |   240   124    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41208>  410     . |
+1 |  8780  <856>    . |
+2 |   240   124    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42064): 0=41208, 1=856, 2=0, 
+
+False Negatives (9554): 1=8780, 0=410, 2=364, 
+
+False Positives (9554): 0=9020, 1=534, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.49s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41801
+          1       0.62      0.10      0.17      9498
+          2       0.00      0.00      0.00       319
+
+avg / total       0.78      0.82      0.76     51618
+
+accuracy score: 0.818881
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41314>  487     . |
+1 |  8543  <955>    . |
+2 |   224    95    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41314>  487     . |
+1 |  8543  <955>    . |
+2 |   224    95    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42269): 0=41314, 1=955, 2=0, 
+
+False Negatives (9349): 1=8543, 0=487, 2=319, 
+
+False Positives (9349): 0=8767, 1=582, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.48s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50542
+          1       0.00      0.00      0.00      1075
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979116
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50540>    2     . |
+1 |  1075    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50540>    2     . |
+1 |  1075    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50540): 0=50540, 1=0, 2=0, 
+
+False Negatives (1078): 1=1075, 0=2, 2=1, 
+
+False Positives (1078): 0=1076, 1=2, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.49s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50737
+          1       0.80      0.64      0.71       881
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.991205
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50599>  138 |
+1 |   316  <565>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50599>  138 |
+1 |   316  <565>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51164): 0=50599, 1=565, 
+
+False Negatives (454): 1=316, 0=138, 
+
+False Positives (454): 0=316, 1=138, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.48s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.99      0.95     35867
+          1       0.97      0.80      0.88     15751
+
+avg / total       0.94      0.93      0.93     51618
+
+accuracy score: 0.932524
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35515>  352 |
+1 |  3131<12620>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35515>  352 |
+1 |  3131<12620>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48135): 0=35515, 1=12620, 
+
+False Negatives (3483): 1=3131, 0=352, 
+
+False Positives (3483): 0=3131, 1=352, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.48s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41501
+          1       0.67      0.11      0.19     10117
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.815336
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40944>  557 |
+1 |  8975 <1142>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40944>  557 |
+1 |  8975 <1142>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42086): 0=40944, 1=1142, 
+
+False Negatives (9532): 1=8975, 0=557, 
+
+False Positives (9532): 0=8975, 1=557, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.47s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.99      0.90     41897
+          1       0.69      0.11      0.19      9721
+
+avg / total       0.80      0.82      0.77     51618
+
+accuracy score: 0.823240
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41394>  503 |
+1 |  8621 <1100>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41394>  503 |
+1 |  8621 <1100>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42494): 0=41394, 1=1100, 
+
+False Negatives (9124): 1=8621, 0=503, 
+
+False Positives (9124): 0=8621, 1=503, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.48s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50540
+          1       0.00      0.00      0.00      1078
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979116
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50540>    . |
+1 |  1078    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50540>    . |
+1 |  1078    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50540): 0=50540, 1=0, 
+
+False Negatives (1078): 1=1078, 0=0, 
+
+False Positives (1078): 0=1078, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.10s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50698
+          1       0.44      0.04      0.07       611
+          2       0.00      0.00      0.00       303
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982119
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50671>   27     .     . |
+1 |   587   <24>    .     . |
+2 |   300     3    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50671>   27     .     . |
+1 |   587   <24>    .     . |
+2 |   300     3    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50695): 0=50671, 1=24, 2=0, 3=0, 
+
+False Negatives (923): 1=587, 2=303, 0=27, 3=6, 
+
+False Positives (923): 0=893, 1=30, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.98      0.95     35959
+          1       0.95      0.81      0.88     15659
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.929656
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35271>  688 |
+1 |  2943<12716>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35271>  688 |
+1 |  2943<12716>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (47987): 0=35271, 1=12716, 
+
+False Negatives (3631): 1=2943, 0=688, 
+
+False Positives (3631): 0=2943, 1=688, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41564
+          1       0.55      0.12      0.20      9669
+          2       0.00      0.00      0.00       385
+
+avg / total       0.77      0.81      0.76     51618
+
+accuracy score: 0.812120
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40773>  791     . |
+1 |  8522 <1147>    . |
+2 |   228   157    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40773>  791     . |
+1 |  8522 <1147>    . |
+2 |   228   157    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41920): 0=40773, 1=1147, 2=0, 
+
+False Negatives (9698): 1=8522, 0=791, 2=385, 
+
+False Positives (9698): 0=8750, 1=948, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41903
+          1       0.64      0.06      0.10      9384
+          2       0.00      0.00      0.00       331
+
+avg / total       0.78      0.82      0.75     51618
+
+accuracy score: 0.817118
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41642>  261     . |
+1 |  8848  <536>    . |
+2 |   289    42    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41642>  261     . |
+1 |  8848  <536>    . |
+2 |   289    42    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42178): 0=41642, 1=536, 2=0, 
+
+False Negatives (9440): 1=8848, 2=331, 0=261, 
+
+False Positives (9440): 0=9137, 1=303, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50521
+          1       0.00      0.00      0.00      1094
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978748
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50521>    .     . |
+1 |  1094    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50521>    .     . |
+1 |  1094    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50521): 0=50521, 1=0, 2=0, 
+
+False Negatives (1097): 1=1094, 2=3, 0=0, 
+
+False Positives (1097): 0=1097, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.10s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50704
+          1       0.50      0.01      0.02       914
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982293
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50697>    7 |
+1 |   907    <7>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50697>    7 |
+1 |   907    <7>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50704): 0=50697, 1=7, 
+
+False Negatives (914): 1=907, 0=7, 
+
+False Positives (914): 0=907, 1=7, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.98      0.95     35924
+          1       0.95      0.82      0.88     15694
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.932795
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35291>  633 |
+1 |  2836<12858>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35291>  633 |
+1 |  2836<12858>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48149): 0=35291, 1=12858, 
+
+False Negatives (3469): 1=2836, 0=633, 
+
+False Positives (3469): 0=2836, 1=633, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41538
+          1       0.63      0.13      0.22     10080
+
+avg / total       0.78      0.81      0.76     51618
+
+accuracy score: 0.814948
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40757>  781 |
+1 |  8771 <1309>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40757>  781 |
+1 |  8771 <1309>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42066): 0=40757, 1=1309, 
+
+False Negatives (9552): 1=8771, 0=781, 
+
+False Positives (9552): 0=8771, 1=781, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41888
+          1       0.61      0.13      0.21      9730
+
+avg / total       0.79      0.82      0.77     51618
+
+accuracy score: 0.820005
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41094>  794 |
+1 |  8497 <1233>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41094>  794 |
+1 |  8497 <1233>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42327): 0=41094, 1=1233, 
+
+False Negatives (9291): 1=8497, 0=794, 
+
+False Positives (9291): 0=8497, 1=794, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50506
+          1       0.00      0.00      0.00      1112
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978457
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50506>    . |
+1 |  1112    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50506>    . |
+1 |  1112    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50506): 0=50506, 1=0, 
+
+False Negatives (1112): 1=1112, 0=0, 
+
+False Positives (1112): 0=1112, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.29s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50729
+          1       0.00      0.00      0.00       569
+          2       0.00      0.00      0.00       312
+          3       0.00      0.00      0.00         8
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982739
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50727>    2     .     . |
+1 |   569    <.>    .     . |
+2 |   312     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50727>    2     .     . |
+1 |   569    <.>    .     . |
+2 |   312     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50727): 0=50727, 2=0, 1=0, 3=0, 
+
+False Negatives (891): 1=569, 2=312, 3=8, 0=2, 
+
+False Positives (891): 0=889, 1=2, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.31s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.96      0.82     35677
+          1       0.64      0.16      0.26     15941
+
+avg / total       0.69      0.71      0.65     51618
+
+accuracy score: 0.712716
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34190> 1487 |
+1 | 13342 <2599>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34190> 1487 |
+1 | 13342 <2599>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36789): 0=34190, 1=2599, 
+
+False Negatives (14829): 1=13342, 0=1487, 
+
+False Positives (14829): 0=13342, 1=1487, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.31s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41581
+          1       0.00      0.00      0.00      9681
+          2       0.00      0.00      0.00       356
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805514
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41579>    2     . |
+1 |  9681    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41579>    2     . |
+1 |  9681    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41579): 0=41579, 1=0, 2=0, 
+
+False Negatives (10039): 1=9681, 2=356, 0=2, 
+
+False Positives (10039): 0=10037, 1=2, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.31s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41902
+          1       0.00      0.00      0.00      9375
+          2       0.00      0.00      0.00       340
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811732
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41900>    2     .     . |
+1 |  9375    <.>    .     . |
+2 |   340     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41900>    2     .     . |
+1 |  9375    <.>    .     . |
+2 |   340     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41900): 0=41900, 2=0, 1=0, 3=0, 
+
+False Negatives (9718): 1=9375, 2=340, 0=2, 3=1, 
+
+False Positives (9718): 0=9716, 1=2, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.31s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50535
+          1       0.00      0.00      0.00      1081
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979000
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50534>    .     1 |
+1 |  1081    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50534>    .     1 |
+1 |  1081    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50534): 0=50534, 1=0, 2=0, 
+
+False Negatives (1084): 1=1081, 2=2, 0=1, 
+
+False Positives (1084): 0=1083, 2=1, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.29s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50737
+          1       0.00      0.00      0.00       881
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982913
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50736>    1 |
+1 |   881    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50736>    1 |
+1 |   881    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50736): 0=50736, 1=0, 
+
+False Negatives (882): 1=881, 0=1, 
+
+False Positives (882): 0=881, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.31s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.95      0.82     35986
+          1       0.61      0.18      0.28     15632
+
+avg / total       0.69      0.72      0.66     51618
+
+accuracy score: 0.717521
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34174> 1812 |
+1 | 12769 <2863>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34174> 1812 |
+1 | 12769 <2863>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37037): 0=34174, 1=2863, 
+
+False Negatives (14581): 1=12769, 0=1812, 
+
+False Positives (14581): 0=12769, 1=1812, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.31s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41635
+          1       0.14      0.00      0.00      9983
+
+avg / total       0.68      0.81      0.72     51618
+
+accuracy score: 0.806405
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41623>   12 |
+1 |  9981    <2>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41623>   12 |
+1 |  9981    <2>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41625): 0=41623, 1=2, 
+
+False Negatives (9993): 1=9981, 0=12, 
+
+False Positives (9993): 0=9981, 1=12, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.30s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41855
+          1       0.00      0.00      0.00      9763
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810802
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41852>    3 |
+1 |  9763    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41852>    3 |
+1 |  9763    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41852): 0=41852, 1=0, 
+
+False Negatives (9766): 1=9763, 0=3, 
+
+False Positives (9766): 0=9763, 1=3, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.32s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50461
+          1       0.00      0.00      0.00      1157
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977566
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50460>    1 |
+1 |  1157    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50460>    1 |
+1 |  1157    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50460): 0=50460, 1=0, 
+
+False Negatives (1158): 1=1157, 0=1, 
+
+False Positives (1158): 0=1157, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.28s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50707
+          1       0.00      0.00      0.00       585
+          2       0.00      0.00      0.00       319
+          3       0.00      0.00      0.00         7
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982351
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50707>    .     .     . |
+1 |   585    <.>    .     . |
+2 |   319     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50707>    .     .     . |
+1 |   585    <.>    .     . |
+2 |   319     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50707): 0=50707, 2=0, 1=0, 3=0, 
+
+False Negatives (911): 1=585, 2=319, 3=7, 0=0, 
+
+False Positives (911): 0=911, 1=0, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.29s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.97      0.83     35848
+          1       0.70      0.18      0.29     15770
+
+avg / total       0.72      0.73      0.66     51618
+
+accuracy score: 0.725600
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34630> 1218 |
+1 | 12946 <2824>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34630> 1218 |
+1 | 12946 <2824>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37454): 0=34630, 1=2824, 
+
+False Negatives (14164): 1=12946, 0=1218, 
+
+False Positives (14164): 0=12946, 1=1218, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.30s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41725
+          1       0.25      0.00      0.00      9535
+          2       0.00      0.00      0.00       358
+
+avg / total       0.70      0.81      0.72     51618
+
+accuracy score: 0.808303
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41722>    3     . |
+1 |  9534    <1>    . |
+2 |   358     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41722>    3     . |
+1 |  9534    <1>    . |
+2 |   358     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41723): 0=41722, 1=1, 2=0, 
+
+False Negatives (9895): 1=9534, 2=358, 0=3, 
+
+False Positives (9895): 0=9892, 1=3, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.29s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41780
+          1       0.50      0.00      0.00      9545
+          2       0.00      0.00      0.00       293
+
+avg / total       0.75      0.81      0.72     51618
+
+accuracy score: 0.809408
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41777>    3     . |
+1 |  9542    <3>    . |
+2 |   293     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41777>    3     . |
+1 |  9542    <3>    . |
+2 |   293     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41780): 0=41777, 1=3, 2=0, 
+
+False Negatives (9838): 1=9542, 2=293, 0=3, 
+
+False Positives (9838): 0=9835, 1=3, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.30s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50546
+          1       0.00      0.00      0.00      1071
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979174
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50543>    2     1 |
+1 |  1071    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50543>    2     1 |
+1 |  1071    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50543): 0=50543, 1=0, 2=0, 
+
+False Negatives (1075): 1=1071, 0=3, 2=1, 
+
+False Positives (1075): 0=1072, 1=2, 2=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.27s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50737
+          1       0.33      0.00      0.00       881
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982913
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50735>    2 |
+1 |   880    <1>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50735>    2 |
+1 |   880    <1>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50736): 0=50735, 1=1, 
+
+False Negatives (882): 1=880, 0=2, 
+
+False Positives (882): 0=880, 1=2, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.29s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.97      0.83     36011
+          1       0.69      0.18      0.28     15607
+
+avg / total       0.72      0.73      0.66     51618
+
+accuracy score: 0.726549
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34764> 1247 |
+1 | 12868 <2739>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34764> 1247 |
+1 | 12868 <2739>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37503): 0=34764, 1=2739, 
+
+False Negatives (14115): 1=12868, 0=1247, 
+
+False Positives (14115): 0=12868, 1=1247, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.30s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41676
+          1       0.14      0.00      0.00      9942
+
+avg / total       0.68      0.81      0.72     51618
+
+accuracy score: 0.807296
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41670>    6 |
+1 |  9941    <1>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41670>    6 |
+1 |  9941    <1>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41671): 0=41670, 1=1, 
+
+False Negatives (9947): 1=9941, 0=6, 
+
+False Positives (9947): 0=9941, 1=6, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.30s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41823
+          1       0.00      0.00      0.00      9795
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810124
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41817>    6 |
+1 |  9795    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41817>    6 |
+1 |  9795    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41817): 0=41817, 1=0, 
+
+False Negatives (9801): 1=9795, 0=6, 
+
+False Positives (9801): 0=9795, 1=6, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.29s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50479
+          1       0.00      0.00      0.00      1139
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977915
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50478>    1 |
+1 |  1139    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50478>    1 |
+1 |  1139    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50478): 0=50478, 1=0, 
+
+False Negatives (1140): 1=1139, 0=1, 
+
+False Positives (1140): 0=1139, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50736
+          1       0.00      0.00      0.00       573
+          2       0.00      0.00      0.00       302
+          3       0.00      0.00      0.00         7
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982874
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50734>    1     1     . |
+1 |   573    <.>    .     . |
+2 |   302     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50734>    1     1     . |
+1 |   573    <.>    .     . |
+2 |   302     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50734): 0=50734, 2=0, 1=0, 3=0, 
+
+False Negatives (884): 1=573, 2=302, 3=7, 0=2, 
+
+False Positives (884): 0=882, 1=1, 2=1, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.38s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.96      0.83     35877
+          1       0.66      0.19      0.29     15741
+
+avg / total       0.71      0.72      0.67     51618
+
+accuracy score: 0.723333
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34361> 1516 |
+1 | 12765 <2976>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34361> 1516 |
+1 | 12765 <2976>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37337): 0=34361, 1=2976, 
+
+False Negatives (14281): 1=12765, 0=1516, 
+
+False Positives (14281): 0=12765, 1=1516, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.37s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41603
+          1       0.17      0.00      0.00      9663
+          2       0.00      0.00      0.00       352
+
+avg / total       0.68      0.81      0.72     51618
+
+accuracy score: 0.805901
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41598>    5     . |
+1 |  9662    <1>    . |
+2 |   352     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41598>    5     . |
+1 |  9662    <1>    . |
+2 |   352     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41599): 0=41598, 1=1, 2=0, 
+
+False Negatives (10019): 1=9662, 2=352, 0=5, 
+
+False Positives (10019): 0=10014, 1=5, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.37s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41938
+          1       0.40      0.00      0.00      9374
+          2       0.00      0.00      0.00       306
+
+avg / total       0.73      0.81      0.73     51618
+
+accuracy score: 0.812449
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41935>    3     . |
+1 |  9372    <2>    . |
+2 |   306     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41935>    3     . |
+1 |  9372    <2>    . |
+2 |   306     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41937): 0=41935, 1=2, 2=0, 
+
+False Negatives (9681): 1=9372, 2=306, 0=3, 
+
+False Positives (9681): 0=9678, 1=3, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.37s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50525
+          1       0.00      0.00      0.00      1091
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978806
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50524>    1     . |
+1 |  1091    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50524>    1     . |
+1 |  1091    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50524): 0=50524, 1=0, 2=0, 
+
+False Negatives (1094): 1=1091, 2=2, 0=1, 
+
+False Positives (1094): 0=1093, 1=1, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.99      0.99     50665
+          1       0.53      0.75      0.62       953
+
+avg / total       0.99      0.98      0.98     51618
+
+accuracy score: 0.982932
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50019>  646 |
+1 |   235  <718>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50019>  646 |
+1 |   235  <718>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50737): 0=50019, 1=718, 
+
+False Negatives (881): 0=646, 1=235, 
+
+False Positives (881): 1=646, 0=235, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.38s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.96      0.83     35977
+          1       0.68      0.19      0.29     15641
+
+avg / total       0.71      0.73      0.67     51618
+
+accuracy score: 0.726607
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34586> 1391 |
+1 | 12721 <2920>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34586> 1391 |
+1 | 12721 <2920>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37506): 0=34586, 1=2920, 
+
+False Negatives (14112): 1=12721, 0=1391, 
+
+False Positives (14112): 0=12721, 1=1391, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.37s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41808
+          1       0.50      0.00      0.00      9810
+
+avg / total       0.75      0.81      0.73     51618
+
+accuracy score: 0.809950
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41803>    5 |
+1 |  9805    <5>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41803>    5 |
+1 |  9805    <5>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41808): 0=41803, 1=5, 
+
+False Negatives (9810): 1=9805, 0=5, 
+
+False Positives (9810): 0=9805, 1=5, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.36s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41954
+          1       0.14      0.00      0.00      9664
+
+avg / total       0.69      0.81      0.73     51618
+
+accuracy score: 0.812682
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41948>    6 |
+1 |  9663    <1>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41948>    6 |
+1 |  9663    <1>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41949): 0=41948, 1=1, 
+
+False Negatives (9669): 1=9663, 0=6, 
+
+False Positives (9669): 0=9663, 1=6, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.39s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50521
+          1       0.00      0.00      0.00      1097
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978651
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50516>    5 |
+1 |  1097    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50516>    5 |
+1 |  1097    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50516): 0=50516, 1=0, 
+
+False Negatives (1102): 1=1097, 0=5, 
+
+False Positives (1102): 0=1097, 1=5, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.36s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50727
+          1       0.00      0.00      0.00       582
+          2       0.00      0.00      0.00       301
+          3       0.00      0.00      0.00         8
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982719
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50726>    .     1     . |
+1 |   582    <.>    .     . |
+2 |   301     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50726>    .     1     . |
+1 |   582    <.>    .     . |
+2 |   301     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50726): 0=50726, 2=0, 1=0, 3=0, 
+
+False Negatives (892): 1=582, 2=301, 3=8, 0=1, 
+
+False Positives (892): 0=891, 2=1, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.98      0.84     35790
+          1       0.78      0.18      0.29     15828
+
+avg / total       0.74      0.73      0.67     51618
+
+accuracy score: 0.733233
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34968>  822 |
+1 | 12948 <2880>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34968>  822 |
+1 | 12948 <2880>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37848): 0=34968, 1=2880, 
+
+False Negatives (13770): 1=12948, 0=822, 
+
+False Positives (13770): 0=12948, 1=822, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.36s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41583
+          1       0.00      0.00      0.00      9657
+          2       0.00      0.00      0.00       378
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805494
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41578>    5     . |
+1 |  9657    <.>    . |
+2 |   378     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41578>    5     . |
+1 |  9657    <.>    . |
+2 |   378     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41578): 0=41578, 1=0, 2=0, 
+
+False Negatives (10040): 1=9657, 2=378, 0=5, 
+
+False Positives (10040): 0=10035, 1=5, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41904
+          1       0.67      0.00      0.00      9376
+          2       0.00      0.00      0.00       337
+          3       0.00      0.00      0.00         1
+
+avg / total       0.78      0.81      0.73     51618
+
+accuracy score: 0.811829
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41903>    1     .     . |
+1 |  9374    <2>    .     . |
+2 |   337     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41903>    1     .     . |
+1 |  9374    <2>    .     . |
+2 |   337     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41905): 0=41903, 1=2, 2=0, 3=0, 
+
+False Negatives (9713): 1=9374, 2=337, 0=1, 3=1, 
+
+False Positives (9713): 0=9712, 1=1, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50489
+          1       0.00      0.00      0.00      1125
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978070
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    3     . |
+1 |  1125    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    3     . |
+1 |  1125    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50486): 0=50486, 1=0, 2=0, 
+
+False Negatives (1132): 1=1125, 2=4, 0=3, 
+
+False Positives (1132): 0=1129, 1=3, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50715
+          1       0.00      0.00      0.00       903
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982487
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50714>    1 |
+1 |   903    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50714>    1 |
+1 |   903    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50714): 0=50714, 1=0, 
+
+False Negatives (904): 1=903, 0=1, 
+
+False Positives (904): 0=903, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.35s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.97      0.84     35932
+          1       0.75      0.20      0.32     15686
+
+avg / total       0.74      0.74      0.68     51618
+
+accuracy score: 0.737146
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34899> 1033 |
+1 | 12535 <3151>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34899> 1033 |
+1 | 12535 <3151>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38050): 0=34899, 1=3151, 
+
+False Negatives (13568): 1=12535, 0=1033, 
+
+False Positives (13568): 0=12535, 1=1033, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.36s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41609
+          1       0.12      0.00      0.00     10009
+
+avg / total       0.67      0.81      0.72     51618
+
+accuracy score: 0.805979
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41602>    7 |
+1 | 10008    <1>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41602>    7 |
+1 | 10008    <1>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41603): 0=41602, 1=1, 
+
+False Negatives (10015): 1=10008, 0=7, 
+
+False Positives (10015): 0=10008, 1=7, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.36s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41913
+          1       0.29      0.00      0.00      9705
+
+avg / total       0.71      0.81      0.73     51618
+
+accuracy score: 0.811926
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41908>    5 |
+1 |  9703    <2>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41908>    5 |
+1 |  9703    <2>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41910): 0=41908, 1=2, 
+
+False Negatives (9708): 1=9703, 0=5, 
+
+False Positives (9708): 0=9703, 1=5, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.36s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50479
+          1       0.00      0.00      0.00      1139
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977895
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50477>    2 |
+1 |  1139    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50477>    2 |
+1 |  1139    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50477): 0=50477, 1=0, 
+
+False Negatives (1141): 1=1139, 0=2, 
+
+False Positives (1141): 0=1139, 1=2, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.57s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50684
+          1       0.50      0.18      0.27       610
+          2       0.41      0.69      0.52       312
+          3       0.00      0.00      0.00        12
+
+avg / total       0.98      0.99      0.98     51618
+
+accuracy score: 0.985393
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50538>   66    80     . |
+1 |   281  <112>  217     . |
+2 |    57    41  <214>    . |
+3 |     1     3     8    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50538>   66    80     . |
+1 |   281  <112>  217     . |
+2 |    57    41  <214>    . |
+3 |     1     3     8    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50864): 0=50538, 2=214, 1=112, 3=0, 
+
+False Negatives (754): 1=498, 0=146, 2=98, 3=12, 
+
+False Positives (754): 0=339, 2=305, 1=110, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.55s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.75      0.93      0.83     35775
+          1       0.64      0.28      0.39     15843
+
+avg / total       0.71      0.73      0.69     51618
+
+accuracy score: 0.731237
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33270> 2505 |
+1 | 11368 <4475>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33270> 2505 |
+1 | 11368 <4475>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37745): 0=33270, 1=4475, 
+
+False Negatives (13873): 1=11368, 0=2505, 
+
+False Positives (13873): 0=11368, 1=2505, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.55s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41614
+          1       0.62      0.08      0.14      9651
+          2       0.00      0.00      0.00       353
+
+avg / total       0.78      0.81      0.75     51618
+
+accuracy score: 0.814038
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41279>  335     . |
+1 |  8911  <740>    . |
+2 |   227   126    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41279>  335     . |
+1 |  8911  <740>    . |
+2 |   227   126    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42019): 0=41279, 1=740, 2=0, 
+
+False Negatives (9599): 1=8911, 2=353, 0=335, 
+
+False Positives (9599): 0=9138, 1=461, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.55s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41800
+          1       0.65      0.08      0.14      9520
+          2       0.00      0.00      0.00       297
+          3       0.00      0.00      0.00         1
+
+avg / total       0.79      0.82      0.75     51618
+
+accuracy score: 0.818125
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41466>  334     .     . |
+1 |  8756  <764>    .     . |
+2 |   217    80    <.>    . |
+3 |     .     1     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41466>  334     .     . |
+1 |  8756  <764>    .     . |
+2 |   217    80    <.>    . |
+3 |     .     1     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (42230): 0=41466, 1=764, 2=0, 3=0, 
+
+False Negatives (9388): 1=8756, 0=334, 2=297, 3=1, 
+
+False Positives (9388): 0=8973, 1=415, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.56s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50516
+          1       0.00      0.00      0.00      1097
+          2       0.00      0.00      0.00         5
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978554
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50511>    5     . |
+1 |  1097    <.>    . |
+2 |     5     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50511>    5     . |
+1 |  1097    <.>    . |
+2 |     5     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50511): 0=50511, 1=0, 2=0, 
+
+False Negatives (1107): 1=1097, 0=5, 2=5, 
+
+False Positives (1107): 0=1102, 1=5, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.56s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50695
+          1       0.81      0.64      0.71       923
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.990837
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50557>  138 |
+1 |   335  <588>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50557>  138 |
+1 |   335  <588>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51145): 0=50557, 1=588, 
+
+False Negatives (473): 1=335, 0=138, 
+
+False Positives (473): 0=335, 1=138, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.93      0.83     35838
+          1       0.64      0.26      0.37     15780
+
+avg / total       0.71      0.73      0.69     51618
+
+accuracy score: 0.728622
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33488> 2350 |
+1 | 11658 <4122>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33488> 2350 |
+1 | 11658 <4122>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37610): 0=33488, 1=4122, 
+
+False Negatives (14008): 1=11658, 0=2350, 
+
+False Positives (14008): 0=11658, 1=2350, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.55s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41573
+          1       0.70      0.10      0.18     10045
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.816982
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41134>  439 |
+1 |  9008 <1037>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41134>  439 |
+1 |  9008 <1037>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42171): 0=41134, 1=1037, 
+
+False Negatives (9447): 1=9008, 0=439, 
+
+False Positives (9447): 0=9008, 1=439, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41748
+          1       0.69      0.09      0.16      9870
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.818532
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41348>  400 |
+1 |  8967  <903>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41348>  400 |
+1 |  8967  <903>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42251): 0=41348, 1=903, 
+
+False Negatives (9367): 1=8967, 0=400, 
+
+False Positives (9367): 0=8967, 1=400, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50454
+          1       0.00      0.00      0.00      1164
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977392
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50451>    3 |
+1 |  1164    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50451>    3 |
+1 |  1164    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50451): 0=50451, 1=0, 
+
+False Negatives (1167): 1=1164, 0=3, 
+
+False Positives (1167): 0=1164, 1=3, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.55s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50687
+          1       1.00      0.00      0.01       600
+          2       0.00      0.00      0.00       321
+          3       0.00      0.00      0.00        10
+
+avg / total       0.98      0.98      0.97     51618
+
+accuracy score: 0.981983
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50686>    .     1     . |
+1 |   598    <2>    .     . |
+2 |   321     .    <.>    . |
+3 |    10     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50686>    .     1     . |
+1 |   598    <2>    .     . |
+2 |   321     .    <.>    . |
+3 |    10     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50688): 0=50686, 1=2, 2=0, 3=0, 
+
+False Negatives (930): 1=598, 2=321, 3=10, 0=1, 
+
+False Positives (930): 0=929, 2=1, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.90      0.84     36057
+          1       0.66      0.45      0.54     15561
+
+avg / total       0.75      0.76      0.75     51618
+
+accuracy score: 0.764927
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32485> 3572 |
+1 |  8562 <6999>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32485> 3572 |
+1 |  8562 <6999>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39484): 0=32485, 1=6999, 
+
+False Negatives (12134): 1=8562, 0=3572, 
+
+False Positives (12134): 0=8562, 1=3572, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41663
+          1       0.59      0.10      0.17      9593
+          2       0.00      0.00      0.00       362
+
+avg / total       0.77      0.81      0.76     51618
+
+accuracy score: 0.814987
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41134>  529     . |
+1 |  8659  <934>    . |
+2 |   239   123    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41134>  529     . |
+1 |  8659  <934>    . |
+2 |   239   123    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42068): 0=41134, 1=934, 2=0, 
+
+False Negatives (9550): 1=8659, 0=529, 2=362, 
+
+False Positives (9550): 0=8898, 1=652, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.99      0.90     41866
+          1       0.58      0.10      0.18      9430
+          2       0.00      0.00      0.00       322
+
+avg / total       0.78      0.82      0.76     51618
+
+accuracy score: 0.818184
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41259>  607     . |
+1 |  8456  <974>    . |
+2 |   218   104    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41259>  607     . |
+1 |  8456  <974>    . |
+2 |   218   104    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42233): 0=41259, 1=974, 2=0, 
+
+False Negatives (9385): 1=8456, 0=607, 2=322, 
+
+False Positives (9385): 0=8674, 1=711, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50502
+          1       0.00      0.00      0.00      1112
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978360
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50501>    1     . |
+1 |  1112    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50501>    1     . |
+1 |  1112    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50501): 0=50501, 1=0, 2=0, 
+
+False Negatives (1117): 1=1112, 2=4, 0=1, 
+
+False Positives (1117): 0=1116, 1=1, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.46s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50709
+          1       0.56      0.60      0.58       909
+
+avg / total       0.99      0.98      0.98     51618
+
+accuracy score: 0.984540
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50279>  430 |
+1 |   368  <541>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50279>  430 |
+1 |   368  <541>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50820): 0=50279, 1=541, 
+
+False Negatives (798): 0=430, 1=368, 
+
+False Positives (798): 1=430, 0=368, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.90      0.84     35863
+          1       0.66      0.45      0.54     15755
+
+avg / total       0.75      0.76      0.75     51618
+
+accuracy score: 0.762777
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32278> 3585 |
+1 |  8660 <7095>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32278> 3585 |
+1 |  8660 <7095>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39373): 0=32278, 1=7095, 
+
+False Negatives (12245): 1=8660, 0=3585, 
+
+False Positives (12245): 0=8660, 1=3585, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.56s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41657
+          1       0.65      0.11      0.19      9961
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.817157
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41049>  608 |
+1 |  8830 <1131>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41049>  608 |
+1 |  8830 <1131>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42180): 0=41049, 1=1131, 
+
+False Negatives (9438): 1=8830, 0=608, 
+
+False Positives (9438): 0=8830, 1=608, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41883
+          1       0.63      0.12      0.20      9735
+
+avg / total       0.79      0.82      0.77     51618
+
+accuracy score: 0.820644
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41234>  649 |
+1 |  8609 <1126>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41234>  649 |
+1 |  8609 <1126>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42360): 0=41234, 1=1126, 
+
+False Negatives (9258): 1=8609, 0=649, 
+
+False Positives (9258): 0=8609, 1=649, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50562
+          1       0.00      0.00      0.00      1056
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979465
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50558>    4 |
+1 |  1056    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50558>    4 |
+1 |  1056    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50558): 0=50558, 1=0, 
+
+False Negatives (1060): 1=1056, 0=4, 
+
+False Positives (1060): 0=1056, 1=4, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

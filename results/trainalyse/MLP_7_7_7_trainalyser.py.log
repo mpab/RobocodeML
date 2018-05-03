@@ -1,0 +1,3822 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.15s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50749
+          1       0.46      0.42      0.44       591
+          2       0.47      0.27      0.34       273
+          3       0.00      0.00      0.00         5
+
+avg / total       0.98      0.99      0.99     51618
+
+accuracy score: 0.986361
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50593>  135    21     . |
+1 |   282  <248>   61     . |
+2 |    48   152   <73>    . |
+3 |     .     4     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50593>  135    21     . |
+1 |   282  <248>   61     . |
+2 |    48   152   <73>    . |
+3 |     .     4     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50914): 0=50593, 1=248, 2=73, 3=0, 
+
+False Negatives (704): 1=343, 2=200, 0=156, 3=5, 
+
+False Positives (704): 0=330, 1=291, 2=83, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 19.42s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.93      0.90     36050
+          1       0.80      0.69      0.74     15568
+
+avg / total       0.85      0.85      0.85     51618
+
+accuracy score: 0.854586
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33426> 2624 |
+1 |  4882<10686>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33426> 2624 |
+1 |  4882<10686>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44112): 0=33426, 1=10686, 
+
+False Negatives (7506): 1=4882, 0=2624, 
+
+False Positives (7506): 0=4882, 1=2624, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.84s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.89     41495
+          1       0.57      0.11      0.18      9750
+          2       0.00      0.00      0.00       373
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.811306
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40831>  664     . |
+1 |  8703 <1047>    . |
+2 |   235   138    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40831>  664     . |
+1 |  8703 <1047>    . |
+2 |   235   138    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41878): 0=40831, 1=1047, 2=0, 
+
+False Negatives (9740): 1=8703, 0=664, 2=373, 
+
+False Positives (9740): 0=8938, 1=802, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.54s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.99      0.90     41843
+          1       0.58      0.11      0.18      9447
+          2       0.00      0.00      0.00       327
+          3       0.00      0.00      0.00         1
+
+avg / total       0.78      0.82      0.76     51618
+
+accuracy score: 0.817970
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41216>  627     .     . |
+1 |  8441 <1006>    .     . |
+2 |   219   108    <.>    . |
+3 |     .     1     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41216>  627     .     . |
+1 |  8441 <1006>    .     . |
+2 |   219   108    <.>    . |
+3 |     .     1     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (42222): 0=41216, 1=1006, 2=0, 3=0, 
+
+False Negatives (9396): 1=8441, 0=627, 2=327, 3=1, 
+
+False Positives (9396): 0=8660, 1=736, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.08s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50513
+          1       0.00      0.00      0.00      1104
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978593
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50513>    .     . |
+1 |  1104    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50513>    .     . |
+1 |  1104    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50513): 0=50513, 2=0, 1=0, 
+
+False Negatives (1105): 1=1104, 2=1, 0=0, 
+
+False Positives (1105): 0=1105, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50698
+          1       0.79      0.62      0.69       920
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.990197
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50545>  153 |
+1 |   353  <567>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50545>  153 |
+1 |   353  <567>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51112): 0=50545, 1=567, 
+
+False Negatives (506): 1=353, 0=153, 
+
+False Positives (506): 0=353, 1=153, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 18.43s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.90      0.93      0.92     35835
+          1       0.84      0.76      0.80     15783
+
+avg / total       0.88      0.88      0.88     51618
+
+accuracy score: 0.881340
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33484> 2351 |
+1 |  3774<12009>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33484> 2351 |
+1 |  3774<12009>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (45493): 0=33484, 1=12009, 
+
+False Negatives (6125): 1=3774, 0=2351, 
+
+False Positives (6125): 0=3774, 1=2351, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.03s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41730
+          1       0.68      0.10      0.17      9888
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.818203
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41293>  437 |
+1 |  8947  <941>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41293>  437 |
+1 |  8947  <941>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42234): 0=41293, 1=941, 
+
+False Negatives (9384): 1=8947, 0=437, 
+
+False Positives (9384): 0=8947, 1=437, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 12.91s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41723
+          1       0.65      0.10      0.18      9895
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.817544
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41178>  545 |
+1 |  8873 <1022>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41178>  545 |
+1 |  8873 <1022>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42200): 0=41178, 1=1022, 
+
+False Negatives (9418): 1=8873, 0=545, 
+
+False Positives (9418): 0=8873, 1=545, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.52s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50474
+          1       0.00      0.00      0.00      1144
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977837
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50474>    . |
+1 |  1144    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50474>    . |
+1 |  1144    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50474): 0=50474, 1=0, 
+
+False Negatives (1144): 1=1144, 0=0, 
+
+False Positives (1144): 0=1144, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.13s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50704
+          1       0.00      0.00      0.00       602
+          2       0.00      0.00      0.00       305
+          3       0.00      0.00      0.00         7
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982293
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50704>    .     .     . |
+1 |   602    <.>    .     . |
+2 |   305     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50704>    .     .     . |
+1 |   602    <.>    .     . |
+2 |   305     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50704): 0=50704, 2=0, 3=0, 1=0, 
+
+False Negatives (914): 1=602, 2=305, 3=7, 0=0, 
+
+False Positives (914): 0=914, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 39.69s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.89      0.90      0.89     35991
+          1       0.76      0.75      0.76     15627
+
+avg / total       0.85      0.85      0.85     51618
+
+accuracy score: 0.852493
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32267> 3724 |
+1 |  3890<11737>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32267> 3724 |
+1 |  3890<11737>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44004): 0=32267, 1=11737, 
+
+False Negatives (7614): 1=3890, 0=3724, 
+
+False Positives (7614): 0=3890, 1=3724, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.25s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41660
+          1       0.55      0.11      0.18      9602
+          2       0.00      0.00      0.00       356
+
+avg / total       0.77      0.81      0.76     51618
+
+accuracy score: 0.813495
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40960>  700     . |
+1 |  8571 <1031>    . |
+2 |   206   150    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40960>  700     . |
+1 |  8571 <1031>    . |
+2 |   206   150    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41991): 0=40960, 1=1031, 2=0, 
+
+False Negatives (9627): 1=8571, 0=700, 2=356, 
+
+False Positives (9627): 0=8777, 1=850, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.27s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41716
+          1       0.59      0.07      0.13      9581
+          2       0.00      0.00      0.00       321
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.813805
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41305>  411     . |
+1 |  8879  <702>    . |
+2 |   246    75    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41305>  411     . |
+1 |  8879  <702>    . |
+2 |   246    75    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42007): 0=41305, 1=702, 2=0, 
+
+False Negatives (9611): 1=8879, 0=411, 2=321, 
+
+False Positives (9611): 0=9125, 1=486, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.68s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50492
+          1       0.00      0.00      0.00      1124
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978186
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50492>    .     . |
+1 |  1124    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50492>    .     . |
+1 |  1124    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50492): 0=50492, 2=0, 1=0, 
+
+False Negatives (1126): 1=1124, 2=2, 0=0, 
+
+False Positives (1126): 0=1126, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.73s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50716
+          1       0.44      0.06      0.11       902
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.982235
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50645>   71 |
+1 |   846   <56>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50645>   71 |
+1 |   846   <56>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50701): 0=50645, 1=56, 
+
+False Negatives (917): 1=846, 0=71, 
+
+False Positives (917): 0=846, 1=71, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 25.31s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.96      0.94      0.95     35871
+          1       0.86      0.90      0.88     15747
+
+avg / total       0.93      0.92      0.93     51618
+
+accuracy score: 0.924929
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33550> 2321 |
+1 |  1554<14193>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33550> 2321 |
+1 |  1554<14193>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (47743): 0=33550, 1=14193, 
+
+False Negatives (3875): 0=2321, 1=1554, 
+
+False Positives (3875): 1=2321, 0=1554, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.53s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.89     41554
+          1       0.61      0.12      0.21     10064
+
+avg / total       0.78      0.81      0.76     51618
+
+accuracy score: 0.813650
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40745>  809 |
+1 |  8810 <1254>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40745>  809 |
+1 |  8810 <1254>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41999): 0=40745, 1=1254, 
+
+False Negatives (9619): 1=8810, 0=809, 
+
+False Positives (9619): 0=8810, 1=809, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.82s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41852
+          1       0.62      0.11      0.18      9766
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.818358
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41200>  652 |
+1 |  8724 <1042>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41200>  652 |
+1 |  8724 <1042>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42242): 0=41200, 1=1042, 
+
+False Negatives (9376): 1=8724, 0=652, 
+
+False Positives (9376): 0=8724, 1=652, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: MLP_7_7_7
+model description: MLP_7_7_7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.99s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50506
+          1       0.00      0.00      0.00      1112
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978457
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50506>    . |
+1 |  1112    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50506>    . |
+1 |  1112    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50506): 0=50506, 1=0, 
+
+False Negatives (1112): 1=1112, 0=0, 
+
+False Positives (1112): 0=1112, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.40s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50717
+          1       0.00      0.00      0.00       565
+          2       0.00      0.00      0.00       329
+          3       0.00      0.00      0.00         7
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982545
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50717>    .     .     . |
+1 |   565    <.>    .     . |
+2 |   329     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50717>    .     .     . |
+1 |   565    <.>    .     . |
+2 |   329     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50717): 0=50717, 2=0, 3=0, 1=0, 
+
+False Negatives (901): 1=565, 2=329, 3=7, 0=0, 
+
+False Positives (901): 0=901, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 27.56s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.92      0.84     35920
+          1       0.68      0.37      0.48     15698
+
+avg / total       0.74      0.75      0.73     51618
+
+accuracy score: 0.754775
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33105> 2815 |
+1 |  9843 <5855>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33105> 2815 |
+1 |  9843 <5855>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38960): 0=33105, 1=5855, 
+
+False Negatives (12658): 1=9843, 0=2815, 
+
+False Positives (12658): 0=9843, 1=2815, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 9.55s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41505
+          1       0.00      0.00      0.00      9757
+          2       0.00      0.00      0.00       356
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.804080
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41505>    .     . |
+1 |  9757    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41505>    .     . |
+1 |  9757    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41505): 0=41505, 2=0, 1=0, 
+
+False Negatives (10113): 1=9757, 2=356, 0=0, 
+
+False Positives (10113): 0=10113, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.12s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41912
+          1       0.00      0.00      0.00      9390
+          2       0.00      0.00      0.00       315
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811965
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41912>    .     .     . |
+1 |  9390    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41912>    .     .     . |
+1 |  9390    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41912): 0=41912, 2=0, 3=0, 1=0, 
+
+False Negatives (9706): 1=9390, 2=315, 3=1, 0=0, 
+
+False Positives (9706): 0=9706, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.99s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50532
+          1       0.00      0.00      0.00      1083
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978961
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50532>    .     . |
+1 |  1083    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50532>    .     . |
+1 |  1083    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50532): 0=50532, 2=0, 1=0, 
+
+False Negatives (1086): 1=1083, 2=3, 0=0, 
+
+False Positives (1086): 0=1086, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.43s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50749
+          1       0.00      0.00      0.00       869
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.983165
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50749>    . |
+1 |   869    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50749>    . |
+1 |   869    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50749): 0=50749, 1=0, 
+
+False Negatives (869): 1=869, 0=0, 
+
+False Positives (869): 0=869, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.49s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.94      0.83     35802
+          1       0.67      0.26      0.37     15816
+
+avg / total       0.72      0.73      0.69     51618
+
+accuracy score: 0.732942
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33753> 2049 |
+1 | 11736 <4080>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33753> 2049 |
+1 | 11736 <4080>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37833): 0=33753, 1=4080, 
+
+False Negatives (13785): 1=11736, 0=2049, 
+
+False Positives (13785): 0=11736, 1=2049, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.03s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41605
+          1       0.00      0.00      0.00     10013
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806017
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41605>    . |
+1 | 10013    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41605>    . |
+1 | 10013    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41605): 0=41605, 1=0, 
+
+False Negatives (10013): 1=10013, 0=0, 
+
+False Positives (10013): 0=10013, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.26s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41776
+          1       0.00      0.00      0.00      9842
+
+avg / total       0.66      0.81      0.72     51618
+
+accuracy score: 0.809330
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41776>    . |
+1 |  9842    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41776>    . |
+1 |  9842    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41776): 0=41776, 1=0, 
+
+False Negatives (9842): 1=9842, 0=0, 
+
+False Positives (9842): 0=9842, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.92s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50510
+          1       0.00      0.00      0.00      1108
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978535
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50510>    . |
+1 |  1108    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50510>    . |
+1 |  1108    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50510): 0=50510, 1=0, 
+
+False Negatives (1108): 1=1108, 0=0, 
+
+False Positives (1108): 0=1108, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.56s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50694
+          1       0.00      0.00      0.00       630
+          2       0.00      0.00      0.00       291
+          3       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982099
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50694>    .     .     . |
+1 |   630    <.>    .     . |
+2 |   291     .    <.>    . |
+3 |     3     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50694>    .     .     . |
+1 |   630    <.>    .     . |
+2 |   291     .    <.>    . |
+3 |     3     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50694): 0=50694, 2=0, 3=0, 1=0, 
+
+False Negatives (924): 1=630, 2=291, 3=3, 0=0, 
+
+False Positives (924): 0=924, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.67s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.93      0.82     35998
+          1       0.61      0.23      0.34     15620
+
+avg / total       0.70      0.72      0.68     51618
+
+accuracy score: 0.722868
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33643> 2355 |
+1 | 11950 <3670>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33643> 2355 |
+1 | 11950 <3670>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37313): 0=33643, 1=3670, 
+
+False Negatives (14305): 1=11950, 0=2355, 
+
+False Positives (14305): 0=11950, 1=2355, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41663
+          1       0.00      0.00      0.00      9621
+          2       0.00      0.00      0.00       334
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807141
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41663>    .     . |
+1 |  9621    <.>    . |
+2 |   334     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41663>    .     . |
+1 |  9621    <.>    . |
+2 |   334     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41663): 0=41663, 2=0, 1=0, 
+
+False Negatives (9955): 1=9621, 2=334, 0=0, 
+
+False Positives (9955): 0=9955, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.52s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41763
+          1       0.00      0.00      0.00      9550
+          2       0.00      0.00      0.00       304
+          3       0.00      0.00      0.00         1
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.809078
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41763>    .     .     . |
+1 |  9550    <.>    .     . |
+2 |   304     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41763>    .     .     . |
+1 |  9550    <.>    .     . |
+2 |   304     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41763): 0=41763, 2=0, 3=0, 1=0, 
+
+False Negatives (9855): 1=9550, 2=304, 3=1, 0=0, 
+
+False Positives (9855): 0=9855, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.78s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50486
+          1       0.00      0.00      0.00      1130
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978070
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    .     . |
+1 |  1130    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    .     . |
+1 |  1130    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50486): 0=50486, 2=0, 1=0, 
+
+False Negatives (1132): 1=1130, 2=2, 0=0, 
+
+False Positives (1132): 0=1132, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 9.60s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50685
+          1       0.00      0.00      0.00       933
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.981925
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50685>    . |
+1 |   933    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50685>    . |
+1 |   933    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50685): 0=50685, 1=0, 
+
+False Negatives (933): 1=933, 0=0, 
+
+False Positives (933): 0=933, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.91s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.75      0.86      0.80     35798
+          1       0.52      0.35      0.42     15820
+
+avg / total       0.68      0.70      0.68     51618
+
+accuracy score: 0.703262
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30759> 5039 |
+1 | 10278 <5542>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30759> 5039 |
+1 | 10278 <5542>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36301): 0=30759, 1=5542, 
+
+False Negatives (15317): 1=10278, 0=5039, 
+
+False Positives (15317): 0=10278, 1=5039, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.40s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41701
+          1       0.00      0.00      0.00      9917
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807877
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41701>    . |
+1 |  9917    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41701>    . |
+1 |  9917    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41701): 0=41701, 1=0, 
+
+False Negatives (9917): 1=9917, 0=0, 
+
+False Positives (9917): 0=9917, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.40s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41853
+          1       0.00      0.00      0.00      9765
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810822
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41853>    . |
+1 |  9765    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41853>    . |
+1 |  9765    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41853): 0=41853, 1=0, 
+
+False Negatives (9765): 1=9765, 0=0, 
+
+False Positives (9765): 0=9765, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA2
+model description: MLP_7_7_7_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.37s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50494
+          1       0.00      0.00      0.00      1124
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978225
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50494>    . |
+1 |  1124    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50494>    . |
+1 |  1124    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50494): 0=50494, 1=0, 
+
+False Negatives (1124): 1=1124, 0=0, 
+
+False Positives (1124): 0=1124, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.64s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50666
+          1       0.29      0.08      0.13       641
+          2       0.00      0.00      0.00       302
+          3       0.00      0.00      0.00         9
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.980937
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50580>   86     .     . |
+1 |   587   <54>    .     . |
+2 |   257    45    <.>    . |
+3 |     7     2     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50580>   86     .     . |
+1 |   587   <54>    .     . |
+2 |   257    45    <.>    . |
+3 |     7     2     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50634): 0=50580, 1=54, 2=0, 3=0, 
+
+False Negatives (984): 1=587, 2=302, 0=86, 3=9, 
+
+False Positives (984): 0=851, 1=133, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 18.02s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.88      0.84     36056
+          1       0.65      0.51      0.58     15562
+
+avg / total       0.76      0.77      0.76     51618
+
+accuracy score: 0.771649
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31852> 4204 |
+1 |  7583 <7979>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31852> 4204 |
+1 |  7583 <7979>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39831): 0=31852, 1=7979, 
+
+False Negatives (11787): 1=7583, 0=4204, 
+
+False Positives (11787): 0=7583, 1=4204, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.42s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41519
+          1       0.59      0.09      0.15      9728
+          2       0.00      0.00      0.00       371
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.811887
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41081>  438     . |
+1 |  8901  <827>    . |
+2 |   235   136    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41081>  438     . |
+1 |  8901  <827>    . |
+2 |   235   136    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41908): 0=41081, 1=827, 2=0, 
+
+False Negatives (9710): 1=8901, 0=438, 2=371, 
+
+False Positives (9710): 0=9136, 1=574, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.48s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41848
+          1       0.56      0.10      0.16      9449
+          2       0.00      0.00      0.00       319
+          3       0.00      0.00      0.00         2
+
+avg / total       0.77      0.82      0.76     51618
+
+accuracy score: 0.816672
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41249>  599     .     . |
+1 |  8543  <906>    .     . |
+2 |   207   112    <.>    . |
+3 |     .     2     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41249>  599     .     . |
+1 |  8543  <906>    .     . |
+2 |   207   112    <.>    . |
+3 |     .     2     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (42155): 0=41249, 1=906, 2=0, 3=0, 
+
+False Negatives (9463): 1=8543, 0=599, 2=319, 3=2, 
+
+False Positives (9463): 0=8750, 1=713, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.62s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50539
+          1       0.00      0.00      0.00      1075
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979096
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50539>    .     . |
+1 |  1075    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50539>    .     . |
+1 |  1075    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50539): 0=50539, 2=0, 1=0, 
+
+False Negatives (1079): 1=1075, 2=4, 0=0, 
+
+False Positives (1079): 0=1079, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 10.05s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50729
+          1       0.67      0.46      0.55       889
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.986826
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50529>  200 |
+1 |   480  <409>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50529>  200 |
+1 |   480  <409>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50938): 0=50529, 1=409, 
+
+False Negatives (680): 1=480, 0=200, 
+
+False Positives (680): 0=480, 1=200, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.55s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.86      0.83     35727
+          1       0.63      0.54      0.58     15891
+
+avg / total       0.75      0.76      0.76     51618
+
+accuracy score: 0.760859
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30710> 5017 |
+1 |  7327 <8564>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30710> 5017 |
+1 |  7327 <8564>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39274): 0=30710, 1=8564, 
+
+False Negatives (12344): 1=7327, 0=5017, 
+
+False Positives (12344): 0=7327, 1=5017, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.81s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41593
+          1       0.71      0.03      0.06     10025
+
+avg / total       0.79      0.81      0.73     51618
+
+accuracy score: 0.809272
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41470>  123 |
+1 |  9722  <303>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41470>  123 |
+1 |  9722  <303>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41773): 0=41470, 1=303, 
+
+False Negatives (9845): 1=9722, 0=123, 
+
+False Positives (9845): 0=9722, 1=123, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 10.46s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41845
+          1       0.63      0.11      0.19      9773
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.818959
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41206>  639 |
+1 |  8706 <1067>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41206>  639 |
+1 |  8706 <1067>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42273): 0=41206, 1=1067, 
+
+False Negatives (9345): 1=8706, 0=639, 
+
+False Positives (9345): 0=8706, 1=639, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.95s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50513
+          1       0.00      0.00      0.00      1105
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978593
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50513>    . |
+1 |  1105    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50513>    . |
+1 |  1105    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50513): 0=50513, 1=0, 
+
+False Negatives (1105): 1=1105, 0=0, 
+
+False Positives (1105): 0=1105, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.03s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50717
+          1       0.00      0.00      0.00       581
+          2       0.00      0.00      0.00       315
+          3       0.00      0.00      0.00         5
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982545
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50717>    .     .     . |
+1 |   581    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |     5     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50717>    .     .     . |
+1 |   581    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |     5     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50717): 0=50717, 2=0, 3=0, 1=0, 
+
+False Negatives (901): 1=581, 2=315, 3=5, 0=0, 
+
+False Positives (901): 0=901, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.01s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.87      0.83     35906
+          1       0.61      0.46      0.52     15712
+
+avg / total       0.73      0.75      0.74     51618
+
+accuracy score: 0.747530
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31414> 4492 |
+1 |  8540 <7172>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31414> 4492 |
+1 |  8540 <7172>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38586): 0=31414, 1=7172, 
+
+False Negatives (13032): 1=8540, 0=4492, 
+
+False Positives (13032): 0=8540, 1=4492, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.81s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41715
+          1       0.00      0.00      0.00      9570
+          2       0.00      0.00      0.00       333
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808148
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41715>    .     . |
+1 |  9570    <.>    . |
+2 |   333     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41715>    .     . |
+1 |  9570    <.>    . |
+2 |   333     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41715): 0=41715, 2=0, 1=0, 
+
+False Negatives (9903): 1=9570, 2=333, 0=0, 
+
+False Positives (9903): 0=9903, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.47s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41868
+          1       0.45      0.00      0.00      9429
+          2       0.00      0.00      0.00       320
+          3       0.00      0.00      0.00         1
+
+avg / total       0.74      0.81      0.73     51618
+
+accuracy score: 0.811054
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41852>   16     .     . |
+1 |  9416   <13>    .     . |
+2 |   320     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41852>   16     .     . |
+1 |  9416   <13>    .     . |
+2 |   320     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41865): 0=41852, 1=13, 2=0, 3=0, 
+
+False Negatives (9753): 1=9416, 2=320, 0=16, 3=1, 
+
+False Positives (9753): 0=9737, 1=16, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.78s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50484
+          1       0.00      0.00      0.00      1131
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978031
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50484>    .     . |
+1 |  1131    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50484>    .     . |
+1 |  1131    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50484): 0=50484, 2=0, 1=0, 
+
+False Negatives (1134): 1=1131, 2=3, 0=0, 
+
+False Positives (1134): 0=1134, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.22s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50691
+          1       0.00      0.00      0.00       927
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982041
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50691>    . |
+1 |   927    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50691>    . |
+1 |   927    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50691): 0=50691, 1=0, 
+
+False Negatives (927): 1=927, 0=0, 
+
+False Positives (927): 0=927, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 12.92s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.92      0.84     35792
+          1       0.68      0.39      0.49     15826
+
+avg / total       0.74      0.76      0.73     51618
+
+accuracy score: 0.755240
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32831> 2961 |
+1 |  9673 <6153>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32831> 2961 |
+1 |  9673 <6153>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38984): 0=32831, 1=6153, 
+
+False Negatives (12634): 1=9673, 0=2961, 
+
+False Positives (12634): 0=9673, 1=2961, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.79s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41581
+          1       0.00      0.00      0.00     10037
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805552
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41581>    . |
+1 | 10037    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41581>    . |
+1 | 10037    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41581): 0=41581, 1=0, 
+
+False Negatives (10037): 1=10037, 0=0, 
+
+False Positives (10037): 0=10037, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.29s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41866
+          1       0.57      0.06      0.11      9752
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.814018
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41434>  432 |
+1 |  9168  <584>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41434>  432 |
+1 |  9168  <584>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42018): 0=41434, 1=584, 
+
+False Negatives (9600): 1=9168, 0=432, 
+
+False Positives (9600): 0=9168, 1=432, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA3
+model description: MLP_7_7_7_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.89s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50520
+          1       0.00      0.00      0.00      1098
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978728
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50520>    . |
+1 |  1098    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50520>    . |
+1 |  1098    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50520): 0=50520, 1=0, 
+
+False Negatives (1098): 1=1098, 0=0, 
+
+False Positives (1098): 0=1098, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.48s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50712
+          1       0.42      0.48      0.45       594
+          2       0.35      0.08      0.13       301
+          3       0.00      0.00      0.00        11
+
+avg / total       0.98      0.99      0.98     51618
+
+accuracy score: 0.985296
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50547>  161     4     . |
+1 |   266  <288>   40     . |
+2 |    55   222   <24>    . |
+3 |     1    10     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50547>  161     4     . |
+1 |   266  <288>   40     . |
+2 |    55   222   <24>    . |
+3 |     1    10     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50859): 0=50547, 1=288, 2=24, 3=0, 
+
+False Negatives (759): 1=306, 2=277, 0=165, 3=11, 
+
+False Positives (759): 1=393, 0=322, 2=44, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.30s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.90      0.82      0.86     35888
+          1       0.66      0.80      0.72     15730
+
+avg / total       0.83      0.81      0.82     51618
+
+accuracy score: 0.811422
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29324> 6564 |
+1 |  3170<12560>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29324> 6564 |
+1 |  3170<12560>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41884): 0=29324, 1=12560, 
+
+False Negatives (9734): 0=6564, 1=3170, 
+
+False Positives (9734): 1=6564, 0=3170, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.61s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41797
+          1       0.61      0.09      0.15      9481
+          2       0.00      0.00      0.00       340
+
+avg / total       0.78      0.82      0.76     51618
+
+accuracy score: 0.817544
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41382>  415     . |
+1 |  8663  <818>    . |
+2 |   230   110    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41382>  415     . |
+1 |  8663  <818>    . |
+2 |   230   110    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42200): 0=41382, 1=818, 2=0, 
+
+False Negatives (9418): 1=8663, 0=415, 2=340, 
+
+False Positives (9418): 0=8893, 1=525, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 10.27s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41761
+          1       0.68      0.02      0.04      9537
+          2       0.00      0.00      0.00       318
+          3       0.00      0.00      0.00         2
+
+avg / total       0.78      0.81      0.73     51618
+
+accuracy score: 0.811364
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41693>   68     .     . |
+1 |  9349  <188>    .     . |
+2 |   297    21    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41693>   68     .     . |
+1 |  9349  <188>    .     . |
+2 |   297    21    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41881): 0=41693, 1=188, 2=0, 3=0, 
+
+False Negatives (9737): 1=9349, 2=318, 0=68, 3=2, 
+
+False Positives (9737): 0=9648, 1=89, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.77s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50556
+          1       0.00      0.00      0.00      1060
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979426
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50556>    .     . |
+1 |  1060    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50556>    .     . |
+1 |  1060    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50556): 0=50556, 2=0, 1=0, 
+
+False Negatives (1062): 1=1060, 2=2, 0=0, 
+
+False Positives (1062): 0=1062, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.55s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50774
+          1       0.80      0.51      0.62       844
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.989926
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50667>  107 |
+1 |   413  <431>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50667>  107 |
+1 |   413  <431>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51098): 0=50667, 1=431, 
+
+False Negatives (520): 1=413, 0=107, 
+
+False Positives (520): 0=413, 1=107, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 13.80s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.91      0.83      0.87     35882
+          1       0.67      0.82      0.74     15736
+
+avg / total       0.84      0.82      0.83     51618
+
+accuracy score: 0.823569
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29626> 6256 |
+1 |  2851<12885>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29626> 6256 |
+1 |  2851<12885>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42511): 0=29626, 1=12885, 
+
+False Negatives (9107): 0=6256, 1=2851, 
+
+False Positives (9107): 1=6256, 0=2851, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.28s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41615
+          1       0.70      0.07      0.13     10003
+
+avg / total       0.79      0.81      0.75     51618
+
+accuracy score: 0.814115
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41315>  300 |
+1 |  9295  <708>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41315>  300 |
+1 |  9295  <708>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42023): 0=41315, 1=708, 
+
+False Negatives (9595): 1=9295, 0=300, 
+
+False Positives (9595): 0=9295, 1=300, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.44s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41779
+          1       0.65      0.11      0.19      9839
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.818920
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41210>  569 |
+1 |  8778 <1061>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41210>  569 |
+1 |  8778 <1061>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42271): 0=41210, 1=1061, 
+
+False Negatives (9347): 1=8778, 0=569, 
+
+False Positives (9347): 0=8778, 1=569, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.35s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50528
+          1       0.00      0.00      0.00      1090
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978883
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50528>    . |
+1 |  1090    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50528>    . |
+1 |  1090    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50528): 0=50528, 1=0, 
+
+False Negatives (1090): 1=1090, 0=0, 
+
+False Positives (1090): 0=1090, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.30s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50745
+          1       0.00      0.00      0.00       567
+          2       0.00      0.00      0.00       296
+          3       0.00      0.00      0.00        10
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.983087
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50745>    .     .     . |
+1 |   567    <.>    .     . |
+2 |   296     .    <.>    . |
+3 |    10     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50745>    .     .     . |
+1 |   567    <.>    .     . |
+2 |   296     .    <.>    . |
+3 |    10     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50745): 0=50745, 2=0, 3=0, 1=0, 
+
+False Negatives (873): 1=567, 2=296, 3=10, 0=0, 
+
+False Positives (873): 0=873, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 59.03s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.96      0.94      0.95     35853
+          1       0.88      0.90      0.89     15765
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.932059
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33880> 1973 |
+1 |  1534<14231>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33880> 1973 |
+1 |  1534<14231>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48111): 0=33880, 1=14231, 
+
+False Negatives (3507): 0=1973, 1=1534, 
+
+False Positives (3507): 1=1973, 0=1534, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.44s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41619
+          1       0.55      0.11      0.18      9644
+          2       0.00      0.00      0.00       355
+
+avg / total       0.77      0.81      0.76     51618
+
+accuracy score: 0.812778
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40888>  731     . |
+1 |  8578 <1066>    . |
+2 |   209   146    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40888>  731     . |
+1 |  8578 <1066>    . |
+2 |   209   146    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41954): 0=40888, 1=1066, 2=0, 
+
+False Negatives (9664): 1=8578, 0=731, 2=355, 
+
+False Positives (9664): 0=8787, 1=877, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.77s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41866
+          1       0.54      0.11      0.19      9439
+          2       0.00      0.00      0.00       313
+
+avg / total       0.77      0.82      0.76     51618
+
+accuracy score: 0.816750
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41080>  786     . |
+1 |  8360 <1079>    . |
+2 |   195   118    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41080>  786     . |
+1 |  8360 <1079>    . |
+2 |   195   118    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42159): 0=41080, 1=1079, 2=0, 
+
+False Negatives (9459): 1=8360, 0=786, 2=313, 
+
+False Positives (9459): 0=8555, 1=904, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.97s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50573
+          1       0.00      0.00      0.00      1041
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979755
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50573>    .     . |
+1 |  1041    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50573>    .     . |
+1 |  1041    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50573): 0=50573, 2=0, 1=0, 
+
+False Negatives (1045): 1=1041, 2=4, 0=0, 
+
+False Positives (1045): 0=1045, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.59s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50720
+          1       0.00      0.00      0.00       898
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982603
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50720>    . |
+1 |   898    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50720>    . |
+1 |   898    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50720): 0=50720, 1=0, 
+
+False Negatives (898): 1=898, 0=0, 
+
+False Positives (898): 0=898, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 16.09s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.95      0.94      0.95     35891
+          1       0.87      0.89      0.88     15727
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.925879
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33827> 2064 |
+1 |  1762<13965>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33827> 2064 |
+1 |  1762<13965>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (47792): 0=33827, 1=13965, 
+
+False Negatives (3826): 0=2064, 1=1762, 
+
+False Positives (3826): 1=2064, 0=1762, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.38s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.89     41510
+          1       0.62      0.11      0.18     10108
+
+avg / total       0.78      0.81      0.75     51618
+
+accuracy score: 0.812352
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40859>  651 |
+1 |  9035 <1073>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40859>  651 |
+1 |  9035 <1073>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41932): 0=40859, 1=1073, 
+
+False Negatives (9686): 1=9035, 0=651, 
+
+False Positives (9686): 0=9035, 1=651, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.69s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41846
+          1       0.60      0.12      0.21      9772
+
+avg / total       0.78      0.82      0.77     51618
+
+accuracy score: 0.818339
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41025>  821 |
+1 |  8556 <1216>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41025>  821 |
+1 |  8556 <1216>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42241): 0=41025, 1=1216, 
+
+False Negatives (9377): 1=8556, 0=821, 
+
+False Positives (9377): 0=8556, 1=821, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: MLP_7_7_7_PCA7
+model description: MLP_7_7_7_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.09s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50501
+          1       0.00      0.00      0.00      1117
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978360
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50501>    . |
+1 |  1117    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50501>    . |
+1 |  1117    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50501): 0=50501, 1=0, 
+
+False Negatives (1117): 1=1117, 0=0, 
+
+False Positives (1117): 0=1117, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

@@ -1,0 +1,3819 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.97s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50743
+          1       0.38      0.20      0.26       583
+          2       0.27      0.14      0.18       285
+          3       0.00      0.00      0.00         7
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.982777
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50570>  126    47     . |
+1 |   404  <119>   60     . |
+2 |   175    70   <40>    . |
+3 |     3     1     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50570>  126    47     . |
+1 |   404  <119>   60     . |
+2 |   175    70   <40>    . |
+3 |     3     1     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50729): 0=50570, 1=119, 2=40, 3=0, 
+
+False Negatives (889): 1=464, 2=245, 0=173, 3=7, 
+
+False Positives (889): 0=582, 1=197, 2=110, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.89s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.84      0.85     35888
+          1       0.66      0.70      0.68     15730
+
+avg / total       0.80      0.80      0.80     51618
+
+accuracy score: 0.799663
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30300> 5588 |
+1 |  4753<10977>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30300> 5588 |
+1 |  4753<10977>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41277): 0=30300, 1=10977, 
+
+False Negatives (10341): 0=5588, 1=4753, 
+
+False Positives (10341): 1=5588, 0=4753, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.98s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41611
+          1       0.31      0.18      0.23      9643
+          2       0.14      0.02      0.03       364
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.767484
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37851> 3749    11 |
+1 |  7854 <1758>   31 |
+2 |   225   132    <7>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37851> 3749    11 |
+1 |  7854 <1758>   31 |
+2 |   225   132    <7>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39616): 0=37851, 1=1758, 2=7, 
+
+False Negatives (12002): 1=7885, 0=3760, 2=357, 
+
+False Positives (12002): 0=8079, 1=3881, 2=42, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.90s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41713
+          1       0.32      0.18      0.23      9587
+          2       0.15      0.01      0.02       317
+          3       0.00      0.00      0.00         1
+
+avg / total       0.73      0.77      0.74     51618
+
+accuracy score: 0.770797
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<38028> 3679     6     . |
+1 |  7820 <1756>   11     . |
+2 |   210   104    <3>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<38028> 3679     6     . |
+1 |  7820 <1756>   11     . |
+2 |   210   104    <3>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (39787): 0=38028, 1=1756, 2=3, 3=0, 
+
+False Negatives (11831): 1=7831, 0=3685, 2=314, 3=1, 
+
+False Positives (11831): 0=8031, 1=3783, 2=17, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.96s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50506
+          1       0.05      0.00      0.01      1110
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.976810
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50416>   90     . |
+1 |  1105    <5>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50416>   90     . |
+1 |  1105    <5>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50421): 0=50416, 1=5, 2=0, 
+
+False Negatives (1197): 1=1105, 0=90, 2=2, 
+
+False Positives (1197): 0=1107, 1=90, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.99s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50703
+          1       0.59      0.49      0.54       915
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.984986
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50393>  310 |
+1 |   465  <450>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50393>  310 |
+1 |   465  <450>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50843): 0=50393, 1=450, 
+
+False Negatives (775): 1=465, 0=310, 
+
+False Positives (775): 0=465, 1=310, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.95s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.84      0.85     35833
+          1       0.66      0.70      0.68     15785
+
+avg / total       0.80      0.80      0.80     51618
+
+accuracy score: 0.800031
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30275> 5558 |
+1 |  4764<11021>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30275> 5558 |
+1 |  4764<11021>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41296): 0=30275, 1=11021, 
+
+False Negatives (10322): 0=5558, 1=4764, 
+
+False Positives (10322): 1=5558, 0=4764, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.96s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.90      0.86     41621
+          1       0.34      0.20      0.26      9997
+
+avg / total       0.73      0.77      0.75     51618
+
+accuracy score: 0.769208
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37663> 3958 |
+1 |  7955 <2042>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37663> 3958 |
+1 |  7955 <2042>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39705): 0=37663, 1=2042, 
+
+False Negatives (11913): 1=7955, 0=3958, 
+
+False Positives (11913): 0=7955, 1=3958, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.96s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41805
+          1       0.34      0.20      0.25      9813
+
+avg / total       0.74      0.77      0.75     51618
+
+accuracy score: 0.773044
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37934> 3871 |
+1 |  7844 <1969>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37934> 3871 |
+1 |  7844 <1969>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39903): 0=37934, 1=1969, 
+
+False Negatives (11715): 1=7844, 0=3871, 
+
+False Positives (11715): 0=7844, 1=3871, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.11s
+test: took 0.91s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50508
+          1       0.07      0.00      0.01      1110
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977275
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50440>   68 |
+1 |  1105    <5>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50440>   68 |
+1 |  1105    <5>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50445): 0=50440, 1=5, 
+
+False Negatives (1173): 1=1105, 0=68, 
+
+False Positives (1173): 0=1105, 1=68, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.93s
+test: took 2.34s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50712
+          1       0.38      0.15      0.21       592
+          2       0.34      0.15      0.21       307
+          3       0.00      0.00      0.00         7
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.981847
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50548>  107    57     . |
+1 |   475   <87>   30     . |
+2 |   224    37   <46>    . |
+3 |     6     .     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50548>  107    57     . |
+1 |   475   <87>   30     . |
+2 |   224    37   <46>    . |
+3 |     6     .     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50681): 0=50548, 1=87, 2=46, 3=0, 
+
+False Negatives (937): 1=505, 2=261, 0=164, 3=7, 
+
+False Positives (937): 0=705, 1=144, 2=88, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.94s
+test: took 2.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.96      0.94      0.95     35907
+          1       0.87      0.91      0.89     15711
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.931516
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33828> 2079 |
+1 |  1456<14255>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33828> 2079 |
+1 |  1456<14255>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48083): 0=33828, 1=14255, 
+
+False Negatives (3535): 0=2079, 1=1456, 
+
+False Positives (3535): 1=2079, 0=1456, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.93s
+test: took 2.37s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41768
+          1       0.29      0.16      0.21      9490
+          2       0.12      0.02      0.03       360
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.767077
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38041> 3707    20 |
+1 |  7919 <1548>   23 |
+2 |   247   107    <6>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38041> 3707    20 |
+1 |  7919 <1548>   23 |
+2 |   247   107    <6>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39595): 0=38041, 1=1548, 2=6, 
+
+False Negatives (12023): 1=7942, 0=3727, 2=354, 
+
+False Positives (12023): 0=8166, 1=3814, 2=43, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.90s
+test: took 2.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41770
+          1       0.32      0.18      0.23      9540
+          2       0.09      0.01      0.02       308
+
+avg / total       0.73      0.77      0.75     51618
+
+accuracy score: 0.774168
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38208> 3551    11 |
+1 |  7772 <1750>   18 |
+2 |   213    92    <3>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38208> 3551    11 |
+1 |  7772 <1750>   18 |
+2 |   213    92    <3>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39961): 0=38208, 1=1750, 2=3, 
+
+False Negatives (11657): 1=7790, 0=3562, 2=305, 
+
+False Positives (11657): 0=7985, 1=3643, 2=29, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.91s
+test: took 2.34s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50452
+          1       0.06      0.00      0.01      1163
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.976249
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50388>   64     . |
+1 |  1159    <4>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50388>   64     . |
+1 |  1159    <4>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50392): 0=50388, 1=4, 2=0, 
+
+False Negatives (1226): 1=1159, 0=64, 2=3, 
+
+False Positives (1226): 0=1162, 1=64, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.91s
+test: took 2.19s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50696
+          1       0.56      0.33      0.42       922
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.983455
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50459>  237 |
+1 |   617  <305>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50459>  237 |
+1 |   617  <305>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50764): 0=50459, 1=305, 
+
+False Negatives (854): 1=617, 0=237, 
+
+False Positives (854): 0=617, 1=237, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.91s
+test: took 2.35s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.96      0.94      0.95     35737
+          1       0.87      0.91      0.89     15881
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.930916
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33662> 2075 |
+1 |  1491<14390>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33662> 2075 |
+1 |  1491<14390>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48052): 0=33662, 1=14390, 
+
+False Negatives (3566): 0=2075, 1=1491, 
+
+False Positives (3566): 1=2075, 0=1491, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.93s
+test: took 2.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41575
+          1       0.32      0.18      0.23     10043
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.765450
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37685> 3890 |
+1 |  8217 <1826>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37685> 3890 |
+1 |  8217 <1826>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39511): 0=37685, 1=1826, 
+
+False Negatives (12107): 1=8217, 0=3890, 
+
+False Positives (12107): 0=8217, 1=3890, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.81s
+test: took 2.37s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41725
+          1       0.34      0.20      0.25      9893
+
+avg / total       0.73      0.77      0.75     51618
+
+accuracy score: 0.773994
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37999> 3726 |
+1 |  7940 <1953>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37999> 3726 |
+1 |  7940 <1953>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39952): 0=37999, 1=1953, 
+
+False Negatives (11666): 1=7940, 0=3726, 
+
+False Positives (11666): 0=7940, 1=3726, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.78s
+test: took 2.21s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50495
+          1       0.04      0.00      0.00      1123
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.976791
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50417>   78 |
+1 |  1120    <3>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50417>   78 |
+1 |  1120    <3>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50420): 0=50417, 1=3, 
+
+False Negatives (1198): 1=1120, 0=78, 
+
+False Positives (1198): 0=1120, 1=78, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50696
+          1       0.24      0.07      0.11       618
+          2       0.06      0.02      0.03       298
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.979561
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50515>  119    62     . |
+1 |   561   <43>   14     . |
+2 |   279    14    <5>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50515>  119    62     . |
+1 |   561   <43>   14     . |
+2 |   279    14    <5>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50563): 0=50515, 1=43, 2=5, 3=0, 
+
+False Negatives (1055): 1=575, 2=293, 0=181, 3=6, 
+
+False Positives (1055): 0=846, 1=133, 2=76, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.18s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.76      0.83      0.79     35953
+          1       0.51      0.41      0.46     15665
+
+avg / total       0.69      0.70      0.69     51618
+
+accuracy score: 0.701306
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29707> 6246 |
+1 |  9172 <6493>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29707> 6246 |
+1 |  9172 <6493>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36200): 0=29707, 1=6493, 
+
+False Negatives (15418): 1=9172, 0=6246, 
+
+False Positives (15418): 0=9172, 1=6246, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41765
+          1       0.25      0.14      0.18      9494
+          2       0.00      0.00      0.00       359
+
+avg / total       0.71      0.76      0.73     51618
+
+accuracy score: 0.759561
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37882> 3874     9 |
+1 |  8163 <1325>    6 |
+2 |   292    67    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37882> 3874     9 |
+1 |  8163 <1325>    6 |
+2 |   292    67    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39207): 0=37882, 1=1325, 2=0, 
+
+False Negatives (12411): 1=8169, 0=3883, 2=359, 
+
+False Positives (12411): 0=8455, 1=3941, 2=15, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41761
+          1       0.24      0.13      0.17      9507
+          2       0.00      0.00      0.00       350
+
+avg / total       0.70      0.76      0.73     51618
+
+accuracy score: 0.757856
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37881> 3865    15 |
+1 |  8259 <1238>   10 |
+2 |   296    54    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37881> 3865    15 |
+1 |  8259 <1238>   10 |
+2 |   296    54    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39119): 0=37881, 1=1238, 2=0, 
+
+False Negatives (12499): 1=8269, 0=3880, 2=350, 
+
+False Positives (12499): 0=8555, 1=3919, 2=25, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50512
+          1       0.06      0.00      0.01      1104
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977488
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50452>   60     . |
+1 |  1100    <4>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50452>   60     . |
+1 |  1100    <4>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50456): 0=50452, 1=4, 2=0, 
+
+False Negatives (1162): 1=1100, 0=60, 2=2, 
+
+False Positives (1162): 0=1102, 1=60, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50736
+          1       0.29      0.14      0.19       882
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.979542
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50441>  295 |
+1 |   761  <121>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50441>  295 |
+1 |   761  <121>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50562): 0=50441, 1=121, 
+
+False Negatives (1056): 1=761, 0=295, 
+
+False Positives (1056): 0=761, 1=295, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.76      0.82      0.79     35857
+          1       0.51      0.41      0.45     15761
+
+avg / total       0.68      0.70      0.69     51618
+
+accuracy score: 0.697819
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29523> 6334 |
+1 |  9264 <6497>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29523> 6334 |
+1 |  9264 <6497>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36020): 0=29523, 1=6497, 
+
+False Negatives (15598): 1=9264, 0=6334, 
+
+False Positives (15598): 0=9264, 1=6334, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.90      0.85     41655
+          1       0.25      0.15      0.19      9963
+
+avg / total       0.71      0.75      0.72     51618
+
+accuracy score: 0.751230
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37289> 4366 |
+1 |  8475 <1488>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37289> 4366 |
+1 |  8475 <1488>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38777): 0=37289, 1=1488, 
+
+False Negatives (12841): 1=8475, 0=4366, 
+
+False Positives (12841): 0=8475, 1=4366, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.90      0.86     41807
+          1       0.26      0.15      0.19      9811
+
+avg / total       0.71      0.76      0.73     51618
+
+accuracy score: 0.757836
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37685> 4122 |
+1 |  8378 <1433>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37685> 4122 |
+1 |  8378 <1433>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39118): 0=37685, 1=1433, 
+
+False Negatives (12500): 1=8378, 0=4122, 
+
+False Positives (12500): 0=8378, 1=4122, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50539
+          1       0.05      0.00      0.01      1079
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977682
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50462>   77 |
+1 |  1075    <4>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50462>   77 |
+1 |  1075    <4>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50466): 0=50462, 1=4, 
+
+False Negatives (1152): 1=1075, 0=77, 
+
+False Positives (1152): 0=1075, 1=77, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50687
+          1       0.12      0.02      0.03       615
+          2       0.05      0.01      0.01       311
+          3       0.00      0.00      0.00         5
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.979968
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50571>   79    37     . |
+1 |   603   <11>    1     . |
+2 |   309     .    <2>    . |
+3 |     5     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50571>   79    37     . |
+1 |   603   <11>    1     . |
+2 |   309     .    <2>    . |
+3 |     5     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50584): 0=50571, 1=11, 2=2, 3=0, 
+
+False Negatives (1034): 1=604, 2=309, 0=116, 3=5, 
+
+False Positives (1034): 0=917, 1=79, 2=38, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.81      0.79     35980
+          1       0.50      0.44      0.46     15638
+
+avg / total       0.68      0.69      0.69     51618
+
+accuracy score: 0.694816
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29050> 6930 |
+1 |  8823 <6815>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29050> 6930 |
+1 |  8823 <6815>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35865): 0=29050, 1=6815, 
+
+False Negatives (15753): 1=8823, 0=6930, 
+
+False Positives (15753): 0=8823, 1=6930, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.90      0.86     41700
+          1       0.22      0.12      0.16      9551
+          2       0.00      0.00      0.00       367
+
+avg / total       0.70      0.75      0.72     51618
+
+accuracy score: 0.752935
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37714> 3973    13 |
+1 |  8397 <1151>    3 |
+2 |   313    54    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37714> 3973    13 |
+1 |  8397 <1151>    3 |
+2 |   313    54    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (38865): 0=37714, 1=1151, 2=0, 
+
+False Negatives (12753): 1=8400, 0=3986, 2=367, 
+
+False Positives (12753): 0=8710, 1=4027, 2=16, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.91      0.86     41846
+          1       0.21      0.11      0.15      9454
+          2       0.00      0.00      0.00       316
+          3       0.00      0.00      0.00         2
+
+avg / total       0.70      0.76      0.72     51618
+
+accuracy score: 0.756693
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<37994> 3839    13     . |
+1 |  8389 <1065>    .     . |
+2 |   263    53    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<37994> 3839    13     . |
+1 |  8389 <1065>    .     . |
+2 |   263    53    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (39059): 0=37994, 1=1065, 3=0, 2=0, 
+
+False Negatives (12559): 1=8389, 0=3852, 2=316, 3=2, 
+
+False Positives (12559): 0=8654, 1=3892, 2=13, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50496
+          1       0.03      0.00      0.00      1116
+          2       0.00      0.00      0.00         6
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977024
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50430>   66     . |
+1 |  1114    <2>    . |
+2 |     6     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50430>   66     . |
+1 |  1114    <2>    . |
+2 |     6     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50432): 0=50430, 1=2, 2=0, 
+
+False Negatives (1186): 1=1114, 0=66, 2=6, 
+
+False Positives (1186): 0=1120, 1=66, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.23s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50698
+          1       0.17      0.04      0.07       920
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.979174
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50504>  194 |
+1 |   881   <39>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50504>  194 |
+1 |   881   <39>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50543): 0=50504, 1=39, 
+
+False Negatives (1075): 1=881, 0=194, 
+
+False Positives (1075): 0=881, 1=194, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.80      0.78     35944
+          1       0.49      0.44      0.47     15674
+
+avg / total       0.68      0.69      0.69     51618
+
+accuracy score: 0.693576
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28848> 7096 |
+1 |  8721 <6953>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28848> 7096 |
+1 |  8721 <6953>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35801): 0=28848, 1=6953, 
+
+False Negatives (15817): 1=8721, 0=7096, 
+
+False Positives (15817): 0=8721, 1=7096, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.90      0.85     41586
+          1       0.25      0.13      0.17     10032
+
+avg / total       0.70      0.75      0.72     51618
+
+accuracy score: 0.752373
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37487> 4099 |
+1 |  8683 <1349>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37487> 4099 |
+1 |  8683 <1349>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38836): 0=37487, 1=1349, 
+
+False Negatives (12782): 1=8683, 0=4099, 
+
+False Positives (12782): 0=8683, 1=4099, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.23s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.90      0.86     41843
+          1       0.24      0.13      0.17      9775
+
+avg / total       0.71      0.76      0.73     51618
+
+accuracy score: 0.758205
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37859> 3984 |
+1 |  8497 <1278>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37859> 3984 |
+1 |  8497 <1278>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39137): 0=37859, 1=1278, 
+
+False Negatives (12481): 1=8497, 0=3984, 
+
+False Positives (12481): 0=8497, 1=3984, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.10s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50463
+          1       0.01      0.00      0.00      1155
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.975900
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50373>   90 |
+1 |  1154    <1>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50373>   90 |
+1 |  1154    <1>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50374): 0=50373, 1=1, 
+
+False Negatives (1244): 1=1154, 0=90, 
+
+False Positives (1244): 0=1154, 1=90, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50692
+          1       0.36      0.23      0.28       614
+          2       0.33      0.21      0.26       303
+          3       0.00      0.00      0.00         9
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.981983
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50481>  152    59     . |
+1 |   399  <142>   73     . |
+2 |   140    98   <65>    . |
+3 |     6     .     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50481>  152    59     . |
+1 |   399  <142>   73     . |
+2 |   140    98   <65>    . |
+3 |     6     .     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50688): 0=50481, 1=142, 2=65, 3=0, 
+
+False Negatives (930): 1=472, 2=238, 0=211, 3=9, 
+
+False Positives (930): 0=545, 1=250, 2=135, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.83      0.81     35980
+          1       0.56      0.49      0.52     15638
+
+avg / total       0.72      0.73      0.72     51618
+
+accuracy score: 0.727847
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29901> 6079 |
+1 |  7969 <7669>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29901> 6079 |
+1 |  7969 <7669>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37570): 0=29901, 1=7669, 
+
+False Negatives (14048): 1=7969, 0=6079, 
+
+False Positives (14048): 0=7969, 1=6079, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41635
+          1       0.31      0.18      0.23      9633
+          2       0.03      0.00      0.01       350
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.767116
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37858> 3766    11 |
+1 |  7877 <1738>   18 |
+2 |   225   124    <1>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37858> 3766    11 |
+1 |  7877 <1738>   18 |
+2 |   225   124    <1>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39597): 0=37858, 1=1738, 2=1, 
+
+False Negatives (12021): 1=7895, 0=3777, 2=349, 
+
+False Positives (12021): 0=8102, 1=3890, 2=29, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41907
+          1       0.30      0.17      0.22      9384
+          2       0.06      0.01      0.01       327
+
+avg / total       0.73      0.77      0.74     51618
+
+accuracy score: 0.771572
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38184> 3714     9 |
+1 |  7720 <1641>   23 |
+2 |   215   110    <2>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38184> 3714     9 |
+1 |  7720 <1641>   23 |
+2 |   215   110    <2>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39827): 0=38184, 1=1641, 2=2, 
+
+False Negatives (11791): 1=7743, 0=3723, 2=325, 
+
+False Positives (11791): 0=7935, 1=3824, 2=32, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50485
+          1       0.03      0.00      0.00      1132
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.976714
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50414>   71     . |
+1 |  1130    <2>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50414>   71     . |
+1 |  1130    <2>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50416): 0=50414, 1=2, 2=0, 
+
+False Negatives (1202): 1=1130, 0=71, 2=1, 
+
+False Positives (1202): 0=1131, 1=71, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50699
+          1       0.68      0.58      0.62       919
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.987621
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50449>  250 |
+1 |   389  <530>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50449>  250 |
+1 |   389  <530>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50979): 0=50449, 1=530, 
+
+False Negatives (639): 1=389, 0=250, 
+
+False Positives (639): 0=389, 1=250, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.83      0.81     35792
+          1       0.57      0.49      0.53     15826
+
+avg / total       0.72      0.73      0.72     51618
+
+accuracy score: 0.729920
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29856> 5936 |
+1 |  8005 <7821>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29856> 5936 |
+1 |  8005 <7821>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37677): 0=29856, 1=7821, 
+
+False Negatives (13941): 1=8005, 0=5936, 
+
+False Positives (13941): 0=8005, 1=5936, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.90      0.86     41724
+          1       0.33      0.20      0.25      9894
+
+avg / total       0.73      0.77      0.75     51618
+
+accuracy score: 0.769596
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37714> 4010 |
+1 |  7883 <2011>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37714> 4010 |
+1 |  7883 <2011>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39725): 0=37714, 1=2011, 
+
+False Negatives (11893): 1=7883, 0=4010, 
+
+False Positives (11893): 0=7883, 1=4010, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.86     41736
+          1       0.33      0.19      0.24      9882
+
+avg / total       0.73      0.77      0.75     51618
+
+accuracy score: 0.769208
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37785> 3951 |
+1 |  7962 <1920>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37785> 3951 |
+1 |  7962 <1920>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39705): 0=37785, 1=1920, 
+
+False Negatives (11913): 1=7962, 0=3951, 
+
+False Positives (11913): 0=7962, 1=3951, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50556
+          1       0.07      0.00      0.01      1062
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978263
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50491>   65 |
+1 |  1057    <5>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50491>   65 |
+1 |  1057    <5>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50496): 0=50491, 1=5, 
+
+False Negatives (1122): 1=1057, 0=65, 
+
+False Positives (1122): 0=1057, 1=65, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50759
+          1       0.24      0.11      0.16       574
+          2       0.29      0.16      0.21       277
+          3       0.00      0.00      0.00         8
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.980879
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50520>  170    69     . |
+1 |   467   <66>   41     . |
+2 |   194    38   <45>    . |
+3 |     5     1     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50520>  170    69     . |
+1 |   467   <66>   41     . |
+2 |   194    38   <45>    . |
+3 |     5     1     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50631): 0=50520, 1=66, 2=45, 3=0, 
+
+False Negatives (987): 1=508, 0=239, 2=232, 3=8, 
+
+False Positives (987): 0=666, 1=209, 2=112, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.26s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.82      0.80     35903
+          1       0.54      0.48      0.51     15715
+
+avg / total       0.71      0.72      0.71     51618
+
+accuracy score: 0.719148
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29573> 6330 |
+1 |  8167 <7548>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29573> 6330 |
+1 |  8167 <7548>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37121): 0=29573, 1=7548, 
+
+False Negatives (14497): 1=8167, 0=6330, 
+
+False Positives (14497): 0=8167, 1=6330, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.24s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41624
+          1       0.27      0.15      0.19      9643
+          2       0.04      0.00      0.01       351
+
+avg / total       0.71      0.76      0.73     51618
+
+accuracy score: 0.760549
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37847> 3766    11 |
+1 |  8218 <1410>   15 |
+2 |   262    88    <1>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37847> 3766    11 |
+1 |  8218 <1410>   15 |
+2 |   262    88    <1>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39258): 0=37847, 1=1410, 2=1, 
+
+False Negatives (12360): 1=8233, 0=3777, 2=350, 
+
+False Positives (12360): 0=8480, 1=3854, 2=26, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.25s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41841
+          1       0.28      0.16      0.20      9439
+          2       0.14      0.01      0.02       337
+          3       0.00      0.00      0.00         1
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.766477
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<38048> 3784     9     . |
+1 |  7917 <1513>    9     . |
+2 |   253    81    <3>    . |
+3 |     .     1     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<38048> 3784     9     . |
+1 |  7917 <1513>    9     . |
+2 |   253    81    <3>    . |
+3 |     .     1     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (39564): 0=38048, 1=1513, 2=3, 3=0, 
+
+False Negatives (12054): 1=7926, 0=3793, 2=334, 3=1, 
+
+False Positives (12054): 0=8170, 1=3866, 2=18, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50526
+          1       0.01      0.00      0.00      1092
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977159
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50438>   88 |
+1 |  1091    <1>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50438>   88 |
+1 |  1091    <1>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50439): 0=50438, 1=1, 
+
+False Negatives (1179): 1=1091, 0=88, 
+
+False Positives (1179): 0=1091, 1=88, 
+
+Untested: ['2']
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.26s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50685
+          1       0.46      0.31      0.37       933
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.980976
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50351>  334 |
+1 |   648  <285>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50351>  334 |
+1 |   648  <285>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50636): 0=50351, 1=285, 
+
+False Negatives (982): 1=648, 0=334, 
+
+False Positives (982): 0=648, 1=334, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.25s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.83      0.80     35830
+          1       0.55      0.48      0.51     15788
+
+avg / total       0.71      0.72      0.72     51618
+
+accuracy score: 0.720504
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29587> 6243 |
+1 |  8184 <7604>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29587> 6243 |
+1 |  8184 <7604>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37191): 0=29587, 1=7604, 
+
+False Negatives (14427): 1=8184, 0=6243, 
+
+False Positives (14427): 0=8184, 1=6243, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.25s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.90      0.86     41728
+          1       0.28      0.16      0.21      9890
+
+avg / total       0.72      0.76      0.73     51618
+
+accuracy score: 0.761033
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37665> 4063 |
+1 |  8272 <1618>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37665> 4063 |
+1 |  8272 <1618>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39283): 0=37665, 1=1618, 
+
+False Negatives (12335): 1=8272, 0=4063, 
+
+False Positives (12335): 0=8272, 1=4063, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.24s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41861
+          1       0.30      0.17      0.22      9757
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.766554
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37892> 3969 |
+1 |  8081 <1676>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37892> 3969 |
+1 |  8081 <1676>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39568): 0=37892, 1=1676, 
+
+False Negatives (12050): 1=8081, 0=3969, 
+
+False Positives (12050): 0=8081, 1=3969, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.21s
+test: took 0.25s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50552
+          1       0.03      0.00      0.00      1066
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978031
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50482>   70 |
+1 |  1064    <2>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50482>   70 |
+1 |  1064    <2>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50484): 0=50482, 1=2, 
+
+False Negatives (1134): 1=1064, 0=70, 
+
+False Positives (1134): 0=1064, 1=70, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.77s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50716
+          1       0.37      0.22      0.28       588
+          2       0.35      0.16      0.22       305
+          3       0.00      0.00      0.00         9
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.982041
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50511>  154    51     . |
+1 |   420  <132>   36     . |
+2 |   184    73   <48>    . |
+3 |     4     2     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50511>  154    51     . |
+1 |   420  <132>   36     . |
+2 |   184    73   <48>    . |
+3 |     4     2     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50691): 0=50511, 1=132, 2=48, 3=0, 
+
+False Negatives (927): 1=456, 2=257, 0=205, 3=9, 
+
+False Positives (927): 0=608, 1=229, 2=90, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 0.76s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.84      0.85     35776
+          1       0.66      0.70      0.68     15842
+
+avg / total       0.80      0.80      0.80     51618
+
+accuracy score: 0.796428
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30082> 5694 |
+1 |  4814<11028>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30082> 5694 |
+1 |  4814<11028>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41110): 0=30082, 1=11028, 
+
+False Negatives (10508): 0=5694, 1=4814, 
+
+False Positives (10508): 1=5694, 0=4814, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.77s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41656
+          1       0.30      0.18      0.23      9601
+          2       0.13      0.02      0.04       361
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.765411
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37773> 3867    16 |
+1 |  7835 <1728>   38 |
+2 |   220   133    <8>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37773> 3867    16 |
+1 |  7835 <1728>   38 |
+2 |   220   133    <8>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39509): 0=37773, 1=1728, 2=8, 
+
+False Negatives (12109): 1=7873, 0=3883, 2=353, 
+
+False Positives (12109): 0=8055, 1=4000, 2=54, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.76s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41767
+          1       0.31      0.18      0.23      9520
+          2       0.10      0.01      0.01       331
+
+avg / total       0.73      0.77      0.74     51618
+
+accuracy score: 0.771320
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38099> 3660     8 |
+1 |  7796 <1713>   11 |
+2 |   223   106    <2>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<38099> 3660     8 |
+1 |  7796 <1713>   11 |
+2 |   223   106    <2>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39814): 0=38099, 1=1713, 2=2, 
+
+False Negatives (11804): 1=7807, 0=3668, 2=329, 
+
+False Positives (11804): 0=8019, 1=3766, 2=19, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.76s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50461
+          1       0.05      0.00      0.00      1154
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.976423
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50398>   63     . |
+1 |  1151    <3>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50398>   63     . |
+1 |  1151    <3>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50401): 0=50398, 1=3, 2=0, 
+
+False Negatives (1217): 1=1151, 0=63, 2=3, 
+
+False Positives (1217): 0=1154, 1=63, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.76s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50709
+          1       0.61      0.47      0.53       909
+
+avg / total       0.98      0.99      0.98     51618
+
+accuracy score: 0.985354
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50436>  273 |
+1 |   483  <426>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50436>  273 |
+1 |   483  <426>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50862): 0=50436, 1=426, 
+
+False Negatives (756): 1=483, 0=273, 
+
+False Positives (756): 0=483, 1=273, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.75s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.84      0.85     35920
+          1       0.66      0.69      0.67     15698
+
+avg / total       0.80      0.80      0.80     51618
+
+accuracy score: 0.797067
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30278> 5642 |
+1 |  4833<10865>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30278> 5642 |
+1 |  4833<10865>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41143): 0=30278, 1=10865, 
+
+False Negatives (10475): 0=5642, 1=4833, 
+
+False Positives (10475): 1=5642, 0=4833, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.76s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.90      0.86     41664
+          1       0.34      0.20      0.25      9954
+
+avg / total       0.73      0.77      0.75     51618
+
+accuracy score: 0.769790
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37703> 3961 |
+1 |  7922 <2032>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37703> 3961 |
+1 |  7922 <2032>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39735): 0=37703, 1=2032, 
+
+False Negatives (11883): 1=7922, 0=3961, 
+
+False Positives (11883): 0=7922, 1=3961, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 0.76s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41804
+          1       0.34      0.20      0.25      9814
+
+avg / total       0.74      0.77      0.75     51618
+
+accuracy score: 0.774943
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<38028> 3776 |
+1 |  7841 <1973>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<38028> 3776 |
+1 |  7841 <1973>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40001): 0=38028, 1=1973, 
+
+False Negatives (11617): 1=7841, 0=3776, 
+
+False Positives (11617): 0=7841, 1=3776, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.77s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50507
+          1       0.08      0.01      0.01      1111
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977140
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50431>   76 |
+1 |  1104    <7>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50431>   76 |
+1 |  1104    <7>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50438): 0=50431, 1=7, 
+
+False Negatives (1180): 1=1104, 0=76, 
+
+False Positives (1180): 0=1104, 1=76, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.09s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50725
+          1       0.33      0.12      0.17       588
+          2       0.36      0.16      0.22       297
+          3       0.00      0.00      0.00         8
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.981770
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50559>  113    53     . |
+1 |   487   <70>   31     . |
+2 |   218    31   <48>    . |
+3 |     7     .     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50559>  113    53     . |
+1 |   487   <70>   31     . |
+2 |   218    31   <48>    . |
+3 |     7     .     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50677): 0=50559, 1=70, 2=48, 3=0, 
+
+False Negatives (941): 1=518, 2=249, 0=166, 3=8, 
+
+False Positives (941): 0=712, 1=144, 2=85, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.11s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.96      0.94      0.95     35647
+          1       0.87      0.91      0.89     15971
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.930257
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33545> 2102 |
+1 |  1498<14473>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33545> 2102 |
+1 |  1498<14473>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48018): 0=33545, 1=14473, 
+
+False Negatives (3600): 0=2102, 1=1498, 
+
+False Positives (3600): 1=2102, 0=1498, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41729
+          1       0.29      0.16      0.21      9542
+          2       0.13      0.01      0.02       347
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.765469
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37949> 3765    15 |
+1 |  7971 <1559>   12 |
+2 |   241   102    <4>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<37949> 3765    15 |
+1 |  7971 <1559>   12 |
+2 |   241   102    <4>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (39512): 0=37949, 1=1559, 2=4, 
+
+False Negatives (12106): 1=7983, 0=3780, 2=343, 
+
+False Positives (12106): 0=8212, 1=3867, 2=27, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 1.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41848
+          1       0.31      0.18      0.22      9469
+          2       0.12      0.01      0.02       300
+          3       0.00      0.00      0.00         1
+
+avg / total       0.73      0.77      0.74     51618
+
+accuracy score: 0.771669
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<38158> 3676    14     . |
+1 |  7789 <1671>    9     . |
+2 |   210    87    <3>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<38158> 3676    14     . |
+1 |  7789 <1671>    9     . |
+2 |   210    87    <3>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (39832): 0=38158, 1=1671, 2=3, 3=0, 
+
+False Negatives (11786): 1=7798, 0=3690, 2=297, 3=1, 
+
+False Positives (11786): 0=8000, 1=3763, 2=23, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 1.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50509
+          1       0.05      0.00      0.01      1108
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977024
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50428>   81     . |
+1 |  1104    <4>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50428>   81     . |
+1 |  1104    <4>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50432): 0=50428, 1=4, 2=0, 
+
+False Negatives (1186): 1=1104, 0=81, 2=1, 
+
+False Positives (1186): 0=1105, 1=81, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.16s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50719
+          1       0.49      0.33      0.39       899
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.982409
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50416>  303 |
+1 |   605  <294>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50416>  303 |
+1 |   605  <294>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50710): 0=50416, 1=294, 
+
+False Negatives (908): 1=605, 0=303, 
+
+False Positives (908): 0=605, 1=303, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.12s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.96      0.94      0.95     35830
+          1       0.87      0.90      0.89     15788
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.929075
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33711> 2119 |
+1 |  1542<14246>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33711> 2119 |
+1 |  1542<14246>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (47957): 0=33711, 1=14246, 
+
+False Negatives (3661): 0=2119, 1=1542, 
+
+False Positives (3661): 1=2119, 0=1542, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.91      0.86     41633
+          1       0.31      0.18      0.23      9985
+
+avg / total       0.72      0.77      0.74     51618
+
+accuracy score: 0.765683
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<37734> 3899 |
+1 |  8196 <1789>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<37734> 3899 |
+1 |  8196 <1789>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39523): 0=37734, 1=1789, 
+
+False Negatives (12095): 1=8196, 0=3899, 
+
+False Positives (12095): 0=8196, 1=3899, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.12s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.91      0.87     41884
+          1       0.34      0.21      0.26      9734
+
+avg / total       0.74      0.78      0.75     51618
+
+accuracy score: 0.775388
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<38003> 3881 |
+1 |  7713 <2021>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<38003> 3881 |
+1 |  7713 <2021>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40024): 0=38003, 1=2021, 
+
+False Negatives (11594): 1=7713, 0=3881, 
+
+False Positives (11594): 0=7713, 1=3881, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 1.11s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50494
+          1       0.05      0.00      0.01      1124
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977120
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50434>   60 |
+1 |  1121    <3>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50434>   60 |
+1 |  1121    <3>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50437): 0=50434, 1=3, 
+
+False Negatives (1181): 1=1121, 0=60, 
+
+False Positives (1181): 0=1121, 1=60, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

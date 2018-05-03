@@ -1,0 +1,3821 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50735
+          1       0.00      0.00      0.00       588
+          2       0.00      0.00      0.00       291
+          3       0.00      0.00      0.00         4
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982894
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50735>    .     .     . |
+1 |   588    <.>    .     . |
+2 |   291     .    <.>    . |
+3 |     4     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50735>    .     .     . |
+1 |   588    <.>    .     . |
+2 |   291     .    <.>    . |
+3 |     4     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50735): 0=50735, 2=0, 1=0, 3=0, 
+
+False Negatives (883): 1=588, 2=291, 3=4, 0=0, 
+
+False Positives (883): 0=883, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.93      0.85     35895
+          1       0.74      0.43      0.54     15723
+
+avg / total       0.77      0.78      0.76     51618
+
+accuracy score: 0.778895
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33479> 2416 |
+1 |  8997 <6726>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33479> 2416 |
+1 |  8997 <6726>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40205): 0=33479, 1=6726, 
+
+False Negatives (11413): 1=8997, 0=2416, 
+
+False Positives (11413): 0=8997, 1=2416, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41704
+          1       0.00      0.00      0.00      9535
+          2       0.00      0.00      0.00       379
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807935
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41704>    .     . |
+1 |  9535    <.>    . |
+2 |   379     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41704>    .     . |
+1 |  9535    <.>    . |
+2 |   379     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41704): 0=41704, 2=0, 1=0, 
+
+False Negatives (9914): 1=9535, 2=379, 0=0, 
+
+False Positives (9914): 0=9914, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41844
+          1       0.00      0.00      0.00      9437
+          2       0.00      0.00      0.00       336
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810647
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41844>    .     .     . |
+1 |  9434    <.>    .     3 |
+2 |   336     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41844>    .     .     . |
+1 |  9434    <.>    .     3 |
+2 |   336     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41844): 0=41844, 2=0, 1=0, 3=0, 
+
+False Negatives (9774): 1=9437, 2=336, 3=1, 0=0, 
+
+False Positives (9774): 0=9771, 3=3, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50525
+          1       0.00      0.00      0.00      1090
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978825
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50525>    .     . |
+1 |  1090    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50525>    .     . |
+1 |  1090    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50525): 0=50525, 2=0, 1=0, 
+
+False Negatives (1093): 1=1090, 2=3, 0=0, 
+
+False Positives (1093): 0=1093, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50703
+          1       0.65      0.27      0.38       915
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.984502
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50575>  128 |
+1 |   672  <243>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50575>  128 |
+1 |   672  <243>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50818): 0=50575, 1=243, 
+
+False Negatives (800): 1=672, 0=128, 
+
+False Positives (800): 0=672, 1=128, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.94      0.86     35827
+          1       0.75      0.43      0.55     15791
+
+avg / total       0.78      0.78      0.76     51618
+
+accuracy score: 0.782595
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33553> 2274 |
+1 |  8948 <6843>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33553> 2274 |
+1 |  8948 <6843>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40396): 0=33553, 1=6843, 
+
+False Negatives (11222): 1=8948, 0=2274, 
+
+False Positives (11222): 0=8948, 1=2274, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41614
+          1       0.00      0.00      0.00     10004
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806192
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41614>    . |
+1 | 10004    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41614>    . |
+1 | 10004    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41614): 0=41614, 1=0, 
+
+False Negatives (10004): 1=10004, 0=0, 
+
+False Positives (10004): 0=10004, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41685
+          1       1.00      0.00      0.00      9933
+
+avg / total       0.84      0.81      0.72     51618
+
+accuracy score: 0.807625
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41685>    . |
+1 |  9930    <3>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41685>    . |
+1 |  9930    <3>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41688): 0=41685, 1=3, 
+
+False Negatives (9930): 1=9930, 0=0, 
+
+False Positives (9930): 0=9930, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50516
+          1       0.00      0.00      0.00      1102
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978651
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50516>    . |
+1 |  1102    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50516>    . |
+1 |  1102    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50516): 0=50516, 1=0, 
+
+False Negatives (1102): 1=1102, 0=0, 
+
+False Positives (1102): 0=1102, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50682
+          1       0.00      0.00      0.00       594
+          2       0.00      0.00      0.00       333
+          3       0.00      0.78      0.01         9
+
+avg / total       0.98      0.96      0.97     51618
+
+accuracy score: 0.962087
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49654>    .     .  1028 |
+1 |   142    <.>    .   452 |
+2 |    43     .    <.>  290 |
+3 |     2     .     .    <7>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49654>    .     .  1028 |
+1 |   142    <.>    .   452 |
+2 |    43     .    <.>  290 |
+3 |     2     .     .    <7>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (49661): 0=49654, 3=7, 2=0, 1=0, 
+
+False Negatives (1957): 0=1028, 1=594, 2=333, 3=2, 
+
+False Positives (1957): 3=1770, 0=187, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.93      0.86     35893
+          1       0.74      0.44      0.55     15725
+
+avg / total       0.78      0.78      0.76     51618
+
+accuracy score: 0.782983
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33507> 2386 |
+1 |  8816 <6909>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33507> 2386 |
+1 |  8816 <6909>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40416): 0=33507, 1=6909, 
+
+False Negatives (11202): 1=8816, 0=2386, 
+
+False Positives (11202): 0=8816, 1=2386, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41672
+          1       0.00      0.00      0.00      9581
+          2       0.00      0.00      0.00       365
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807315
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41672>    .     . |
+1 |  9581    <.>    . |
+2 |   365     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41672>    .     . |
+1 |  9581    <.>    . |
+2 |   365     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41672): 0=41672, 2=0, 1=0, 
+
+False Negatives (9946): 1=9581, 2=365, 0=0, 
+
+False Positives (9946): 0=9946, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41804
+          1       0.00      0.00      0.00      9509
+          2       0.00      0.00      0.00       305
+          3       0.00      0.00      0.00         0
+
+avg / total       0.66      0.81      0.72     51618
+
+accuracy score: 0.808652
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41741>    .     .    63 |
+1 |  9427    <.>    .    82 |
+2 |   294     .    <.>   11 |
+3 |     .     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41741>    .     .    63 |
+1 |  9427    <.>    .    82 |
+2 |   294     .    <.>   11 |
+3 |     .     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41741): 0=41741, 2=0, 1=0, 3=0, 
+
+False Negatives (9877): 1=9509, 2=305, 0=63, 3=0, 
+
+False Positives (9877): 0=9721, 3=156, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50519
+          1       0.00      0.00      0.00      1095
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978709
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50519>    .     . |
+1 |  1095    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50519>    .     . |
+1 |  1095    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50519): 0=50519, 2=0, 1=0, 
+
+False Negatives (1099): 1=1095, 2=4, 0=0, 
+
+False Positives (1099): 0=1099, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50700
+          1       0.47      0.27      0.34       918
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.981518
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50420>  280 |
+1 |   674  <244>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50420>  280 |
+1 |   674  <244>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50664): 0=50420, 1=244, 
+
+False Negatives (954): 1=674, 0=280, 
+
+False Positives (954): 0=674, 1=280, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.94      0.86     35886
+          1       0.75      0.44      0.56     15732
+
+avg / total       0.78      0.79      0.77     51618
+
+accuracy score: 0.786082
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33602> 2284 |
+1 |  8758 <6974>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33602> 2284 |
+1 |  8758 <6974>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40576): 0=33602, 1=6974, 
+
+False Negatives (11042): 1=8758, 0=2284, 
+
+False Positives (11042): 0=8758, 1=2284, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41563
+          1       0.00      0.00      0.00     10055
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805204
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41563>    . |
+1 | 10055    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41563>    . |
+1 | 10055    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41563): 0=41563, 1=0, 
+
+False Negatives (10055): 1=10055, 0=0, 
+
+False Positives (10055): 0=10055, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41688
+          1       0.00      0.00      0.00      9930
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807625
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41688>    . |
+1 |  9930    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41688>    . |
+1 |  9930    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41688): 0=41688, 1=0, 
+
+False Negatives (9930): 1=9930, 0=0, 
+
+False Positives (9930): 0=9930, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50489
+          1       0.00      0.00      0.00      1129
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978128
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50489>    . |
+1 |  1129    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50489>    . |
+1 |  1129    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50489): 0=50489, 1=0, 
+
+False Negatives (1129): 1=1129, 0=0, 
+
+False Positives (1129): 0=1129, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50706
+          1       0.00      0.00      0.00       598
+          2       0.00      0.00      0.00       307
+          3       0.00      0.00      0.00         7
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982332
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50706>    .     .     . |
+1 |   598    <.>    .     . |
+2 |   307     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50706>    .     .     . |
+1 |   598    <.>    .     . |
+2 |   307     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50706): 0=50706, 2=0, 1=0, 3=0, 
+
+False Negatives (912): 1=598, 2=307, 3=7, 0=0, 
+
+False Positives (912): 0=912, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.17s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     35898
+          1       0.00      0.00      0.00     15720
+
+avg / total       0.48      0.70      0.57     51618
+
+accuracy score: 0.695455
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35898>    . |
+1 | 15720    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35898>    . |
+1 | 15720    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35898): 0=35898, 1=0, 
+
+False Negatives (15720): 1=15720, 0=0, 
+
+False Positives (15720): 0=15720, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41706
+          1       0.00      0.00      0.00      9561
+          2       0.00      0.00      0.00       351
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807974
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41706>    .     . |
+1 |  9561    <.>    . |
+2 |   351     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41706>    .     . |
+1 |  9561    <.>    . |
+2 |   351     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41706): 0=41706, 2=0, 1=0, 
+
+False Negatives (9912): 1=9561, 2=351, 0=0, 
+
+False Positives (9912): 0=9912, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41866
+          1       0.00      0.00      0.00      9453
+          2       0.00      0.00      0.00       299
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811074
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41866>    .     . |
+1 |  9453    <.>    . |
+2 |   299     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41866>    .     . |
+1 |  9453    <.>    . |
+2 |   299     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41866): 0=41866, 2=0, 1=0, 
+
+False Negatives (9752): 1=9453, 2=299, 0=0, 
+
+False Positives (9752): 0=9752, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50505
+          1       0.00      0.00      0.00      1109
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978438
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50505>    .     . |
+1 |  1109    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50505>    .     . |
+1 |  1109    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50505): 0=50505, 2=0, 1=0, 
+
+False Negatives (1113): 1=1109, 2=4, 0=0, 
+
+False Positives (1113): 0=1113, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50761
+          1       0.00      0.00      0.00       857
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.983397
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50761>    . |
+1 |   857    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50761>    . |
+1 |   857    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50761): 0=50761, 1=0, 
+
+False Negatives (857): 1=857, 0=0, 
+
+False Positives (857): 0=857, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     35829
+          1       0.00      0.00      0.00     15789
+
+avg / total       0.48      0.69      0.57     51618
+
+accuracy score: 0.694118
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35829>    . |
+1 | 15789    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35829>    . |
+1 | 15789    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35829): 0=35829, 1=0, 
+
+False Negatives (15789): 1=15789, 0=0, 
+
+False Positives (15789): 0=15789, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41574
+          1       0.00      0.00      0.00     10044
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805417
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41574>    . |
+1 | 10044    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41574>    . |
+1 | 10044    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41574): 0=41574, 1=0, 
+
+False Negatives (10044): 1=10044, 0=0, 
+
+False Positives (10044): 0=10044, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41826
+          1       0.00      0.00      0.00      9792
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810299
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41826>    . |
+1 |  9792    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41826>    . |
+1 |  9792    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41826): 0=41826, 1=0, 
+
+False Negatives (9792): 1=9792, 0=0, 
+
+False Positives (9792): 0=9792, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50533
+          1       0.00      0.00      0.00      1085
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978980
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50533>    . |
+1 |  1085    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50533>    . |
+1 |  1085    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50533): 0=50533, 1=0, 
+
+False Negatives (1085): 1=1085, 0=0, 
+
+False Positives (1085): 0=1085, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50693
+          1       0.00      0.00      0.00       614
+          2       0.00      0.00      0.00       309
+          3       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982080
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50693>    .     .     . |
+1 |   614    <.>    .     . |
+2 |   309     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50693>    .     .     . |
+1 |   614    <.>    .     . |
+2 |   309     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50693): 0=50693, 2=0, 1=0, 3=0, 
+
+False Negatives (925): 1=614, 2=309, 3=2, 0=0, 
+
+False Positives (925): 0=925, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.94      0.81     35780
+          1       0.56      0.18      0.27     15838
+
+avg / total       0.67      0.70      0.65     51618
+
+accuracy score: 0.704347
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33556> 2224 |
+1 | 13037 <2801>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33556> 2224 |
+1 | 13037 <2801>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36357): 0=33556, 1=2801, 
+
+False Negatives (15261): 1=13037, 0=2224, 
+
+False Positives (15261): 0=13037, 1=2224, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41681
+          1       0.00      0.00      0.00      9564
+          2       0.00      0.00      0.00       373
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807490
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41681>    .     . |
+1 |  9564    <.>    . |
+2 |   373     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41681>    .     . |
+1 |  9564    <.>    . |
+2 |   373     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41681): 0=41681, 2=0, 1=0, 
+
+False Negatives (9937): 1=9564, 2=373, 0=0, 
+
+False Positives (9937): 0=9937, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41896
+          1       0.00      0.00      0.00      9393
+          2       0.00      0.00      0.00       329
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811655
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41896>    .     . |
+1 |  9393    <.>    . |
+2 |   329     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41896>    .     . |
+1 |  9393    <.>    . |
+2 |   329     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41896): 0=41896, 2=0, 1=0, 
+
+False Negatives (9722): 1=9393, 2=329, 0=0, 
+
+False Positives (9722): 0=9722, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50512
+          1       0.00      0.00      0.00      1105
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978573
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50512>    .     . |
+1 |  1105    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50512>    .     . |
+1 |  1105    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50512): 0=50512, 2=0, 1=0, 
+
+False Negatives (1106): 1=1105, 2=1, 0=0, 
+
+False Positives (1106): 0=1106, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50732
+          1       0.00      0.00      0.00       886
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982835
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50732>    . |
+1 |   886    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50732>    . |
+1 |   886    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50732): 0=50732, 1=0, 
+
+False Negatives (886): 1=886, 0=0, 
+
+False Positives (886): 0=886, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.93      0.81     35922
+          1       0.54      0.20      0.29     15696
+
+avg / total       0.67      0.70      0.65     51618
+
+accuracy score: 0.704037
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33267> 2655 |
+1 | 12622 <3074>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33267> 2655 |
+1 | 12622 <3074>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36341): 0=33267, 1=3074, 
+
+False Negatives (15277): 1=12622, 0=2655, 
+
+False Positives (15277): 0=12622, 1=2655, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41669
+          1       0.00      0.00      0.00      9949
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807257
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41669>    . |
+1 |  9949    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41669>    . |
+1 |  9949    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41669): 0=41669, 1=0, 
+
+False Negatives (9949): 1=9949, 0=0, 
+
+False Positives (9949): 0=9949, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     42001
+          1       0.00      0.00      0.00      9617
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.813689
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<42001>    . |
+1 |  9617    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<42001>    . |
+1 |  9617    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42001): 0=42001, 1=0, 
+
+False Negatives (9617): 1=9617, 0=0, 
+
+False Positives (9617): 0=9617, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50513
+          1       0.00      0.00      0.00      1105
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978593
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50513>    . |
+1 |  1105    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50513>    . |
+1 |  1105    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50513): 0=50513, 1=0, 
+
+False Negatives (1105): 1=1105, 0=0, 
+
+False Positives (1105): 0=1105, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50702
+          1       0.00      0.00      0.00       604
+          2       0.00      0.00      0.00       306
+          3       0.00      0.00      0.00         6
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982254
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50702>    .     .     . |
+1 |   604    <.>    .     . |
+2 |   306     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50702>    .     .     . |
+1 |   604    <.>    .     . |
+2 |   306     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50702): 0=50702, 2=0, 1=0, 3=0, 
+
+False Negatives (916): 1=604, 2=306, 3=6, 0=0, 
+
+False Positives (916): 0=916, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     35838
+          1       0.71      0.00      0.01     15780
+
+avg / total       0.70      0.69      0.57     51618
+
+accuracy score: 0.694932
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35815>   23 |
+1 | 15724   <56>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35815>   23 |
+1 | 15724   <56>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35871): 0=35815, 1=56, 
+
+False Negatives (15747): 1=15724, 0=23, 
+
+False Positives (15747): 0=15724, 1=23, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.17s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41504
+          1       0.00      0.00      0.00      9759
+          2       0.00      0.00      0.00       355
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.804061
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41504>    .     . |
+1 |  9759    <.>    . |
+2 |   355     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41504>    .     . |
+1 |  9759    <.>    . |
+2 |   355     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41504): 0=41504, 2=0, 1=0, 
+
+False Negatives (10114): 1=9759, 2=355, 0=0, 
+
+False Positives (10114): 0=10114, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41776
+          1       0.00      0.00      0.00      9495
+          2       0.00      0.00      0.00       347
+
+avg / total       0.66      0.81      0.72     51618
+
+accuracy score: 0.809330
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41776>    .     . |
+1 |  9495    <.>    . |
+2 |   347     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41776>    .     . |
+1 |  9495    <.>    . |
+2 |   347     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41776): 0=41776, 2=0, 1=0, 
+
+False Negatives (9842): 1=9495, 2=347, 0=0, 
+
+False Positives (9842): 0=9842, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50526
+          1       0.00      0.00      0.00      1089
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978845
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50526>    .     . |
+1 |  1089    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50526>    .     . |
+1 |  1089    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50526): 0=50526, 2=0, 1=0, 
+
+False Negatives (1092): 1=1089, 2=3, 0=0, 
+
+False Positives (1092): 0=1092, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50681
+          1       0.80      0.01      0.02       937
+
+avg / total       0.98      0.98      0.97     51618
+
+accuracy score: 0.981964
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50679>    2 |
+1 |   929    <8>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50679>    2 |
+1 |   929    <8>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50687): 0=50679, 1=8, 
+
+False Negatives (931): 1=929, 0=2, 
+
+False Positives (931): 0=929, 1=2, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     35818
+          1       0.71      0.01      0.01     15800
+
+avg / total       0.70      0.69      0.57     51618
+
+accuracy score: 0.694932
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35781>   37 |
+1 | 15710   <90>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35781>   37 |
+1 | 15710   <90>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35871): 0=35781, 1=90, 
+
+False Negatives (15747): 1=15710, 0=37, 
+
+False Positives (15747): 0=15710, 1=37, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41574
+          1       0.00      0.00      0.00     10044
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805417
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41574>    . |
+1 | 10044    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41574>    . |
+1 | 10044    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41574): 0=41574, 1=0, 
+
+False Negatives (10044): 1=10044, 0=0, 
+
+False Positives (10044): 0=10044, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41749
+          1       0.00      0.00      0.00      9869
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808807
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41749>    . |
+1 |  9869    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41749>    . |
+1 |  9869    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41749): 0=41749, 1=0, 
+
+False Negatives (9869): 1=9869, 0=0, 
+
+False Positives (9869): 0=9869, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.17s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50526
+          1       0.00      0.00      0.00      1092
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978845
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50526>    . |
+1 |  1092    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50526>    . |
+1 |  1092    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50526): 0=50526, 1=0, 
+
+False Negatives (1092): 1=1092, 0=0, 
+
+False Positives (1092): 0=1092, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50691
+          1       0.00      0.00      0.00       608
+          2       0.00      0.00      0.00       310
+          3       0.00      0.00      0.00         9
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982041
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50691>    .     .     . |
+1 |   608    <.>    .     . |
+2 |   310     .    <.>    . |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50691>    .     .     . |
+1 |   608    <.>    .     . |
+2 |   310     .    <.>    . |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50691): 0=50691, 2=0, 1=0, 3=0, 
+
+False Negatives (927): 1=608, 2=310, 3=9, 0=0, 
+
+False Positives (927): 0=927, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     35749
+          1       0.66      0.23      0.34     15869
+
+avg / total       0.71      0.73      0.68     51618
+
+accuracy score: 0.727382
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33868> 1881 |
+1 | 12191 <3678>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33868> 1881 |
+1 | 12191 <3678>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37546): 0=33868, 1=3678, 
+
+False Negatives (14072): 1=12191, 0=1881, 
+
+False Positives (14072): 0=12191, 1=1881, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41651
+          1       0.00      0.00      0.00      9594
+          2       0.00      0.00      0.00       373
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806908
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41651>    .     . |
+1 |  9594    <.>    . |
+2 |   373     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41651>    .     . |
+1 |  9594    <.>    . |
+2 |   373     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41651): 0=41651, 2=0, 1=0, 
+
+False Negatives (9967): 1=9594, 2=373, 0=0, 
+
+False Positives (9967): 0=9967, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.17s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41795
+          1       0.00      0.00      0.00      9499
+          2       0.00      0.00      0.00       323
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.72     51618
+
+accuracy score: 0.809698
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41795>    .     .     . |
+1 |  9499    <.>    .     . |
+2 |   323     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41795>    .     .     . |
+1 |  9499    <.>    .     . |
+2 |   323     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41795): 0=41795, 2=0, 1=0, 3=0, 
+
+False Negatives (9823): 1=9499, 2=323, 3=1, 0=0, 
+
+False Positives (9823): 0=9823, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50486
+          1       0.00      0.00      0.00      1129
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978070
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    .     . |
+1 |  1129    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    .     . |
+1 |  1129    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50486): 0=50486, 2=0, 1=0, 
+
+False Negatives (1132): 1=1129, 2=3, 0=0, 
+
+False Positives (1132): 0=1132, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50702
+          1       0.00      0.00      0.00       916
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982254
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50702>    . |
+1 |   916    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50702>    . |
+1 |   916    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50702): 0=50702, 1=0, 
+
+False Negatives (916): 1=916, 0=0, 
+
+False Positives (916): 0=916, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.95      0.83     35707
+          1       0.67      0.23      0.34     15911
+
+avg / total       0.72      0.73      0.68     51618
+
+accuracy score: 0.727982
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33905> 1802 |
+1 | 12239 <3672>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33905> 1802 |
+1 | 12239 <3672>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37577): 0=33905, 1=3672, 
+
+False Negatives (14041): 1=12239, 0=1802, 
+
+False Positives (14041): 0=12239, 1=1802, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41616
+          1       0.00      0.00      0.00     10002
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806230
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41616>    . |
+1 | 10002    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41616>    . |
+1 | 10002    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41616): 0=41616, 1=0, 
+
+False Negatives (10002): 1=10002, 0=0, 
+
+False Positives (10002): 0=10002, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41562
+          1       0.00      0.00      0.00     10056
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805184
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41562>    . |
+1 | 10056    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41562>    . |
+1 | 10056    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41562): 0=41562, 1=0, 
+
+False Negatives (10056): 1=10056, 0=0, 
+
+False Positives (10056): 0=10056, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50543
+          1       0.00      0.00      0.00      1075
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979174
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50543>    . |
+1 |  1075    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50543>    . |
+1 |  1075    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50543): 0=50543, 1=0, 
+
+False Negatives (1075): 1=1075, 0=0, 
+
+False Positives (1075): 0=1075, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.97      0.99     50682
+          1       0.24      0.85      0.38       601
+          2       0.00      0.00      0.00       328
+          3       0.00      0.00      0.00         7
+
+avg / total       0.98      0.97      0.97     51618
+
+accuracy score: 0.966601
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49383> 1299     .     . |
+1 |    90  <511>    .     . |
+2 |    22   306    <.>    . |
+3 |     .     7     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49383> 1299     .     . |
+1 |    90  <511>    .     . |
+2 |    22   306    <.>    . |
+3 |     .     7     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (49894): 0=49383, 1=511, 2=0, 3=0, 
+
+False Negatives (1724): 0=1299, 2=328, 1=90, 3=7, 
+
+False Positives (1724): 1=1612, 0=112, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.93      0.82     36009
+          1       0.59      0.23      0.33     15609
+
+avg / total       0.69      0.72      0.67     51618
+
+accuracy score: 0.717986
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33504> 2505 |
+1 | 12052 <3557>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33504> 2505 |
+1 | 12052 <3557>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37061): 0=33504, 1=3557, 
+
+False Negatives (14557): 1=12052, 0=2505, 
+
+False Positives (14557): 0=12052, 1=2505, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.97      0.89     41704
+          1       0.45      0.12      0.19      9551
+          2       0.00      0.00      0.00       363
+
+avg / total       0.75      0.81      0.75     51618
+
+accuracy score: 0.805087
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40431> 1273     . |
+1 |  8425 <1126>    . |
+2 |   249   114    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40431> 1273     . |
+1 |  8425 <1126>    . |
+2 |   249   114    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41557): 0=40431, 1=1126, 2=0, 
+
+False Negatives (10061): 1=8425, 0=1273, 2=363, 
+
+False Positives (10061): 0=8674, 1=1387, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.97      0.89     41909
+          1       0.44      0.11      0.18      9388
+          2       0.00      0.00      0.00       321
+          3       0.00      0.00      0.00         0
+
+avg / total       0.75      0.81      0.76     51618
+
+accuracy score: 0.807800
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<40632> 1271     .     6 |
+1 |  8304 <1065>    .    19 |
+2 |   222    99    <.>    . |
+3 |     .     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<40632> 1271     .     6 |
+1 |  8304 <1065>    .    19 |
+2 |   222    99    <.>    . |
+3 |     .     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41697): 0=40632, 1=1065, 2=0, 3=0, 
+
+False Negatives (9921): 1=8323, 0=1277, 2=321, 3=0, 
+
+False Positives (9921): 0=8526, 1=1370, 3=25, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50548
+          1       0.00      0.00      0.00      1067
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979271
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50548>    .     . |
+1 |  1067    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50548>    .     . |
+1 |  1067    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50548): 0=50548, 2=0, 1=0, 
+
+False Negatives (1070): 1=1067, 2=3, 0=0, 
+
+False Positives (1070): 0=1070, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.97      0.99     50709
+          1       0.37      0.89      0.52       909
+
+avg / total       0.99      0.97      0.98     51618
+
+accuracy score: 0.971018
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<49312> 1397 |
+1 |    99  <810>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<49312> 1397 |
+1 |    99  <810>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50122): 0=49312, 1=810, 
+
+False Negatives (1496): 0=1397, 1=99, 
+
+False Positives (1496): 1=1397, 0=99, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.93      0.82     35758
+          1       0.58      0.22      0.32     15860
+
+avg / total       0.68      0.71      0.66     51618
+
+accuracy score: 0.711612
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33241> 2517 |
+1 | 12369 <3491>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33241> 2517 |
+1 | 12369 <3491>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36732): 0=33241, 1=3491, 
+
+False Negatives (14886): 1=12369, 0=2517, 
+
+False Positives (14886): 0=12369, 1=2517, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.96      0.89     41633
+          1       0.46      0.14      0.22      9985
+
+avg / total       0.75      0.80      0.76     51618
+
+accuracy score: 0.801852
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<39952> 1681 |
+1 |  8547 <1438>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<39952> 1681 |
+1 |  8547 <1438>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41390): 0=39952, 1=1438, 
+
+False Negatives (10228): 1=8547, 0=1681, 
+
+False Positives (10228): 0=8547, 1=1681, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     41788
+          1       0.46      0.14      0.22      9830
+
+avg / total       0.76      0.81      0.76     51618
+
+accuracy score: 0.805107
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40172> 1616 |
+1 |  8444 <1386>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40172> 1616 |
+1 |  8444 <1386>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41558): 0=40172, 1=1386, 
+
+False Negatives (10060): 1=8444, 0=1616, 
+
+False Positives (10060): 0=8444, 1=1616, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50539
+          1       0.00      0.00      0.00      1079
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979096
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50539>    . |
+1 |  1079    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50539>    . |
+1 |  1079    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50539): 0=50539, 1=0, 
+
+False Negatives (1079): 1=1079, 0=0, 
+
+False Positives (1079): 0=1079, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50724
+          1       0.27      0.67      0.38       604
+          2       0.25      0.20      0.22       285
+          3       0.00      0.00      0.00         5
+
+avg / total       0.98      0.97      0.98     51618
+
+accuracy score: 0.971851
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49702>  921   101     . |
+1 |   131  <406>   67     . |
+2 |    26   202   <57>    . |
+3 |     1     3     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49702>  921   101     . |
+1 |   131  <406>   67     . |
+2 |    26   202   <57>    . |
+3 |     1     3     1    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50165): 0=49702, 1=406, 2=57, 3=0, 
+
+False Negatives (1453): 0=1022, 2=228, 1=198, 3=5, 
+
+False Positives (1453): 1=1126, 2=169, 0=158, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.76      0.92      0.83     35879
+          1       0.65      0.35      0.46     15739
+
+avg / total       0.73      0.74      0.72     51618
+
+accuracy score: 0.744295
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32909> 2970 |
+1 | 10229 <5510>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32909> 2970 |
+1 | 10229 <5510>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38419): 0=32909, 1=5510, 
+
+False Negatives (13199): 1=10229, 0=2970, 
+
+False Positives (13199): 0=10229, 1=2970, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.99      0.89     41644
+          1       0.57      0.05      0.10      9600
+          2       0.00      0.00      0.00       374
+
+avg / total       0.76      0.81      0.74     51618
+
+accuracy score: 0.810647
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41329>  315     . |
+1 |  9085  <515>    . |
+2 |   301    73    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41329>  315     . |
+1 |  9085  <515>    . |
+2 |   301    73    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41844): 0=41329, 1=515, 2=0, 
+
+False Negatives (9774): 1=9085, 2=374, 0=315, 
+
+False Positives (9774): 0=9386, 1=388, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41674
+          1       0.62      0.05      0.10      9584
+          2       0.00      0.00      0.00       360
+          3       0.00      0.00      0.00         0
+
+avg / total       0.77      0.81      0.74     51618
+
+accuracy score: 0.812023
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41411>  262     .     1 |
+1 |  9072  <504>    .     8 |
+2 |   307    52    <.>    1 |
+3 |     .     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41411>  262     .     1 |
+1 |  9072  <504>    .     8 |
+2 |   307    52    <.>    1 |
+3 |     .     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41915): 0=41411, 1=504, 2=0, 3=0, 
+
+False Negatives (9703): 1=9080, 2=360, 0=263, 3=0, 
+
+False Positives (9703): 0=9379, 1=314, 3=10, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50544
+          1       0.00      0.00      0.00      1071
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979193
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50544>    .     . |
+1 |  1071    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50544>    .     . |
+1 |  1071    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50544): 0=50544, 2=0, 1=0, 
+
+False Negatives (1074): 1=1071, 2=3, 0=0, 
+
+False Positives (1074): 0=1074, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50734
+          1       0.41      0.85      0.55       884
+
+avg / total       0.99      0.98      0.98     51618
+
+accuracy score: 0.976462
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<49654> 1080 |
+1 |   135  <749>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<49654> 1080 |
+1 |   135  <749>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50403): 0=49654, 1=749, 
+
+False Negatives (1215): 0=1080, 1=135, 
+
+False Positives (1215): 1=1080, 0=135, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.91      0.83     36031
+          1       0.64      0.36      0.46     15587
+
+avg / total       0.73      0.75      0.72     51618
+
+accuracy score: 0.745864
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32893> 3138 |
+1 |  9980 <5607>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32893> 3138 |
+1 |  9980 <5607>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38500): 0=32893, 1=5607, 
+
+False Negatives (13118): 1=9980, 0=3138, 
+
+False Positives (13118): 0=9980, 1=3138, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.89     41595
+          1       0.64      0.08      0.14     10023
+
+avg / total       0.78      0.81      0.75     51618
+
+accuracy score: 0.812469
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41165>  430 |
+1 |  9250  <773>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41165>  430 |
+1 |  9250  <773>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41938): 0=41165, 1=773, 
+
+False Negatives (9680): 1=9250, 0=430, 
+
+False Positives (9680): 0=9250, 1=430, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41757
+          1       0.67      0.08      0.14      9861
+
+avg / total       0.79      0.82      0.75     51618
+
+accuracy score: 0.816479
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41374>  383 |
+1 |  9090  <771>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41374>  383 |
+1 |  9090  <771>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42145): 0=41374, 1=771, 
+
+False Negatives (9473): 1=9090, 0=383, 
+
+False Positives (9473): 0=9090, 1=383, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.05s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50483
+          1       0.00      0.00      0.00      1135
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978012
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50483>    . |
+1 |  1135    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50483>    . |
+1 |  1135    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50483): 0=50483, 1=0, 
+
+False Negatives (1135): 1=1135, 0=0, 
+
+False Positives (1135): 0=1135, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

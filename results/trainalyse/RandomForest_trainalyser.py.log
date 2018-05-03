@@ -1,0 +1,3821 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.57s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50695
+          1       0.71      0.01      0.02       609
+          2       0.00      0.00      0.00       304
+          3       0.00      0.00      0.00        10
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982177
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50693>    2     .     . |
+1 |   604    <5>    .     . |
+2 |   304     .    <.>    . |
+3 |    10     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50693>    2     .     . |
+1 |   604    <5>    .     . |
+2 |   304     .    <.>    . |
+3 |    10     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50698): 0=50693, 1=5, 3=0, 2=0, 
+
+False Negatives (920): 1=604, 2=304, 3=10, 0=2, 
+
+False Positives (920): 0=918, 1=2, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.99      0.88     35750
+          1       0.94      0.41      0.57     15868
+
+avg / total       0.83      0.81      0.78     51618
+
+accuracy score: 0.808613
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35308>  442 |
+1 |  9437 <6431>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35308>  442 |
+1 |  9437 <6431>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41739): 0=35308, 1=6431, 
+
+False Negatives (9879): 1=9437, 0=442, 
+
+False Positives (9879): 0=9437, 1=442, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41673
+          1       0.00      0.00      0.00      9588
+          2       0.00      0.00      0.00       357
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807335
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41673>    .     . |
+1 |  9588    <.>    . |
+2 |   357     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41673>    .     . |
+1 |  9588    <.>    . |
+2 |   357     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41673): 0=41673, 1=0, 2=0, 
+
+False Negatives (9945): 1=9588, 2=357, 0=0, 
+
+False Positives (9945): 0=9945, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.60s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41963
+          1       0.92      0.00      0.00      9322
+          2       0.00      0.00      0.00       332
+          3       0.00      0.00      0.00         1
+
+avg / total       0.83      0.81      0.73     51618
+
+accuracy score: 0.813166
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41962>    1     .     . |
+1 |  9310   <12>    .     . |
+2 |   332     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41962>    1     .     . |
+1 |  9310   <12>    .     . |
+2 |   332     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41974): 0=41962, 1=12, 3=0, 2=0, 
+
+False Negatives (9644): 1=9310, 2=332, 3=1, 0=1, 
+
+False Positives (9644): 0=9643, 1=1, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.52s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50560
+          1       0.00      0.00      0.00      1056
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979503
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50560>    .     . |
+1 |  1056    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50560>    .     . |
+1 |  1056    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50560): 0=50560, 1=0, 2=0, 
+
+False Negatives (1058): 1=1056, 2=2, 0=0, 
+
+False Positives (1058): 0=1058, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50700
+          1       0.00      0.00      0.00       918
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982216
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50700>    . |
+1 |   918    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50700>    . |
+1 |   918    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50700): 0=50700, 1=0, 
+
+False Negatives (918): 1=918, 0=0, 
+
+False Positives (918): 0=918, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.99      0.88     35888
+          1       0.97      0.40      0.57     15730
+
+avg / total       0.85      0.81      0.79     51618
+
+accuracy score: 0.814600
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35706>  182 |
+1 |  9388 <6342>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35706>  182 |
+1 |  9388 <6342>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42048): 0=35706, 1=6342, 
+
+False Negatives (9570): 1=9388, 0=182, 
+
+False Positives (9570): 0=9388, 1=182, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.54s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41613
+          1       0.80      0.01      0.02     10005
+
+avg / total       0.81      0.81      0.72     51618
+
+accuracy score: 0.807373
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41592>   21 |
+1 |  9922   <83>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41592>   21 |
+1 |  9922   <83>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41675): 0=41592, 1=83, 
+
+False Negatives (9943): 1=9922, 0=21, 
+
+False Positives (9943): 0=9922, 1=21, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.58s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41856
+          1       0.74      0.00      0.01      9762
+
+avg / total       0.80      0.81      0.73     51618
+
+accuracy score: 0.811267
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41845>   11 |
+1 |  9731   <31>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41845>   11 |
+1 |  9731   <31>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41876): 0=41845, 1=31, 
+
+False Negatives (9742): 1=9731, 0=11, 
+
+False Positives (9742): 0=9731, 1=11, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.53s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50543
+          1       0.00      0.00      0.00      1075
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979174
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50543>    . |
+1 |  1075    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50543>    . |
+1 |  1075    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50543): 0=50543, 1=0, 
+
+False Negatives (1075): 1=1075, 0=0, 
+
+False Positives (1075): 0=1075, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.28s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50697
+          1       0.00      0.00      0.00       602
+          2       0.00      0.00      0.00       313
+          3       0.00      0.00      0.00         6
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982157
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50697>    .     .     . |
+1 |   602    <.>    .     . |
+2 |   313     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50697>    .     .     . |
+1 |   602    <.>    .     . |
+2 |   313     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50697): 0=50697, 1=0, 3=0, 2=0, 
+
+False Negatives (921): 1=602, 2=313, 3=6, 0=0, 
+
+False Positives (921): 0=921, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.26s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.99      0.88     35900
+          1       0.95      0.43      0.59     15718
+
+avg / total       0.85      0.82      0.80     51618
+
+accuracy score: 0.820160
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35555>  345 |
+1 |  8938 <6780>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35555>  345 |
+1 |  8938 <6780>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42335): 0=35555, 1=6780, 
+
+False Negatives (9283): 1=8938, 0=345, 
+
+False Positives (9283): 0=8938, 1=345, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.26s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41723
+          1       0.58      0.00      0.01      9517
+          2       0.00      0.00      0.00       378
+
+avg / total       0.76      0.81      0.72     51618
+
+accuracy score: 0.808516
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41705>   18     . |
+1 |  9488   <29>    . |
+2 |   375     3    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41705>   18     . |
+1 |  9488   <29>    . |
+2 |   375     3    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41734): 0=41705, 1=29, 2=0, 
+
+False Negatives (9884): 1=9488, 2=378, 0=18, 
+
+False Positives (9884): 0=9863, 1=21, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.26s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41743
+          1       0.78      0.00      0.00      9560
+          2       0.00      0.00      0.00       314
+          3       0.00      0.00      0.00         1
+
+avg / total       0.80      0.81      0.72     51618
+
+accuracy score: 0.808788
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41741>    2     .     . |
+1 |  9553    <7>    .     . |
+2 |   314     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41741>    2     .     . |
+1 |  9553    <7>    .     . |
+2 |   314     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41748): 0=41741, 1=7, 3=0, 2=0, 
+
+False Negatives (9870): 1=9553, 2=314, 0=2, 3=1, 
+
+False Positives (9870): 0=9868, 1=2, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.24s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50558
+          1       0.00      0.00      0.00      1057
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979465
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50558>    .     . |
+1 |  1057    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50558>    .     . |
+1 |  1057    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50558): 0=50558, 1=0, 2=0, 
+
+False Negatives (1060): 1=1057, 2=3, 0=0, 
+
+False Positives (1060): 0=1060, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.25s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50710
+          1       0.00      0.00      0.00       908
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982409
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50710>    . |
+1 |   908    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50710>    . |
+1 |   908    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50710): 0=50710, 1=0, 
+
+False Negatives (908): 1=908, 0=0, 
+
+False Positives (908): 0=908, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.26s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.99      0.88     35954
+          1       0.96      0.42      0.59     15664
+
+avg / total       0.85      0.82      0.79     51618
+
+accuracy score: 0.819288
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35661>  293 |
+1 |  9035 <6629>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35661>  293 |
+1 |  9035 <6629>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42290): 0=35661, 1=6629, 
+
+False Negatives (9328): 1=9035, 0=293, 
+
+False Positives (9328): 0=9035, 1=293, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.26s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41691
+          1       0.76      0.00      0.01      9927
+
+avg / total       0.80      0.81      0.72     51618
+
+accuracy score: 0.808110
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41681>   10 |
+1 |  9895   <32>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41681>   10 |
+1 |  9895   <32>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41713): 0=41681, 1=32, 
+
+False Negatives (9905): 1=9895, 0=10, 
+
+False Positives (9905): 0=9895, 1=10, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.25s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41875
+          1       0.73      0.01      0.02      9743
+
+avg / total       0.80      0.81      0.73     51618
+
+accuracy score: 0.812585
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41835>   40 |
+1 |  9634  <109>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41835>   40 |
+1 |  9634  <109>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41944): 0=41835, 1=109, 
+
+False Negatives (9674): 1=9634, 0=40, 
+
+False Positives (9674): 0=9634, 1=40, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.25s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50504
+          1       0.00      0.00      0.00      1114
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978418
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50504>    . |
+1 |  1114    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50504>    . |
+1 |  1114    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50504): 0=50504, 1=0, 
+
+False Negatives (1114): 1=1114, 0=0, 
+
+False Positives (1114): 0=1114, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.88s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50721
+          1       0.00      0.00      0.00       578
+          2       0.00      0.00      0.00       312
+          3       0.00      0.00      0.00         7
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982622
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50721>    .     .     . |
+1 |   578    <.>    .     . |
+2 |   312     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50721>    .     .     . |
+1 |   578    <.>    .     . |
+2 |   312     .    <.>    . |
+3 |     7     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50721): 0=50721, 1=0, 3=0, 2=0, 
+
+False Negatives (897): 1=578, 2=312, 3=7, 0=0, 
+
+False Positives (897): 0=897, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.90s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.97      0.83     35994
+          1       0.67      0.13      0.21     15624
+
+avg / total       0.70      0.72      0.64     51618
+
+accuracy score: 0.716746
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35015>  979 |
+1 | 13642 <1982>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35015>  979 |
+1 | 13642 <1982>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36997): 0=35015, 1=1982, 
+
+False Negatives (14621): 1=13642, 0=979, 
+
+False Positives (14621): 0=13642, 1=979, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.86s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41696
+          1       0.00      0.00      0.00      9583
+          2       0.00      0.00      0.00       339
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807780
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41696>    .     . |
+1 |  9583    <.>    . |
+2 |   339     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41696>    .     . |
+1 |  9583    <.>    . |
+2 |   339     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41696): 0=41696, 1=0, 2=0, 
+
+False Negatives (9922): 1=9583, 2=339, 0=0, 
+
+False Positives (9922): 0=9922, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.85s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41957
+          1       0.00      0.00      0.00      9366
+          2       0.00      0.00      0.00       294
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.812837
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41957>    .     .     . |
+1 |  9366    <.>    .     . |
+2 |   294     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41957>    .     .     . |
+1 |  9366    <.>    .     . |
+2 |   294     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41957): 0=41957, 1=0, 3=0, 2=0, 
+
+False Negatives (9661): 1=9366, 2=294, 3=1, 0=0, 
+
+False Positives (9661): 0=9661, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.83s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50534
+          1       0.00      0.00      0.00      1080
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979000
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50534>    .     . |
+1 |  1080    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50534>    .     . |
+1 |  1080    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50534): 0=50534, 1=0, 2=0, 
+
+False Negatives (1084): 1=1080, 2=4, 0=0, 
+
+False Positives (1084): 0=1084, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.82s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50714
+          1       0.00      0.00      0.00       904
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982487
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50714>    . |
+1 |   904    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50714>    . |
+1 |   904    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50714): 0=50714, 1=0, 
+
+False Negatives (904): 1=904, 0=0, 
+
+False Positives (904): 0=904, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.88s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.97      0.83     35894
+          1       0.68      0.13      0.22     15724
+
+avg / total       0.71      0.72      0.64     51618
+
+accuracy score: 0.716436
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34894> 1000 |
+1 | 13637 <2087>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34894> 1000 |
+1 | 13637 <2087>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36981): 0=34894, 1=2087, 
+
+False Negatives (14637): 1=13637, 0=1000, 
+
+False Positives (14637): 0=13637, 1=1000, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41610
+          1       0.00      0.00      0.00     10008
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806114
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41610>    . |
+1 | 10008    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41610>    . |
+1 | 10008    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41610): 0=41610, 1=0, 
+
+False Negatives (10008): 1=10008, 0=0, 
+
+False Positives (10008): 0=10008, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.84s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41892
+          1       0.00      0.00      0.00      9726
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811577
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41892>    . |
+1 |  9726    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41892>    . |
+1 |  9726    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41892): 0=41892, 1=0, 
+
+False Negatives (9726): 1=9726, 0=0, 
+
+False Positives (9726): 0=9726, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.85s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50528
+          1       0.00      0.00      0.00      1090
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978883
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50528>    . |
+1 |  1090    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50528>    . |
+1 |  1090    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50528): 0=50528, 1=0, 
+
+False Negatives (1090): 1=1090, 0=0, 
+
+False Positives (1090): 0=1090, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.79s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50679
+          1       0.00      0.00      0.00       618
+          2       0.00      0.00      0.00       312
+          3       0.00      0.00      0.00         9
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.981809
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50679>    .     .     . |
+1 |   618    <.>    .     . |
+2 |   312     .    <.>    . |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50679>    .     .     . |
+1 |   618    <.>    .     . |
+2 |   312     .    <.>    . |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50679): 0=50679, 1=0, 3=0, 2=0, 
+
+False Negatives (939): 1=618, 2=312, 3=9, 0=0, 
+
+False Positives (939): 0=939, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.80s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.96      0.83     35726
+          1       0.68      0.18      0.29     15892
+
+avg / total       0.71      0.72      0.66     51618
+
+accuracy score: 0.721802
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34354> 1372 |
+1 | 12988 <2904>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34354> 1372 |
+1 | 12988 <2904>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37258): 0=34354, 1=2904, 
+
+False Negatives (14360): 1=12988, 0=1372, 
+
+False Positives (14360): 0=12988, 1=1372, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.83s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41744
+          1       0.00      0.00      0.00      9525
+          2       0.00      0.00      0.00       349
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808710
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41744>    .     . |
+1 |  9525    <.>    . |
+2 |   349     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41744>    .     . |
+1 |  9525    <.>    . |
+2 |   349     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41744): 0=41744, 1=0, 2=0, 
+
+False Negatives (9874): 1=9525, 2=349, 0=0, 
+
+False Positives (9874): 0=9874, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.84s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41761
+          1       0.00      0.00      0.00      9527
+          2       0.00      0.00      0.00       328
+          3       0.00      0.00      0.00         2
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.809039
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41761>    .     .     . |
+1 |  9527    <.>    .     . |
+2 |   328     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41761>    .     .     . |
+1 |  9527    <.>    .     . |
+2 |   328     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41761): 0=41761, 1=0, 3=0, 2=0, 
+
+False Negatives (9857): 1=9527, 2=328, 3=2, 0=0, 
+
+False Positives (9857): 0=9857, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.86s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50526
+          1       0.00      0.00      0.00      1090
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978845
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50526>    .     . |
+1 |  1090    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50526>    .     . |
+1 |  1090    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50526): 0=50526, 1=0, 2=0, 
+
+False Negatives (1092): 1=1090, 2=2, 0=0, 
+
+False Positives (1092): 0=1092, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50721
+          1       0.00      0.00      0.00       897
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982622
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50721>    . |
+1 |   897    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50721>    . |
+1 |   897    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50721): 0=50721, 1=0, 
+
+False Negatives (897): 1=897, 0=0, 
+
+False Positives (897): 0=897, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.83s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.97      0.83     35979
+          1       0.68      0.17      0.28     15639
+
+avg / total       0.72      0.73      0.66     51618
+
+accuracy score: 0.725406
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34723> 1256 |
+1 | 12918 <2721>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34723> 1256 |
+1 | 12918 <2721>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37444): 0=34723, 1=2721, 
+
+False Negatives (14174): 1=12918, 0=1256, 
+
+False Positives (14174): 0=12918, 1=1256, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.81s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41596
+          1       0.00      0.00      0.00     10022
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805824
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41595>    1 |
+1 | 10022    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41595>    1 |
+1 | 10022    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41595): 0=41595, 1=0, 
+
+False Negatives (10023): 1=10022, 0=1, 
+
+False Positives (10023): 0=10022, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.81s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41682
+          1       0.00      0.00      0.00      9936
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807509
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41682>    . |
+1 |  9936    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41682>    . |
+1 |  9936    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41682): 0=41682, 1=0, 
+
+False Negatives (9936): 1=9936, 0=0, 
+
+False Positives (9936): 0=9936, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.84s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50501
+          1       0.00      0.00      0.00      1117
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978360
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50501>    . |
+1 |  1117    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50501>    . |
+1 |  1117    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50501): 0=50501, 1=0, 
+
+False Negatives (1117): 1=1117, 0=0, 
+
+False Positives (1117): 0=1117, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.76s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50747
+          1       0.00      0.00      0.00       578
+          2       0.00      0.00      0.00       287
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.983126
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50747>    .     .     . |
+1 |   578    <.>    .     . |
+2 |   287     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50747>    .     .     . |
+1 |   578    <.>    .     . |
+2 |   287     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50747): 0=50747, 1=0, 3=0, 2=0, 
+
+False Negatives (871): 1=578, 2=287, 3=6, 0=0, 
+
+False Positives (871): 0=871, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.97      0.83     35862
+          1       0.68      0.13      0.21     15756
+
+avg / total       0.71      0.72      0.64     51618
+
+accuracy score: 0.715196
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34930>  932 |
+1 | 13769 <1987>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34930>  932 |
+1 | 13769 <1987>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36917): 0=34930, 1=1987, 
+
+False Negatives (14701): 1=13769, 0=932, 
+
+False Positives (14701): 0=13769, 1=932, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.79s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41515
+          1       0.00      0.00      0.00      9742
+          2       0.00      0.00      0.00       361
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.804274
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41515>    .     . |
+1 |  9742    <.>    . |
+2 |   361     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41515>    .     . |
+1 |  9742    <.>    . |
+2 |   361     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41515): 0=41515, 1=0, 2=0, 
+
+False Negatives (10103): 1=9742, 2=361, 0=0, 
+
+False Positives (10103): 0=10103, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.82s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41738
+          1       0.00      0.00      0.00      9545
+          2       0.00      0.00      0.00       333
+          3       0.00      0.00      0.00         2
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808594
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41738>    .     .     . |
+1 |  9545    <.>    .     . |
+2 |   333     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41738>    .     .     . |
+1 |  9545    <.>    .     . |
+2 |   333     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41738): 0=41738, 1=0, 3=0, 2=0, 
+
+False Negatives (9880): 1=9545, 2=333, 3=2, 0=0, 
+
+False Positives (9880): 0=9880, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.80s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50521
+          1       0.00      0.00      0.00      1094
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978748
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50521>    .     . |
+1 |  1094    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50521>    .     . |
+1 |  1094    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50521): 0=50521, 1=0, 2=0, 
+
+False Negatives (1097): 1=1094, 2=3, 0=0, 
+
+False Positives (1097): 0=1097, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50705
+          1       0.00      0.00      0.00       913
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982312
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50705>    . |
+1 |   913    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50705>    . |
+1 |   913    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50705): 0=50705, 1=0, 
+
+False Negatives (913): 1=913, 0=0, 
+
+False Positives (913): 0=913, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.84s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.97      0.83     35967
+          1       0.66      0.15      0.24     15651
+
+avg / total       0.70      0.72      0.65     51618
+
+accuracy score: 0.718528
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34758> 1209 |
+1 | 13320 <2331>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34758> 1209 |
+1 | 13320 <2331>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37089): 0=34758, 1=2331, 
+
+False Negatives (14529): 1=13320, 0=1209, 
+
+False Positives (14529): 0=13320, 1=1209, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.81s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41570
+          1       0.00      0.00      0.00     10048
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805339
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41570>    . |
+1 | 10048    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41570>    . |
+1 | 10048    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41570): 0=41570, 1=0, 
+
+False Negatives (10048): 1=10048, 0=0, 
+
+False Positives (10048): 0=10048, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.79s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41761
+          1       0.00      0.00      0.00      9857
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.809039
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41761>    . |
+1 |  9857    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41761>    . |
+1 |  9857    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41761): 0=41761, 1=0, 
+
+False Negatives (9857): 1=9857, 0=0, 
+
+False Positives (9857): 0=9857, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.80s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50522
+          1       0.00      0.00      0.00      1096
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978767
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50522>    . |
+1 |  1096    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50522>    . |
+1 |  1096    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50522): 0=50522, 1=0, 
+
+False Negatives (1096): 1=1096, 0=0, 
+
+False Positives (1096): 0=1096, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.74s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50740
+          1       0.00      0.00      0.00       568
+          2       0.00      0.00      0.00       298
+          3       0.00      0.00      0.00        12
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982990
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50740>    .     .     . |
+1 |   568    <.>    .     . |
+2 |   298     .    <.>    . |
+3 |    12     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50740>    .     .     . |
+1 |   568    <.>    .     . |
+2 |   298     .    <.>    . |
+3 |    12     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50740): 0=50740, 1=0, 3=0, 2=0, 
+
+False Negatives (878): 1=568, 2=298, 3=12, 0=0, 
+
+False Positives (878): 0=878, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.97      0.84     35894
+          1       0.76      0.24      0.37     15724
+
+avg / total       0.75      0.75      0.70     51618
+
+accuracy score: 0.745844
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34677> 1217 |
+1 | 11902 <3822>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34677> 1217 |
+1 | 11902 <3822>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38499): 0=34677, 1=3822, 
+
+False Negatives (13119): 1=11902, 0=1217, 
+
+False Positives (13119): 0=11902, 1=1217, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41582
+          1       0.00      0.00      0.00      9691
+          2       0.00      0.00      0.00       345
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805572
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41582>    .     . |
+1 |  9691    <.>    . |
+2 |   345     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41582>    .     . |
+1 |  9691    <.>    . |
+2 |   345     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41582): 0=41582, 1=0, 2=0, 
+
+False Negatives (10036): 1=9691, 2=345, 0=0, 
+
+False Positives (10036): 0=10036, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41856
+          1       0.00      0.00      0.00      9437
+          2       0.00      0.00      0.00       325
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810880
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41856>    .     . |
+1 |  9437    <.>    . |
+2 |   325     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41856>    .     . |
+1 |  9437    <.>    . |
+2 |   325     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41856): 0=41856, 1=0, 2=0, 
+
+False Negatives (9762): 1=9437, 2=325, 0=0, 
+
+False Positives (9762): 0=9762, 1=0, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.78s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50472
+          1       0.00      0.00      0.00      1146
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977798
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50472>    . |
+1 |  1146    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50472>    . |
+1 |  1146    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50472): 0=50472, 1=0, 
+
+False Negatives (1146): 1=1146, 0=0, 
+
+False Positives (1146): 0=1146, 1=0, 
+
+Untested: ['2']
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.73s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50708
+          1       0.00      0.00      0.00       910
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982370
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50708>    . |
+1 |   910    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50708>    . |
+1 |   910    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50708): 0=50708, 1=0, 
+
+False Negatives (910): 1=910, 0=0, 
+
+False Positives (910): 0=910, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.79s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.96      0.84     35774
+          1       0.75      0.25      0.38     15844
+
+avg / total       0.74      0.74      0.70     51618
+
+accuracy score: 0.743791
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34415> 1359 |
+1 | 11866 <3978>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34415> 1359 |
+1 | 11866 <3978>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38393): 0=34415, 1=3978, 
+
+False Negatives (13225): 1=11866, 0=1359, 
+
+False Positives (13225): 0=11866, 1=1359, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.77s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41666
+          1       0.00      0.00      0.00      9952
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807180
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41665>    1 |
+1 |  9952    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41665>    1 |
+1 |  9952    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41665): 0=41665, 1=0, 
+
+False Negatives (9953): 1=9952, 0=1, 
+
+False Positives (9953): 0=9952, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.80s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41769
+          1       0.00      0.00      0.00      9849
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.809194
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41769>    . |
+1 |  9849    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41769>    . |
+1 |  9849    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41769): 0=41769, 1=0, 
+
+False Negatives (9849): 1=9849, 0=0, 
+
+False Positives (9849): 0=9849, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.80s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50545
+          1       0.00      0.00      0.00      1073
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979213
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50545>    . |
+1 |  1073    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50545>    . |
+1 |  1073    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50545): 0=50545, 1=0, 
+
+False Negatives (1073): 1=1073, 0=0, 
+
+False Positives (1073): 0=1073, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50703
+          1       0.75      0.00      0.01       618
+          2       0.00      0.00      0.00       292
+          3       0.00      0.00      0.00         5
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982312
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50702>    1     .     . |
+1 |   615    <3>    .     . |
+2 |   292     .    <.>    . |
+3 |     5     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50702>    1     .     . |
+1 |   615    <3>    .     . |
+2 |   292     .    <.>    . |
+3 |     5     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50705): 0=50702, 1=3, 3=0, 2=0, 
+
+False Negatives (913): 1=615, 2=292, 3=5, 0=1, 
+
+False Positives (913): 0=912, 1=1, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.71      0.98      0.83     35805
+          1       0.71      0.10      0.18     15813
+
+avg / total       0.71      0.71      0.63     51618
+
+accuracy score: 0.712271
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35132>  673 |
+1 | 14179 <1634>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35132>  673 |
+1 | 14179 <1634>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36766): 0=35132, 1=1634, 
+
+False Negatives (14852): 1=14179, 0=673, 
+
+False Positives (14852): 0=14179, 1=673, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.67s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41534
+          1       0.65      0.03      0.06      9719
+          2       0.00      0.00      0.00       365
+
+avg / total       0.77      0.81      0.73     51618
+
+accuracy score: 0.808245
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41426>  108     . |
+1 |  9425  <294>    . |
+2 |   318    47    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41426>  108     . |
+1 |  9425  <294>    . |
+2 |   318    47    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41720): 0=41426, 1=294, 2=0, 
+
+False Negatives (9898): 1=9425, 2=365, 0=108, 
+
+False Positives (9898): 0=9743, 1=155, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.66s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41903
+          1       0.67      0.01      0.03      9394
+          2       0.00      0.00      0.00       321
+
+avg / total       0.78      0.81      0.73     51618
+
+accuracy score: 0.813398
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41851>   52     . |
+1 |  9259  <135>    . |
+2 |   306    15    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41851>   52     . |
+1 |  9259  <135>    . |
+2 |   306    15    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41986): 0=41851, 1=135, 2=0, 
+
+False Negatives (9632): 1=9259, 2=321, 0=52, 
+
+False Positives (9632): 0=9565, 1=67, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.63s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50483
+          1       0.00      0.00      0.00      1130
+          2       0.00      0.00      0.00         5
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978012
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50483>    .     . |
+1 |  1130    <.>    . |
+2 |     5     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50483>    .     . |
+1 |  1130    <.>    . |
+2 |     5     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50483): 0=50483, 1=0, 2=0, 
+
+False Negatives (1135): 1=1130, 2=5, 0=0, 
+
+False Positives (1135): 0=1135, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50688
+          1       0.76      0.06      0.10       930
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.982680
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50672>   16 |
+1 |   878   <52>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50672>   16 |
+1 |   878   <52>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50724): 0=50672, 1=52, 
+
+False Negatives (894): 1=878, 0=16, 
+
+False Positives (894): 0=878, 1=16, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.63s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.71      0.98      0.83     35863
+          1       0.72      0.09      0.16     15755
+
+avg / total       0.71      0.71      0.62     51618
+
+accuracy score: 0.711806
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35298>  565 |
+1 | 14311 <1444>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35298>  565 |
+1 | 14311 <1444>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36742): 0=35298, 1=1444, 
+
+False Negatives (14876): 1=14311, 0=565, 
+
+False Positives (14876): 0=14311, 1=565, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.66s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41734
+          1       0.67      0.06      0.11      9884
+
+avg / total       0.79      0.81      0.75     51618
+
+accuracy score: 0.814076
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41446>  288 |
+1 |  9309  <575>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41446>  288 |
+1 |  9309  <575>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42021): 0=41446, 1=575, 
+
+False Negatives (9597): 1=9309, 0=288, 
+
+False Positives (9597): 0=9309, 1=288, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.67s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41794
+          1       0.69      0.02      0.03      9824
+
+avg / total       0.79      0.81      0.73     51618
+
+accuracy score: 0.811480
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41719>   75 |
+1 |  9656  <168>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41719>   75 |
+1 |  9656  <168>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41887): 0=41719, 1=168, 
+
+False Negatives (9731): 1=9656, 0=75, 
+
+False Positives (9731): 0=9656, 1=75, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50488
+          1       0.00      0.00      0.00      1130
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978108
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50488>    . |
+1 |  1130    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50488>    . |
+1 |  1130    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50488): 0=50488, 1=0, 
+
+False Negatives (1130): 1=1130, 0=0, 
+
+False Positives (1130): 0=1130, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50712
+          1       0.00      0.00      0.00       615
+          2       0.00      0.00      0.00       285
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982448
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50712>    .     .     . |
+1 |   615    <.>    .     . |
+2 |   285     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50712>    .     .     . |
+1 |   615    <.>    .     . |
+2 |   285     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50712): 0=50712, 1=0, 3=0, 2=0, 
+
+False Negatives (906): 1=615, 2=285, 3=6, 0=0, 
+
+False Positives (906): 0=906, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.98      0.84     35969
+          1       0.81      0.18      0.29     15649
+
+avg / total       0.76      0.74      0.67     51618
+
+accuracy score: 0.738793
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35332>  637 |
+1 | 12846 <2803>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35332>  637 |
+1 | 12846 <2803>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38135): 0=35332, 1=2803, 
+
+False Negatives (13483): 1=12846, 0=637, 
+
+False Positives (13483): 0=12846, 1=637, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41649
+          1       0.59      0.01      0.02      9637
+          2       0.00      0.00      0.00       332
+
+avg / total       0.76      0.81      0.73     51618
+
+accuracy score: 0.807664
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41577>   72     . |
+1 |  9524  <113>    . |
+2 |   324     8    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41577>   72     . |
+1 |  9524  <113>    . |
+2 |   324     8    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41690): 0=41577, 1=113, 2=0, 
+
+False Negatives (9928): 1=9524, 2=332, 0=72, 
+
+False Positives (9928): 0=9848, 1=80, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41846
+          1       0.00      0.00      0.00      9451
+          2       0.00      0.00      0.00       320
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810686
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41846>    .     .     . |
+1 |  9451    <.>    .     . |
+2 |   320     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41846>    .     .     . |
+1 |  9451    <.>    .     . |
+2 |   320     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41846): 0=41846, 1=0, 3=0, 2=0, 
+
+False Negatives (9772): 1=9451, 2=320, 3=1, 0=0, 
+
+False Positives (9772): 0=9772, 1=0, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50572
+          1       0.00      0.00      0.00      1044
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979736
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50572>    .     . |
+1 |  1044    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50572>    .     . |
+1 |  1044    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50572): 0=50572, 1=0, 2=0, 
+
+False Negatives (1046): 1=1044, 2=2, 0=0, 
+
+False Positives (1046): 0=1046, 1=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.63s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50714
+          1       0.00      0.00      0.00       904
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982487
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50714>    . |
+1 |   904    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50714>    . |
+1 |   904    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50714): 0=50714, 1=0, 
+
+False Negatives (904): 1=904, 0=0, 
+
+False Positives (904): 0=904, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.71      1.00      0.83     35838
+          1       0.88      0.07      0.13     15780
+
+avg / total       0.76      0.71      0.61     51618
+
+accuracy score: 0.712310
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35690>  148 |
+1 | 14702 <1078>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35690>  148 |
+1 | 14702 <1078>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36768): 0=35690, 1=1078, 
+
+False Negatives (14850): 1=14702, 0=148, 
+
+False Positives (14850): 0=14702, 1=148, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41597
+          1       0.73      0.02      0.03     10021
+
+avg / total       0.79      0.81      0.73     51618
+
+accuracy score: 0.807800
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41539>   58 |
+1 |  9863  <158>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41539>   58 |
+1 |  9863  <158>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41697): 0=41539, 1=158, 
+
+False Negatives (9921): 1=9863, 0=58, 
+
+False Positives (9921): 0=9863, 1=58, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      1.00      0.90     41846
+          1       0.67      0.04      0.07      9772
+
+avg / total       0.79      0.81      0.74     51618
+
+accuracy score: 0.814251
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41663>  183 |
+1 |  9405  <367>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41663>  183 |
+1 |  9405  <367>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42030): 0=41663, 1=367, 
+
+False Negatives (9588): 1=9405, 0=183, 
+
+False Positives (9588): 0=9405, 1=183, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.64s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50526
+          1       0.00      0.00      0.00      1092
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978845
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50526>    . |
+1 |  1092    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50526>    . |
+1 |  1092    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50526): 0=50526, 1=0, 
+
+False Negatives (1092): 1=1092, 0=0, 
+
+False Positives (1092): 0=1092, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

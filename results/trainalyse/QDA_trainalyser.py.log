@@ -1,0 +1,3788 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.97      0.98     50733
+          1       0.20      0.68      0.31       576
+          2       0.41      0.41      0.41       302
+          3       0.00      0.00      0.00         7
+
+avg / total       0.99      0.96      0.97     51618
+
+accuracy score: 0.964179
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49253> 1416    63     1 |
+1 |    67  <392>  117     . |
+2 |    17   161  <124>    . |
+3 |     .     5     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49253> 1416    63     1 |
+1 |    67  <392>  117     . |
+2 |    17   161  <124>    . |
+3 |     .     5     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (49769): 0=49253, 1=392, 2=124, 3=0, 
+
+False Negatives (1849): 0=1480, 1=184, 2=178, 3=7, 
+
+False Positives (1849): 1=1582, 2=182, 0=84, 3=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.91      0.85     35916
+          1       0.70      0.45      0.55     15702
+
+avg / total       0.76      0.77      0.76     51618
+
+accuracy score: 0.774226
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32839> 3077 |
+1 |  8577 <7125>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32839> 3077 |
+1 |  8577 <7125>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39964): 0=32839, 1=7125, 
+
+False Negatives (11654): 1=8577, 0=3077, 
+
+False Positives (11654): 0=8577, 1=3077, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.97      0.89     41611
+          1       0.45      0.13      0.20      9643
+          2       0.00      0.00      0.00       364
+
+avg / total       0.75      0.80      0.75     51618
+
+accuracy score: 0.803383
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40252> 1359     . |
+1 |  8426 <1217>    . |
+2 |   219   145    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40252> 1359     . |
+1 |  8426 <1217>    . |
+2 |   219   145    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41469): 0=40252, 1=1217, 2=0, 
+
+False Negatives (10149): 1=8426, 0=1359, 2=364, 
+
+False Positives (10149): 0=8645, 1=1504, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser.py", line 96, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.5/site-packages/sklearn/pipeline.py", line 250, in fit
+    self._final_estimator.fit(Xt, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.5/site-packages/sklearn/discriminant_analysis.py", line 676, in fit
+    'is ill defined.' % str(self.classes_[ind]))
+ValueError: y has only 1 sample in class 3, covariance is ill defined.
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50566
+          1       0.00      0.00      0.00      1050
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979620
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50566>    .     . |
+1 |  1050    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50566>    .     . |
+1 |  1050    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50566): 0=50566, 2=0, 1=0, 
+
+False Negatives (1052): 1=1050, 2=2, 0=0, 
+
+False Positives (1052): 0=1052, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.97      0.98     50687
+          1       0.36      0.90      0.52       931
+
+avg / total       0.99      0.97      0.98     51618
+
+accuracy score: 0.969642
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<49215> 1472 |
+1 |    95  <836>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<49215> 1472 |
+1 |    95  <836>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50051): 0=49215, 1=836, 
+
+False Negatives (1567): 0=1472, 1=95, 
+
+False Positives (1567): 1=1472, 0=95, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.91      0.85     35919
+          1       0.70      0.46      0.55     15699
+
+avg / total       0.77      0.78      0.76     51618
+
+accuracy score: 0.775679
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32829> 3090 |
+1 |  8489 <7210>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32829> 3090 |
+1 |  8489 <7210>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40039): 0=32829, 1=7210, 
+
+False Negatives (11579): 1=8489, 0=3090, 
+
+False Positives (11579): 0=8489, 1=3090, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     41660
+          1       0.49      0.16      0.24      9958
+
+avg / total       0.76      0.81      0.76     51618
+
+accuracy score: 0.805533
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<39995> 1665 |
+1 |  8373 <1585>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<39995> 1665 |
+1 |  8373 <1585>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41580): 0=39995, 1=1585, 
+
+False Negatives (10038): 1=8373, 0=1665, 
+
+False Positives (10038): 0=8373, 1=1665, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     41877
+          1       0.49      0.16      0.24      9741
+
+avg / total       0.77      0.81      0.77     51618
+
+accuracy score: 0.810609
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40278> 1599 |
+1 |  8177 <1564>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40278> 1599 |
+1 |  8177 <1564>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41842): 0=40278, 1=1564, 
+
+False Negatives (9776): 1=8177, 0=1599, 
+
+False Positives (9776): 0=8177, 1=1599, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.03s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50534
+          1       0.00      0.00      0.00      1084
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979000
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50534>    . |
+1 |  1084    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50534>    . |
+1 |  1084    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50534): 0=50534, 1=0, 
+
+False Negatives (1084): 1=1084, 0=0, 
+
+False Positives (1084): 0=1084, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50671
+          1       0.25      0.66      0.36       601
+          2       0.35      0.38      0.37       341
+          3       0.00      0.00      0.00         5
+
+avg / total       0.98      0.97      0.98     51618
+
+accuracy score: 0.969720
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49530> 1015   126     . |
+1 |    96  <394>  111     . |
+2 |    28   182  <131>    . |
+3 |     1     1     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49530> 1015   126     . |
+1 |    96  <394>  111     . |
+2 |    28   182  <131>    . |
+3 |     1     1     3    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50055): 0=49530, 1=394, 2=131, 3=0, 
+
+False Negatives (1563): 0=1141, 2=210, 1=207, 3=5, 
+
+False Positives (1563): 1=1198, 2=240, 0=125, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.03s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.91      0.85     36106
+          1       0.70      0.46      0.55     15512
+
+avg / total       0.77      0.78      0.76     51618
+
+accuracy score: 0.777616
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33016> 3090 |
+1 |  8389 <7123>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33016> 3090 |
+1 |  8389 <7123>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40139): 0=33016, 1=7123, 
+
+False Negatives (11479): 1=8389, 0=3090, 
+
+False Positives (11479): 0=8389, 1=3090, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.97      0.89     41565
+          1       0.48      0.12      0.20      9703
+          2       0.00      0.00      0.00       350
+
+avg / total       0.75      0.81      0.75     51618
+
+accuracy score: 0.805494
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40367> 1198     . |
+1 |  8492 <1211>    . |
+2 |   232   118    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40367> 1198     . |
+1 |  8492 <1211>    . |
+2 |   232   118    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41578): 0=40367, 1=1211, 2=0, 
+
+False Negatives (10040): 1=8492, 0=1198, 2=350, 
+
+False Positives (10040): 0=8724, 1=1316, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.03s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.97      0.89     41879
+          1       0.49      0.14      0.21      9444
+          2       0.00      0.00      0.00       295
+
+avg / total       0.76      0.81      0.76     51618
+
+accuracy score: 0.811926
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40634> 1245     . |
+1 |  8168 <1276>    . |
+2 |   199    96    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40634> 1245     . |
+1 |  8168 <1276>    . |
+2 |   199    96    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41910): 0=40634, 1=1276, 2=0, 
+
+False Negatives (9708): 1=8168, 0=1245, 2=295, 
+
+False Positives (9708): 0=8367, 1=1341, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50482
+          1       0.00      0.00      0.00      1134
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977992
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50482>    .     . |
+1 |  1134    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50482>    .     . |
+1 |  1134    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50482): 0=50482, 2=0, 1=0, 
+
+False Negatives (1136): 1=1134, 2=2, 0=0, 
+
+False Positives (1136): 0=1136, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50656
+          1       0.42      0.88      0.57       962
+
+avg / total       0.99      0.98      0.98     51618
+
+accuracy score: 0.975241
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<49491> 1165 |
+1 |   113  <849>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<49491> 1165 |
+1 |   113  <849>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50340): 0=49491, 1=849, 
+
+False Negatives (1278): 0=1165, 1=113, 
+
+False Positives (1278): 1=1165, 0=113, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.92      0.85     35869
+          1       0.70      0.46      0.55     15749
+
+avg / total       0.77      0.78      0.76     51618
+
+accuracy score: 0.775388
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32852> 3017 |
+1 |  8577 <7172>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32852> 3017 |
+1 |  8577 <7172>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40024): 0=32852, 1=7172, 
+
+False Negatives (11594): 1=8577, 0=3017, 
+
+False Positives (11594): 0=8577, 1=3017, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     41641
+          1       0.51      0.15      0.24      9977
+
+avg / total       0.77      0.81      0.76     51618
+
+accuracy score: 0.807993
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40170> 1471 |
+1 |  8440 <1537>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40170> 1471 |
+1 |  8440 <1537>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41707): 0=40170, 1=1537, 
+
+False Negatives (9911): 1=8440, 0=1471, 
+
+False Positives (9911): 0=8440, 1=1471, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     41992
+          1       0.49      0.16      0.24      9626
+
+avg / total       0.77      0.81      0.77     51618
+
+accuracy score: 0.812410
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40423> 1569 |
+1 |  8114 <1512>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40423> 1569 |
+1 |  8114 <1512>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41935): 0=40423, 1=1512, 
+
+False Negatives (9683): 1=8114, 0=1569, 
+
+False Positives (9683): 0=8114, 1=1569, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.04s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50512
+          1       0.00      0.00      0.00      1106
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978573
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50512>    . |
+1 |  1106    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50512>    . |
+1 |  1106    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50512): 0=50512, 1=0, 
+
+False Negatives (1106): 1=1106, 0=0, 
+
+False Positives (1106): 0=1106, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50663
+          1       0.00      0.00      0.00       644
+          2       0.00      0.00      0.00       305
+          3       0.00      0.00      0.00         6
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.981499
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50663>    .     .     . |
+1 |   644    <.>    .     . |
+2 |   305     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50663>    .     .     . |
+1 |   644    <.>    .     . |
+2 |   305     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50663): 0=50663, 2=0, 1=0, 3=0, 
+
+False Negatives (955): 1=644, 2=305, 3=6, 0=0, 
+
+False Positives (955): 0=955, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     35938
+          1       0.00      0.00      0.00     15680
+
+avg / total       0.48      0.70      0.57     51618
+
+accuracy score: 0.696230
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35938>    . |
+1 | 15680    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35938>    . |
+1 | 15680    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35938): 0=35938, 1=0, 
+
+False Negatives (15680): 1=15680, 0=0, 
+
+False Positives (15680): 0=15680, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41579
+          1       0.00      0.00      0.00      9664
+          2       0.00      0.00      0.00       375
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805514
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41579>    .     . |
+1 |  9664    <.>    . |
+2 |   375     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41579>    .     . |
+1 |  9664    <.>    . |
+2 |   375     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41579): 0=41579, 2=0, 1=0, 
+
+False Negatives (10039): 1=9664, 2=375, 0=0, 
+
+False Positives (10039): 0=10039, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41746
+          1       0.00      0.00      0.00      9526
+          2       0.00      0.00      0.00       345
+          3       0.00      0.00      0.00         1
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808749
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41746>    .     .     . |
+1 |  9526    <.>    .     . |
+2 |   345     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41746>    .     .     . |
+1 |  9526    <.>    .     . |
+2 |   345     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41746): 0=41746, 2=0, 1=0, 3=0, 
+
+False Negatives (9872): 1=9526, 2=345, 3=1, 0=0, 
+
+False Positives (9872): 0=9872, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50552
+          1       0.00      0.00      0.00      1063
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979348
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50552>    .     . |
+1 |  1063    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50552>    .     . |
+1 |  1063    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50552): 0=50552, 2=0, 1=0, 
+
+False Negatives (1066): 1=1063, 2=3, 0=0, 
+
+False Positives (1066): 0=1066, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50706
+          1       0.00      0.00      0.00       912
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982332
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50706>    . |
+1 |   912    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50706>    . |
+1 |   912    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50706): 0=50706, 1=0, 
+
+False Negatives (912): 1=912, 0=0, 
+
+False Positives (912): 0=912, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     35681
+          1       0.00      0.00      0.00     15937
+
+avg / total       0.48      0.69      0.57     51618
+
+accuracy score: 0.691251
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35681>    . |
+1 | 15937    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35681>    . |
+1 | 15937    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35681): 0=35681, 1=0, 
+
+False Negatives (15937): 1=15937, 0=0, 
+
+False Positives (15937): 0=15937, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41579
+          1       0.00      0.00      0.00     10039
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805514
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41579>    . |
+1 | 10039    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41579>    . |
+1 | 10039    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41579): 0=41579, 1=0, 
+
+False Negatives (10039): 1=10039, 0=0, 
+
+False Positives (10039): 0=10039, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41810
+          1       0.00      0.00      0.00      9808
+
+avg / total       0.66      0.81      0.72     51618
+
+accuracy score: 0.809989
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41810>    . |
+1 |  9808    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41810>    . |
+1 |  9808    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41810): 0=41810, 1=0, 
+
+False Negatives (9808): 1=9808, 0=0, 
+
+False Positives (9808): 0=9808, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50538
+          1       0.00      0.00      0.00      1080
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979077
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50538>    . |
+1 |  1080    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50538>    . |
+1 |  1080    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50538): 0=50538, 1=0, 
+
+False Negatives (1080): 1=1080, 0=0, 
+
+False Positives (1080): 0=1080, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50677
+          1       0.00      0.00      0.00       615
+          2       0.00      0.00      0.00       315
+          3       0.00      0.00      0.00        11
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.981770
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50677>    .     .     . |
+1 |   615    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |    11     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50677>    .     .     . |
+1 |   615    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |    11     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50677): 0=50677, 2=0, 1=0, 3=0, 
+
+False Negatives (941): 1=615, 2=315, 3=11, 0=0, 
+
+False Positives (941): 0=941, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.94      0.82     35799
+          1       0.56      0.18      0.27     15819
+
+avg / total       0.67      0.71      0.65     51618
+
+accuracy score: 0.705762
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33600> 2199 |
+1 | 12989 <2830>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33600> 2199 |
+1 | 12989 <2830>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36430): 0=33600, 1=2830, 
+
+False Negatives (15188): 1=12989, 0=2199, 
+
+False Positives (15188): 0=12989, 1=2199, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41586
+          1       0.00      0.00      0.00      9676
+          2       0.00      0.00      0.00       356
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805649
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41586>    .     . |
+1 |  9676    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41586>    .     . |
+1 |  9676    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41586): 0=41586, 2=0, 1=0, 
+
+False Negatives (10032): 1=9676, 2=356, 0=0, 
+
+False Positives (10032): 0=10032, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41845
+          1       0.00      0.00      0.00      9451
+          2       0.00      0.00      0.00       321
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810667
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41845>    .     .     . |
+1 |  9451    <.>    .     . |
+2 |   321     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41845>    .     .     . |
+1 |  9451    <.>    .     . |
+2 |   321     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41845): 0=41845, 2=0, 1=0, 3=0, 
+
+False Negatives (9773): 1=9451, 2=321, 3=1, 0=0, 
+
+False Positives (9773): 0=9773, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50508
+          1       0.00      0.00      0.00      1107
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978496
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50508>    .     . |
+1 |  1107    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50508>    .     . |
+1 |  1107    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50508): 0=50508, 2=0, 1=0, 
+
+False Negatives (1110): 1=1107, 2=3, 0=0, 
+
+False Positives (1110): 0=1110, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50696
+          1       0.00      0.00      0.00       922
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982138
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50696>    . |
+1 |   922    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50696>    . |
+1 |   922    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50696): 0=50696, 1=0, 
+
+False Negatives (922): 1=922, 0=0, 
+
+False Positives (922): 0=922, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.72      0.94      0.82     35863
+          1       0.57      0.18      0.27     15755
+
+avg / total       0.68      0.71      0.65     51618
+
+accuracy score: 0.707873
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33686> 2177 |
+1 | 12902 <2853>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33686> 2177 |
+1 | 12902 <2853>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36539): 0=33686, 1=2853, 
+
+False Negatives (15079): 1=12902, 0=2177, 
+
+False Positives (15079): 0=12902, 1=2177, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41747
+          1       0.00      0.00      0.00      9871
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808768
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41747>    . |
+1 |  9871    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41747>    . |
+1 |  9871    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41747): 0=41747, 1=0, 
+
+False Negatives (9871): 1=9871, 0=0, 
+
+False Positives (9871): 0=9871, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41912
+          1       0.00      0.00      0.00      9706
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811965
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41912>    . |
+1 |  9706    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41912>    . |
+1 |  9706    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41912): 0=41912, 1=0, 
+
+False Negatives (9706): 1=9706, 0=0, 
+
+False Positives (9706): 0=9706, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50476
+          1       0.00      0.00      0.00      1142
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977876
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50476>    . |
+1 |  1142    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50476>    . |
+1 |  1142    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50476): 0=50476, 1=0, 
+
+False Negatives (1142): 1=1142, 0=0, 
+
+False Positives (1142): 0=1142, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50703
+          1       0.00      0.00      0.00       593
+          2       0.00      0.00      0.00       314
+          3       0.00      0.00      0.00         8
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982274
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50703>    .     .     . |
+1 |   593    <.>    .     . |
+2 |   314     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50703>    .     .     . |
+1 |   593    <.>    .     . |
+2 |   314     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50703): 0=50703, 2=0, 1=0, 3=0, 
+
+False Negatives (915): 1=593, 2=314, 3=8, 0=0, 
+
+False Positives (915): 0=915, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     35824
+          1       0.74      0.02      0.04     15794
+
+avg / total       0.71      0.70      0.58     51618
+
+accuracy score: 0.698070
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35711>  113 |
+1 | 15472  <322>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35711>  113 |
+1 | 15472  <322>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36033): 0=35711, 1=322, 
+
+False Negatives (15585): 1=15472, 0=113, 
+
+False Positives (15585): 0=15472, 1=113, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41548
+          1       0.00      0.00      0.00      9716
+          2       0.00      0.00      0.00       354
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.804913
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41548>    .     . |
+1 |  9716    <.>    . |
+2 |   354     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41548>    .     . |
+1 |  9716    <.>    . |
+2 |   354     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41548): 0=41548, 2=0, 1=0, 
+
+False Negatives (10070): 1=9716, 2=354, 0=0, 
+
+False Positives (10070): 0=10070, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41813
+          1       0.00      0.00      0.00      9488
+          2       0.00      0.00      0.00       316
+          3       0.00      0.00      0.00         1
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810047
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41813>    .     .     . |
+1 |  9488    <.>    .     . |
+2 |   316     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41813>    .     .     . |
+1 |  9488    <.>    .     . |
+2 |   316     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41813): 0=41813, 2=0, 1=0, 3=0, 
+
+False Negatives (9805): 1=9488, 2=316, 3=1, 0=0, 
+
+False Positives (9805): 0=9805, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50507
+          1       0.00      0.00      0.00      1109
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978477
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50507>    .     . |
+1 |  1109    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50507>    .     . |
+1 |  1109    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50507): 0=50507, 2=0, 1=0, 
+
+False Negatives (1111): 1=1109, 2=2, 0=0, 
+
+False Positives (1111): 0=1111, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50708
+          1       0.00      0.00      0.00       910
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982332
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50706>    2 |
+1 |   910    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50706>    2 |
+1 |   910    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50706): 0=50706, 1=0, 
+
+False Negatives (912): 1=910, 0=2, 
+
+False Positives (912): 0=910, 1=2, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     35913
+          1       0.77      0.02      0.04     15705
+
+avg / total       0.72      0.70      0.59     51618
+
+accuracy score: 0.700550
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35807>  106 |
+1 | 15351  <354>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35807>  106 |
+1 | 15351  <354>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36161): 0=35807, 1=354, 
+
+False Negatives (15457): 1=15351, 0=106, 
+
+False Positives (15457): 0=15351, 1=106, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41612
+          1       0.00      0.00      0.00     10006
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806153
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41612>    . |
+1 | 10006    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41612>    . |
+1 | 10006    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41612): 0=41612, 1=0, 
+
+False Negatives (10006): 1=10006, 0=0, 
+
+False Positives (10006): 0=10006, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41784
+          1       0.00      0.00      0.00      9834
+
+avg / total       0.66      0.81      0.72     51618
+
+accuracy score: 0.809485
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41784>    . |
+1 |  9834    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41784>    . |
+1 |  9834    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41784): 0=41784, 1=0, 
+
+False Negatives (9834): 1=9834, 0=0, 
+
+False Positives (9834): 0=9834, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50503
+          1       0.00      0.00      0.00      1115
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978399
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50503>    . |
+1 |  1115    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50503>    . |
+1 |  1115    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50503): 0=50503, 1=0, 
+
+False Negatives (1115): 1=1115, 0=0, 
+
+False Positives (1115): 0=1115, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50697
+          1       0.00      0.00      0.00       600
+          2       0.00      0.00      0.00       315
+          3       0.00      0.00      0.00         6
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982157
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50697>    .     .     . |
+1 |   600    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50697>    .     .     . |
+1 |   600    <.>    .     . |
+2 |   315     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50697): 0=50697, 2=0, 1=0, 3=0, 
+
+False Negatives (921): 1=600, 2=315, 3=6, 0=0, 
+
+False Positives (921): 0=921, 2=0, 1=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.94      0.83     36006
+          1       0.64      0.24      0.35     15612
+
+avg / total       0.71      0.73      0.68     51618
+
+accuracy score: 0.729552
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33946> 2060 |
+1 | 11900 <3712>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33946> 2060 |
+1 | 11900 <3712>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37658): 0=33946, 1=3712, 
+
+False Negatives (13960): 1=11900, 0=2060, 
+
+False Positives (13960): 0=11900, 1=2060, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41574
+          1       0.00      0.00      0.00      9702
+          2       0.00      0.00      0.00       342
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805417
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41574>    .     . |
+1 |  9702    <.>    . |
+2 |   342     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41574>    .     . |
+1 |  9702    <.>    . |
+2 |   342     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41574): 0=41574, 2=0, 1=0, 
+
+False Negatives (10044): 1=9702, 2=342, 0=0, 
+
+False Positives (10044): 0=10044, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41876
+          1       0.00      0.00      0.00      9438
+          2       0.00      0.00      0.00       304
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811267
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41876>    .     . |
+1 |  9438    <.>    . |
+2 |   304     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41876>    .     . |
+1 |  9438    <.>    . |
+2 |   304     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41876): 0=41876, 2=0, 1=0, 
+
+False Negatives (9742): 1=9438, 2=304, 0=0, 
+
+False Positives (9742): 0=9742, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50540
+          1       0.00      0.00      0.00      1071
+          2       0.00      0.00      0.00         7
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979116
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50540>    .     . |
+1 |  1071    <.>    . |
+2 |     7     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50540>    .     . |
+1 |  1071    <.>    . |
+2 |     7     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50540): 0=50540, 2=0, 1=0, 
+
+False Negatives (1078): 1=1071, 2=7, 0=0, 
+
+False Positives (1078): 0=1078, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.15s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50675
+          1       0.00      0.00      0.00       943
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.981731
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50675>    . |
+1 |   943    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50675>    . |
+1 |   943    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50675): 0=50675, 1=0, 
+
+False Negatives (943): 1=943, 0=0, 
+
+False Positives (943): 0=943, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     35939
+          1       0.66      0.23      0.34     15679
+
+avg / total       0.72      0.73      0.68     51618
+
+accuracy score: 0.730617
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34056> 1883 |
+1 | 12022 <3657>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34056> 1883 |
+1 | 12022 <3657>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37713): 0=34056, 1=3657, 
+
+False Negatives (13905): 1=12022, 0=1883, 
+
+False Positives (13905): 0=12022, 1=1883, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41506
+          1       0.00      0.00      0.00     10112
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.804099
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41506>    . |
+1 | 10112    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41506>    . |
+1 | 10112    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41506): 0=41506, 1=0, 
+
+False Negatives (10112): 1=10112, 0=0, 
+
+False Positives (10112): 0=10112, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41773
+          1       0.00      0.00      0.00      9845
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.809272
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41773>    . |
+1 |  9845    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41773>    . |
+1 |  9845    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41773): 0=41773, 1=0, 
+
+False Negatives (9845): 1=9845, 0=0, 
+
+False Positives (9845): 0=9845, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.16s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50483
+          1       0.00      0.00      0.00      1135
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978012
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50483>    . |
+1 |  1135    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50483>    . |
+1 |  1135    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50483): 0=50483, 1=0, 
+
+False Negatives (1135): 1=1135, 0=0, 
+
+False Positives (1135): 0=1135, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.97      0.98     50696
+          1       0.22      0.70      0.33       605
+          2       0.31      0.34      0.33       309
+          3       0.00      0.00      0.00         8
+
+avg / total       0.98      0.96      0.97     51618
+
+accuracy score: 0.963947
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49226> 1352   118     . |
+1 |    72  <425>  108     . |
+2 |    28   175  <106>    . |
+3 |     1     2     5    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49226> 1352   118     . |
+1 |    72  <425>  108     . |
+2 |    28   175  <106>    . |
+3 |     1     2     5    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (49757): 0=49226, 1=425, 2=106, 3=0, 
+
+False Negatives (1861): 0=1470, 2=203, 1=180, 3=8, 
+
+False Positives (1861): 1=1529, 2=231, 0=101, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.75      0.91      0.82     36108
+          1       0.60      0.31      0.40     15510
+
+avg / total       0.71      0.73      0.70     51618
+
+accuracy score: 0.728854
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32891> 3217 |
+1 | 10779 <4731>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32891> 3217 |
+1 | 10779 <4731>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37622): 0=32891, 1=4731, 
+
+False Negatives (13996): 1=10779, 0=3217, 
+
+False Positives (13996): 0=10779, 1=3217, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.97      0.89     41614
+          1       0.46      0.13      0.20      9645
+          2       0.00      0.00      0.00       359
+
+avg / total       0.75      0.80      0.75     51618
+
+accuracy score: 0.804584
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40301> 1313     . |
+1 |  8415 <1230>    . |
+2 |   238   121    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40301> 1313     . |
+1 |  8415 <1230>    . |
+2 |   238   121    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41531): 0=40301, 1=1230, 2=0, 
+
+False Negatives (10087): 1=8415, 0=1313, 2=359, 
+
+False Positives (10087): 0=8653, 1=1434, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.97      0.89     41880
+          1       0.48      0.13      0.20      9423
+          2       0.00      0.00      0.00       314
+          3       0.00      0.00      0.00         1
+
+avg / total       0.76      0.81      0.76     51618
+
+accuracy score: 0.810783
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<40631> 1249     .     . |
+1 |  8203 <1220>    .     . |
+2 |   221    93    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<40631> 1249     .     . |
+1 |  8203 <1220>    .     . |
+2 |   221    93    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41851): 0=40631, 1=1220, 2=0, 3=0, 
+
+False Negatives (9767): 1=8203, 0=1249, 2=314, 3=1, 
+
+False Positives (9767): 0=8425, 1=1342, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50567
+          1       0.00      0.00      0.00      1050
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979639
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50567>    .     . |
+1 |  1050    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50567>    .     . |
+1 |  1050    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50567): 0=50567, 2=0, 1=0, 
+
+False Negatives (1051): 1=1050, 2=1, 0=0, 
+
+False Positives (1051): 0=1051, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.97      0.98     50694
+          1       0.36      0.91      0.51       924
+
+avg / total       0.99      0.97      0.98     51618
+
+accuracy score: 0.969352
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<49199> 1495 |
+1 |    87  <837>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<49199> 1495 |
+1 |    87  <837>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50036): 0=49199, 1=837, 
+
+False Negatives (1582): 0=1495, 1=87, 
+
+False Positives (1582): 1=1495, 0=87, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.75      0.92      0.83     36047
+          1       0.61      0.31      0.41     15571
+
+avg / total       0.71      0.73      0.70     51618
+
+accuracy score: 0.731741
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32988> 3059 |
+1 | 10788 <4783>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32988> 3059 |
+1 | 10788 <4783>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37771): 0=32988, 1=4783, 
+
+False Negatives (13847): 1=10788, 0=3059, 
+
+False Positives (13847): 0=10788, 1=3059, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.96      0.89     41549
+          1       0.49      0.16      0.24     10069
+
+avg / total       0.76      0.80      0.76     51618
+
+accuracy score: 0.803906
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<39910> 1639 |
+1 |  8483 <1586>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<39910> 1639 |
+1 |  8483 <1586>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41496): 0=39910, 1=1586, 
+
+False Negatives (10122): 1=8483, 0=1639, 
+
+False Positives (10122): 0=8483, 1=1639, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     41725
+          1       0.48      0.15      0.23      9893
+
+avg / total       0.76      0.81      0.76     51618
+
+accuracy score: 0.806230
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40086> 1639 |
+1 |  8363 <1530>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40086> 1639 |
+1 |  8363 <1530>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41616): 0=40086, 1=1530, 
+
+False Negatives (10002): 1=8363, 0=1639, 
+
+False Positives (10002): 0=8363, 1=1639, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50562
+          1       0.00      0.00      0.00      1056
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979542
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50562>    . |
+1 |  1056    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50562>    . |
+1 |  1056    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50562): 0=50562, 1=0, 
+
+False Negatives (1056): 1=1056, 0=0, 
+
+False Positives (1056): 0=1056, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50657
+          1       0.28      0.72      0.40       620
+          2       0.32      0.26      0.29       331
+          3       0.00      0.00      0.00        10
+
+avg / total       0.98      0.97      0.98     51618
+
+accuracy score: 0.971386
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49610>  925   122     . |
+1 |   121  <445>   54     . |
+2 |    29   216   <86>    . |
+3 |     .     6     4    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<49610>  925   122     . |
+1 |   121  <445>   54     . |
+2 |    29   216   <86>    . |
+3 |     .     6     4    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50141): 0=49610, 1=445, 2=86, 3=0, 
+
+False Negatives (1477): 0=1047, 2=245, 1=175, 3=10, 
+
+False Positives (1477): 1=1147, 2=180, 0=150, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.93      0.85     35962
+          1       0.73      0.44      0.55     15656
+
+avg / total       0.77      0.78      0.76     51618
+
+accuracy score: 0.780270
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33378> 2584 |
+1 |  8758 <6898>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33378> 2584 |
+1 |  8758 <6898>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40276): 0=33378, 1=6898, 
+
+False Negatives (11342): 1=8758, 0=2584, 
+
+False Positives (11342): 0=8758, 1=2584, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.89     41630
+          1       0.57      0.07      0.12      9618
+          2       0.00      0.00      0.00       370
+
+avg / total       0.76      0.81      0.74     51618
+
+accuracy score: 0.811054
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41209>  421     . |
+1 |  8962  <656>    . |
+2 |   294    76    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41209>  421     . |
+1 |  8962  <656>    . |
+2 |   294    76    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41865): 0=41209, 1=656, 2=0, 
+
+False Negatives (9753): 1=8962, 0=421, 2=370, 
+
+False Positives (9753): 0=9256, 1=497, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41747
+          1       0.56      0.08      0.13      9526
+          2       0.00      0.00      0.00       344
+          3       0.00      0.00      0.00         1
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.813011
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41241>  506     .     . |
+1 |  8801  <725>    .     . |
+2 |   280    64    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41241>  506     .     . |
+1 |  8801  <725>    .     . |
+2 |   280    64    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41966): 0=41241, 1=725, 2=0, 3=0, 
+
+False Negatives (9652): 1=8801, 0=506, 2=344, 3=1, 
+
+False Positives (9652): 0=9082, 1=570, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50514
+          1       0.00      0.00      0.00      1101
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978612
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50514>    .     . |
+1 |  1101    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50514>    .     . |
+1 |  1101    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50514): 0=50514, 2=0, 1=0, 
+
+False Negatives (1104): 1=1101, 2=3, 0=0, 
+
+False Positives (1104): 0=1104, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       1.00      0.98      0.99     50722
+          1       0.41      0.88      0.56       896
+
+avg / total       0.99      0.98      0.98     51618
+
+accuracy score: 0.975687
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<49579> 1143 |
+1 |   112  <784>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<49579> 1143 |
+1 |   112  <784>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50363): 0=49579, 1=784, 
+
+False Negatives (1255): 0=1143, 1=112, 
+
+False Positives (1255): 1=1143, 0=112, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.93      0.85     35988
+          1       0.72      0.44      0.55     15630
+
+avg / total       0.77      0.78      0.76     51618
+
+accuracy score: 0.779631
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33324> 2664 |
+1 |  8711 <6919>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33324> 2664 |
+1 |  8711 <6919>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40243): 0=33324, 1=6919, 
+
+False Negatives (11375): 1=8711, 0=2664, 
+
+False Positives (11375): 0=8711, 1=2664, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.89     41738
+          1       0.57      0.09      0.16      9880
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.812778
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41020>  718 |
+1 |  8946  <934>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41020>  718 |
+1 |  8946  <934>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41954): 0=41020, 1=934, 
+
+False Negatives (9664): 1=8946, 0=718, 
+
+False Positives (9664): 0=8946, 1=718, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41921
+          1       0.61      0.10      0.17      9697
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.818997
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41291>  630 |
+1 |  8713  <984>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41291>  630 |
+1 |  8713  <984>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42275): 0=41291, 1=984, 
+
+False Negatives (9343): 1=8713, 0=630, 
+
+False Positives (9343): 0=8713, 1=630, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.07s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50494
+          1       0.00      0.00      0.00      1124
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978225
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50494>    . |
+1 |  1124    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50494>    . |
+1 |  1124    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50494): 0=50494, 1=0, 
+
+False Negatives (1124): 1=1124, 0=0, 
+
+False Positives (1124): 0=1124, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

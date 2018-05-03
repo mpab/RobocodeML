@@ -1,0 +1,3819 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 19.11s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50657
+          1       0.46      0.34      0.39       635
+          2       0.38      0.04      0.08       317
+          3       0.00      0.00      0.00         9
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.984192
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50575>   75     7     . |
+1 |   406  <213>   16     . |
+2 |   134   169   <14>    . |
+3 |     4     5     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50575>   75     7     . |
+1 |   406  <213>   16     . |
+2 |   134   169   <14>    . |
+3 |     4     5     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50802): 0=50575, 1=213, 2=14, 3=0, 
+
+False Negatives (816): 1=422, 2=303, 0=82, 3=9, 
+
+False Positives (816): 0=544, 1=249, 2=23, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.68s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.89      0.93      0.91     35973
+          1       0.82      0.73      0.77     15645
+
+avg / total       0.87      0.87      0.87     51618
+
+accuracy score: 0.869755
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33439> 2534 |
+1 |  4189<11456>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33439> 2534 |
+1 |  4189<11456>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44895): 0=33439, 1=11456, 
+
+False Negatives (6723): 1=4189, 0=2534, 
+
+False Positives (6723): 0=4189, 1=2534, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.00s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41800
+          1       0.59      0.03      0.05      9464
+          2       0.00      0.00      0.00       354
+
+avg / total       0.77      0.81      0.73     51618
+
+accuracy score: 0.812120
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41676>  124     . |
+1 |  9220  <244>    . |
+2 |   310    44    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41676>  124     . |
+1 |  9220  <244>    . |
+2 |   310    44    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41920): 0=41676, 1=244, 2=0, 
+
+False Negatives (9698): 1=9220, 2=354, 0=124, 
+
+False Positives (9698): 0=9530, 1=168, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 9.08s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41796
+          1       0.58      0.11      0.18      9490
+          2       0.05      0.01      0.02       330
+          3       0.00      0.00      0.00         2
+
+avg / total       0.77      0.82      0.76     51618
+
+accuracy score: 0.816614
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41152>  627    17     . |
+1 |  8456  <997>   37     . |
+2 |   220   107    <3>    . |
+3 |     .     2     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41152>  627    17     . |
+1 |  8456  <997>   37     . |
+2 |   220   107    <3>    . |
+3 |     .     2     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (42152): 0=41152, 1=997, 2=3, 3=0, 
+
+False Negatives (9466): 1=8493, 0=644, 2=327, 3=2, 
+
+False Positives (9466): 0=8676, 1=736, 2=54, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.11s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50525
+          1       0.00      0.00      0.00      1092
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978825
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50525>    .     . |
+1 |  1092    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50525>    .     . |
+1 |  1092    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50525): 0=50525, 2=0, 1=0, 
+
+False Negatives (1093): 1=1092, 2=1, 0=0, 
+
+False Positives (1093): 0=1093, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 20.22s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50700
+          1       0.86      0.29      0.44       918
+
+avg / total       0.99      0.99      0.98     51618
+
+accuracy score: 0.986574
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50656>   44 |
+1 |   649  <269>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50656>   44 |
+1 |   649  <269>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50925): 0=50656, 1=269, 
+
+False Negatives (693): 1=649, 0=44, 
+
+False Positives (693): 0=649, 1=44, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.08s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.95      0.91     35908
+          1       0.84      0.68      0.75     15710
+
+avg / total       0.86      0.86      0.86     51618
+
+accuracy score: 0.864020
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33936> 1972 |
+1 |  5047<10663>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33936> 1972 |
+1 |  5047<10663>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44599): 0=33936, 1=10663, 
+
+False Negatives (7019): 1=5047, 0=1972, 
+
+False Positives (7019): 0=5047, 1=1972, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.66s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.89     41519
+          1       0.61      0.11      0.18     10099
+
+avg / total       0.78      0.81      0.76     51618
+
+accuracy score: 0.812178
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40826>  693 |
+1 |  9002 <1097>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40826>  693 |
+1 |  9002 <1097>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41923): 0=40826, 1=1097, 
+
+False Negatives (9695): 1=9002, 0=693, 
+
+False Positives (9695): 0=9002, 1=693, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 9.64s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41976
+          1       0.69      0.07      0.13      9642
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.820373
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41664>  312 |
+1 |  8960  <682>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41664>  312 |
+1 |  8960  <682>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42346): 0=41664, 1=682, 
+
+False Negatives (9272): 1=8960, 0=312, 
+
+False Positives (9272): 0=8960, 1=312, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.28s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50509
+          1       0.00      0.00      0.00      1109
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978496
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50508>    1 |
+1 |  1109    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50508>    1 |
+1 |  1109    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50508): 0=50508, 1=0, 
+
+False Negatives (1110): 1=1109, 0=1, 
+
+False Positives (1110): 0=1109, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.51s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50739
+          1       0.00      0.00      0.00       576
+          2       0.00      0.00      0.00       294
+          3       0.00      0.00      0.00         9
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982971
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50739>    .     .     . |
+1 |   576    <.>    .     . |
+2 |   294     .    <.>    . |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50739>    .     .     . |
+1 |   576    <.>    .     . |
+2 |   294     .    <.>    . |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50739): 0=50739, 2=0, 3=0, 1=0, 
+
+False Negatives (879): 1=576, 2=294, 3=9, 0=0, 
+
+False Positives (879): 0=879, 1=0, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 20.04s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.85      0.95      0.89     35952
+          1       0.83      0.61      0.71     15666
+
+avg / total       0.84      0.85      0.84     51618
+
+accuracy score: 0.845190
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34034> 1918 |
+1 |  6073 <9593>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34034> 1918 |
+1 |  6073 <9593>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43627): 0=34034, 1=9593, 
+
+False Negatives (7991): 1=6073, 0=1918, 
+
+False Positives (7991): 0=6073, 1=1918, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.68s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41667
+          1       0.00      0.00      0.00      9595
+          2       0.00      0.00      0.00       356
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807218
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41667>    .     . |
+1 |  9595    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41667>    .     . |
+1 |  9595    <.>    . |
+2 |   356     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41667): 0=41667, 2=0, 1=0, 
+
+False Negatives (9951): 1=9595, 2=356, 0=0, 
+
+False Positives (9951): 0=9951, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.44s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41757
+          1       0.00      0.00      0.00      9539
+          2       0.00      0.00      0.00       322
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808962
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41757>    .     . |
+1 |  9539    <.>    . |
+2 |   322     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41757>    .     . |
+1 |  9539    <.>    . |
+2 |   322     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41757): 0=41757, 2=0, 1=0, 
+
+False Negatives (9861): 1=9539, 2=322, 0=0, 
+
+False Positives (9861): 0=9861, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.49s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50509
+          1       0.00      0.00      0.00      1106
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978515
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50509>    .     . |
+1 |  1106    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50509>    .     . |
+1 |  1106    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50509): 0=50509, 2=0, 1=0, 
+
+False Negatives (1109): 1=1106, 2=3, 0=0, 
+
+False Positives (1109): 0=1109, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.52s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50730
+          1       0.00      0.00      0.00       888
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982797
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50730>    . |
+1 |   888    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50730>    . |
+1 |   888    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50730): 0=50730, 1=0, 
+
+False Negatives (888): 1=888, 0=0, 
+
+False Positives (888): 0=888, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.95s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.85      0.95      0.90     35912
+          1       0.85      0.61      0.71     15706
+
+avg / total       0.85      0.85      0.84     51618
+
+accuracy score: 0.850672
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34269> 1643 |
+1 |  6065 <9641>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34269> 1643 |
+1 |  6065 <9641>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43910): 0=34269, 1=9641, 
+
+False Negatives (7708): 1=6065, 0=1643, 
+
+False Positives (7708): 0=6065, 1=1643, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.00s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41628
+          1       0.00      0.00      0.00      9990
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806463
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41628>    . |
+1 |  9990    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41628>    . |
+1 |  9990    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41628): 0=41628, 1=0, 
+
+False Negatives (9990): 1=9990, 0=0, 
+
+False Positives (9990): 0=9990, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.24s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41884
+          1       0.00      0.00      0.00      9734
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811422
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41884>    . |
+1 |  9734    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41884>    . |
+1 |  9734    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41884): 0=41884, 1=0, 
+
+False Negatives (9734): 1=9734, 0=0, 
+
+False Positives (9734): 0=9734, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.09s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50526
+          1       0.00      0.00      0.00      1092
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978845
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50526>    . |
+1 |  1092    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50526>    . |
+1 |  1092    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50526): 0=50526, 1=0, 
+
+False Negatives (1092): 1=1092, 0=0, 
+
+False Positives (1092): 0=1092, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 17.98s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50707
+          1       0.00      0.00      0.00       594
+          2       0.00      0.00      0.00       311
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982351
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50707>    .     .     . |
+1 |   594    <.>    .     . |
+2 |   311     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50707>    .     .     . |
+1 |   594    <.>    .     . |
+2 |   311     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50707): 0=50707, 2=0, 3=0, 1=0, 
+
+False Negatives (911): 1=594, 2=311, 3=6, 0=0, 
+
+False Positives (911): 0=911, 2=0, 3=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.17s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.72      0.76     36079
+          1       0.48      0.58      0.52     15539
+
+avg / total       0.70      0.68      0.69     51618
+
+accuracy score: 0.681487
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26157> 9922 |
+1 |  6519 <9020>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26157> 9922 |
+1 |  6519 <9020>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35177): 0=26157, 1=9020, 
+
+False Negatives (16441): 0=9922, 1=6519, 
+
+False Positives (16441): 1=9922, 0=6519, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 22.52s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41615
+          1       0.00      0.00      0.00      9639
+          2       0.00      0.00      0.00       364
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806211
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41615>    .     . |
+1 |  9639    <.>    . |
+2 |   364     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41615>    .     . |
+1 |  9639    <.>    . |
+2 |   364     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41615): 0=41615, 2=0, 1=0, 
+
+False Negatives (10003): 1=9639, 2=364, 0=0, 
+
+False Positives (10003): 0=10003, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 26.36s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41897
+          1       0.00      0.00      0.00      9398
+          2       0.00      0.00      0.00       323
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811674
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41897>    .     . |
+1 |  9398    <.>    . |
+2 |   323     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41897>    .     . |
+1 |  9398    <.>    . |
+2 |   323     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41897): 0=41897, 2=0, 1=0, 
+
+False Negatives (9721): 1=9398, 2=323, 0=0, 
+
+False Positives (9721): 0=9721, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 18.74s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50527
+          1       0.00      0.00      0.00      1090
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978864
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50527>    .     . |
+1 |  1090    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50527>    .     . |
+1 |  1090    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50527): 0=50527, 2=0, 1=0, 
+
+False Negatives (1091): 1=1090, 2=1, 0=0, 
+
+False Positives (1091): 0=1091, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 21.68s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50739
+          1       0.00      0.00      0.00       879
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982971
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50739>    . |
+1 |   879    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50739>    . |
+1 |   879    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50739): 0=50739, 1=0, 
+
+False Negatives (879): 1=879, 0=0, 
+
+False Positives (879): 0=879, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.59s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.84      0.80     35893
+          1       0.53      0.41      0.46     15725
+
+avg / total       0.69      0.71      0.70     51618
+
+accuracy score: 0.709772
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30173> 5720 |
+1 |  9261 <6464>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30173> 5720 |
+1 |  9261 <6464>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36637): 0=30173, 1=6464, 
+
+False Negatives (14981): 1=9261, 0=5720, 
+
+False Positives (14981): 0=9261, 1=5720, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.92s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41581
+          1       0.43      0.00      0.00     10037
+
+avg / total       0.73      0.81      0.72     51618
+
+accuracy score: 0.805417
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41554>   27 |
+1 | 10017   <20>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41554>   27 |
+1 | 10017   <20>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41574): 0=41554, 1=20, 
+
+False Negatives (10044): 1=10017, 0=27, 
+
+False Positives (10044): 0=10017, 1=27, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.97s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.99      0.89     41781
+          1       0.31      0.01      0.02      9837
+
+avg / total       0.71      0.81      0.73     51618
+
+accuracy score: 0.806734
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41529>  252 |
+1 |  9724  <113>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41529>  252 |
+1 |  9724  <113>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41642): 0=41529, 1=113, 
+
+False Negatives (9976): 1=9724, 0=252, 
+
+False Positives (9976): 0=9724, 1=252, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 21.95s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50545
+          1       0.00      0.00      0.00      1073
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979213
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50545>    . |
+1 |  1073    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50545>    . |
+1 |  1073    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50545): 0=50545, 1=0, 
+
+False Negatives (1073): 1=1073, 0=0, 
+
+False Positives (1073): 0=1073, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.14s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50689
+          1       0.00      0.00      0.00       605
+          2       0.00      0.00      0.00       316
+          3       0.00      0.00      0.00         8
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982002
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50689>    .     .     . |
+1 |   605    <.>    .     . |
+2 |   316     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50689>    .     .     . |
+1 |   605    <.>    .     . |
+2 |   316     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50689): 0=50689, 2=0, 3=0, 1=0, 
+
+False Negatives (929): 1=605, 2=316, 3=8, 0=0, 
+
+False Positives (929): 0=929, 2=0, 3=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.68s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.87      0.80     35967
+          1       0.48      0.28      0.35     15651
+
+avg / total       0.66      0.69      0.66     51618
+
+accuracy score: 0.690069
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31297> 4670 |
+1 | 11328 <4323>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31297> 4670 |
+1 | 11328 <4323>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35620): 0=31297, 1=4323, 
+
+False Negatives (15998): 1=11328, 0=4670, 
+
+False Positives (15998): 0=11328, 1=4670, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.59s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41573
+          1       0.00      0.00      0.00      9700
+          2       0.00      0.00      0.00       345
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.805397
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41573>    .     . |
+1 |  9700    <.>    . |
+2 |   345     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41573>    .     . |
+1 |  9700    <.>    . |
+2 |   345     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41573): 0=41573, 1=0, 2=0, 
+
+False Negatives (10045): 1=9700, 2=345, 0=0, 
+
+False Positives (10045): 0=10045, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.45s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41840
+          1       0.00      0.00      0.00      9452
+          2       0.00      0.00      0.00       326
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810570
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41840>    .     . |
+1 |  9452    <.>    . |
+2 |   326     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41840>    .     . |
+1 |  9452    <.>    . |
+2 |   326     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41840): 0=41840, 2=0, 1=0, 
+
+False Negatives (9778): 1=9452, 2=326, 0=0, 
+
+False Positives (9778): 0=9778, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.11s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50511
+          1       0.00      0.00      0.00      1105
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978554
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50511>    .     . |
+1 |  1105    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50511>    .     . |
+1 |  1105    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50511): 0=50511, 2=0, 1=0, 
+
+False Negatives (1107): 1=1105, 2=2, 0=0, 
+
+False Positives (1107): 0=1107, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.26s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50729
+          1       0.00      0.00      0.00       889
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982777
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50729>    . |
+1 |   889    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50729>    . |
+1 |   889    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50729): 0=50729, 1=0, 
+
+False Negatives (889): 1=889, 0=0, 
+
+False Positives (889): 0=889, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.66s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.87      0.80     35890
+          1       0.49      0.28      0.36     15728
+
+avg / total       0.66      0.69      0.66     51618
+
+accuracy score: 0.692259
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31344> 4546 |
+1 | 11339 <4389>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31344> 4546 |
+1 | 11339 <4389>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35733): 0=31344, 1=4389, 
+
+False Negatives (15885): 1=11339, 0=4546, 
+
+False Positives (15885): 0=11339, 1=4546, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.27s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41765
+          1       0.00      0.00      0.00      9853
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.809117
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41765>    . |
+1 |  9853    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41765>    . |
+1 |  9853    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41765): 0=41765, 1=0, 
+
+False Negatives (9853): 1=9853, 0=0, 
+
+False Positives (9853): 0=9853, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.96s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41619
+          1       0.00      0.00      0.00      9999
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806289
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41619>    . |
+1 |  9999    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41619>    . |
+1 |  9999    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41619): 0=41619, 1=0, 
+
+False Negatives (9999): 1=9999, 0=0, 
+
+False Positives (9999): 0=9999, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.44s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50488
+          1       0.00      0.00      0.00      1130
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978108
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50488>    . |
+1 |  1130    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50488>    . |
+1 |  1130    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50488): 0=50488, 1=0, 
+
+False Negatives (1130): 1=1130, 0=0, 
+
+False Positives (1130): 0=1130, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 14.99s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50716
+          1       0.34      0.19      0.24       589
+          2       0.00      0.00      0.00       307
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.982022
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50580>  122    14     . |
+1 |   479  <110>    .     . |
+2 |   221    86    <.>    . |
+3 |     3     3     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50580>  122    14     . |
+1 |   479  <110>    .     . |
+2 |   221    86    <.>    . |
+3 |     3     3     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50690): 0=50580, 1=110, 2=0, 3=0, 
+
+False Negatives (928): 1=479, 2=307, 0=136, 3=6, 
+
+False Positives (928): 0=703, 1=211, 2=14, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 10.77s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.87      0.82     35692
+          1       0.59      0.42      0.49     15926
+
+avg / total       0.72      0.73      0.72     51618
+
+accuracy score: 0.732671
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31067> 4625 |
+1 |  9174 <6752>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31067> 4625 |
+1 |  9174 <6752>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37819): 0=31067, 1=6752, 
+
+False Negatives (13799): 1=9174, 0=4625, 
+
+False Positives (13799): 0=9174, 1=4625, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 23.91s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41640
+          1       0.00      0.00      0.00      9626
+          2       0.00      0.00      0.00       352
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806695
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41640>    .     . |
+1 |  9626    <.>    . |
+2 |   352     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41640>    .     . |
+1 |  9626    <.>    . |
+2 |   352     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41640): 0=41640, 2=0, 1=0, 
+
+False Negatives (9978): 1=9626, 2=352, 0=0, 
+
+False Positives (9978): 0=9978, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.11s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      1.00      0.90     41831
+          1       0.57      0.03      0.06      9473
+          2       0.00      0.00      0.00       313
+          3       0.00      0.00      0.00         1
+
+avg / total       0.77      0.81      0.74     51618
+
+accuracy score: 0.812546
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41642>  189     .     . |
+1 |  9173  <300>    .     . |
+2 |   276    37    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41642>  189     .     . |
+1 |  9173  <300>    .     . |
+2 |   276    37    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41942): 0=41642, 1=300, 2=0, 3=0, 
+
+False Negatives (9676): 1=9173, 2=313, 0=189, 3=1, 
+
+False Positives (9676): 0=9450, 1=226, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 18.27s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50559
+          1       0.00      0.00      0.00      1058
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979484
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50559>    .     . |
+1 |  1058    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50559>    .     . |
+1 |  1058    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50559): 0=50559, 2=0, 1=0, 
+
+False Negatives (1059): 1=1058, 2=1, 0=0, 
+
+False Positives (1059): 0=1059, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 17.13s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50705
+          1       0.68      0.35      0.46       913
+
+avg / total       0.98      0.99      0.98     51618
+
+accuracy score: 0.985606
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50558>  147 |
+1 |   596  <317>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50558>  147 |
+1 |   596  <317>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50875): 0=50558, 1=317, 
+
+False Negatives (743): 1=596, 0=147, 
+
+False Positives (743): 0=596, 1=147, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 32.29s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.85      0.83     35765
+          1       0.61      0.52      0.56     15853
+
+avg / total       0.74      0.75      0.74     51618
+
+accuracy score: 0.751036
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30554> 5211 |
+1 |  7640 <8213>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30554> 5211 |
+1 |  7640 <8213>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38767): 0=30554, 1=8213, 
+
+False Negatives (12851): 1=7640, 0=5211, 
+
+False Positives (12851): 0=7640, 1=5211, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.32s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.97      0.89     41584
+          1       0.44      0.10      0.16     10034
+
+avg / total       0.74      0.80      0.74     51618
+
+accuracy score: 0.800573
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40369> 1215 |
+1 |  9079  <955>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40369> 1215 |
+1 |  9079  <955>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41324): 0=40369, 1=955, 
+
+False Negatives (10294): 1=9079, 0=1215, 
+
+False Positives (10294): 0=9079, 1=1215, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 28.38s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41897
+          1       0.72      0.01      0.02      9721
+
+avg / total       0.80      0.81      0.73     51618
+
+accuracy score: 0.812624
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41867>   30 |
+1 |  9642   <79>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41867>   30 |
+1 |  9642   <79>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41946): 0=41867, 1=79, 
+
+False Negatives (9672): 1=9642, 0=30, 
+
+False Positives (9672): 0=9642, 1=30, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 21.42s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50518
+          1       0.00      0.00      0.00      1100
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978690
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50518>    . |
+1 |  1100    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50518>    . |
+1 |  1100    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50518): 0=50518, 1=0, 
+
+False Negatives (1100): 1=1100, 0=0, 
+
+False Positives (1100): 0=1100, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.89s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50717
+          1       0.00      0.00      0.00       598
+          2       0.00      0.00      0.00       292
+          3       0.00      0.00      0.00        11
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982545
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50717>    .     .     . |
+1 |   598    <.>    .     . |
+2 |   292     .    <.>    . |
+3 |    11     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50717>    .     .     . |
+1 |   598    <.>    .     . |
+2 |   292     .    <.>    . |
+3 |    11     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50717): 0=50717, 2=0, 3=0, 1=0, 
+
+False Negatives (901): 1=598, 2=292, 3=11, 0=0, 
+
+False Positives (901): 0=901, 1=0, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.79s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     35785
+          1       0.76      0.04      0.07     15833
+
+avg / total       0.72      0.70      0.59     51618
+
+accuracy score: 0.700628
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35610>  175 |
+1 | 15278  <555>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35610>  175 |
+1 | 15278  <555>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36165): 0=35610, 1=555, 
+
+False Negatives (15453): 1=15278, 0=175, 
+
+False Positives (15453): 0=15278, 1=175, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.61s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41710
+          1       0.00      0.00      0.00      9556
+          2       0.00      0.00      0.00       352
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808051
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41710>    .     . |
+1 |  9556    <.>    . |
+2 |   352     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41710>    .     . |
+1 |  9556    <.>    . |
+2 |   352     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41710): 0=41710, 2=0, 1=0, 
+
+False Negatives (9908): 1=9556, 2=352, 0=0, 
+
+False Positives (9908): 0=9908, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 9.37s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41732
+          1       0.00      0.00      0.00      9561
+          2       0.00      0.00      0.00       324
+          3       0.00      0.00      0.00         1
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808478
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41732>    .     .     . |
+1 |  9561    <.>    .     . |
+2 |   324     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41732>    .     .     . |
+1 |  9561    <.>    .     . |
+2 |   324     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41732): 0=41732, 1=0, 2=0, 3=0, 
+
+False Negatives (9886): 1=9561, 2=324, 3=1, 0=0, 
+
+False Positives (9886): 0=9886, 2=0, 3=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.99s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50510
+          1       0.00      0.00      0.00      1106
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978535
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50510>    .     . |
+1 |  1106    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50510>    .     . |
+1 |  1106    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50510): 0=50510, 1=0, 2=0, 
+
+False Negatives (1108): 1=1106, 2=2, 0=0, 
+
+False Positives (1108): 0=1108, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.60s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50723
+          1       0.00      0.00      0.00       895
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982661
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50723>    . |
+1 |   895    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50723>    . |
+1 |   895    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50723): 0=50723, 1=0, 
+
+False Negatives (895): 1=895, 0=0, 
+
+False Positives (895): 0=895, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.99s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.91      0.81     35888
+          1       0.54      0.23      0.33     15730
+
+avg / total       0.67      0.71      0.66     51618
+
+accuracy score: 0.705297
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32710> 3178 |
+1 | 12034 <3696>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32710> 3178 |
+1 | 12034 <3696>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36406): 0=32710, 1=3696, 
+
+False Negatives (15212): 1=12034, 0=3178, 
+
+False Positives (15212): 0=12034, 1=3178, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.98s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41605
+          1       0.00      0.00      0.00     10013
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806017
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41605>    . |
+1 | 10013    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41605>    . |
+1 | 10013    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41605): 0=41605, 1=0, 
+
+False Negatives (10013): 1=10013, 0=0, 
+
+False Positives (10013): 0=10013, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.65s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41861
+          1       0.00      0.00      0.00      9757
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810977
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41861>    . |
+1 |  9757    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41861>    . |
+1 |  9757    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41861): 0=41861, 1=0, 
+
+False Negatives (9757): 1=9757, 0=0, 
+
+False Positives (9757): 0=9757, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.27s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50554
+          1       0.00      0.00      0.00      1064
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979387
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50554>    . |
+1 |  1064    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50554>    . |
+1 |  1064    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50554): 0=50554, 1=0, 
+
+False Negatives (1064): 1=1064, 0=0, 
+
+False Positives (1064): 0=1064, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 17.01s
+test: took 0.07s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50717
+          1       0.39      0.35      0.37       589
+          2       0.00      0.00      0.00       304
+          3       0.00      0.00      0.00         8
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.983998
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50586>  131     .     . |
+1 |   383  <206>    .     . |
+2 |   122   182    <.>    . |
+3 |     1     7     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50586>  131     .     . |
+1 |   383  <206>    .     . |
+2 |   122   182    <.>    . |
+3 |     1     7     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50792): 0=50586, 1=206, 2=0, 3=0, 
+
+False Negatives (826): 1=383, 2=304, 0=131, 3=8, 
+
+False Positives (826): 0=506, 1=320, 2=0, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 24.73s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.88      0.85      0.87     35851
+          1       0.69      0.74      0.71     15767
+
+avg / total       0.82      0.82      0.82     51618
+
+accuracy score: 0.818222
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30576> 5275 |
+1 |  4108<11659>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30576> 5275 |
+1 |  4108<11659>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42235): 0=30576, 1=11659, 
+
+False Negatives (9383): 0=5275, 1=4108, 
+
+False Positives (9383): 1=5275, 0=4108, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 19.05s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41528
+          1       0.62      0.10      0.16      9704
+          2       0.00      0.00      0.00       386
+
+avg / total       0.78      0.81      0.75     51618
+
+accuracy score: 0.813922
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41090>  438     . |
+1 |  8781  <923>    . |
+2 |   260   126    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41090>  438     . |
+1 |  8781  <923>    . |
+2 |   260   126    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42013): 0=41090, 1=923, 2=0, 
+
+False Negatives (9605): 1=8781, 0=438, 2=386, 
+
+False Positives (9605): 0=9041, 1=564, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 21.72s
+test: took 0.09s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      1.00      0.90     41812
+          1       0.64      0.03      0.06      9479
+          2       0.00      0.00      0.00       327
+
+avg / total       0.78      0.81      0.74     51618
+
+accuracy score: 0.813398
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41683>  129     . |
+1 |  9176  <303>    . |
+2 |   284    43    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41683>  129     . |
+1 |  9176  <303>    . |
+2 |   284    43    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41986): 0=41683, 1=303, 2=0, 
+
+False Negatives (9632): 1=9176, 2=327, 0=129, 
+
+False Positives (9632): 0=9460, 1=172, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 17.72s
+test: took 0.09s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50519
+          1       0.00      0.00      0.00      1097
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978709
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50519>    .     . |
+1 |  1097    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50519>    .     . |
+1 |  1097    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50519): 0=50519, 2=0, 1=0, 
+
+False Negatives (1099): 1=1097, 2=2, 0=0, 
+
+False Positives (1099): 0=1099, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 17.00s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50713
+          1       0.72      0.70      0.71       905
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.990003
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50473>  240 |
+1 |   276  <629>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50473>  240 |
+1 |   276  <629>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51102): 0=50473, 1=629, 
+
+False Negatives (516): 1=276, 0=240, 
+
+False Positives (516): 0=276, 1=240, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 24.60s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.89      0.84      0.87     35749
+          1       0.68      0.77      0.72     15869
+
+avg / total       0.83      0.82      0.82     51618
+
+accuracy score: 0.818726
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30040> 5709 |
+1 |  3648<12221>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30040> 5709 |
+1 |  3648<12221>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42261): 0=30040, 1=12221, 
+
+False Negatives (9357): 0=5709, 1=3648, 
+
+False Positives (9357): 1=5709, 0=3648, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 27.34s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41662
+          1       0.61      0.10      0.18      9956
+
+avg / total       0.78      0.81      0.76     51618
+
+accuracy score: 0.814309
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41014>  648 |
+1 |  8937 <1019>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41014>  648 |
+1 |  8937 <1019>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42033): 0=41014, 1=1019, 
+
+False Negatives (9585): 1=8937, 0=648, 
+
+False Positives (9585): 0=8937, 1=648, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 24.47s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41802
+          1       0.74      0.03      0.06      9816
+
+avg / total       0.80      0.81      0.74     51618
+
+accuracy score: 0.813960
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41691>  111 |
+1 |  9492  <324>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41691>  111 |
+1 |  9492  <324>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42015): 0=41691, 1=324, 
+
+False Negatives (9603): 1=9492, 0=111, 
+
+False Positives (9603): 0=9492, 1=111, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 15.21s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50485
+          1       0.00      0.00      0.00      1133
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978050
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50485>    . |
+1 |  1133    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50485>    . |
+1 |  1133    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50485): 0=50485, 1=0, 
+
+False Negatives (1133): 1=1133, 0=0, 
+
+False Positives (1133): 0=1133, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.95s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50709
+          1       0.00      0.00      0.00       587
+          2       0.00      0.00      0.00       311
+          3       0.00      0.00      0.00        11
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982390
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50709>    .     .     . |
+1 |   587    <.>    .     . |
+2 |   311     .    <.>    . |
+3 |    11     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50709>    .     .     . |
+1 |   587    <.>    .     . |
+2 |   311     .    <.>    . |
+3 |    11     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50709): 0=50709, 2=0, 3=0, 1=0, 
+
+False Negatives (909): 1=587, 2=311, 3=11, 0=0, 
+
+False Positives (909): 0=909, 2=0, 3=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.68s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.85      0.95      0.90     35866
+          1       0.84      0.62      0.72     15752
+
+avg / total       0.85      0.85      0.84     51618
+
+accuracy score: 0.850207
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34053> 1813 |
+1 |  5919 <9833>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34053> 1813 |
+1 |  5919 <9833>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43886): 0=34053, 1=9833, 
+
+False Negatives (7732): 1=5919, 0=1813, 
+
+False Positives (7732): 0=5919, 1=1813, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.67s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41717
+          1       0.00      0.00      0.00      9553
+          2       0.00      0.00      0.00       348
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808187
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41717>    .     . |
+1 |  9553    <.>    . |
+2 |   348     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41717>    .     . |
+1 |  9553    <.>    . |
+2 |   348     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41717): 0=41717, 2=0, 1=0, 
+
+False Negatives (9901): 1=9553, 2=348, 0=0, 
+
+False Positives (9901): 0=9901, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.25s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41812
+          1       0.00      0.00      0.00      9451
+          2       0.00      0.00      0.00       355
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810028
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41812>    .     . |
+1 |  9451    <.>    . |
+2 |   355     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41812>    .     . |
+1 |  9451    <.>    . |
+2 |   355     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41812): 0=41812, 2=0, 1=0, 
+
+False Negatives (9806): 1=9451, 2=355, 0=0, 
+
+False Positives (9806): 0=9806, 2=0, 1=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.71s
+test: took 0.07s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50494
+          1       0.00      0.00      0.00      1123
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978225
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50494>    .     . |
+1 |  1123    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50494>    .     . |
+1 |  1123    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50494): 0=50494, 2=0, 1=0, 
+
+False Negatives (1124): 1=1123, 2=1, 0=0, 
+
+False Positives (1124): 0=1124, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.92s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50709
+          1       0.00      0.00      0.00       909
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982390
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50709>    . |
+1 |   909    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50709>    . |
+1 |   909    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50709): 0=50709, 1=0, 
+
+False Negatives (909): 1=909, 0=0, 
+
+False Positives (909): 0=909, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 10.24s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.94      0.90     35911
+          1       0.83      0.67      0.74     15707
+
+avg / total       0.85      0.86      0.85     51618
+
+accuracy score: 0.856600
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33681> 2230 |
+1 |  5172<10535>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33681> 2230 |
+1 |  5172<10535>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44216): 0=33681, 1=10535, 
+
+False Negatives (7402): 1=5172, 0=2230, 
+
+False Positives (7402): 0=5172, 1=2230, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.60s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41725
+          1       0.00      0.00      0.00      9893
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808342
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41725>    . |
+1 |  9893    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41725>    . |
+1 |  9893    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41725): 0=41725, 1=0, 
+
+False Negatives (9893): 1=9893, 0=0, 
+
+False Positives (9893): 0=9893, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.55s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41822
+          1       0.00      0.00      0.00      9796
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810221
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41822>    . |
+1 |  9796    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41822>    . |
+1 |  9796    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41822): 0=41822, 1=0, 
+
+False Negatives (9796): 1=9796, 0=0, 
+
+False Positives (9796): 0=9796, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.25s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50518
+          1       0.00      0.00      0.00      1100
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978690
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50518>    . |
+1 |  1100    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50518>    . |
+1 |  1100    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50518): 0=50518, 1=0, 
+
+False Negatives (1100): 1=1100, 0=0, 
+
+False Positives (1100): 0=1100, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

@@ -1,0 +1,3820 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.56s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50704
+          1       0.41      0.32      0.36       584
+          2       0.51      0.56      0.53       321
+          3       0.00      0.00      0.00         9
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.984811
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50467>  182    55     . |
+1 |   279  <186>  117     2 |
+2 |    51    86  <181>    3 |
+3 |     2     2     5    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50467>  182    55     . |
+1 |   279  <186>  117     2 |
+2 |    51    86  <181>    3 |
+3 |     2     2     5    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50834): 0=50467, 1=186, 2=181, 3=0, 
+
+False Negatives (784): 1=398, 0=237, 2=140, 3=9, 
+
+False Positives (784): 0=332, 1=270, 2=177, 3=5, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.18s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.97      0.95     35887
+          1       0.93      0.85      0.89     15731
+
+avg / total       0.94      0.94      0.94     51618
+
+accuracy score: 0.935991
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34945>  942 |
+1 |  2362<13369>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34945>  942 |
+1 |  2362<13369>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48314): 0=34945, 1=13369, 
+
+False Negatives (3304): 1=2362, 0=942, 
+
+False Positives (3304): 0=2362, 1=942, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.38s
+test: took 0.23s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41717
+          1       0.60      0.09      0.15      9544
+          2       0.00      0.00      0.00       357
+
+avg / total       0.78      0.82      0.75     51618
+
+accuracy score: 0.816169
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41290>  427     . |
+1 |  8705  <839>    . |
+2 |   225   132    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41290>  427     . |
+1 |  8705  <839>    . |
+2 |   225   132    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (42129): 0=41290, 1=839, 2=0, 
+
+False Negatives (9489): 1=8705, 0=427, 2=357, 
+
+False Positives (9489): 0=8930, 1=559, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.64s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.71      0.77     41946
+          1       0.25      0.14      0.18      9325
+          2       0.01      0.20      0.01       347
+
+avg / total       0.72      0.61      0.65     51618
+
+accuracy score: 0.605719
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<29874> 3790  8282 |
+1 |  6063 <1321> 1941 |
+2 |   167   109   <71>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<29874> 3790  8282 |
+1 |  6063 <1321> 1941 |
+2 |   167   109   <71>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (31266): 0=29874, 1=1321, 2=71, 
+
+False Negatives (20352): 0=12072, 1=8004, 2=276, 
+
+False Positives (20352): 2=10223, 0=6230, 1=3899, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.36s
+test: took 0.23s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50536
+          1       0.03      0.00      0.01      1078
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977353
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50446>   90     . |
+1 |  1075    <3>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50446>   90     . |
+1 |  1075    <3>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50449): 0=50446, 1=3, 2=0, 
+
+False Negatives (1169): 1=1075, 0=90, 2=4, 
+
+False Positives (1169): 0=1079, 1=90, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.25s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      1.00     50679
+          1       0.83      0.64      0.72       939
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.990992
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50553>  126 |
+1 |   339  <600>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50553>  126 |
+1 |   339  <600>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51153): 0=50553, 1=600, 
+
+False Negatives (465): 1=339, 0=126, 
+
+False Positives (465): 0=339, 1=126, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.22s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.98      0.96     35856
+          1       0.94      0.85      0.89     15762
+
+avg / total       0.94      0.94      0.94     51618
+
+accuracy score: 0.937832
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34974>  882 |
+1 |  2327<13435>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34974>  882 |
+1 |  2327<13435>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48409): 0=34974, 1=13435, 
+
+False Negatives (3209): 1=2327, 0=882, 
+
+False Positives (3209): 0=2327, 1=882, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.15s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41625
+          1       0.73      0.09      0.17      9993
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.817893
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41270>  355 |
+1 |  9045  <948>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41270>  355 |
+1 |  9045  <948>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42218): 0=41270, 1=948, 
+
+False Negatives (9400): 1=9045, 0=355, 
+
+False Positives (9400): 0=9045, 1=355, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.17s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41838
+          1       0.68      0.10      0.17      9780
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.820315
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41398>  440 |
+1 |  8835  <945>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41398>  440 |
+1 |  8835  <945>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42343): 0=41398, 1=945, 
+
+False Negatives (9275): 1=8835, 0=440, 
+
+False Positives (9275): 0=8835, 1=440, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.13s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50520
+          1       0.00      0.00      0.00      1098
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978728
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50520>    . |
+1 |  1098    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50520>    . |
+1 |  1098    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50520): 0=50520, 1=0, 
+
+False Negatives (1098): 1=1098, 0=0, 
+
+False Positives (1098): 0=1098, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.90s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50712
+          1       0.00      0.00      0.00       578
+          2       0.50      0.01      0.02       319
+          3       0.00      0.00      0.00         9
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982448
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50709>    .     3     . |
+1 |   578    <.>    .     . |
+2 |   315     .    <3>    1 |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50709>    .     3     . |
+1 |   578    <.>    .     . |
+2 |   315     .    <3>    1 |
+3 |     9     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50712): 0=50709, 2=3, 3=0, 1=0, 
+
+False Negatives (906): 1=578, 2=316, 3=9, 0=3, 
+
+False Positives (906): 0=902, 2=3, 3=1, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.57s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.97      0.95     35873
+          1       0.92      0.85      0.89     15745
+
+avg / total       0.93      0.93      0.93     51618
+
+accuracy score: 0.933763
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34781> 1092 |
+1 |  2327<13418>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34781> 1092 |
+1 |  2327<13418>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48199): 0=34781, 1=13418, 
+
+False Negatives (3419): 1=2327, 0=1092, 
+
+False Positives (3419): 0=2327, 1=1092, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.77s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41632
+          1       0.55      0.11      0.19      9631
+          2       0.00      0.00      0.00       355
+
+avg / total       0.77      0.81      0.76     51618
+
+accuracy score: 0.812992
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40862>  770     . |
+1 |  8528 <1103>    . |
+2 |   206   149    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40862>  770     . |
+1 |  8528 <1103>    . |
+2 |   206   149    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41965): 0=40862, 1=1103, 2=0, 
+
+False Negatives (9653): 1=8528, 0=770, 2=355, 
+
+False Positives (9653): 0=8734, 1=919, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.96s
+test: took 0.29s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.07      0.12     41812
+          1       0.20      0.14      0.17      9453
+          2       0.01      0.70      0.01       353
+
+avg / total       0.70      0.08      0.13     51618
+
+accuracy score: 0.083944
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 | <2735> 5478 33599 |
+1 |   564 <1351> 7538 |
+2 |    21    85  <247>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 | <2735> 5478 33599 |
+1 |   564 <1351> 7538 |
+2 |    21    85  <247>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (4333): 0=2735, 1=1351, 2=247, 
+
+False Negatives (47285): 0=39077, 1=8102, 2=106, 
+
+False Positives (47285): 2=41137, 1=5563, 0=585, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.74s
+test: took 0.23s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50537
+          1       0.00      0.00      0.00      1080
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979019
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50535>    .     2 |
+1 |  1080    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50535>    .     2 |
+1 |  1080    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50535): 0=50535, 2=0, 1=0, 
+
+False Negatives (1083): 1=1080, 0=2, 2=1, 
+
+False Positives (1083): 0=1081, 2=2, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.57s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50712
+          1       0.48      0.41      0.45       906
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.981983
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50315>  397 |
+1 |   533  <373>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50315>  397 |
+1 |   533  <373>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50688): 0=50315, 1=373, 
+
+False Negatives (930): 1=533, 0=397, 
+
+False Positives (930): 0=533, 1=397, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.62s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.97      0.95     35962
+          1       0.93      0.85      0.89     15656
+
+avg / total       0.94      0.94      0.93     51618
+
+accuracy score: 0.935584
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34947> 1015 |
+1 |  2310<13346>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34947> 1015 |
+1 |  2310<13346>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (48293): 0=34947, 1=13346, 
+
+False Negatives (3325): 1=2310, 0=1015, 
+
+False Positives (3325): 0=2310, 1=1015, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.59s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.90     41725
+          1       0.61      0.12      0.20      9893
+
+avg / total       0.78      0.82      0.76     51618
+
+accuracy score: 0.816556
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40942>  783 |
+1 |  8686 <1207>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40942>  783 |
+1 |  8686 <1207>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42149): 0=40942, 1=1207, 
+
+False Negatives (9469): 1=8686, 0=783, 
+
+False Positives (9469): 0=8686, 1=783, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.59s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41819
+          1       0.61      0.13      0.21      9799
+
+avg / total       0.79      0.82      0.77     51618
+
+accuracy score: 0.818765
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41022>  797 |
+1 |  8558 <1241>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41022>  797 |
+1 |  8558 <1241>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42263): 0=41022, 1=1241, 
+
+False Negatives (9355): 1=8558, 0=797, 
+
+False Positives (9355): 0=8558, 1=797, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.59s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50539
+          1       0.00      0.00      0.00      1079
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979096
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50539>    . |
+1 |  1079    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50539>    . |
+1 |  1079    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50539): 0=50539, 1=0, 
+
+False Negatives (1079): 1=1079, 0=0, 
+
+False Positives (1079): 0=1079, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.05s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50705
+          1       0.00      0.00      0.00       586
+          2       0.00      0.00      0.00       319
+          3       0.00      0.00      0.00         8
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982274
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50703>    .     .     2 |
+1 |   584    <.>    .     2 |
+2 |   319     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50703>    .     .     2 |
+1 |   584    <.>    .     2 |
+2 |   319     .    <.>    . |
+3 |     8     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50703): 0=50703, 3=0, 2=0, 1=0, 
+
+False Negatives (915): 1=586, 2=319, 3=8, 0=2, 
+
+False Positives (915): 0=911, 3=4, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.73s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.71      0.98      0.82     35899
+          1       0.68      0.07      0.13     15719
+
+avg / total       0.70      0.71      0.61     51618
+
+accuracy score: 0.707525
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<35357>  542 |
+1 | 14555 <1164>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<35357>  542 |
+1 | 14555 <1164>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36521): 0=35357, 1=1164, 
+
+False Negatives (15097): 1=14555, 0=542, 
+
+False Positives (15097): 0=14555, 1=542, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.87s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41631
+          1       0.00      0.00      0.00      9625
+          2       0.00      0.00      0.00       362
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806502
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41630>    .     1 |
+1 |  9625    <.>    . |
+2 |   362     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41630>    .     1 |
+1 |  9625    <.>    . |
+2 |   362     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41630): 0=41630, 2=0, 1=0, 
+
+False Negatives (9988): 1=9625, 2=362, 0=1, 
+
+False Positives (9988): 0=9987, 2=1, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.13s
+test: took 0.29s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41716
+          1       0.00      0.00      0.00      9586
+          2       0.00      0.00      0.00       314
+          3       0.00      0.00      0.00         2
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.808148
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41715>    .     .     1 |
+1 |  9586    <.>    .     . |
+2 |   314     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41715>    .     .     1 |
+1 |  9586    <.>    .     . |
+2 |   314     .    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41715): 0=41715, 3=0, 2=0, 1=0, 
+
+False Negatives (9903): 1=9586, 2=314, 3=2, 0=1, 
+
+False Positives (9903): 0=9902, 3=1, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.86s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50486
+          1       0.00      0.00      0.00      1131
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978070
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    .     . |
+1 |  1131    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50486>    .     . |
+1 |  1131    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50486): 0=50486, 2=0, 1=0, 
+
+False Negatives (1132): 1=1131, 2=1, 0=0, 
+
+False Positives (1132): 0=1132, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.71s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50692
+          1       0.00      0.00      0.00       926
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.982022
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50690>    2 |
+1 |   926    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50690>    2 |
+1 |   926    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50690): 0=50690, 1=0, 
+
+False Negatives (928): 1=926, 0=2, 
+
+False Positives (928): 0=926, 1=2, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.71s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.71      0.97      0.82     35876
+          1       0.60      0.11      0.18     15742
+
+avg / total       0.68      0.71      0.63     51618
+
+accuracy score: 0.705723
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34769> 1107 |
+1 | 14083 <1659>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34769> 1107 |
+1 | 14083 <1659>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36428): 0=34769, 1=1659, 
+
+False Negatives (15190): 1=14083, 0=1107, 
+
+False Positives (15190): 0=14083, 1=1107, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.70s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41606
+          1       0.00      0.00      0.00     10012
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806037
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41606>    . |
+1 | 10012    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41606>    . |
+1 | 10012    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41606): 0=41606, 1=0, 
+
+False Negatives (10012): 1=10012, 0=0, 
+
+False Positives (10012): 0=10012, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.71s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41868
+          1       0.00      0.00      0.00      9750
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811112
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41868>    . |
+1 |  9750    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41868>    . |
+1 |  9750    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41868): 0=41868, 1=0, 
+
+False Negatives (9750): 1=9750, 0=0, 
+
+False Positives (9750): 0=9750, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.65s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50492
+          1       0.00      0.00      0.00      1126
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978186
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50492>    . |
+1 |  1126    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50492>    . |
+1 |  1126    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50492): 0=50492, 1=0, 
+
+False Negatives (1126): 1=1126, 0=0, 
+
+False Positives (1126): 0=1126, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.88s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50681
+          1       0.01      0.00      0.00       620
+          2       0.00      0.00      0.00       311
+          3       0.00      0.00      0.00         6
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.980143
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50592>   89     .     . |
+1 |   619    <1>    .     . |
+2 |   311     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50592>   89     .     . |
+1 |   619    <1>    .     . |
+2 |   311     .    <.>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50593): 0=50592, 1=1, 3=0, 2=0, 
+
+False Negatives (1025): 1=619, 2=311, 0=89, 3=6, 
+
+False Positives (1025): 0=936, 1=89, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.51s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     35988
+          1       0.66      0.23      0.34     15630
+
+avg / total       0.71      0.73      0.68     51618
+
+accuracy score: 0.730888
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<34082> 1906 |
+1 | 11985 <3645>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<34082> 1906 |
+1 | 11985 <3645>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37727): 0=34082, 1=3645, 
+
+False Negatives (13891): 1=11985, 0=1906, 
+
+False Positives (13891): 0=11985, 1=1906, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.70s
+test: took 0.21s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41669
+          1       0.00      0.00      0.00      9611
+          2       0.00      0.00      0.00       338
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807257
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41669>    .     . |
+1 |  9611    <.>    . |
+2 |   338     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41669>    .     . |
+1 |  9611    <.>    . |
+2 |   338     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41669): 0=41669, 2=0, 1=0, 
+
+False Negatives (9949): 1=9611, 2=338, 0=0, 
+
+False Positives (9949): 0=9949, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.94s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41775
+          1       0.22      0.00      0.00      9518
+          2       0.00      0.00      0.00       324
+          3       0.00      0.00      0.00         1
+
+avg / total       0.69      0.81      0.72     51618
+
+accuracy score: 0.808904
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41746>   29     .     . |
+1 |  9510    <8>    .     . |
+2 |   324     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41746>   29     .     . |
+1 |  9510    <8>    .     . |
+2 |   324     .    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41754): 0=41746, 1=8, 3=0, 2=0, 
+
+False Negatives (9864): 1=9510, 2=324, 0=29, 3=1, 
+
+False Positives (9864): 0=9835, 1=29, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.69s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50519
+          1       0.00      0.00      0.00      1096
+          2       0.00      0.00      0.00         3
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978690
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50518>    .     1 |
+1 |  1096    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50518>    .     1 |
+1 |  1096    <.>    . |
+2 |     3     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50518): 0=50518, 2=0, 1=0, 
+
+False Negatives (1100): 1=1096, 2=3, 0=1, 
+
+False Positives (1100): 0=1099, 2=1, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.56s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50716
+          1       0.00      0.00      0.00       902
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.982525
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50716>    . |
+1 |   902    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50716>    . |
+1 |   902    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50716): 0=50716, 1=0, 
+
+False Negatives (902): 1=902, 0=0, 
+
+False Positives (902): 0=902, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.57s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.94      0.83     35847
+          1       0.64      0.26      0.37     15771
+
+avg / total       0.71      0.73      0.69     51618
+
+accuracy score: 0.728447
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33532> 2315 |
+1 | 11702 <4069>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33532> 2315 |
+1 | 11702 <4069>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37601): 0=33532, 1=4069, 
+
+False Negatives (14017): 1=11702, 0=2315, 
+
+False Positives (14017): 0=11702, 1=2315, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.57s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41552
+          1       0.00      0.00      0.00     10066
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.804991
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41552>    . |
+1 | 10066    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41552>    . |
+1 | 10066    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41552): 0=41552, 1=0, 
+
+False Negatives (10066): 1=10066, 0=0, 
+
+False Positives (10066): 0=10066, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.57s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41858
+          1       0.00      0.00      0.00      9760
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.810919
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41858>    . |
+1 |  9760    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41858>    . |
+1 |  9760    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41858): 0=41858, 1=0, 
+
+False Negatives (9760): 1=9760, 0=0, 
+
+False Positives (9760): 0=9760, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.52s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50539
+          1       0.00      0.00      0.00      1079
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979077
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50538>    1 |
+1 |  1079    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50538>    1 |
+1 |  1079    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50538): 0=50538, 1=0, 
+
+False Negatives (1080): 1=1079, 0=1, 
+
+False Positives (1080): 0=1079, 1=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.95s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50714
+          1       0.34      0.15      0.20       589
+          2       0.32      0.13      0.19       311
+          3       0.00      0.00      0.00         4
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.982196
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50572>   98    44     . |
+1 |   461   <86>   42     . |
+2 |   200    70   <41>    . |
+3 |     4     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50572>   98    44     . |
+1 |   461   <86>   42     . |
+2 |   200    70   <41>    . |
+3 |     4     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50699): 0=50572, 1=86, 2=41, 3=0, 
+
+False Negatives (919): 1=503, 2=270, 0=142, 3=4, 
+
+False Positives (919): 0=665, 1=168, 2=86, 3=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.54s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.94      0.82     35745
+          1       0.61      0.22      0.32     15873
+
+avg / total       0.69      0.72      0.67     51618
+
+accuracy score: 0.717075
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33531> 2214 |
+1 | 12390 <3483>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33531> 2214 |
+1 | 12390 <3483>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37014): 0=33531, 1=3483, 
+
+False Negatives (14604): 1=12390, 0=2214, 
+
+False Positives (14604): 0=12390, 1=2214, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.68s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41700
+          1       0.00      0.00      0.00      9565
+          2       0.00      0.00      0.00       353
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.807858
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41700>    .     . |
+1 |  9565    <.>    . |
+2 |   353     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41700>    .     . |
+1 |  9565    <.>    . |
+2 |   353     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41700): 0=41700, 2=0, 1=0, 
+
+False Negatives (9918): 1=9565, 2=353, 0=0, 
+
+False Positives (9918): 0=9918, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.03s
+test: took 0.29s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41806
+          1       0.68      0.00      0.00      9474
+          2       0.00      0.00      0.00       337
+          3       0.00      0.00      0.00         1
+
+avg / total       0.78      0.81      0.73     51618
+
+accuracy score: 0.810124
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41798>    8     .     . |
+1 |  9455   <19>    .     . |
+2 |   336     1    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41798>    8     .     . |
+1 |  9455   <19>    .     . |
+2 |   336     1    <.>    . |
+3 |     1     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (41817): 0=41798, 1=19, 3=0, 2=0, 
+
+False Negatives (9801): 1=9455, 2=337, 0=8, 3=1, 
+
+False Positives (9801): 0=9792, 1=9, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.65s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50509
+          1       0.00      0.00      0.00      1107
+          2       0.00      0.00      0.00         2
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978515
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50509>    .     . |
+1 |  1107    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50509>    .     . |
+1 |  1107    <.>    . |
+2 |     2     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50509): 0=50509, 2=0, 1=0, 
+
+False Negatives (1109): 1=1107, 2=2, 0=0, 
+
+False Positives (1109): 0=1109, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.52s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50720
+          1       0.61      0.50      0.55       898
+
+avg / total       0.98      0.99      0.99     51618
+
+accuracy score: 0.985722
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50434>  286 |
+1 |   451  <447>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50434>  286 |
+1 |   451  <447>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50881): 0=50434, 1=447, 
+
+False Negatives (737): 1=451, 0=286, 
+
+False Positives (737): 0=451, 1=286, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.51s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.73      0.93      0.82     35787
+          1       0.61      0.23      0.34     15831
+
+avg / total       0.70      0.72      0.67     51618
+
+accuracy score: 0.719110
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33401> 2386 |
+1 | 12113 <3718>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33401> 2386 |
+1 | 12113 <3718>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37119): 0=33401, 1=3718, 
+
+False Negatives (14499): 1=12113, 0=2386, 
+
+False Positives (14499): 0=12113, 1=2386, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.49s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41584
+          1       0.80      0.00      0.00     10034
+
+avg / total       0.80      0.81      0.72     51618
+
+accuracy score: 0.805785
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41581>    3 |
+1 | 10022   <12>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41581>    3 |
+1 | 10022   <12>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41593): 0=41581, 1=12, 
+
+False Negatives (10025): 1=10022, 0=3, 
+
+False Positives (10025): 0=10022, 1=3, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.48s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41852
+          1       0.81      0.00      0.00      9766
+
+avg / total       0.81      0.81      0.73     51618
+
+accuracy score: 0.810996
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41849>    3 |
+1 |  9753   <13>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41849>    3 |
+1 |  9753   <13>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41862): 0=41849, 1=13, 
+
+False Negatives (9756): 1=9753, 0=3, 
+
+False Positives (9756): 0=9753, 1=3, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.44s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50476
+          1       0.00      0.00      0.00      1142
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.977876
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50476>    . |
+1 |  1142    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50476>    . |
+1 |  1142    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50476): 0=50476, 1=0, 
+
+False Negatives (1142): 1=1142, 0=0, 
+
+False Positives (1142): 0=1142, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.72s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      0.99      0.99     50720
+          1       0.00      0.00      0.00       579
+          2       0.06      0.06      0.06       313
+          3       0.00      0.00      0.00         6
+
+avg / total       0.97      0.98      0.97     51618
+
+accuracy score: 0.977837
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50454>    2   262     2 |
+1 |   542    <.>   37     . |
+2 |   291     2   <20>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50454>    2   262     2 |
+1 |   542    <.>   37     . |
+2 |   291     2   <20>    . |
+3 |     6     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50474): 0=50454, 2=20, 3=0, 1=0, 
+
+False Negatives (1144): 1=579, 2=293, 0=266, 3=6, 
+
+False Positives (1144): 0=839, 2=299, 1=4, 3=2, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.39s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.93      0.84     35833
+          1       0.70      0.35      0.47     15785
+
+avg / total       0.75      0.76      0.73     51618
+
+accuracy score: 0.755763
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33452> 2381 |
+1 | 10226 <5559>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33452> 2381 |
+1 | 10226 <5559>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39011): 0=33452, 1=5559, 
+
+False Negatives (12607): 1=10226, 0=2381, 
+
+False Positives (12607): 0=10226, 1=2381, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.62s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.89     41608
+          1       0.00      0.00      0.00      9673
+          2       0.00      0.00      0.00       337
+
+avg / total       0.65      0.81      0.72     51618
+
+accuracy score: 0.806075
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41608>    .     . |
+1 |  9673    <.>    . |
+2 |   337     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41608>    .     . |
+1 |  9673    <.>    . |
+2 |   337     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41608): 0=41608, 2=0, 1=0, 
+
+False Negatives (10010): 1=9673, 2=337, 0=0, 
+
+False Positives (10010): 0=10010, 2=0, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.84s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.97      0.89     41927
+          1       0.25      0.04      0.07      9377
+          2       0.00      0.00      0.00       314
+
+avg / total       0.71      0.80      0.73     51618
+
+accuracy score: 0.797842
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40808> 1119     . |
+1 |  9002  <375>    . |
+2 |   301    13    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40808> 1119     . |
+1 |  9002  <375>    . |
+2 |   301    13    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41183): 0=40808, 1=375, 2=0, 
+
+False Negatives (10435): 1=9002, 0=1119, 2=314, 
+
+False Positives (10435): 0=9303, 1=1132, 2=0, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.55s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50521
+          1       0.00      0.00      0.00      1096
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978709
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50519>    .     2 |
+1 |  1096    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50519>    .     2 |
+1 |  1096    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50519): 0=50519, 2=0, 1=0, 
+
+False Negatives (1099): 1=1096, 0=2, 2=1, 
+
+False Positives (1099): 0=1097, 2=2, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.44s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50707
+          1       0.46      0.07      0.13       911
+
+avg / total       0.97      0.98      0.98     51618
+
+accuracy score: 0.982099
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50627>   80 |
+1 |   844   <67>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50627>   80 |
+1 |   844   <67>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50694): 0=50627, 1=67, 
+
+False Negatives (924): 1=844, 0=80, 
+
+False Positives (924): 0=844, 1=80, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.45s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.93      0.84     35991
+          1       0.68      0.36      0.48     15627
+
+avg / total       0.74      0.76      0.73     51618
+
+accuracy score: 0.756810
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<33370> 2621 |
+1 |  9932 <5695>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<33370> 2621 |
+1 |  9932 <5695>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39065): 0=33370, 1=5695, 
+
+False Negatives (12553): 1=9932, 0=2621, 
+
+False Positives (12553): 0=9932, 1=2621, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.43s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      1.00      0.89     41489
+          1       0.00      0.00      0.00     10129
+
+avg / total       0.65      0.80      0.72     51618
+
+accuracy score: 0.803770
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41489>    . |
+1 | 10129    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41489>    . |
+1 | 10129    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41489): 0=41489, 1=0, 
+
+False Negatives (10129): 1=10129, 0=0, 
+
+False Positives (10129): 0=10129, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.44s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      1.00      0.90     41882
+          1       0.00      0.00      0.00      9736
+
+avg / total       0.66      0.81      0.73     51618
+
+accuracy score: 0.811384
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41882>    . |
+1 |  9736    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41882>    . |
+1 |  9736    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41882): 0=41882, 1=0, 
+
+False Negatives (9736): 1=9736, 0=0, 
+
+False Positives (9736): 0=9736, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.39s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50527
+          1       0.00      0.00      0.00      1091
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978864
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50527>    . |
+1 |  1091    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50527>    . |
+1 |  1091    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50527): 0=50527, 1=0, 
+
+False Negatives (1091): 1=1091, 0=0, 
+
+False Positives (1091): 0=1091, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.85s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50697
+          1       0.49      0.31      0.38       618
+          2       0.40      0.44      0.42       296
+          3       0.00      0.00      0.00         7
+
+avg / total       0.98      0.99      0.98     51618
+
+accuracy score: 0.985257
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50533>  105    59     . |
+1 |   292  <194>  131     1 |
+2 |    69    97  <130>    . |
+3 |     3     2     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50533>  105    59     . |
+1 |   292  <194>  131     1 |
+2 |    69    97  <130>    . |
+3 |     3     2     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50857): 0=50533, 1=194, 2=130, 3=0, 
+
+False Negatives (761): 1=424, 2=166, 0=164, 3=7, 
+
+False Positives (761): 0=364, 1=204, 2=192, 3=1, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.59s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.76      0.90      0.82     35813
+          1       0.60      0.34      0.43     15805
+
+avg / total       0.71      0.73      0.70     51618
+
+accuracy score: 0.728525
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32260> 3553 |
+1 | 10460 <5345>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32260> 3553 |
+1 | 10460 <5345>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37605): 0=32260, 1=5345, 
+
+False Negatives (14013): 1=10460, 0=3553, 
+
+False Positives (14013): 0=10460, 1=3553, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.57s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41622
+          1       0.58      0.09      0.16      9641
+          2       0.00      0.00      0.00       355
+
+avg / total       0.77      0.81      0.75     51618
+
+accuracy score: 0.813302
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41111>  511     . |
+1 |  8771  <870>    . |
+2 |   225   130    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<41111>  511     . |
+1 |  8771  <870>    . |
+2 |   225   130    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41981): 0=41111, 1=870, 2=0, 
+
+False Negatives (9637): 1=8771, 0=511, 2=355, 
+
+False Positives (9637): 0=8996, 1=641, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.87s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      1.00      0.90     41778
+          1       0.69      0.04      0.07      9530
+          2       0.00      0.00      0.00       308
+          3       0.00      0.00      0.00         2
+
+avg / total       0.79      0.81      0.74     51618
+
+accuracy score: 0.814018
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41680>   98     .     . |
+1 |  9192  <338>    .     . |
+2 |   255    53    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<41680>   98     .     . |
+1 |  9192  <338>    .     . |
+2 |   255    53    <.>    . |
+3 |     2     .     .    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (42018): 0=41680, 1=338, 3=0, 2=0, 
+
+False Negatives (9600): 1=9192, 2=308, 0=98, 3=2, 
+
+False Positives (9600): 0=9449, 1=151, 3=0, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.65s
+test: took 0.23s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50517
+          1       0.00      0.00      0.00      1097
+          2       0.00      0.00      0.00         4
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978651
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50516>    .     1 |
+1 |  1097    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50516>    .     1 |
+1 |  1097    <.>    . |
+2 |     4     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50516): 0=50516, 2=0, 1=0, 
+
+False Negatives (1102): 1=1097, 2=4, 0=1, 
+
+False Positives (1102): 0=1101, 2=1, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: pure_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.51s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      1.00      0.99     50726
+          1       0.75      0.64      0.69       892
+
+avg / total       0.99      0.99      0.99     51618
+
+accuracy score: 0.990062
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50533>  193 |
+1 |   320  <572>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50533>  193 |
+1 |   320  <572>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (51105): 0=50533, 1=572, 
+
+False Negatives (513): 1=320, 0=193, 
+
+False Positives (513): 0=320, 1=193, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: pure_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.55s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.76      0.90      0.82     35849
+          1       0.60      0.34      0.43     15769
+
+avg / total       0.71      0.73      0.70     51618
+
+accuracy score: 0.728099
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32273> 3576 |
+1 | 10459 <5310>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32273> 3576 |
+1 | 10459 <5310>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37583): 0=32273, 1=5310, 
+
+False Negatives (14035): 1=10459, 0=3576, 
+
+False Positives (14035): 0=10459, 1=3576, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: pure_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.49s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41627
+          1       0.65      0.11      0.18      9991
+
+avg / total       0.79      0.82      0.76     51618
+
+accuracy score: 0.815878
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41037>  590 |
+1 |  8914 <1077>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41037>  590 |
+1 |  8914 <1077>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42114): 0=41037, 1=1077, 
+
+False Negatives (9504): 1=8914, 0=590, 
+
+False Positives (9504): 0=8914, 1=590, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: pure_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.52s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.99      0.90     41656
+          1       0.71      0.09      0.17      9962
+
+avg / total       0.80      0.82      0.76     51618
+
+accuracy score: 0.817854
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41279>  377 |
+1 |  9025  <937>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41279>  377 |
+1 |  9025  <937>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42216): 0=41279, 1=937, 
+
+False Negatives (9402): 1=9025, 0=377, 
+
+False Positives (9402): 0=9025, 1=377, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: pure_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.34s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50547
+          1       0.00      0.00      0.00      1071
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.979251
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50547>    . |
+1 |  1071    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50547>    . |
+1 |  1071    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50547): 0=50547, 1=0, 
+
+False Negatives (1071): 1=1071, 0=0, 
+
+False Positives (1071): 0=1071, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.78s
+test: took 0.28s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50727
+          1       0.26      0.35      0.30       583
+          2       0.37      0.17      0.23       301
+          3       0.00      0.00      0.00         7
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.976559
+Confusion matrix:
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50152>  530    43     2 |
+1 |   332  <204>   45     2 |
+2 |   182    64   <52>    3 |
+3 |     5     .     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2     3 |
+--+-------------------------+
+0 |<50152>  530    43     2 |
+1 |   332  <204>   45     2 |
+2 |   182    64   <52>    3 |
+3 |     5     .     2    <.>|
+--+-------------------------+
+(row = reference; col = test)
+
+True Positives (50408): 0=50152, 1=204, 2=52, 3=0, 
+
+False Negatives (1210): 0=575, 1=379, 2=249, 3=7, 
+
+False Positives (1210): 1=594, 0=519, 2=90, 3=7, 
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.44s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.90      0.85     36030
+          1       0.69      0.52      0.59     15588
+
+avg / total       0.78      0.78      0.77     51618
+
+accuracy score: 0.784339
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32352> 3678 |
+1 |  7454 <8134>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32352> 3678 |
+1 |  7454 <8134>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40486): 0=32352, 1=8134, 
+
+False Negatives (11132): 1=7454, 0=3678, 
+
+False Positives (11132): 0=7454, 1=3678, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.42s
+test: took 0.22s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.98      0.89     41535
+          1       0.55      0.12      0.19      9728
+          2       0.00      0.00      0.00       355
+
+avg / total       0.76      0.81      0.76     51618
+
+accuracy score: 0.811112
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40747>  788     . |
+1 |  8607 <1121>    . |
+2 |   218   137    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<40747>  788     . |
+1 |  8607 <1121>    . |
+2 |   218   137    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (41868): 0=40747, 1=1121, 2=0, 
+
+False Negatives (9750): 1=8607, 0=788, 2=355, 
+
+False Positives (9750): 0=8825, 1=925, 2=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.69s
+test: took 0.29s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.82      0.08      0.15     41824
+          1       0.48      0.01      0.03      9485
+          2       0.01      0.83      0.01       309
+
+avg / total       0.75      0.07      0.12     51618
+
+accuracy score: 0.073366
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 | <3395>  132 38297 |
+1 |   706  <134> 8645 |
+2 |    35    16  <258>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 | <3395>  132 38297 |
+1 |   706  <134> 8645 |
+2 |    35    16  <258>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (3787): 0=3395, 2=258, 1=134, 
+
+False Negatives (47831): 0=38429, 1=9351, 2=51, 
+
+False Positives (47831): 2=46942, 0=741, 1=148, 
+
+Untested: ['3']
+
+#expected: 51618, #predicted: 51618, #labels: 4
+labels: ['0', '1', '2', '3']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_pure
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.55s
+test: took 0.23s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50490
+          1       0.00      0.00      0.00      1127
+          2       0.00      0.00      0.00         1
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978128
+Confusion matrix:
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50489>    .     1 |
+1 |  1127    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1     2 |
+--+-------------------+
+0 |<50489>    .     1 |
+1 |  1127    <.>    . |
+2 |     1     .    <.>|
+--+-------------------+
+(row = reference; col = test)
+
+True Positives (50489): 0=50489, 2=0, 1=0, 
+
+False Negatives (1129): 1=1127, 2=1, 0=1, 
+
+False Positives (1129): 0=1128, 2=1, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 3
+labels: ['0', '1', '2']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: enemy_collisions
+feature class: scaled_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.37s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.99      0.99      0.99     50695
+          1       0.59      0.45      0.51       923
+
+avg / total       0.98      0.98      0.98     51618
+
+accuracy score: 0.984579
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50404>  291 |
+1 |   505  <418>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50404>  291 |
+1 |   505  <418>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50822): 0=50404, 1=418, 
+
+False Negatives (796): 1=505, 0=291, 
+
+False Positives (796): 0=505, 1=291, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+feature class: scaled_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.39s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.81      0.90      0.85     35736
+          1       0.69      0.51      0.59     15882
+
+avg / total       0.77      0.78      0.77     51618
+
+accuracy score: 0.778662
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32023> 3713 |
+1 |  7712 <8170>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32023> 3713 |
+1 |  7712 <8170>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (40193): 0=32023, 1=8170, 
+
+False Negatives (11425): 1=7712, 0=3713, 
+
+False Positives (11425): 0=7712, 1=3713, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_hits
+feature class: scaled_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.42s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41713
+          1       0.62      0.13      0.22      9905
+
+avg / total       0.79      0.82      0.77     51618
+
+accuracy score: 0.818029
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<40929>  784 |
+1 |  8609 <1296>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<40929>  784 |
+1 |  8609 <1296>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42225): 0=40929, 1=1296, 
+
+False Negatives (9393): 1=8609, 0=784, 
+
+False Positives (9393): 0=8609, 1=784, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_wounds
+feature class: scaled_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.29s
+test: took 0.18s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.98      0.90     41904
+          1       0.61      0.12      0.20      9714
+
+avg / total       0.79      0.82      0.77     51618
+
+accuracy score: 0.819947
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<41139>  765 |
+1 |  8529 <1185>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<41139>  765 |
+1 |  8529 <1185>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42324): 0=41139, 1=1185, 
+
+False Negatives (9294): 1=8529, 0=765, 
+
+False Positives (9294): 0=8529, 1=765, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: shell_intercepts
+feature class: scaled_boolean
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.21s
+test: took 0.17s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      1.00      0.99     50525
+          1       0.00      0.00      0.00      1093
+
+avg / total       0.96      0.98      0.97     51618
+
+accuracy score: 0.978825
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<50525>    . |
+1 |  1093    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<50525>    . |
+1 |  1093    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (50525): 0=50525, 1=0, 
+
+False Negatives (1093): 1=1093, 0=0, 
+
+False Positives (1093): 0=1093, 1=0, 
+
+#expected: 51618, #predicted: 51618, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
