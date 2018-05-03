@@ -1,9 +1,7 @@
 package NN;
 
+import Common.Observation;
 import org.json.JSONObject;
-import robocode.*;
-
-import java.io.Console;
 
 public class Tester extends Trainer {
 

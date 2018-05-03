@@ -1,4 +1,4 @@
-package NN;
+package Common;
 
 import org.json.JSONObject;
 import robocode.AdvancedRobot;

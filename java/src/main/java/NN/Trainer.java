@@ -1,5 +1,8 @@
 package NN;
 
+import Common.BotProxy;
+import Common.Connection;
+import Common.Observation;
 import robocode.*;
 
 public class Trainer extends AdvancedRobot {

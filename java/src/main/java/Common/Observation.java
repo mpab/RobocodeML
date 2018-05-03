@@ -1,4 +1,4 @@
-package NN;
+package Common;
 
 import org.json.JSONObject;
 
@@ -10,25 +10,25 @@ public class Observation {
     int frame;
     // features
     int action;
-    double x;
-    double y;
-    double heading;
+    public double x;
+    public double y;
+    public double heading;
     // NOTE
     // some features (named scanned_*) are only valid if the robot was scanned
     // if this flag is true, the features are valid
-    boolean scanned;
-    double scanned_enemy_distance;
-    double scanned_enemy_bearing;
-    double scanned_enemy_x;
-    double scanned_enemy_y;
+    public boolean scanned;
+    public double scanned_enemy_distance;
+    public double scanned_enemy_bearing;
+    public double scanned_enemy_x;
+    public double scanned_enemy_y;
 
     // events
-    int enemy_collisions;
-    int wall_collisions;
-    int shell_hits;
-    int shell_wounds;
-    int shell_misses;
-    int shell_intercepts;
+    public int enemy_collisions;
+    public int wall_collisions;
+    public int shell_hits;
+    public int shell_wounds;
+    public int shell_misses;
+    public int shell_intercepts;
 
     public Observation(int round, int num_rounds, int frame, int action) {
         this.round = round;

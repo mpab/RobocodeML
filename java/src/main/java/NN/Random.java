@@ -1,5 +1,6 @@
 package NN;
 
+import Common.BotProxy;
 import robocode.*;
 
 public class Random extends AdvancedRobot {
