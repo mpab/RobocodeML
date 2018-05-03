@@ -32,26 +32,8 @@
 
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring-version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/spring-core-${spring-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${spring-version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/spring-context-${spring-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${spring-version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/spring-beans-${spring-version}.jar</systemPath>
+            <version>5.0.5.RELEASE</version>
         </dependency>
 
         <dependency>
