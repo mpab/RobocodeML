@@ -1,25 +1,39 @@
+#!/usr/bin/env python3
+
 from collections import Counter
 from nltk.metrics import ConfusionMatrix
 import logging
+import numpy as np
 
 def report(expected, predicted, labels, log):
-    
+
+    xxx = np.array([str(e) for e in expected])
+    yyy = np.array([str(e) for e in predicted])
+    zzz = np.array([str(e) for e in labels])
+
+    expected = list(xxx)
+    predicted = list(yyy)
+    labels = list(zzz)
+
     cm = ConfusionMatrix(expected, predicted)
-
-    log.info("Confusion matrix:\n%s", cm)
-
-    log.info("Confusion matrix: sorted by count\n%s", cm.pretty_format(sort_by_count=True))
+    log.info("Confusion matrix:")
+    log.info("\n%s", cm)
+    log.info("Confusion matrix: sorted by count")
+    log.info("\n%s", cm.pretty_format(sort_by_count=True))
       
     true_positives = Counter()
     false_negatives = Counter()
     false_positives = Counter()
-    missing_labels = Counter()
 
     #merge expected & predicted, & get unique values
-    tested_labels = set(expected + predicted)
+    all_labels = set(expected + predicted)
 
-    for i in tested_labels:
-        for j in tested_labels:
+    true_positives = Counter()
+    false_negatives = Counter()
+    false_positives = Counter()
+
+    for i in all_labels:
+        for j in all_labels:
             if i == j:
                 true_positives[i] += cm[i,j]
             else:
@@ -45,8 +59,8 @@ def report(expected, predicted, labels, log):
     log.info("False Positives (%d): %s\n", sum(false_positives.values()), sb)
 
     sb = ''
-    last = len(tested_labels) - 1
-    for i, x in enumerate(sorted(tested_labels)):
+    last = len(all_labels) - 1
+    for i, x in enumerate(sorted(all_labels)):
         if true_positives[x] == 0:
             fscore = 0
         else:
@@ -59,15 +73,19 @@ def report(expected, predicted, labels, log):
         else:
             sb += '{0}={1}'.format(x, fscore)
 
-    log.info('F Scores: {0}\n'.format(sb))
+    #log.info('F Scores: {0}\n'.format(sb))
 
-    untested_labels = set(labels) - tested_labels
+    untested_labels = set(labels) - all_labels
 
     if (len(untested_labels)):
-        log.info('No F Scores for untested categories: {0}\n'.format(list(untested_labels)))
+        log.info('Untested: {0}\n'.format(list(untested_labels)))
+    
+    log.info('#expected: {}, #predicted: {}, #labels: {}'.format(len(expected), len(predicted), len(labels)))
+    log.info('labels: {}'.format(labels))
+    log.info('')
 
 if __name__ == "__main__":
-    expected = 'DET NN VB DET JJ NN NN IN DET NN DET NN VB DET JJ NN NN IN DET NN'.split()
+    expected =  'DET NN VB DET JJ NN NN IN DET NN DET NN VB DET JJ NN NN IN DET NN'.split()
     predicted = 'DET VB VB DET NN NN NN IN DET NN DET NN NN DET NN NN NN IN DET NN'.split()
     labels = 'DET NN VB IN JJ'.split()
     logging.basicConfig(level=logging.INFO)
