@@ -1,15 +1,12 @@
-package NN;
+package Common;
 
-import Common.BotProxy;
-import Common.Connection;
-import Common.Observation;
 import robocode.*;
 
 public class Trainer extends AdvancedRobot {
 
-    Connection conn = new Connection();
-    BotProxy proxy = new BotProxy(this);
-    Observation obs;
+    public Connection conn = new Connection();
+    public BotProxy proxy = new BotProxy(this);
+    public Observation obs;
 
     public void run() {
 

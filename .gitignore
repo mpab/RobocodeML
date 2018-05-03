@@ -31,6 +31,9 @@ gradle-app.setting
 *.war
 *.ear
 
+## General:
+*.zip
+
 ## Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

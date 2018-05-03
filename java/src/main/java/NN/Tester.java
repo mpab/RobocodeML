@@ -1,6 +1,7 @@
 package NN;
 
 import Common.Observation;
+import Common.Trainer;
 import org.json.JSONObject;
 
 public class Tester extends Trainer {
