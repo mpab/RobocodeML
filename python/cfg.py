@@ -6,7 +6,7 @@ observations_root = data_root + "observations/"
 observations = "observations.csv"
 
 features_root = data_root + "features/"
-features_scanned_root = data_root + "features_scanned/"
+features_unscanned_root = data_root + "features_unscanned/"
 features = "features.csv"
 
 models_root = data_root + "models/"

@@ -50,10 +50,10 @@ def extract_to_csv(obs_list):
         print("creating features file: {}".format(fp))
         features.csv_create(fp)
         features_fp.append(fp)
-        fp = cfg.ensure_fp(cfg.features_scanned_root + features_class, cfg.features)
-        print("creating features file: {}".format(fp))
-        features.csv_create(fp)
-        features_fp.append(fp)
+        #fp = cfg.ensure_fp(cfg.features_unscanned_root + features_class, cfg.features)
+        #print("creating features file: {}".format(fp))
+        #features.csv_create(fp)
+        #features_fp.append(fp)
 
     for jsn in obs_list:
         obs = observations.json_to_observation(jsn)
@@ -67,11 +67,11 @@ def extract_to_csv(obs_list):
             if out is None:
                 raise RuntimeError("no feature converter for features_class: {}".format(features_class))
 
-            fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
-            features.csv_append(fp, out)
+            #fp = cfg.ensure_fp(cfg.features_unscanned_root + features_class, cfg.features)
+            #features.csv_append(fp, out)
 
             if obs.scanned:
-                fp = cfg.ensure_fp(cfg.features_scanned_root + features_class, cfg.features)
+                fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
                 features.csv_append(fp, out)
 
     for fp in features_fp:
