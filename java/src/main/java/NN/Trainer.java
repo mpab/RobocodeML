@@ -15,7 +15,7 @@ public class Trainer extends AdvancedRobot {
 
         while (true) {
             int action = proxy.randomAction();
-            obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, proxy.actionToString(action));
+            obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, action);
             proxy.execAction(action);
             conn.send(obs.toJson().toString());
         }

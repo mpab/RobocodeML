@@ -12,13 +12,13 @@ public class Tester extends Trainer {
         conn.open("localhost", 8889);
         int frame = 1;
 
-        obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, "");
+        obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, 0);
         conn.send(obs.toJson().toString());
 
         while (true) {
             int action = getNextAction();
             proxy.execAction(action);
-            obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, "");
+            obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, 0);
             conn.send(obs.toJson().toString());
         }
     }
