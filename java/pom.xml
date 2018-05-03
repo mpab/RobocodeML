@@ -13,6 +13,11 @@
         <robocode-version>1.9.3.2</robocode-version>
         <picocontainer-version>2.14.2</picocontainer-version>
         <json-version>20180130</json-version>
+        <jfreechart-version>1.0.0</jfreechart-version>
+        <slf4j-version>1.7.6</slf4j-version>
+        <typesafeconfig-version>1.2.0</typesafeconfig-version>
+        <guava-version>16.0.1</guava-version>
+        <spring-version>4.0.2.RELEASE</spring-version>
     </properties>
 
     <licenses>
@@ -24,6 +29,62 @@
     </licenses>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/spring-core-${spring-version}.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/spring-context-${spring-version}.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring-version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/spring-beans-${spring-version}.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>guava</artifactId>
+            <version>16.0.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/guava-${guava-version}.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>typesafeconfig</artifactId>
+            <version>1.2.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/config-${typesafeconfig-version}.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-version}</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/slf4j-api-${slf4j-version}.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/jfreechart-${jfreechart-version}.jar</systemPath>
+        </dependency>
 
         <dependency>
             <groupId>net.sf.robocode</groupId>
