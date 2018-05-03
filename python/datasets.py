@@ -10,14 +10,12 @@ import pandas as pd
 from sklearn.datasets.base import Bunch
 from sklearn.preprocessing import LabelEncoder
 
-
 # -----------------------------------------------------------
 
 __logger__ = [None]
 
 
 def log():
-
     if __logger__[0] is not None:
         return __logger__[0]
 
@@ -33,16 +31,17 @@ def log():
     __logger__[0] = logger
     return __logger__[0]
 
+
 # -----------------------------------------------------------
 
 def check_discard_list(discard, target):
-
     filtered = list(discard)
 
     if target in discard:
         filtered.remove(target)
 
     return filtered
+
 
 def load_csv_and_discard(data_fp, discard_list, target_name):
     df = pd.read_csv(data_fp)
