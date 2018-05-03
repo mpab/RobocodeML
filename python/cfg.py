@@ -6,6 +6,7 @@ observations_root = data_root + "observations/"
 observations = "observations.csv"
 
 features_root = data_root + "features/"
+features_scanned_root = data_root + "features_scanned/"
 features = "features.csv"
 
 models_root = data_root + "models/"
@@ -38,21 +39,17 @@ onehot_targets = [
 # convention: feature_target_target
 features_classes = [
     "pure_pure",
-    "pure_classified",
     "pure_boolean",
-    "pure_boolean_classified",
     "scaled_pure",
-    "scaled_classified",
     "scaled_boolean",
-    "scaled_boolean_classified"
 ]
 
-classification_compatible = [
-    "pure_classified",
-    "pure_boolean_classified",
-    "scaled_classified",
-    "scaled_boolean_classified"
-]
+#classification_compatible = [
+#    "pure_classified",
+#    "pure_boolean_classified",
+#    "scaled_classified",
+#    "scaled_boolean_classified"
+#]
 
 
 def ensure_path(path):

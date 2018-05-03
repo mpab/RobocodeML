@@ -10,17 +10,24 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
 import pandas as pd
+import numpy as np
 
 # models
 import models
 
 # data
-import classification_ds
+import datasets
 import cfg
 
 # local utilities
 import stats
 import graphs
+
+# -----------------------------------------------------------
+
+def tostrlist(v):
+        a = np.array([str(e) for e in v])
+        return list(a)
 
 # -----------------------------------------------------------
 
@@ -94,10 +101,24 @@ class Trainalyser:  # because it trains and analyses...
         log().info("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
         log().info("")
 
+    def target_names(self):
+        if hasattr(self.ds, 'target_names'):
+            return np.array([str(e) for e in self.ds.target_names])
+
+        return None
+
+    
+
     def assess(self):
-        self.classification_report = \
-            metrics.classification_report(self.y_test, self.y_predict, target_names=self.ds.target_names)
-        self.accuracy_score = metrics.accuracy_score(self.y_test, self.y_predict)
+        tn = self.target_names()
+        if tn is not None:
+            self.classification_report = metrics.classification_report(
+                self.y_test,
+                self.y_predict,
+                target_names=tn)
+            self.accuracy_score = metrics.accuracy_score(self.y_test, self.y_predict)
+        else:
+            log().info('assess() not run, no target names in data store')
 
     def report(self):
         log().info("------------------------- START REPORT ----------------------------------")
@@ -108,10 +129,17 @@ class Trainalyser:  # because it trains and analyses...
         log().info('classification report:\n%s', self.classification_report)
         log().info('accuracy score: %f', self.accuracy_score)
 
-        test = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_test))
-        predict = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_predict))
-
-        stats.report(test, predict, self.ds.target_names, log())
+        # check for encoders
+        if hasattr(self.ds, 'encoders'):
+            test = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_test))
+            predict = list(self.ds.encoders[self.ds.target_name].inverse_transform(self.y_predict))
+            stats.report(test, predict, self.ds.target_names, log())
+        else:
+            tn = self.target_names()
+            if tn is not None:
+                stats.report(self.y_test, self.y_predict, tn, log())
+            else:
+                log().info('stats.report() not run, no target names in data store')
 
         log().info("-------------------------- END REPORT -----------------------------------")
 
@@ -130,46 +158,46 @@ class Trainalyser:  # because it trains and analyses...
         return pd.DataFrame.from_dict(report_data)
 
     def graph(self):
-        cm = confusion_matrix(self.y_test, self.y_predict)
-        graphs.plot_cm(cm, self.ds.target_names, self.working_folder)
+        tn = self.target_names()
+        if tn is not None:
+            cm = confusion_matrix(tostrlist(self.y_test), tostrlist(self.y_predict))
+            graphs.plot_cm(cm, tn, self.working_folder)
+        else:
+            log().info('graph() not run, no target names in data store')
 
 # -----------------------------------------------------------
 
 
-def train_and_evaluate(features_class, target_name):
+def train_and_evaluate(mm, features_class, target_name):
+   
+        feat_fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
+        model_path = cfg.ensure_path(cfg.models_root + "/" + features_class)
 
-    mm = models.create(features_class)
-    if mm is None:
-        log().info("no model for target: {} - unhandled features class: {}".format(target_name, features_class))
-        return
+        working_folder = cfg.ensure_path(model_path / mm.name / target_name)
+        ds = datasets.from_csv_with_target_names(feat_fp, cfg.onehot_targets, target_name)
 
-    feat_fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
-    model_path = cfg.ensure_path(cfg.models_root + "/" + features_class)
+        analyser = Trainalyser(working_folder, ds)
 
-    working_folder = cfg.ensure_path(model_path / mm.name / target_name)
-    ds = classification_ds.load_encoded(feat_fp, cfg.onehot_targets, target_name)
+        log().info("target: {}".format(target_name))
+        log().info("feature class: {}".format(features_class))
+        log().info("model name: {}".format(mm.name))
+        log().info("model description: {}".format(mm.description))
 
-    analyser = Trainalyser(working_folder, ds)
+        analyser.split()
+        analyser.train(mm.model)
+        analyser.test(mm.model)
+        analyser.assess()
+        analyser.report()
+        analyser.graph()
 
-    log().info("target: {}".format(target_name))
-    log().info("feature class: {}".format(features_class))
-    log().info("model name: {}".format(mm.name))
-    log().info("model description: {}".format(mm.description))
-
-    analyser.split()
-    analyser.train(mm.model)
-    analyser.test(mm.model)
-    analyser.assess()
-    analyser.report()
-    analyser.graph()
-
-    mm.save(working_folder)
+        mm.save(working_folder)
 
 
 def train_and_evaluate_all():
-    for target_name in cfg.onehot_targets:
+    for mm in models.generate(): 
         for features_class in cfg.features_classes:
-            train_and_evaluate(features_class, target_name)
+            for target_name in cfg.onehot_targets:           
+                train_and_evaluate(mm, features_class, target_name)
 
 
 def main():
