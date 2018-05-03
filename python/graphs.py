@@ -1,9 +1,36 @@
+#!/usr/bin/env python3
+
 import itertools
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
+import sklearn.datasets
+import datasets as lds
 
 from pylab import rcParams
+
 rcParams['figure.figsize'] = 12, 12
+
+
+def plot_hist():
+    data = pd.read_csv('../data/features/pure_pure/features.csv', quoting=2)
+    data.hist(bins=50)
+    plt.xlim([0, 115000])
+    plt.title("Data")
+    plt.xlabel("Value")
+    plt.ylabel("Frequency")
+    plt.show()
+
+
+def datasets():
+    yield sklearn.datasets.load_boston()
+    yield sklearn.datasets.load_breast_cancer()
+    yield sklearn.datasets.load_diabetes()
+    yield sklearn.datasets.load_digits()
+    yield sklearn.datasets.load_iris()
+    yield sklearn.datasets.load_linnerud()
+    yield lds.load_features_u()
+    yield lds.load_features_c()
 
 
 def plot_cm(cm,
@@ -11,7 +38,7 @@ def plot_cm(cm,
             path,
             normalize=False,
             title='Confusion matrix',
-            cmap=plt.cm.Blues,):
+            cmap=plt.cm.Blues, ):
     """
     renders a confusion matrix.
     Normalization can be applied by setting `normalize=True`.
@@ -41,3 +68,13 @@ def plot_cm(cm,
     # plt.show()
 
     plt.savefig(str(path) + '/confusion_matrix.png', bbox_inches='tight')
+
+
+def main():
+    # for ds in datasets():
+    #    lds.print_info(ds)
+    plot_hist()
+
+
+if __name__ == '__main__':
+    main()
