@@ -1,0 +1,4 @@
+Results for 5000 rounds
+Robot Name      Total Score     Survival    Surv Bonus  Bullet Dmg  Bullet Bonus    Ram Dmg * 2 Ram Bonus    1sts    2nds    3rds   
+1st: NN.NNTrainer*  505748 (50%)    125000  25000   314875  36931   3360    582 2548    2452    0   
+2nd: RND.Random*    501139 (50%)    122600  24520   314218  36099   3392    310 2500    2500    0   
