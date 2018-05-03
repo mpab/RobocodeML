@@ -1,0 +1,3 @@
+class,f1-score,precision,recall,support
+0,0.99,0.99,1.00,50713
+1,0.71,0.72,0.70,905
