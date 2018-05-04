@@ -57,7 +57,7 @@ def observation_to_features(obs):
     return feat
 
 
-def csv_append(filepath, feat):
+def to_string(feat):
     record = "{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
         feat.action,
         feat.x,
@@ -72,17 +72,23 @@ def csv_append(filepath, feat):
         feat.shell_hits,
         feat.shell_wounds,
         feat.shell_intercepts)
+    return record
 
+
+def csv_append(filepath, feat):
+    record = to_string(feat)
     with open(str(filepath), 'a') as handle:
         handle.write("{}\n".format(record))
 
 
-def csv_create(filepath):
-    header = ""
+def header():
+    hdr = ""
     for col in cfg.csv_column_names:
-        header = header + col + ","
+        hdr = hdr + col + ","
+    hdr = hdr.rstrip(",")
+    return hdr
 
-    header = header.rstrip(",")
 
+def csv_create(filepath):
     with open(str(filepath), 'w') as handle:
-        handle.write("{}\n".format(header))
+        handle.write("{}\n".format(header()))

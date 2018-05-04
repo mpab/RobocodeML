@@ -65,12 +65,6 @@ def create_features_test_dataset(feat_class_filt, feat):
         pbc.action = action
         test_features.append(pbc)
 
-    header = ""
-    for col in cfg.csv_column_names:
-        header = header + col + ","
-
-    header = header.rstrip(",")
-
     # TODO: convert observation to dataframe and process using dataset
     data_fp = './features.csv'
     features.csv_create(data_fp)
