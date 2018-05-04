@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import random
+import io
 
 import util
 import observations
@@ -51,40 +52,38 @@ def test_select_classification_metamodel():
             print('features_class: {}, target: {}, model: {}'.format(features_class, target, mdl.name))
 
 
-def model(feat_class_filt, target):
-    return select_classification_metamodel(feat_class_filt, target).model
+def model(feat_class_filt, target_name):
+    return select_classification_metamodel(feat_class_filt, target_name).model
 
 
-def create_features_test_dataset(feat_class_filt, feat):
-    test_features = []
+def create_features_test_dataset(feat_class_filt, feat, target_name):
+
+    csv_data = features.header()
+
+    record = extractor.extract(feat_class_filt, feat)
+    if record is None:
+        raise RuntimeError("no feature converter for features_class: {}".format(feat_class_filt))
+
     for action in range(1, 6):
-        pbc = extractor.extract(feat_class_filt, feat)
-        if pbc is None:
-            raise RuntimeError("no feature converter for features_class: {}".format(feat_class_filt))
+        record.action = action
+        csv_data += '\n'
+        csv_data += features.to_string(record)
 
-        pbc.action = action
-        test_features.append(pbc)
+    data_fp = io.StringIO(csv_data)
+    ds = datasets.from_csv(data_fp, cfg.onehot_targets, target_name)
 
-    # TODO: convert observation to dataframe and process using dataset
-    data_fp = './features.csv'
-    features.csv_create(data_fp)
-    for ef in test_features:
-        features.csv_append(data_fp, ef)
-
-    target_name = 'enemy_collisions'
-
-    return datasets.from_csv(data_fp, cfg.onehot_targets, target_name), test_features
+    return ds, csv_data
 
 
-def predict(obs, feat_class_filt, target):
+def predict(obs, feat_class_filt, target_name):
     obs.scanned = True
 
     pure_pure = features.observation_to_features(obs)
     if pure_pure is None:
         raise RuntimeError("failed to convert observation to features")
 
-    ds, test_features = create_features_test_dataset(feat_class_filt, pure_pure)
-    mdl = model(feat_class_filt, target)
+    ds, test_features = create_features_test_dataset(feat_class_filt, pure_pure, target_name)
+    mdl = model(feat_class_filt, target_name)
     predictions = mdl.predict(ds.data)
     return predictions, ds.data, test_features
 
