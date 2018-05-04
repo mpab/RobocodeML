@@ -118,6 +118,28 @@ def randomize_predictions(predictions):
         yield predictions[idx]
 
 
+def min_max(obs, feat_class_filt, target_name):
+    predictions, _, test_features = predict(obs, feat_class_filt, target_name)
+    lowest = 99999
+    highest = -1
+    for idx, p in enumerate(predictions):
+        if p < lowest:
+            lowest = p
+            min_feat = test_features[idx]
+        if p > highest:
+            highest = p
+            max_feat = test_features[idx]
+    return lowest, min_feat, highest, max_feat
+
+
+def xminimise(obs, feat_class_filt, target_name):
+    lowest, min_feat, highest, max_feat = min_max(obs, feat_class_filt, target_name)
+    obs.action = min_feat.action
+    print("minimise {} recommendation: {} ({})".format(target_name, obs.action, lowest))
+    print("{}/{})".format(predictions, features.to_string(feat)))
+    return lowest, highest
+
+
 def minimise(obs, feat_class_filt, target_name):
     predictions, _, test_features = predict(obs, feat_class_filt, target_name)
     lowest = 99999
@@ -126,7 +148,7 @@ def minimise(obs, feat_class_filt, target_name):
             lowest = p
             feat = test_features[idx]
             obs.action = feat.action
-    print("minimise {} recommendation: {} ({})".format(target_name, obs.action, lowest))
+    # print("minimise {} recommendation: {} ({})".format(target_name, obs.action, lowest))
     # print("{}/{})".format(predictions, features.to_string(feat)))
     return lowest
 
@@ -139,7 +161,7 @@ def maximise(obs, feat_class_filt, target_name):
             highest = p
             feat = test_features[idx]
             obs.action = feat.action
-    print("maximise {} recommendation: {} ({})".format(target_name, obs.action, highest))
+    # print("maximise {} recommendation: {} ({})".format(target_name, obs.action, highest))
     # print("{}/{})".format(predictions, features.to_string(feat)))
     return highest
 
