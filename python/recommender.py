@@ -134,7 +134,6 @@ def minimise(obs, feat_class_filt, target_name):
 def maximise(obs, feat_class_filt, target_name):
     predictions, _, test_features = predict(obs, feat_class_filt, target_name)
     highest = -1
-    feat = None
     for idx, p in enumerate(predictions):
         if p > highest:
             highest = p
