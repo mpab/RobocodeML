@@ -10,17 +10,17 @@ import extractor
 import features
 import datasets
 
-
 classifier_filter = 'AdaBoost'
-#features_classification_filter = 'pure_boolean_classified'
-#target_filter = 'enemy_collisions'
+# features_classification_filter = 'pure_boolean_classified'
+# target_filter = 'enemy_collisions'
 __classification_metamodels__ = [None]
 
 
 def classification_models():
-
     if __classification_metamodels__[0] is not None:
         return __classification_metamodels__[0]
+
+    print('loading models')
 
     classification_metamodels = {}
 
@@ -55,36 +55,44 @@ def model(feat_class_filt, target):
     return select_classification_metamodel(feat_class_filt, target).model
 
 
-def predict(obs, feat_class_filt, target):
+def create_features_test_dataset(feat_class_filt, feat):
+    test_features = []
+    for action in range(1, 6):
+        pbc = extractor.extract(feat_class_filt, feat)
+        if pbc is None:
+            raise RuntimeError("no feature converter for features_class: {}".format(feat_class_filt))
 
+        pbc.action = action
+        test_features.append(pbc)
+
+    header = ""
+    for col in cfg.csv_column_names:
+        header = header + col + ","
+
+    header = header.rstrip(",")
+
+    # TODO: convert observation to dataframe and process using dataset
+    data_fp = './features.csv'
+    features.csv_create(data_fp)
+    for ef in test_features:
+        features.csv_append(data_fp, ef)
+
+    target_name = 'enemy_collisions'
+
+    return datasets.from_csv(data_fp, cfg.onehot_targets, target_name), test_features
+
+
+def predict(obs, feat_class_filt, target):
     obs.scanned = True
 
     pure_pure = features.observation_to_features(obs)
     if pure_pure is None:
         raise RuntimeError("failed to convert observation to features")
 
-    eval_features = []
-    for action in range(1, 6):
-        pbc = extractor.extract(feat_class_filt, pure_pure)
-        if pbc is None:
-            raise RuntimeError("no feature converter for features_class: {}".format(feat_class_filt))
-
-        pbc.action = action
-        eval_features.append(pbc)
-
-    # TODO: convert observation to dataframe and process using dataset
-    data_fp = './features.csv'
-    features.csv_create(data_fp)
-    for ef in eval_features:
-        features.csv_append(data_fp, ef)
-
-    target_name = 'enemy_collisions'
-
-    ds = datasets.from_csv(data_fp, cfg.onehot_targets, target_name)
-
+    ds, test_features = create_features_test_dataset(feat_class_filt, pure_pure)
     mdl = model(feat_class_filt, target)
     predictions = mdl.predict(ds.data)
-    return predictions, ds.data, eval_features
+    return predictions, ds.data, test_features
 
 
 def avoid_wall_recommendation(obs):
