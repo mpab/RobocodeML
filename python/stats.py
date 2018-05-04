@@ -4,12 +4,14 @@ from collections import Counter
 from nltk.metrics import ConfusionMatrix
 import logging
 import numpy as np
+import pandas as pd
+import cfg
 
-def report(expected, predicted, labels, log):
 
-    xxx = np.array([str(e) for e in expected])
-    yyy = np.array([str(e) for e in predicted])
-    zzz = np.array([str(e) for e in labels])
+def report(xexpected, xpredicted, xlabels, log):
+    xxx = np.array([str(e) for e in xexpected])
+    yyy = np.array([str(e) for e in xpredicted])
+    zzz = np.array([str(e) for e in xlabels])
 
     expected = list(xxx)
     predicted = list(yyy)
@@ -20,12 +22,8 @@ def report(expected, predicted, labels, log):
     log.info("\n%s", cm)
     log.info("Confusion matrix: sorted by count")
     log.info("\n%s", cm.pretty_format(sort_by_count=True))
-      
-    true_positives = Counter()
-    false_negatives = Counter()
-    false_positives = Counter()
 
-    #merge expected & predicted, & get unique values
+    # merge expected & predicted, & get unique values
     all_labels = set(expected + predicted)
 
     true_positives = Counter()
@@ -35,17 +33,17 @@ def report(expected, predicted, labels, log):
     for i in all_labels:
         for j in all_labels:
             if i == j:
-                true_positives[i] += cm[i,j]
+                true_positives[i] += cm[i, j]
             else:
-                false_negatives[i] += cm[i,j]
-                false_positives[j] += cm[i,j]
+                false_negatives[i] += cm[i, j]
+                false_positives[j] += cm[i, j]
 
     sb = ''
     for value, count in true_positives.most_common():
         s = '{0}={1}, '.format(value, count)
         sb += s
     log.info("True Positives (%d): %s\n", sum(true_positives.values()), sb)
-    
+
     sb = ''
     for value, count in false_negatives.most_common():
         s = '{0}={1}, '.format(value, count)
@@ -64,8 +62,8 @@ def report(expected, predicted, labels, log):
         if true_positives[x] == 0:
             fscore = 0
         else:
-            precision = true_positives[x] / float(true_positives[x]+false_positives[x])
-            recall = true_positives[x] / float(true_positives[x]+false_negatives[x])
+            precision = true_positives[x] / float(true_positives[x] + false_positives[x])
+            recall = true_positives[x] / float(true_positives[x] + false_negatives[x])
             fscore = 2 * (precision * recall) / float(precision + recall)
 
         if i != last:
@@ -73,21 +71,41 @@ def report(expected, predicted, labels, log):
         else:
             sb += '{0}={1}'.format(x, fscore)
 
-    #log.info('F Scores: {0}\n'.format(sb))
+    # log.info('F Scores: {0}\n'.format(sb))
 
     untested_labels = set(labels) - all_labels
 
-    if (len(untested_labels)):
+    if len(untested_labels):
         log.info('Untested: {0}\n'.format(list(untested_labels)))
-    
+
     log.info('#expected: {}, #predicted: {}, #labels: {}'.format(len(expected), len(predicted), len(labels)))
     log.info('labels: {}'.format(labels))
     log.info('')
 
-if __name__ == "__main__":
-    expected =  'DET NN VB DET JJ NN NN IN DET NN DET NN VB DET JJ NN NN IN DET NN'.split()
+
+def targets_info(fp):
+    data = pd.read_csv(fp)
+    print('targets information from: {}'.format(fp))
+    for t in cfg.onehot_targets:
+        print(t)
+        print('val  count')
+        print(data[t].value_counts())
+        print()
+
+
+def test_cm():
+    expected = 'DET NN VB DET JJ NN NN IN DET NN DET NN VB DET JJ NN NN IN DET NN'.split()
     predicted = 'DET VB VB DET NN NN NN IN DET NN DET NN NN DET NN NN NN IN DET NN'.split()
     labels = 'DET NN VB IN JJ'.split()
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger()
     report(expected, predicted, labels, logger)
+
+
+def test_targets_info():
+    targets_info('../data/observations/observations.csv')
+
+
+if __name__ == "__main__":
+    # test_cm()
+    test_targets_info()
