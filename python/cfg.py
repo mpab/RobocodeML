@@ -28,11 +28,11 @@ csv_column_names = [
 ]
 
 onehot_targets = [
-    "enemy_collisions",
-    "wall_collisions",
-    "shell_hits",
-    "shell_wounds",
-    "shell_intercepts"
+    "enemy_collisions",     # minimise
+    "wall_collisions",      # minimise
+    "shell_wounds",         # minimise
+    "shell_intercepts",     # maximise
+    "shell_hits"            # maximise
 ]
 
 # convention: feature_target

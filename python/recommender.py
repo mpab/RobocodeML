@@ -2,6 +2,7 @@
 
 import random
 import io
+import copy
 
 import util
 import observations
@@ -11,12 +12,22 @@ import extractor
 import features
 import datasets
 
-classifier_filter = 'AdaBoost'
+model_name = 'AdaBoost'
 # features_classification_filter = 'pure_boolean_classified'
 # target_filter = 'enemy_collisions'
 __classification_metamodels__ = [None]
 
 num_actions = 5
+
+
+def make_key(features_classification, target_name):
+    return features_classification + '_' + model_name + '_' + target_name
+
+
+def model_path(features_classification, target_name):
+    path = '../data/models/' + features_classification + '/' + model_name + '/' + target_name
+    # print(path)
+    return path
 
 
 def classification_models():
@@ -28,22 +39,17 @@ def classification_models():
     classification_metamodels = {}
 
     for features_classification in cfg.features_classes:
-        for target in cfg.onehot_targets:
-            path = '../data/models/' + features_classification + '/' + classifier_filter + '/' + target
-            # print(path)
-            mm = models.load(path)
-            key = features_classification + '_' + target
-            # print(key)
-            # print(model.name)
-            # print(model.description)
+        for target_name in cfg.onehot_targets:
+            mm = models.load(model_path(features_classification, target_name))
+            key = make_key(features_classification, target_name)
             classification_metamodels[key] = mm
 
     __classification_metamodels__[0] = classification_metamodels
     return __classification_metamodels__[0]
 
 
-def select_classification_metamodel(features_classification, target):
-    key = features_classification + '_' + target
+def select_classification_metamodel(features_classification, target_name):
+    key = make_key(features_classification, target_name)
     return classification_models()[key]
 
 
@@ -71,15 +77,19 @@ def create_features_test_dataset(feat_class_filt, feat, target_name):
     if record is None:
         raise RuntimeError("no feature converter for features_class: {}".format(feat_class_filt))
 
+    test_features = []
+
     for action in randomized_actions():
-        record.action = action
+        test_feature = copy.copy(record)
+        test_feature.action = action
+        test_features.append(test_feature)
         csv_data += '\n'
-        csv_data += features.to_string(record)
+        csv_data += features.to_string(test_feature)
 
     data_fp = io.StringIO(csv_data)
     ds = datasets.from_csv(data_fp, cfg.onehot_targets, target_name)
 
-    return ds, csv_data
+    return ds, test_features
 
 
 def predict(obs, feat_class_filt, target_name):
@@ -108,28 +118,56 @@ def randomize_predictions(predictions):
         yield predictions[idx]
 
 
-def avoid_wall(obs):
-    predictions, _, _ = predict(obs, 'scaled_boolean', 'avoid_wall')
+def minimise(obs, feat_class_filt, target_name):
+    predictions, _, test_features = predict(obs, feat_class_filt, target_name)
     lowest = 99999
     for idx, p in enumerate(predictions):
         if p < lowest:
-            obs.action = idx + 1
-    print("avoid_wall recommendation: {} ({})".format(obs.action, lowest))
-    return random_recommendation(obs)
+            lowest = p
+            feat = test_features[idx]
+            obs.action = feat.action
+    print("minimise {} recommendation: {} ({})".format(target_name, obs.action, lowest))
+    # print("{}/{})".format(predictions, features.to_string(feat)))
+    return lowest
 
 
-def avoid_shell(obs):
-    predictions, _, _ = predict(obs, 'scaled_boolean', 'shell_wounds')
-    lowest = 99999
+def maximise(obs, feat_class_filt, target_name):
+    predictions, _, test_features = predict(obs, feat_class_filt, target_name)
+    highest = -1
+    feat = None
     for idx, p in enumerate(predictions):
-        if p < lowest:
-            obs.action = idx + 1
-    print("avoid_shell recommendation: {} ({})".format(obs.action, lowest))
-    return random_recommendation(obs)
+        if p > highest:
+            highest = p
+            feat = test_features[idx]
+            obs.action = feat.action
+    print("maximise {} recommendation: {} ({})".format(target_name, obs.action, highest))
+    # print("{}/{})".format(predictions, features.to_string(feat)))
+    return highest
+
+
+def minimise_enemy_collisions(obs):
+    return minimise(obs, 'scaled_pure', 'enemy_collisions')
+
+
+def minimise_wall_collisions(obs):
+    return minimise(obs, 'scaled_pure', 'wall_collisions')
+
+
+def minimise_shell_wounds(obs):
+    return minimise(obs, 'scaled_pure', 'shell_wounds')
+
+
+def maximise_shell_intercepts(obs):
+    return maximise(obs, 'scaled_pure', 'shell_intercepts')
+
+
+def maximise_shell_hits(obs):
+    return maximise(obs, 'scaled_pure', 'shell_hits')
 
 
 def recommend(obs):
-    return avoid_wall(obs)
+    lowest = minimise_wall_collisions(obs)
+    return lowest
 
 
 def test_recommendations_from_observations():
@@ -145,7 +183,7 @@ def test_recommendations_from_observations():
 
         for feat_class_filt in cfg.features_classes:
             for target in cfg.onehot_targets:
-                predictions, _, _ = predict(obs, feat_class_filt, target)
+                predictions, _, test_features = predict(obs, feat_class_filt, target)
 
                 found = False
                 n = predictions[0]
@@ -156,8 +194,28 @@ def test_recommendations_from_observations():
                     if n != t:
                         print("{}: target={}, feat_class_filt={}, predictions={}".format(
                             idx, target, feat_class_filt, predictions))
+                        for f in test_features:
+                            print(features.to_string(f))
                         found = True
                         continue
+
+
+def test_recommenders():
+    obs_fp = cfg.ensure_fp(cfg.observations_root, cfg.observations)
+    print("recommending from: {}".format(obs_fp))
+    obs_list = util.csv_to_json(obs_fp)
+
+    print('-------------------- RECOMMENDATIONS --------------------')
+
+    for idx, jsn in enumerate(obs_list):
+        print('observation: {}'.format(idx))
+        obs = observations.json_to_observation(jsn)
+
+        minimise_enemy_collisions(obs)
+        minimise_wall_collisions(obs)
+        minimise_shell_wounds(obs)
+        maximise_shell_intercepts(obs)
+        maximise_shell_hits(obs)
 
 
 def test_randomized_actions():
@@ -170,7 +228,8 @@ def test_randomized_actions():
 
 def main():
     test_randomized_actions()
-    test_recommendations_from_observations()
+    test_recommenders()
+    # test_recommendations_from_observations()
 
 
 if __name__ == "__main__":
