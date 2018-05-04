@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-./run-battle ../battles/nntrain-vs-random.battle gui
