@@ -1,0 +1,5 @@
+Round 1000 cleaning up.
+Results for 1000 rounds
+Robot Name      Total Score     Survival    Surv Bonus  Bullet Dmg  Bullet Bonus    Ram Dmg * 2 Ram Bonus    1sts    2nds    3rds   
+1st: RND.Random*    102405 (50%)    25250   5050    63720   7642    678 65  512 488 0   
+2nd: NN.NNTester*   100869 (50%)    24400   4880    63716   7164    685 23  495 505 0   

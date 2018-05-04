@@ -1,0 +1,4 @@
+Results for 1000 rounds
+Robot Name      Total Score     Survival    Surv Bonus  Bullet Dmg  Bullet Bonus    Ram Dmg * 2 Ram Bonus    1sts    2nds    3rds   
+1st: NN.NNTester*   103199 (51%)    26050   5210    63557   7680    619 83  528 472 0   
+2nd: RND.Random*    98456 (49%) 23600   4720    62446   6999    623 68  479 521 0   
