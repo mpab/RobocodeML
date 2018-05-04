@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 . ./env-py
 pushd ../python
-python ./nntest.py
+python ./tester.py
