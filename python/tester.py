@@ -53,9 +53,9 @@ def test(conn):
         jsn = json.loads(text)
         obs = observations.json_to_observation(jsn)
 
-        recommendation = recommender.recommend(obs)
+        recommender.recommend(obs)
 
-        reply = json.dumps(recommendation.__dict__) + '\n'  # add EOL for java client
+        reply = json.dumps(obs.__dict__) + '\n'  # add EOL for java client
 
         try:
             conn.send(reply.encode('utf-8'))
