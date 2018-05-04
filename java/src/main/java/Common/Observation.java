@@ -9,7 +9,7 @@ public class Observation {
     int num_rounds;
     int frame;
     // features
-    int action;
+    public int action;
     public double x;
     public double y;
     public double heading;

@@ -93,8 +93,6 @@ def create_features_test_dataset(feat_class_filt, feat, target_name):
 
 
 def predict(obs, feat_class_filt, target_name):
-    obs.scanned = True
-
     pure_pure = features.observation_to_features(obs)
     if pure_pure is None:
         raise RuntimeError("failed to convert observation to features")

@@ -8,17 +8,30 @@ public class NNTester extends NNTrainer {
     public void run() {
 
         conn.open("localhost", 8889);
-        int frame = 1;
+        frame = 0;
 
-        obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, 0);
-        conn.send(obs.toJson().toString());
+        newObservation();
+        conn.send(obs.toJson().toString()); // ensure we get an update
 
         while (true) {
+            newObservation();
             int action = getNextAction();
             proxy.execAction(action);
-            obs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, 0);
             conn.send(obs.toJson().toString());
         }
+    }
+
+    private void newObservation() {
+        Observation nobs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, 0);
+        nobs.action = -1;
+        nobs.x = getX();
+        nobs.y = getY();
+        nobs.heading = getHeading();
+        nobs.scanned_enemy_distance = lastEnemyDistance;
+        nobs.scanned_enemy_bearing = lastEnemyBearing;
+        nobs.scanned_enemy_x = lastEnemyX;
+        nobs.scanned_enemy_y = lastEnemyY;
+        obs = nobs;
     }
 
     private int getNextAction() {
@@ -28,4 +41,6 @@ public class NNTester extends NNTrainer {
         //System.out.printf("getNextAction() -> %s\n", proxy.actionToString(action));
         return action;
     }
+
+
 }

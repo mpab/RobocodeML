@@ -7,14 +7,21 @@ import robocode.*;
 
 public class NNTrainer extends AdvancedRobot {
 
+    public double lastEnemyBearing;
+    public double lastEnemyDistance;
+    public double lastEnemyX;
+    public double lastEnemyY;
+
     public Connection conn = new Connection();
     public BotProxy proxy = new BotProxy(this);
     public Observation obs;
 
+    int frame;
+
     public void run() {
 
         conn.open("localhost", 8888);
-        int frame = 1;
+        frame = 0;
 
         while (true) {
             int action = proxy.randomAction();
@@ -35,21 +42,25 @@ public class NNTrainer extends AdvancedRobot {
         obs.heading = getHeading();
 
         obs.scanned = true;
-        obs.scanned_enemy_distance = e.getDistance();
+        lastEnemyDistance = e.getDistance();
+        obs.scanned_enemy_distance = lastEnemyDistance;
 
-        double lastEnemyBearing = e.getBearing() % 360;
+        lastEnemyBearing = e.getBearing() % 360;
 
         // Calculate the angle to the scanned robot
         double angle = Math.toRadians((getHeading() + lastEnemyBearing));
-        obs.scanned_enemy_x = getX() + Math.sin(angle) * obs.scanned_enemy_distance;
-        obs.scanned_enemy_y = getY() + Math.cos(angle) * obs.scanned_enemy_distance;
+        lastEnemyX = getX() + Math.sin(angle) * lastEnemyDistance;
+        obs.scanned_enemy_x = lastEnemyX;
+        lastEnemyY = getY() + Math.cos(angle) * lastEnemyDistance;
+        obs.scanned_enemy_y = lastEnemyY;
 
         //absolute angle to enemy
-        obs.scanned_enemy_bearing = absBearing(
+        lastEnemyBearing = absBearing(
                 (float)getX(),
                 (float)getY(),
                 (float)obs.scanned_enemy_x,
                 (float)obs.scanned_enemy_y);
+        obs.scanned_enemy_bearing = lastEnemyBearing;
 
         proxy.fireAtEnemy(obs.scanned_enemy_distance);
     }
