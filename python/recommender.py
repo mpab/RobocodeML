@@ -16,6 +16,8 @@ classifier_filter = 'AdaBoost'
 # target_filter = 'enemy_collisions'
 __classification_metamodels__ = [None]
 
+num_actions = 5
+
 
 def classification_models():
     if __classification_metamodels__[0] is not None:
@@ -56,15 +58,20 @@ def model(feat_class_filt, target_name):
     return select_classification_metamodel(feat_class_filt, target_name).model
 
 
-def create_features_test_dataset(feat_class_filt, feat, target_name):
+def randomized_actions():
+    indices = random.sample(range(1, num_actions + 1), num_actions)
+    for idx in indices:
+        yield idx
 
+
+def create_features_test_dataset(feat_class_filt, feat, target_name):
     csv_data = features.header()
 
     record = extractor.extract(feat_class_filt, feat)
     if record is None:
         raise RuntimeError("no feature converter for features_class: {}".format(feat_class_filt))
 
-    for action in range(1, 6):
+    for action in randomized_actions():
         record.action = action
         csv_data += '\n'
         csv_data += features.to_string(record)
@@ -88,29 +95,44 @@ def predict(obs, feat_class_filt, target_name):
     return predictions, ds.data, test_features
 
 
-def avoid_wall_recommendation(obs):
-    predictions, _, _ = predict(obs, 'scaled_boolean', 'wall_collisions')
-    for idx, p in enumerate(predictions):
-        if p == 0:
-            obs.action = idx + 1
-            print("avoid_wall_recommendation: {}".format(obs.action))
-            return obs
-    return random_recommendation(obs)
-
-
 def random_recommendation(obs):
     action = random.randint(1, 5)
     obs.action = action
-    print("random_recommendation action: {}".format(obs.action))
     return obs
 
 
-def recommend(obs):
+def randomize_predictions(predictions):
+    np = len(predictions)
+    indices = random.sample(range(1, np + 1), np)
+    for idx in indices:
+        yield predictions[idx]
+
+
+def avoid_wall(obs):
+    predictions, _, _ = predict(obs, 'scaled_boolean', 'avoid_wall')
+    lowest = 99999
+    for idx, p in enumerate(predictions):
+        if p < lowest:
+            obs.action = idx + 1
+    print("avoid_wall recommendation: {} ({})".format(obs.action, lowest))
     return random_recommendation(obs)
 
 
-def main():
-    # test_select_classification_model()
+def avoid_shell(obs):
+    predictions, _, _ = predict(obs, 'scaled_boolean', 'shell_wounds')
+    lowest = 99999
+    for idx, p in enumerate(predictions):
+        if p < lowest:
+            obs.action = idx + 1
+    print("avoid_shell recommendation: {} ({})".format(obs.action, lowest))
+    return random_recommendation(obs)
+
+
+def recommend(obs):
+    return avoid_wall(obs)
+
+
+def test_recommendations_from_observations():
     obs_fp = cfg.ensure_fp(cfg.observations_root, cfg.observations)
     print("recommending from: {}".format(obs_fp))
     obs_list = util.csv_to_json(obs_fp)
@@ -136,6 +158,19 @@ def main():
                             idx, target, feat_class_filt, predictions))
                         found = True
                         continue
+
+
+def test_randomized_actions():
+    for _ in range(10000):
+        for idx in randomized_actions():
+            if idx < 1 or idx > num_actions:
+                raise RuntimeError('randomized_actions: {}'.format(idx))
+    print('randomized_actions passed')
+
+
+def main():
+    test_randomized_actions()
+    test_recommendations_from_observations()
 
 
 if __name__ == "__main__":
