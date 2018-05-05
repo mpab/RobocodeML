@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ROBOCODE=./robocode-1.9.3.2
+CLSPTH="../$ROBOCODE/libs/*:../java/target/lib/*"
 
 start_robocode_headless () {
   java -Xmx512M \
@@ -8,7 +9,7 @@ start_robocode_headless () {
   -Ddebug=true \
   -DNOSECURITY=true \
   -DROBOTPATH=../java/target/classes \
-  -cp "../$ROBOCODE/libs/*:../java/lib/*:../java/target/*" robocode.Robocode \
+  -cp $CLSPTH robocode.Robocode \
   -battle $1 \
   -nosound \
   -nodisplay \
@@ -21,7 +22,7 @@ start_robocode_gui () {
   -Ddebug=true \
   -DNOSECURITY=true \
   -DROBOTPATH=../java/target/classes \
-  -cp "../$ROBOCODE/libs/*:../java/lib/*:../java/target:/*" robocode.Robocode \
+  -cp $CLSPTH robocode.Robocode \
   -battle $1 \
   -tps 100 &
 }
