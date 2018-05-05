@@ -47,6 +47,13 @@ features_classes = [
     "scaled_boolean",
 ]
 
+features_filters = [
+    "xy",
+    "xyhead",
+    "enemy_xy",
+    "enemy_dist_bearing",
+]
+
 #classification_compatible = [
 #    "pure_classified",
 #    "pure_boolean_classified",

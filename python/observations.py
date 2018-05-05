@@ -34,7 +34,7 @@ def json_to_observation(jsn):
 
 
 def csv_append(filepath, obs):
-    record = "{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
+    record = "{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(
         obs.round,
         obs.num_rounds,
         obs.frame,
@@ -52,7 +52,8 @@ def csv_append(filepath, obs):
         obs.shell_hits,
         obs.shell_wounds,
         obs.shell_misses,
-        obs.shell_intercepts)
+        obs.shell_intercepts,
+        obs.handshake)
 
     with open(str(filepath), 'a') as handle:
         handle.write("{}\n".format(record))
@@ -62,7 +63,8 @@ def csv_create(filepath):
     header = "round,num_rounds,frame,action,x,y,heading," \
              "scanned,scanned_enemy_distance,scanned_enemy_bearing,scanned_enemy_x,scanned_enemy_y," \
              "enemy_collisions,wall_collisions," \
-             "shell_hits,shell_wounds,shell_misses,shell_intercepts"
+             "shell_hits,shell_wounds,shell_misses,shell_intercepts," \
+             "handshake"
 
     with open(str(filepath), 'w') as handle:
         handle.write("{}\n".format(header))
