@@ -43,7 +43,7 @@ $PROJECT is the root of the project folder
 
 - IntelliJ (assuming the project root is ./java/)
 
-- Open the ./java roject and make sure you import the POM.xml (you may get a warning about this)
+- Open the ./java roject and make sure you import the pom.xml (you may get a warning about this)
 
     - Go to `Run` > `Edit Configurations...` > Click `+` (`Add New Configuration`) > Select `Application`
 
