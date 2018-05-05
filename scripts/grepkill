@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pgrep java | xargs kill
+pgrep py | xargs kill
