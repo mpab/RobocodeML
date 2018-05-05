@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pushd ../robocode-1.9.3.2
+./robocode.sh

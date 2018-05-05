@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+ROBOCODE=./robocode-1.9.3.2
+CLSPTH="../$ROBOCODE/libs/*:../java/target/lib/*"
+
+start_robocode_headless () {
+  java -Xmx512M \
+  -Dsun.io.useCanonCaches=false \
+  -Ddebug=true \
+  -DNOSECURITY=true \
+  -DROBOTPATH=../$ROBOCODE/robots \
+  -cp $CLSPTH robocode.Robocode \
+  -battle $1 \
+  -nosound \
+  -nodisplay \
+  -tps 1000 &
+}
+
+start_robocode_gui () {
+  java -Xmx512M \
+  -Dsun.io.useCanonCaches=false \
+  -Ddebug=true \
+  -DNOSECURITY=true \
+  -DROBOTPATH=../$ROBOCODE/robots \
+  -cp $CLSPTH robocode.Robocode \
+  -battle $1 \
+  -tps 100 &
+}
+
+if [ "x$1" == "x" ]; then
+	echo "ERROR: no battle file specified, usage: $0 xxx.battle gui/headless"
+	exit
+fi
+
+if [ ! -e $1 ]; then
+	echo "ERROR: battle file: $1 not found"
+  echo "from the ../battles directory, you can select one of:"
+  ls -1 ../battles/
+	exit
+fi
+
+if [ "x$2" == "x" ]; then
+  echo "no gui option specified, running headless"
+  export option=headless
+  start_robocode_headless $1
+fi
+
+if [ "x$2" == "xgui" ]; then
+  echo "gui option specified, running with gui"
+  export option=gui
+  start_robocode_gui $1
+fi
+
+if [ "x$option" == "x" ]; then
+  echo "ERROR: invalid option specified, usage: $0 xxx.battle gui"
+  exit
+fi
+
+trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
+
+wait
