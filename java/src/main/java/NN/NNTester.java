@@ -5,39 +5,37 @@ import org.json.JSONObject;
 
 public class NNTester extends NNTrainer {
 
+    int handshake;
+
     public void run() {
 
         conn.open("localhost", 8889);
-        frame = 0;
 
-        newObservation();
+        obs = new Observation(getRoundNum() + 1, getNumRounds(), 1, -1);
         conn.send(obs.toJson().toString()); // ensure we get an update
 
         while (true) {
-            newObservation();
             int action = getNextAction();
             proxy.execAction(action);
+            updateObservation();
             conn.send(obs.toJson().toString());
         }
     }
 
-    private void newObservation() {
-        Observation nobs = new Observation(getRoundNum() + 1, getNumRounds(), frame++, 0);
-        nobs.action = -1;
-        nobs.x = getX();
-        nobs.y = getY();
-        nobs.heading = getHeading();
-        nobs.scanned_enemy_distance = lastEnemyDistance;
-        nobs.scanned_enemy_bearing = lastEnemyBearing;
-        nobs.scanned_enemy_x = lastEnemyX;
-        nobs.scanned_enemy_y = lastEnemyY;
-        obs = nobs;
+    private void updateObservation() {
+        obs.action = -1;
+        obs.x = getX();
+        obs.y = getY();
+        obs.heading = getHeading();
+        obs.handshake = handshake;
+        obs.frame++;
     }
 
     private int getNextAction() {
         String msg = conn.receive();
         JSONObject jsn = new JSONObject(msg);
         int action = jsn.getInt("action");
+        handshake = jsn.getInt("handshake");
         //System.out.printf("getNextAction() -> %s\n", proxy.actionToString(action));
         return action;
     }

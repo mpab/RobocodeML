@@ -7,7 +7,7 @@ public class Observation {
     // metadata
     int round;
     int num_rounds;
-    int frame;
+    public int frame;
     // features
     public int action;
     public double x;
@@ -29,6 +29,8 @@ public class Observation {
     public int shell_wounds;
     public int shell_misses;
     public int shell_intercepts;
+
+    public int handshake;
 
     public Observation(int round, int num_rounds, int frame, int action) {
         this.round = round;
@@ -61,6 +63,8 @@ public class Observation {
         jsn.put("shell_wounds", shell_wounds);
         jsn.put("shell_misses", shell_misses);
         jsn.put("shell_intercepts", shell_intercepts);
+
+        jsn.put("handshake", handshake);
 
         return jsn;
     }

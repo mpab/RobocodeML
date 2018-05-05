@@ -28,6 +28,8 @@ def json_to_observation(jsn):
     obs.shell_misses = jsn['shell_misses']
     obs.shell_intercepts = jsn['shell_intercepts']
 
+    obs.handshake = jsn['handshake']
+
     return obs
 
 

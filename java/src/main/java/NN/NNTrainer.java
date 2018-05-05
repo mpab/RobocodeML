@@ -16,12 +16,10 @@ public class NNTrainer extends AdvancedRobot {
     public BotProxy proxy = new BotProxy(this);
     public Observation obs;
 
-    int frame;
-
     public void run() {
 
         conn.open("localhost", 8888);
-        frame = 0;
+        int frame = 0;
 
         while (true) {
             int action = proxy.randomAction();
