@@ -39,6 +39,7 @@ $PROJECT is the root of the project folder
 2.b Install python dependencies
     - python 3
     - python3-venv
+    - python3-pip
 
 3.a Build from command line: `./build`
 
