@@ -43,27 +43,40 @@ $PROJECT is the root of the project folder
 
 - IntelliJ (assuming the project root is ./java/)
 
+- Open the ./java roject and make sure you import the POM.xml (you may get a warning about this)
+
     - Go to `Run` > `Edit Configurations...` > Click `+` (`Add New Configuration`) > Select `Application`
 
-        - Configure with the below parameters:
+    - Configure with the below parameters:
 
-            - `Name`: `Robocode`
+        - `Name`: `random-vs-random.battle` (recommend one configuration per)
 
-            - `Main class`: `robocode.Robocode`
+        - `Main class`: `robocode.Robocode`
 
-            - IF you want to configure robocode to automatically find the project robots
+        - IF you want to configure robocode to automatically find the project robots
 
-                - `VM options`: `--Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true -DROBOTPATH=../java/target/classes`
+            - `VM options`: `-Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true -DNOSECURITY=true -DROBOTPATH=../java/target/classes`
 
-            - ELSE if you want to set the robots path from within robocode (see '4')
+        - ELSE if you want to set the robots path from within robocode (see '4')
 
-                - `VM options`: `--Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true`
+            - `VM options`: `--Xmx512M -Dsun.io.useCanonCaches=false -Ddebug=true`
 
-            - Program arguments: `-battle ../random.battle`
+        - Program arguments: `-battle ../battles/random-vs-random.battle`
 
-            - `Working directory`: `/path/to/robocode` (from previous step)
+        - `Working directory`: `/path/to/robocode` (from previous step)
+              e.g. `$HOME/Projects/RobocodeML/robocode-1.9.3.2`
 
-            - `Use classpath of module`: `RobocodeML`
+        - `Use classpath of module`: `RobocodeML`
+
+    - You will then need to add the Robocode jars to your classpath, (how you do this depends on the version of IntelliJ)
+    In IntelliJ, go to the `Project Settings/Project/Modules` proprties page
+    Select the dependencies tab
+    Add (click +) JARs or directories
+    Select the libs folder in your Robocode installation - e.g. `$HOME/Projects/RobocodeML/robocode-1.9.3.2/libs`
+
+    - Make sure you name this configuration (e.g.`random-vs-random.battle`) and click Apply or OK, otherwise you'll have to start again
+
+    - Run or Debug
 
 - Eclipse: [use these instructions](http://robowiki.net/wiki/Robocode/Running_from_Eclipse)
 

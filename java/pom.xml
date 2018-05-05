@@ -11,13 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <robocode-version>1.9.3.2</robocode-version>
-        <picocontainer-version>2.14.2</picocontainer-version>
         <json-version>20180130</json-version>
-        <jfreechart-version>1.0.0</jfreechart-version>
-        <slf4j-version>1.7.25</slf4j-version>
-        <typesafeconfig-version>1.2.0</typesafeconfig-version>
-        <guava-version>16.0.1</guava-version>
-        <spring-version>4.0.2.RELEASE</spring-version>
     </properties>
 
     <licenses>
@@ -29,52 +23,6 @@
     </licenses>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>sl4j-api</artifactId>
-            <version>1.7.25</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/slf4j-api-${slf4j-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.0.5.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google</groupId>
-            <artifactId>guava</artifactId>
-            <version>16.0.1</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/guava-${guava-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>com.typesafe</groupId>
-            <artifactId>typesafeconfig</artifactId>
-            <version>1.2.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/config-${typesafeconfig-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j-version}</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/slf4j-api-${slf4j-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jfree</groupId>
-            <artifactId>jfreechart</artifactId>
-            <version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/jfreechart-${jfreechart-version}.jar</systemPath>
-        </dependency>
 
         <dependency>
             <groupId>net.sf.robocode</groupId>
@@ -141,14 +89,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.picocontainer</groupId>
-            <artifactId>picocontainer</artifactId>
-            <version>2.14.2</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/../robocode-${robocode-version}/libs/picocontainer-${picocontainer-version}.jar</systemPath>
-        </dependency>
-
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -156,25 +96,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.hamcrest</groupId>
-            <artifactId>hamcrest-all</artifactId>
-            <version>1.3</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>1.10.19</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20180130</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/json-${json-version}.jar</systemPath>
+            <version>${json-version}</version>
         </dependency>
 
     </dependencies>
