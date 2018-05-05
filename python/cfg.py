@@ -1,8 +1,11 @@
 import pathlib
 
-data_root = "../data/"
+trainer = 'sample.SpinBot'
+
+data_root = "../data-" + trainer + "/"
 
 observations_root = data_root + "observations/"
+
 observations = "observations.csv"
 
 features_root = data_root + "features/"
