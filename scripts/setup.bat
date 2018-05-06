@@ -1,1 +1,1 @@
-"java -jar ..\installers\robocode-1.9.3.2-setup.jar ..\robocode-1.9.3.2" 
+java -jar ..\installers\robocode-1.9.3.2-setup.jar ..\robocode-1.9.3.2
