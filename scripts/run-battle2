@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ROBOCODE=./robocode-1.9.3.2
-CLSPTH="../$ROBOCODE/libs/*.*:../java/target/lib/*.*"
+CLSPTH="../$ROBOCODE/libs/*:../java/target/lib/*"
 
 start_robocode_headless () {
   java -Xmx512M \
