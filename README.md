@@ -37,9 +37,10 @@ $PROJECT is the root of the project folder
     - JDK 8
 
 2.b Install python dependencies
-    - python 3
+    - python3
     - python3-venv
     - python3-pip
+    - python3-tk
 
 3.a Build from command line: `./build`
 
