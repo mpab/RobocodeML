@@ -10,12 +10,12 @@ def targets_info(fp, target):
 
     print(target)
     print('val  count')
-    print(data[target].value_counts(ascending=True))
+    print(data[target].value_counts(ascending=False))
 
     z_count = 0
     nz_count = 0
     idx = 0
-    for cnt in data[target].value_counts(ascending=True):
+    for cnt in data[target].value_counts(ascending=False):
         if idx == 0:
             z_count = cnt
         else:
