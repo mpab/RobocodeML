@@ -172,7 +172,7 @@ def maximise(obs, feat_class, feat_filt, target_name):
 
 
 def minimise_wall_collisions(obs):
-    return minimise(obs, 'scaled_pure', cfg.features_filters[0], 'wall_collisions')
+    return minimise(obs, 'scaled_boolean', cfg.features_filters[0], 'wall_collisions')
 
 
 #def minimise_shell_wounds(obs):
