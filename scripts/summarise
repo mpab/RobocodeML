@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+grep -wns accuracy score ../results/logs/trainalyser2_xyhead_wc.py.log -B 7
