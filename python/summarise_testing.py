@@ -10,7 +10,20 @@ def targets_info(fp, target):
 
     print(target)
     print('val  count')
-    print(data[target].value_counts())
+    print(data[target].value_counts(ascending=True))
+
+    z_count = 0
+    nz_count = 0
+    idx = 0
+    for cnt in data[target].value_counts(ascending=True):
+        if idx == 0:
+            z_count = cnt
+        else:
+            nz_count = nz_count + cnt
+        idx = idx + 1
+
+    print('{}={}%'.format(target, (nz_count / (nz_count + z_count))*100))
+
     print()
 
 
