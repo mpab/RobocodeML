@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+. ./env-py
+pushd ../python
+python ./summarise_testing.py
