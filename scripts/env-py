@@ -15,7 +15,7 @@ if [ -d "./.venv" ]; then
     . .venv/bin/activate
 fi
 
-pip install --upgrade pip
-pip install -r requirements.txt
+pip install --upgrade pip > pip.log
+pip install -r requirements.txt >> pip.log
 
 popd
