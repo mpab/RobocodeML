@@ -19,6 +19,7 @@ public class NNTester extends NNTrainer {
             proxy.execAction(action);
             updateObservation();
             conn.send(obs.toJson().toString());
+            resetObservation();
         }
     }
 
@@ -29,6 +30,16 @@ public class NNTester extends NNTrainer {
         obs.heading = getHeading();
         obs.handshake = handshake;
         obs.frame++;
+    }
+
+    private void resetObservation() {
+        obs.scanned = false;
+        obs.enemy_collisions = 0;
+        obs.wall_collisions = 0;
+        obs.shell_hits = 0;
+        obs.shell_wounds = 0;
+        obs.shell_misses = 0;
+        obs.shell_intercepts = 0;
     }
 
     private int getNextAction() {
