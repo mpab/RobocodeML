@@ -18,7 +18,7 @@ def filter_features_csv():
 
             df = pd.read_csv(feat_fp)
 
-            drop_list = util.diff(cfg.csv_column_names, features_filter[1])
+            drop_list = util.list_diff(cfg.csv_column_names, features_filter[1])
 
             for d in drop_list:
                 df = df.drop(d, axis=1)
