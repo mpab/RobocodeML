@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+./run-battle2 ../battles/test-vs-spin.battle gui

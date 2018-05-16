@@ -1,0 +1,93 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.73s
+test: took 0.54s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      0.97      0.97     32101
+          1       0.94      0.94      0.94     14145
+
+avg / total       0.96      0.96      0.96     46246
+
+accuracy score: 0.964408
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31246>  855 |
+1 |   791<13354>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31246>  855 |
+1 |   791<13354>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44600): 0=31246, 1=13354, 
+
+False Negatives (1646): 0=855, 1=791, 
+
+False Positives (1646): 1=855, 0=791, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.74s
+test: took 0.51s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.97      0.97      0.97     32056
+          1       0.94      0.94      0.94     14190
+
+avg / total       0.96      0.96      0.96     46246
+
+accuracy score: 0.963932
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31199>  857 |
+1 |   811<13379>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31199>  857 |
+1 |   811<13379>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44578): 0=31199, 1=13379, 
+
+False Negatives (1668): 0=857, 1=811, 
+
+False Positives (1668): 1=857, 0=811, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------

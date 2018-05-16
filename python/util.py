@@ -84,3 +84,8 @@ def csv_to_json(fp):
     raw = frame.to_json(orient='records')
     jslist = json.loads(raw)
     return jslist
+
+
+def list_diff(first, second):
+    second = set(second)
+    return [item for item in first if item not in second]

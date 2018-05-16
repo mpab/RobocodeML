@@ -2,16 +2,12 @@
 
 import pandas as pd
 import cfg
+import util
 
 
 def make_features_fp(features_class):
     fp = cfg.ensure_fp(cfg.features_root + features_class, cfg.features)
     return fp
-
-
-def diff(first, second):
-    second = set(second)
-    return [item for item in first if item not in second]
 
 
 def filter_features_csv():
@@ -22,7 +18,7 @@ def filter_features_csv():
 
             df = pd.read_csv(feat_fp)
 
-            drop_list = diff(cfg.csv_column_names, features_filter[1])
+            drop_list = util.diff(cfg.csv_column_names, features_filter[1])
 
             for d in drop_list:
                 df = df.drop(d, axis=1)

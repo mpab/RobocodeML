@@ -4,17 +4,10 @@ import errno
 import json
 import socket
 
-import recommender
+import recommender2
 import observations
 import util
-
-
-def connect(host, port):
-    soc = socket.socket()
-    soc.bind((host, port))
-    soc.listen(5)
-    conn, addr = soc.accept()
-    return conn
+import cfg
 
 
 def test(conn, tracker):
@@ -63,8 +56,7 @@ def test(conn, tracker):
         if expected_handshake > 0 and expected_handshake != obs.handshake:
             print("{}/{}: expected_handshake/obs.handshake - {}/{}".format(tracker.round, tracker.frame, expected_handshake, obs.handshake))
 
-        # recommend(obs)
-        recommender.random_recommendation(obs)
+        recommend(obs)
 
         expected_handshake = expected_handshake + 1
         obs.handshake = expected_handshake
@@ -85,11 +77,27 @@ def test(conn, tracker):
     return tracker
 
 
+def obs_fp():
+    return cfg.observations_root + 'minimise_wall_collisions.csv'
+
+
+def log_init():
+    print('creating: {}'.format(obs_fp()))
+    observations.csv_create(obs_fp())
+
+
+def recommend(obs):
+    recommender2.minimise_wall_collisions(obs)
+    observations.csv_append(obs_fp(), obs)
+
+
 def main():
 
     tracker = None
     host = "localhost"
     port = 8889
+
+    log_init()
 
     print("monitoring {}:{}".format(host, port))
 
