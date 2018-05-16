@@ -1,0 +1,4648 @@
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.90      0.88      0.89     31990
+          1       0.75      0.79      0.77     14256
+
+avg / total       0.86      0.85      0.86     46246
+
+accuracy score: 0.854582
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28311> 3679 |
+1 |  3046<11210>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28311> 3679 |
+1 |  3046<11210>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39521): 0=28311, 1=11210, 
+
+False Negatives (6725): 0=3679, 1=3046, 
+
+False Positives (6725): 1=3679, 0=3046, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.13s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.90      0.89      0.89     32103
+          1       0.75      0.78      0.77     14143
+
+avg / total       0.86      0.85      0.85     46246
+
+accuracy score: 0.854128
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28417> 3686 |
+1 |  3060<11083>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28417> 3686 |
+1 |  3060<11083>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39500): 0=28417, 1=11083, 
+
+False Negatives (6746): 0=3686, 1=3060, 
+
+False Positives (6746): 1=3686, 0=3060, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.73s
+test: took 0.54s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.98      0.97      0.97     32101
+          1       0.94      0.94      0.94     14145
+
+avg / total       0.96      0.96      0.96     46246
+
+accuracy score: 0.964408
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31246>  855 |
+1 |   791<13354>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31246>  855 |
+1 |   791<13354>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44600): 0=31246, 1=13354, 
+
+False Negatives (1646): 0=855, 1=791, 
+
+False Positives (1646): 1=855, 0=791, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: KNN
+model description: KNN
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.74s
+test: took 0.51s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.97      0.97      0.97     32056
+          1       0.94      0.94      0.94     14190
+
+avg / total       0.96      0.96      0.96     46246
+
+accuracy score: 0.963932
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31199>  857 |
+1 |   811<13379>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31199>  857 |
+1 |   811<13379>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (44578): 0=31199, 1=13379, 
+
+False Negatives (1668): 0=857, 1=811, 
+
+False Positives (1668): 1=857, 0=811, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.06s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.87      0.87     32185
+          1       0.70      0.70      0.70     14061
+
+avg / total       0.82      0.82      0.82     46246
+
+accuracy score: 0.817000
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27910> 4275 |
+1 |  4188 <9873>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27910> 4275 |
+1 |  4188 <9873>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37783): 0=27910, 1=9873, 
+
+False Negatives (8463): 0=4275, 1=4188, 
+
+False Positives (8463): 1=4275, 0=4188, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.07s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.87      0.87     32070
+          1       0.70      0.71      0.71     14176
+
+avg / total       0.82      0.82      0.82     46246
+
+accuracy score: 0.818968
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27869> 4201 |
+1 |  4171<10005>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27869> 4201 |
+1 |  4171<10005>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37874): 0=27869, 1=10005, 
+
+False Negatives (8372): 0=4201, 1=4171, 
+
+False Positives (8372): 1=4201, 0=4171, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.08s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.93      0.93     32175
+          1       0.83      0.86      0.85     14071
+
+avg / total       0.91      0.90      0.91     46246
+
+accuracy score: 0.904878
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29773> 2402 |
+1 |  1997<12074>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29773> 2402 |
+1 |  1997<12074>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41847): 0=29773, 1=12074, 
+
+False Negatives (4399): 0=2402, 1=1997, 
+
+False Positives (4399): 1=2402, 0=1997, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: KNN_PCA2
+model description: KNN_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.14s
+test: took 0.12s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.91      0.92     32081
+          1       0.80      0.84      0.82     14165
+
+avg / total       0.89      0.89      0.89     46246
+
+accuracy score: 0.889201
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29167> 2914 |
+1 |  2210<11955>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29167> 2914 |
+1 |  2210<11955>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41122): 0=29167, 1=11955, 
+
+False Negatives (5124): 0=2914, 1=2210, 
+
+False Positives (5124): 1=2914, 0=2210, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.11s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.88      0.87      0.88     32106
+          1       0.72      0.74      0.73     14140
+
+avg / total       0.83      0.83      0.83     46246
+
+accuracy score: 0.830861
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28029> 4077 |
+1 |  3745<10395>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28029> 4077 |
+1 |  3745<10395>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38424): 0=28029, 1=10395, 
+
+False Negatives (7822): 0=4077, 1=3745, 
+
+False Positives (7822): 1=4077, 0=3745, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.12s
+test: took 0.11s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.88      0.87      0.88     31959
+          1       0.72      0.74      0.73     14287
+
+avg / total       0.83      0.83      0.83     46246
+
+accuracy score: 0.828850
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27827> 4132 |
+1 |  3783<10504>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27827> 4132 |
+1 |  3783<10504>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38331): 0=27827, 1=10504, 
+
+False Negatives (7915): 0=4132, 1=3783, 
+
+False Positives (7915): 1=4132, 0=3783, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 0.11s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.95      0.94      0.94     32068
+          1       0.87      0.88      0.87     14178
+
+avg / total       0.92      0.92      0.92     46246
+
+accuracy score: 0.921204
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30148> 1920 |
+1 |  1724<12454>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30148> 1920 |
+1 |  1724<12454>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42602): 0=30148, 1=12454, 
+
+False Negatives (3644): 0=1920, 1=1724, 
+
+False Positives (3644): 1=1920, 0=1724, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: KNN_PCA3
+model description: KNN_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.13s
+test: took 0.16s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.95      0.94      0.94     32192
+          1       0.87      0.88      0.87     14054
+
+avg / total       0.92      0.92      0.92     46246
+
+accuracy score: 0.921809
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30282> 1910 |
+1 |  1706<12348>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30282> 1910 |
+1 |  1706<12348>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42630): 0=30282, 1=12348, 
+
+False Negatives (3616): 0=1910, 1=1706, 
+
+False Positives (3616): 1=1910, 0=1706, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: KNN_PCA7
+model description: KNN_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 12.62s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.96      0.91     32122
+          1       0.86      0.65      0.74     14124
+
+avg / total       0.86      0.86      0.86     46246
+
+accuracy score: 0.861783
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30677> 1445 |
+1 |  4947 <9177>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30677> 1445 |
+1 |  4947 <9177>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39854): 0=30677, 1=9177, 
+
+False Negatives (6392): 1=4947, 0=1445, 
+
+False Positives (6392): 0=4947, 1=1445, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 10.35s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.84      0.94      0.88     31937
+          1       0.81      0.59      0.68     14309
+
+avg / total       0.83      0.83      0.82     46246
+
+accuracy score: 0.830623
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30028> 1909 |
+1 |  5924 <8385>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30028> 1909 |
+1 |  5924 <8385>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38413): 0=30028, 1=8385, 
+
+False Negatives (7833): 1=5924, 0=1909, 
+
+False Positives (7833): 0=5924, 1=1909, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 8.76s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.95      0.87     32272
+          1       0.79      0.46      0.59     13974
+
+avg / total       0.80      0.80      0.78     46246
+
+accuracy score: 0.801150
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30554> 1718 |
+1 |  7478 <6496>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30554> 1718 |
+1 |  7478 <6496>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37050): 0=30554, 1=6496, 
+
+False Negatives (9196): 1=7478, 0=1718, 
+
+False Positives (9196): 0=7478, 1=1718, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NeuralNet
+model description: NeuralNet
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 11.67s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.96      0.89     32134
+          1       0.87      0.55      0.67     14112
+
+avg / total       0.84      0.84      0.83     46246
+
+accuracy score: 0.837845
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31008> 1126 |
+1 |  6373 <7739>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31008> 1126 |
+1 |  6373 <7739>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38747): 0=31008, 1=7739, 
+
+False Negatives (7499): 1=6373, 0=1126, 
+
+False Positives (7499): 0=6373, 1=1126, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.68s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.81      0.87     31999
+          1       0.67      0.89      0.77     14247
+
+avg / total       0.86      0.83      0.84     46246
+
+accuracy score: 0.831510
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<25761> 6238 |
+1 |  1554<12693>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<25761> 6238 |
+1 |  1554<12693>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38454): 0=25761, 1=12693, 
+
+False Negatives (7792): 0=6238, 1=1554, 
+
+False Positives (7792): 1=6238, 0=1554, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 5.23s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.89      0.81      0.85     32152
+          1       0.64      0.77      0.70     14094
+
+avg / total       0.81      0.80      0.80     46246
+
+accuracy score: 0.795896
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26007> 6145 |
+1 |  3294<10800>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26007> 6145 |
+1 |  3294<10800>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36807): 0=26007, 1=10800, 
+
+False Negatives (9439): 0=6145, 1=3294, 
+
+False Positives (9439): 1=6145, 0=3294, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 4.19s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     31894
+          1       0.70      0.24      0.36     14352
+
+avg / total       0.73      0.73      0.68     46246
+
+accuracy score: 0.732539
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30417> 1477 |
+1 | 10892 <3460>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30417> 1477 |
+1 | 10892 <3460>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (33877): 0=30417, 1=3460, 
+
+False Negatives (12369): 1=10892, 0=1477, 
+
+False Positives (12369): 0=10892, 1=1477, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NeuralNet_PCA2
+model description: NeuralNet_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 3.24s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     32307
+          1       0.68      0.24      0.35     13939
+
+avg / total       0.72      0.74      0.69     46246
+
+accuracy score: 0.736561
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30738> 1569 |
+1 | 10614 <3325>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30738> 1569 |
+1 | 10614 <3325>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (34063): 0=30738, 1=3325, 
+
+False Negatives (12183): 1=10614, 0=1569, 
+
+False Positives (12183): 0=10614, 1=1569, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 9.74s
+test: took 0.05s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.85      0.86     32054
+          1       0.67      0.70      0.68     14192
+
+avg / total       0.80      0.80      0.80     46246
+
+accuracy score: 0.802340
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27239> 4815 |
+1 |  4326 <9866>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27239> 4815 |
+1 |  4326 <9866>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37105): 0=27239, 1=9866, 
+
+False Negatives (9141): 0=4815, 1=4326, 
+
+False Positives (9141): 1=4815, 0=4326, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 13.96s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.85      0.85     32272
+          1       0.66      0.69      0.67     13974
+
+avg / total       0.80      0.80      0.80     46246
+
+accuracy score: 0.797864
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27321> 4951 |
+1 |  4397 <9577>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27321> 4951 |
+1 |  4397 <9577>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36898): 0=27321, 1=9577, 
+
+False Negatives (9348): 0=4951, 1=4397, 
+
+False Positives (9348): 1=4951, 0=4397, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 6.63s
+test: took 0.03s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.85      0.95      0.90     32149
+          1       0.84      0.62      0.71     14097
+
+avg / total       0.85      0.85      0.84     46246
+
+accuracy score: 0.848441
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30534> 1615 |
+1 |  5394 <8703>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30534> 1615 |
+1 |  5394 <8703>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39237): 0=30534, 1=8703, 
+
+False Negatives (7009): 1=5394, 0=1615, 
+
+False Positives (7009): 0=5394, 1=1615, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NeuralNet_PCA3
+model description: NeuralNet_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 7.47s
+test: took 0.04s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.85      0.95      0.90     32159
+          1       0.84      0.62      0.71     14087
+
+avg / total       0.85      0.85      0.84     46246
+
+accuracy score: 0.846430
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30479> 1680 |
+1 |  5422 <8665>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30479> 1680 |
+1 |  5422 <8665>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39144): 0=30479, 1=8665, 
+
+False Negatives (7102): 1=5422, 0=1680, 
+
+False Positives (7102): 0=5422, 1=1680, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NeuralNet_PCA7
+model description: NeuralNet_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.18s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.99      0.95     32178
+          1       0.97      0.79      0.87     14068
+
+avg / total       0.93      0.93      0.93     46246
+
+accuracy score: 0.930134
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31877>  301 |
+1 |  2930<11138>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31877>  301 |
+1 |  2930<11138>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43015): 0=31877, 1=11138, 
+
+False Negatives (3231): 1=2930, 0=301, 
+
+False Positives (3231): 0=2930, 1=301, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.18s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.91      0.99      0.95     32132
+          1       0.98      0.79      0.87     14114
+
+avg / total       0.93      0.93      0.93     46246
+
+accuracy score: 0.929313
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31860>  272 |
+1 |  2997<11117>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31860>  272 |
+1 |  2997<11117>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42977): 0=31860, 1=11117, 
+
+False Negatives (3269): 1=2997, 0=272, 
+
+False Positives (3269): 0=2997, 1=272, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.98      0.95     32074
+          1       0.95      0.80      0.87     14172
+
+avg / total       0.93      0.93      0.92     46246
+
+accuracy score: 0.926286
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31491>  583 |
+1 |  2826<11346>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31491>  583 |
+1 |  2826<11346>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42837): 0=31491, 1=11346, 
+
+False Negatives (3409): 1=2826, 0=583, 
+
+False Positives (3409): 0=2826, 1=583, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: DecisionTree
+model description: DecisionTree
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.06s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.98      0.95     32113
+          1       0.95      0.80      0.87     14133
+
+avg / total       0.93      0.93      0.93     46246
+
+accuracy score: 0.927583
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31573>  540 |
+1 |  2809<11324>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31573>  540 |
+1 |  2809<11324>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42897): 0=31573, 1=11324, 
+
+False Negatives (3349): 1=2809, 0=540, 
+
+False Positives (3349): 0=2809, 1=540, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.19s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.84      0.88     32069
+          1       0.70      0.86      0.77     14177
+
+avg / total       0.86      0.84      0.85     46246
+
+accuracy score: 0.842257
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26792> 5277 |
+1 |  2018<12159>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26792> 5277 |
+1 |  2018<12159>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38951): 0=26792, 1=12159, 
+
+False Negatives (7295): 0=5277, 1=2018, 
+
+False Positives (7295): 1=5277, 0=2018, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.84      0.88     32121
+          1       0.70      0.86      0.77     14125
+
+avg / total       0.86      0.84      0.85     46246
+
+accuracy score: 0.843857
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26876> 5245 |
+1 |  1976<12149>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26876> 5245 |
+1 |  1976<12149>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39025): 0=26876, 1=12149, 
+
+False Negatives (7221): 0=5245, 1=1976, 
+
+False Positives (7221): 1=5245, 0=1976, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.20s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.93      0.85     32212
+          1       0.71      0.37      0.49     14034
+
+avg / total       0.75      0.76      0.74     46246
+
+accuracy score: 0.763504
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30050> 2162 |
+1 |  8775 <5259>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30050> 2162 |
+1 |  8775 <5259>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35309): 0=30050, 1=5259, 
+
+False Negatives (10937): 1=8775, 0=2162, 
+
+False Positives (10937): 0=8775, 1=2162, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: DecisionTree_PCA2
+model description: DecisionTree_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.17s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.91      0.85     32118
+          1       0.69      0.47      0.56     14128
+
+avg / total       0.76      0.77      0.76     46246
+
+accuracy score: 0.772434
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29142> 2976 |
+1 |  7548 <6580>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29142> 2976 |
+1 |  7548 <6580>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35722): 0=29142, 1=6580, 
+
+False Negatives (10524): 1=7548, 0=2976, 
+
+False Positives (10524): 0=7548, 1=2976, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.27s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.83      0.88     32147
+          1       0.70      0.86      0.77     14099
+
+avg / total       0.86      0.84      0.85     46246
+
+accuracy score: 0.842840
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26817> 5330 |
+1 |  1938<12161>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26817> 5330 |
+1 |  1938<12161>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38978): 0=26817, 1=12161, 
+
+False Negatives (7268): 0=5330, 1=1938, 
+
+False Positives (7268): 1=5330, 0=1938, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.26s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.84      0.88     32287
+          1       0.70      0.86      0.77     13959
+
+avg / total       0.86      0.84      0.85     46246
+
+accuracy score: 0.843035
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27048> 5239 |
+1 |  2020<11939>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27048> 5239 |
+1 |  2020<11939>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38987): 0=27048, 1=11939, 
+
+False Negatives (7259): 0=5239, 1=2020, 
+
+False Positives (7259): 1=5239, 0=2020, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.82      0.84     32108
+          1       0.64      0.72      0.68     14138
+
+avg / total       0.80      0.79      0.79     46246
+
+accuracy score: 0.789279
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26323> 5785 |
+1 |  3960<10178>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26323> 5785 |
+1 |  3960<10178>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36501): 0=26323, 1=10178, 
+
+False Negatives (9745): 0=5785, 1=3960, 
+
+False Positives (9745): 1=5785, 0=3960, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: DecisionTree_PCA3
+model description: DecisionTree_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.22s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.84      0.86     32186
+          1       0.66      0.72      0.69     14060
+
+avg / total       0.81      0.80      0.81     46246
+
+accuracy score: 0.803875
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27009> 5177 |
+1 |  3893<10167>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27009> 5177 |
+1 |  3893<10167>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37176): 0=27009, 1=10167, 
+
+False Negatives (9070): 0=5177, 1=3893, 
+
+False Positives (9070): 1=5177, 0=3893, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: DecisionTree_PCA7
+model description: DecisionTree_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.42s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.89      0.99      0.94     32127
+          1       0.98      0.71      0.82     14119
+
+avg / total       0.91      0.91      0.90     46246
+
+accuracy score: 0.907235
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31883>  244 |
+1 |  4046<10073>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31883>  244 |
+1 |  4046<10073>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41956): 0=31883, 1=10073, 
+
+False Negatives (4290): 1=4046, 0=244, 
+
+False Positives (4290): 0=4046, 1=244, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.40s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.87      0.99      0.93     32051
+          1       0.97      0.67      0.79     14195
+
+avg / total       0.90      0.89      0.89     46246
+
+accuracy score: 0.892726
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31796>  255 |
+1 |  4706 <9489>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31796>  255 |
+1 |  4706 <9489>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (41285): 0=31796, 1=9489, 
+
+False Negatives (4961): 1=4706, 0=255, 
+
+False Positives (4961): 0=4706, 1=255, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.23s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.89      0.99      0.94     31995
+          1       0.96      0.73      0.83     14251
+
+avg / total       0.91      0.91      0.91     46246
+
+accuracy score: 0.909008
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31590>  405 |
+1 |  3803<10448>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31590>  405 |
+1 |  3803<10448>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42038): 0=31590, 1=10448, 
+
+False Negatives (4208): 1=3803, 0=405, 
+
+False Positives (4208): 0=3803, 1=405, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: RandomForest
+model description: RandomForest
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.23s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.91      0.99      0.95     32095
+          1       0.96      0.78      0.86     14151
+
+avg / total       0.92      0.92      0.92     46246
+
+accuracy score: 0.921918
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31637>  458 |
+1 |  3153<10998>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31637>  458 |
+1 |  3153<10998>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (42635): 0=31637, 1=10998, 
+
+False Negatives (3611): 1=3153, 0=458, 
+
+False Positives (3611): 0=3153, 1=458, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.69s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.92      0.85      0.89     32261
+          1       0.71      0.84      0.77     13985
+
+avg / total       0.86      0.85      0.85     46246
+
+accuracy score: 0.846062
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27420> 4841 |
+1 |  2278<11707>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27420> 4841 |
+1 |  2278<11707>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (39127): 0=27420, 1=11707, 
+
+False Negatives (7119): 0=4841, 1=2278, 
+
+False Positives (7119): 1=4841, 0=2278, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.74s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.83      0.88     32103
+          1       0.69      0.87      0.77     14143
+
+avg / total       0.86      0.84      0.85     46246
+
+accuracy score: 0.842365
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<26669> 5434 |
+1 |  1856<12287>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<26669> 5434 |
+1 |  1856<12287>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38956): 0=26669, 1=12287, 
+
+False Negatives (7290): 0=5434, 1=1856, 
+
+False Positives (7290): 1=5434, 0=1856, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.61s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.95      0.85     32060
+          1       0.76      0.34      0.47     14186
+
+avg / total       0.76      0.77      0.73     46246
+
+accuracy score: 0.765018
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30564> 1496 |
+1 |  9371 <4815>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30564> 1496 |
+1 |  9371 <4815>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35379): 0=30564, 1=4815, 
+
+False Negatives (10867): 1=9371, 0=1496, 
+
+False Positives (10867): 0=9371, 1=1496, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: RandomForest_PCA2
+model description: RandomForest_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.58s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.96      0.85     32172
+          1       0.77      0.34      0.47     14074
+
+avg / total       0.77      0.77      0.74     46246
+
+accuracy score: 0.768607
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30726> 1446 |
+1 |  9255 <4819>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30726> 1446 |
+1 |  9255 <4819>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35545): 0=30726, 1=4819, 
+
+False Negatives (10701): 1=9255, 0=1446, 
+
+False Positives (10701): 0=9255, 1=1446, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.65s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.86      0.88      0.87     32110
+          1       0.72      0.67      0.69     14136
+
+avg / total       0.81      0.82      0.82     46246
+
+accuracy score: 0.817779
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28368> 3742 |
+1 |  4685 <9451>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28368> 3742 |
+1 |  4685 <9451>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37819): 0=28368, 1=9451, 
+
+False Negatives (8427): 1=4685, 0=3742, 
+
+False Positives (8427): 0=4685, 1=3742, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.67s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.83      0.90      0.86     32175
+          1       0.72      0.58      0.64     14071
+
+avg / total       0.79      0.80      0.80     46246
+
+accuracy score: 0.801604
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28931> 3244 |
+1 |  5931 <8140>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28931> 3244 |
+1 |  5931 <8140>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37071): 0=28931, 1=8140, 
+
+False Negatives (9175): 1=5931, 0=3244, 
+
+False Positives (9175): 0=5931, 1=3244, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.58s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.96      0.87     32113
+          1       0.82      0.43      0.57     14133
+
+avg / total       0.80      0.80      0.78     46246
+
+accuracy score: 0.797020
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30730> 1383 |
+1 |  8004 <6129>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30730> 1383 |
+1 |  8004 <6129>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36859): 0=30730, 1=6129, 
+
+False Negatives (9387): 1=8004, 0=1383, 
+
+False Positives (9387): 0=8004, 1=1383, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: RandomForest_PCA3
+model description: RandomForest_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.58s
+test: took 0.02s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.80      0.95      0.87     32133
+          1       0.80      0.48      0.60     14113
+
+avg / total       0.80      0.80      0.79     46246
+
+accuracy score: 0.803961
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30441> 1692 |
+1 |  7374 <6739>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30441> 1692 |
+1 |  7374 <6739>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37180): 0=30441, 1=6739, 
+
+False Negatives (9066): 1=7374, 0=1692, 
+
+False Positives (9066): 0=7374, 1=1692, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: RandomForest_PCA7
+model description: RandomForest_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.62s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.98      0.95     31975
+          1       0.94      0.84      0.89     14271
+
+avg / total       0.94      0.94      0.94     46246
+
+accuracy score: 0.936276
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31243>  732 |
+1 |  2215<12056>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31243>  732 |
+1 |  2215<12056>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43299): 0=31243, 1=12056, 
+
+False Negatives (2947): 1=2215, 0=732, 
+
+False Positives (2947): 0=2215, 1=732, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.62s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.93      0.98      0.96     32152
+          1       0.95      0.84      0.89     14094
+
+avg / total       0.94      0.94      0.94     46246
+
+accuracy score: 0.938308
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31564>  588 |
+1 |  2265<11829>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31564>  588 |
+1 |  2265<11829>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43393): 0=31564, 1=11829, 
+
+False Negatives (2853): 1=2265, 0=588, 
+
+False Positives (2853): 0=2265, 1=588, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.45s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.97      0.95     32104
+          1       0.93      0.85      0.89     14142
+
+avg / total       0.93      0.93      0.93     46246
+
+accuracy score: 0.934611
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31218>  886 |
+1 |  2138<12004>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31218>  886 |
+1 |  2138<12004>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43222): 0=31218, 1=12004, 
+
+False Negatives (3024): 1=2138, 0=886, 
+
+False Positives (3024): 0=2138, 1=886, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: AdaBoost
+model description: AdaBoost
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.45s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.94      0.97      0.95     32217
+          1       0.93      0.85      0.89     14029
+
+avg / total       0.93      0.93      0.93     46246
+
+accuracy score: 0.933962
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31268>  949 |
+1 |  2105<11924>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31268>  949 |
+1 |  2105<11924>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (43192): 0=31268, 1=11924, 
+
+False Negatives (3054): 1=2105, 0=949, 
+
+False Positives (3054): 0=2105, 1=949, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.26s
+test: took 0.14s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.90      0.85      0.88     32130
+          1       0.70      0.79      0.74     14116
+
+avg / total       0.84      0.83      0.84     46246
+
+accuracy score: 0.833326
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27446> 4684 |
+1 |  3024<11092>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27446> 4684 |
+1 |  3024<11092>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38538): 0=27446, 1=11092, 
+
+False Negatives (7708): 0=4684, 1=3024, 
+
+False Positives (7708): 1=4684, 0=3024, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.24s
+test: took 0.14s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.90      0.86      0.88     32192
+          1       0.71      0.79      0.75     14054
+
+avg / total       0.84      0.84      0.84     46246
+
+accuracy score: 0.836786
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27599> 4593 |
+1 |  2955<11099>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27599> 4593 |
+1 |  2955<11099>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38698): 0=27599, 1=11099, 
+
+False Negatives (7548): 0=4593, 1=2955, 
+
+False Positives (7548): 1=4593, 0=2955, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.99s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.92      0.85     31996
+          1       0.70      0.44      0.54     14250
+
+avg / total       0.76      0.77      0.75     46246
+
+accuracy score: 0.768629
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29290> 2706 |
+1 |  7994 <6256>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29290> 2706 |
+1 |  7994 <6256>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35546): 0=29290, 1=6256, 
+
+False Negatives (10700): 1=7994, 0=2706, 
+
+False Positives (10700): 0=7994, 1=2706, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: AdaBoost_PCA2
+model description: AdaBoost_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 1.98s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.92      0.85     32189
+          1       0.70      0.40      0.51     14057
+
+avg / total       0.75      0.77      0.74     46246
+
+accuracy score: 0.765320
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<29723> 2466 |
+1 |  8387 <5670>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<29723> 2466 |
+1 |  8387 <5670>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (35393): 0=29723, 1=5670, 
+
+False Negatives (10853): 1=8387, 0=2466, 
+
+False Positives (10853): 0=8387, 1=2466, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.99s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.91      0.85      0.88     32183
+          1       0.70      0.80      0.75     14063
+
+avg / total       0.85      0.84      0.84     46246
+
+accuracy score: 0.836980
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27478> 4705 |
+1 |  2834<11229>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27478> 4705 |
+1 |  2834<11229>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38707): 0=27478, 1=11229, 
+
+False Negatives (7539): 0=4705, 1=2834, 
+
+False Positives (7539): 1=4705, 0=2834, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.91s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.91      0.85      0.88     32307
+          1       0.70      0.80      0.74     13939
+
+avg / total       0.84      0.83      0.84     46246
+
+accuracy score: 0.834537
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<27436> 4871 |
+1 |  2781<11158>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<27436> 4871 |
+1 |  2781<11158>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38594): 0=27436, 1=11158, 
+
+False Negatives (7652): 0=4871, 1=2781, 
+
+False Positives (7652): 1=4871, 0=2781, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.57s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.88      0.89      0.88     31902
+          1       0.75      0.73      0.74     14344
+
+avg / total       0.84      0.84      0.84     46246
+
+accuracy score: 0.839727
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28433> 3469 |
+1 |  3943<10401>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28433> 3469 |
+1 |  3943<10401>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38834): 0=28433, 1=10401, 
+
+False Negatives (7412): 1=3943, 0=3469, 
+
+False Positives (7412): 0=3943, 1=3469, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: AdaBoost_PCA3
+model description: AdaBoost_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 2.46s
+test: took 0.15s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.88      0.89      0.88     32052
+          1       0.75      0.72      0.73     14194
+
+avg / total       0.84      0.84      0.84     46246
+
+accuracy score: 0.839013
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<28646> 3406 |
+1 |  4039<10155>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<28646> 3406 |
+1 |  4039<10155>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (38801): 0=28646, 1=10155, 
+
+False Negatives (7445): 1=4039, 0=3406, 
+
+False Positives (7445): 0=4039, 1=3406, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: AdaBoost_PCA7
+model description: AdaBoost_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.01s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.97      0.87     32066
+          1       0.86      0.39      0.54     14180
+
+avg / total       0.81      0.79      0.77     46246
+
+accuracy score: 0.793452
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31156>  910 |
+1 |  8642 <5538>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31156>  910 |
+1 |  8642 <5538>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36694): 0=31156, 1=5538, 
+
+False Negatives (9552): 1=8642, 0=910, 
+
+False Positives (9552): 0=8642, 1=910, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.01s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.97      0.87     32159
+          1       0.86      0.39      0.54     14087
+
+avg / total       0.81      0.80      0.77     46246
+
+accuracy score: 0.795961
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31279>  880 |
+1 |  8556 <5531>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31279>  880 |
+1 |  8556 <5531>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36810): 0=31279, 1=5531, 
+
+False Negatives (9436): 1=8556, 0=880, 
+
+False Positives (9436): 0=8556, 1=880, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.97      0.87     32132
+          1       0.86      0.39      0.54     14114
+
+avg / total       0.81      0.80      0.77     46246
+
+accuracy score: 0.795528
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31233>  899 |
+1 |  8557 <5557>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31233>  899 |
+1 |  8557 <5557>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36790): 0=31233, 1=5557, 
+
+False Negatives (9456): 1=8557, 0=899, 
+
+False Positives (9456): 0=8557, 1=899, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NaiveBayes
+model description: NaiveBayes
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.01s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.97      0.87     32266
+          1       0.86      0.40      0.54     13980
+
+avg / total       0.81      0.80      0.77     46246
+
+accuracy score: 0.797972
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31356>  910 |
+1 |  8433 <5547>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31356>  910 |
+1 |  8433 <5547>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36903): 0=31356, 1=5547, 
+
+False Negatives (9343): 1=8433, 0=910, 
+
+False Positives (9343): 0=8433, 1=910, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.10s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     31904
+          1       0.00      0.00      0.00     14342
+
+avg / total       0.48      0.69      0.56     46246
+
+accuracy score: 0.689876
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31904>    . |
+1 | 14342    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31904>    . |
+1 | 14342    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (31904): 0=31904, 1=0, 
+
+False Negatives (14342): 1=14342, 0=0, 
+
+False Positives (14342): 0=14342, 1=0, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.09s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     32110
+          1       0.00      0.00      0.00     14136
+
+avg / total       0.48      0.69      0.57     46246
+
+accuracy score: 0.694330
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32110>    . |
+1 | 14136    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32110>    . |
+1 | 14136    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (32110): 0=32110, 1=0, 
+
+False Negatives (14136): 1=14136, 0=0, 
+
+False Positives (14136): 0=14136, 1=0, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     32029
+          1       0.70      0.25      0.37     14217
+
+avg / total       0.73      0.74      0.69     46246
+
+accuracy score: 0.736561
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30485> 1544 |
+1 | 10639 <3578>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30485> 1544 |
+1 | 10639 <3578>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (34063): 0=30485, 1=3578, 
+
+False Negatives (12183): 1=10639, 0=1544, 
+
+False Positives (12183): 0=10639, 1=1544, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NaiveBayes_PCA2
+model description: NaiveBayes_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.75      0.95      0.84     32191
+          1       0.70      0.25      0.37     14055
+
+avg / total       0.73      0.74      0.70     46246
+
+accuracy score: 0.740172
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30647> 1544 |
+1 | 10472 <3583>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30647> 1544 |
+1 | 10472 <3583>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (34230): 0=30647, 1=3583, 
+
+False Negatives (12016): 1=10472, 0=1544, 
+
+False Positives (12016): 0=10472, 1=1544, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.09s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     32163
+          1       0.00      0.00      0.00     14083
+
+avg / total       0.48      0.70      0.57     46246
+
+accuracy score: 0.695476
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32163>    . |
+1 | 14083    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32163>    . |
+1 | 14083    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (32163): 0=32163, 1=0, 
+
+False Negatives (14083): 1=14083, 0=0, 
+
+False Positives (14083): 0=14083, 1=0, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.09s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     32173
+          1       0.00      0.00      0.00     14073
+
+avg / total       0.48      0.70      0.57     46246
+
+accuracy score: 0.695693
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32173>    . |
+1 | 14073    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32173>    . |
+1 | 14073    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (32173): 0=32173, 1=0, 
+
+False Negatives (14073): 1=14073, 0=0, 
+
+False Positives (14073): 0=14073, 1=0, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.09s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.96      0.86     32206
+          1       0.81      0.38      0.52     14040
+
+avg / total       0.79      0.78      0.76     46246
+
+accuracy score: 0.783981
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30934> 1272 |
+1 |  8718 <5322>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30934> 1272 |
+1 |  8718 <5322>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36256): 0=30934, 1=5322, 
+
+False Negatives (9990): 1=8718, 0=1272, 
+
+False Positives (9990): 0=8718, 1=1272, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NaiveBayes_PCA3
+model description: NaiveBayes_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.09s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.96      0.86     32114
+          1       0.82      0.38      0.52     14132
+
+avg / total       0.79      0.79      0.76     46246
+
+accuracy score: 0.786057
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30956> 1158 |
+1 |  8736 <5396>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30956> 1158 |
+1 |  8736 <5396>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36352): 0=30956, 1=5396, 
+
+False Negatives (9894): 1=8736, 0=1158, 
+
+False Positives (9894): 0=8736, 1=1158, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: NaiveBayes_PCA7
+model description: NaiveBayes_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.97      0.87     32199
+          1       0.86      0.40      0.54     14047
+
+avg / total       0.81      0.80      0.77     46246
+
+accuracy score: 0.797280
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31292>  907 |
+1 |  8468 <5579>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31292>  907 |
+1 |  8468 <5579>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36871): 0=31292, 1=5579, 
+
+False Negatives (9375): 1=8468, 0=907, 
+
+False Positives (9375): 0=8468, 1=907, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.97      0.87     32095
+          1       0.85      0.40      0.54     14151
+
+avg / total       0.81      0.79      0.77     46246
+
+accuracy score: 0.794058
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31129>  966 |
+1 |  8558 <5593>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31129>  966 |
+1 |  8558 <5593>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36722): 0=31129, 1=5593, 
+
+False Negatives (9524): 1=8558, 0=966, 
+
+False Positives (9524): 0=8558, 1=966, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.97      0.87     32176
+          1       0.86      0.41      0.56     14070
+
+avg / total       0.81      0.80      0.78     46246
+
+accuracy score: 0.800437
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31258>  918 |
+1 |  8311 <5759>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31258>  918 |
+1 |  8311 <5759>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (37017): 0=31258, 1=5759, 
+
+False Negatives (9229): 1=8311, 0=918, 
+
+False Positives (9229): 0=8311, 1=918, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: QDA
+model description: QDA
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.02s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.79      0.97      0.87     32105
+          1       0.86      0.40      0.55     14141
+
+avg / total       0.81      0.80      0.77     46246
+
+accuracy score: 0.796977
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31223>  882 |
+1 |  8507 <5634>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31223>  882 |
+1 |  8507 <5634>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36857): 0=31223, 1=5634, 
+
+False Negatives (9389): 1=8507, 0=882, 
+
+False Positives (9389): 0=8507, 1=882, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.70      1.00      0.82     32332
+          1       0.00      0.00      0.00     13914
+
+avg / total       0.49      0.70      0.58     46246
+
+accuracy score: 0.699131
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32332>    . |
+1 | 13914    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32332>    . |
+1 | 13914    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (32332): 0=32332, 1=0, 
+
+False Negatives (13914): 1=13914, 0=0, 
+
+False Positives (13914): 0=13914, 1=0, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     31974
+          1       0.00      0.00      0.00     14272
+
+avg / total       0.48      0.69      0.57     46246
+
+accuracy score: 0.691390
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31974>    . |
+1 | 14272    <.>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31974>    . |
+1 | 14272    <.>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (31974): 0=31974, 1=0, 
+
+False Negatives (14272): 1=14272, 0=0, 
+
+False Positives (14272): 0=14272, 1=0, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     32092
+          1       0.69      0.25      0.37     14154
+
+avg / total       0.73      0.74      0.69     46246
+
+accuracy score: 0.736669
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30533> 1559 |
+1 | 10619 <3535>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30533> 1559 |
+1 | 10619 <3535>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (34068): 0=30533, 1=3535, 
+
+False Negatives (12178): 1=10619, 0=1559, 
+
+False Positives (12178): 0=10619, 1=1559, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: QDA_PCA2
+model description: QDA_PCA2
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.74      0.95      0.83     32120
+          1       0.69      0.25      0.37     14126
+
+avg / total       0.73      0.74      0.69     46246
+
+accuracy score: 0.737145
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30491> 1629 |
+1 | 10527 <3599>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30491> 1629 |
+1 | 10527 <3599>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (34090): 0=30491, 1=3599, 
+
+False Negatives (12156): 1=10527, 0=1629, 
+
+False Positives (12156): 0=10527, 1=1629, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.09s
+test: took 0.01s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     32063
+          1       0.73      0.01      0.02     14183
+
+avg / total       0.71      0.69      0.57     46246
+
+accuracy score: 0.694828
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32023>   40 |
+1 | 14073  <110>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32023>   40 |
+1 | 14073  <110>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (32133): 0=32023, 1=110, 
+
+False Negatives (14113): 1=14073, 0=40, 
+
+False Positives (14113): 0=14073, 1=40, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.69      1.00      0.82     32062
+          1       0.74      0.01      0.01     14184
+
+avg / total       0.71      0.69      0.57     46246
+
+accuracy score: 0.694287
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<32037>   25 |
+1 | 14113   <71>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<32037>   25 |
+1 | 14113   <71>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (32108): 0=32037, 1=71, 
+
+False Negatives (14138): 1=14113, 0=25, 
+
+False Positives (14138): 0=14113, 1=25, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.78      0.96      0.86     32220
+          1       0.82      0.37      0.51     14026
+
+avg / total       0.79      0.78      0.76     46246
+
+accuracy score: 0.784738
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<31079> 1141 |
+1 |  8814 <5212>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<31079> 1141 |
+1 |  8814 <5212>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36291): 0=31079, 1=5212, 
+
+False Negatives (9955): 1=8814, 0=1141, 
+
+False Positives (9955): 0=8814, 1=1141, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: QDA_PCA3
+model description: QDA_PCA3
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+train: took 0.08s
+test: took 0.00s
+------------------------- START REPORT ----------------------------------
+classification report:
+             precision    recall  f1-score   support
+
+          0       0.77      0.97      0.86     31989
+          1       0.83      0.37      0.51     14257
+
+avg / total       0.79      0.78      0.75     46246
+
+accuracy score: 0.782770
+Confusion matrix:
+
+  |     0     1 |
+--+-------------+
+0 |<30928> 1061 |
+1 |  8985 <5272>|
+--+-------------+
+(row = reference; col = test)
+
+Confusion matrix: sorted by count
+
+  |     0     1 |
+--+-------------+
+0 |<30928> 1061 |
+1 |  8985 <5272>|
+--+-------------+
+(row = reference; col = test)
+
+True Positives (36200): 0=30928, 1=5272, 
+
+False Negatives (10046): 1=8985, 0=1061, 
+
+False Positives (10046): 0=8985, 1=1061, 
+
+#expected: 46246, #predicted: 46246, #labels: 2
+labels: ['0', '1']
+
+-------------------------- END REPORT -----------------------------------
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_pure_xyhead_wc
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: pure_boolean_xyhead_wc
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_pure_xyhead_wc
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
+------------------------ NEW CLASSIFIER ---------------------------------
+target: wall_collisions
+features id: scaled_boolean_xyhead_wc
+model name: QDA_PCA7
+model description: QDA_PCA7
+splitting data into train/test 0.67/0.33 using splitter: 'train_test_split'
+analyser.train(mm.model)
+Traceback (most recent call last):
+  File "./trainalyser2.py", line 206, in train_and_evaluate
+    analyser.train(mm.model)
+  File "./trainalyser2.py", line 98, in train
+    model.fit(self.X_train, self.y_train)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 248, in fit
+    Xt, fit_params = self._fit(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 213, in _fit
+    **fit_params_steps[name])
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/externals/joblib/memory.py", line 362, in __call__
+    return self.func(*args, **kwargs)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/pipeline.py", line 581, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **fit_params)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 348, in fit_transform
+    U, S, V = self._fit(X)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 392, in _fit
+    return self._fit_full(X, n_components)
+  File "/home/mick/Projects/RobocodeML/python/.venv/lib/python3.6/site-packages/sklearn/decomposition/pca.py", line 410, in _fit_full
+    % (n_components, n_features))
+ValueError: n_components=7 must be between 0 and n_features=4 with svd_solver='full'
+
