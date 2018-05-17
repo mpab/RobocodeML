@@ -1,8 +1,8 @@
 from sklearn.neural_network import MLPClassifier
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.gaussian_process.kernels import RBF
+# from sklearn.svm import SVC
+# from sklearn.gaussian_process import GaussianProcessClassifier
+# from sklearn.gaussian_process.kernels import RBF
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -10,13 +10,12 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.pipeline import make_pipeline
 from sklearn.decomposition import PCA
 from sklearn.externals import joblib
-import cfg
 
 classifiers = [
     ['KNN', KNeighborsClassifier(3)],
     ['NeuralNet', MLPClassifier(alpha=1)],
 
-    # ['MLP_7_7_7', MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)],
+    ['MLP_7_7_7', MLPClassifier(hidden_layer_sizes=(7, 7, 7), max_iter=500)],
     # locks up? #['LinearSVM', SVC(kernel="linear", C=0.025)],
     # locks up? ['RBFSVM', SVC(gamma=2, C=1)],
     # crashes ['GaussianProcess', GaussianProcessClassifier(1.0 * RBF(1.0))],
@@ -27,6 +26,7 @@ classifiers = [
     ['NaiveBayes', GaussianNB()],
     ['QDA', QuadraticDiscriminantAnalysis()]
 ]
+
 
 class MetaModel:
     def __init__(self, model, name, description):

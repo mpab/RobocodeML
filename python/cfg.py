@@ -48,7 +48,8 @@ features_classes = [
 ]
 
 features_filters = [
-   ["xyhead_wc", ["action", "x", "y", "heading", "wall_collisions"]],
+    # ["xyhead_wc", ["action", "x", "y", "heading", "wall_collisions"]],
+    ["xyhead_exey_ec", ["action", "x", "y", "heading", "enemy_x", "enemy_y", "enemy_collisions"]],
 ]
 
 #classification_compatible = [
