@@ -78,7 +78,8 @@ def test(conn, tracker):
 
 
 def obs_fp():
-    return cfg.observations_root + 'minimise_wall_collisions.csv'
+    # return cfg.observations_root + 'minimise_wall_collisions.csv'
+    return cfg.observations_root + 'minimise_enemy_collisions.csv'
 
 
 def log_init():
@@ -87,7 +88,8 @@ def log_init():
 
 
 def recommend(obs):
-    recommender2.minimise_wall_collisions(obs)
+    # recommender2.minimise_wall_collisions(obs)
+    recommender2.minimise_enemy_collisions(obs)
     observations.csv_append(obs_fp(), obs)
 
 

@@ -12,7 +12,9 @@ import extractor
 import features
 import datasets
 
-model_name = 'KNN'
+# model_name = 'KNN'  # minimise_wall_collisions
+model_name = 'MLP_7_7_7' # minimise_enemy_collisions
+
 # features_classification_filter = 'pure_boolean_classified'
 # target_filter = 'enemy_collisions'
 __classification_metamodels__ = [None]
@@ -167,8 +169,8 @@ def maximise(obs, feat_class, feat_filt, target_name):
     return highest
 
 
-#def minimise_enemy_collisions(obs):
-#    return minimise(obs, 'scaled_pure', 'xyhead_wc', 'enemy_collisions')
+def minimise_enemy_collisions(obs):
+    return minimise(obs, 'scaled_boolean', cfg.features_filters[0], 'enemy_collisions')
 
 
 def minimise_wall_collisions(obs):
@@ -234,12 +236,11 @@ def test_recommenders():
         action = obs.action
         print('observation: {} / actual action {}'.format(idx, action))
 
+        #lowest = minimise_wall_collisions(obs)
+        #print('minimise_wall_collisions recommended action: {} (v={})'.format(obs.action, lowest))
 
-
-        #minimise_enemy_collisions(obs)
-
-        lowest = minimise_wall_collisions(obs)
-        print('minimise_wall_collisions recommended action: {} (v={})'.format(obs.action, lowest))
+        lowest = minimise_enemy_collisions(obs)
+        print('minimise_enemy_collisions recommended action: {} (v={})'.format(obs.action, lowest))
 
         #minimise_shell_wounds(obs)
         #maximise_shell_intercepts(obs)

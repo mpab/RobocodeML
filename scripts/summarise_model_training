@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-grep -wns accuracy score ../results/logs/trainalyser2_xyhead_wc.py.log -B 7
+#grep -wns accuracy score ../results/spinbot/wall_collisions/trainalyser2_xyhead_wc.py.log -B 7
+grep -wns accuracy score ../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log -B 7
+
