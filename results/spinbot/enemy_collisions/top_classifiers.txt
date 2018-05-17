@@ -1,0 +1,19 @@
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1618-             precision    recall  f1-score   support
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1619-
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1620-          0       0.99      1.00      0.99     45394
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1621-          1       0.71      0.63      0.67       852
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1622-
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1623-avg / total       0.99      0.99      0.99     46246
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1624-
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log:1625:accuracy score: 0.988431
+--
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1728-             precision    recall  f1-score   support
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1729-
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1730-          0       0.99      0.99      0.99     45370
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1731-          1       0.72      0.71      0.71       876
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1732-
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1733-avg / total       0.99      0.99      0.99     46246
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log-1734-
+../results/spinbot/enemy_collisions/trainalyser2_xyhead_exey_ec.py.log:1735:accuracy score: 0.989210
+--
+

@@ -1,0 +1,5 @@
+Results for 5000 rounds
+Robot Name	    Total Score    	Survival	Surv Bonus	Bullet Dmg	Bullet Bonus	Ram Dmg * 2	Ram Bonus	 1sts 	 2nds 	 3rds 	
+1st: sample.SpinBot	574978 (57%)	162100	32420	324104	47501	7990	863	3252	1748	0	
+2nd: NN.NNTrainer*	433778 (43%)	87400	17480	294052	31161	3206	478	1758	3242	0	
+
